@@ -17,17 +17,21 @@
     <link rel="apple-touch-icon" href="img/icon/favicon.png">
 
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/style.css">
+
 
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+
+    <script src="js/script.js"></script>
     <!-- SWUP -->
-    <!-- <script src="js/swup.min.js"></script>
+    <script src="js/swup.min.js"></script>
     <script src="js/SwupBodyClassPlugin.min.js"></script>
-    <script src="js/SwupHeadPlugin.min.js"></script> -->
+    <script src="js/SwupHeadPlugin.min.js"></script>
+
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,7 +79,12 @@
 
     <!-- CARD LAYOUT -->
     <div class="container">
-        <div class="card-container">
+
+        <button onclick="changeStyle('css/minimalism.css')">Style 1</button>
+        <button onclick="changeStyle('css/baroque.css')">Style 2</button>
+        <button onclick="changeStyle('css/bauhaus.css')">Style 3</button>
+
+        <!-- <div class="card-container">
             <div class="card">
                 <img class="card__background" src="img/minimalism/covers/tur-minimalism.png"
                     alt="Turkey Magazine Cover" />
@@ -118,29 +127,134 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/minimalism/covers/tur-minimalism.png" alt="Turkey Magazine Cover"
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Choose Article</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="article.html">First Article</a></li>
+                            <li class="list-group-item"><a href="article.html">Second Article</a></li>
+                            <li class="list-group-item"><a href="article.html">Third Article</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/minimalism/covers/ita-minimalism.png" alt="Italy Magazine Cover" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Choose Article</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="article.html">First Article</a></li>
+                            <li class="list-group-item"><a href="article.html">Second Article</a></li>
+                            <li class="list-group-item"><a href="article.html">Third Article</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="img/minimalism/covers/kaz-minimalism.png" alt="Kazakhstan Magazine Cover"
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Choose Article</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="article.html">First Article</a></li>
+                            <li class="list-group-item"><a href="article.html">Second Article</a></li>
+                            <li class="list-group-item"><a href="article.html">Third Article</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <!-- CARD LAYOUT END -->
+
     <!-- INTRO -->
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="intro">
                     <hr>
-                    <p class="intro-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, tempora?
+                    <p class="intro-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quia neque
+                        culpa, ut iste beatae non illo tempore veniam molestiae, explicabo unde esse. Modi distinctio
+                        soluta assumenda libero quod, totam nisi corporis illum accusantium minima vitae ut iure tempora
+                        molestias quam aut, nam, harum accusamus hic aspernatur officia quidem? Exercitationem error eum
+                        nisi a quo perspiciatis non odit, deleniti, velit ad vel voluptate molestiae aspernatur nobis.
+                        Voluptatem provident distinctio officiis eveniet necessitatibus suscipit blanditiis minima quam
+                        labore sapiente possimus at doloribus debitis, consectetur minus ut architecto sunt veniam
+                        reiciendis laborum consequuntur qui hic cumque. Repellat earum ad sint culpa nam?
                     </p>
-                    <p class="intro-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, tempora?
-
+                    <p class="intro-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam ex veritatis
+                        exercitationem tempora, eveniet beatae recusandae numquam dolore. Autem dignissimos delectus
+                        culpa obcaecati? Vero maiores numquam sed totam officiis est suscipit ratione officia natus
+                        ullam. Placeat quaerat aliquam quibusdam reprehenderit nulla consequuntur porro natus minima eos
+                        nemo quidem totam esse quisquam, omnis dolore autem, necessitatibus eligendi. Minus sapiente
+                        optio sed impedit expedita eius nostrum odit vitae ad corrupti eaque laudantium tenetur harum
+                        pariatur earum ducimus corporis, dolorum ullam ex culpa, facilis itaque! Voluptate sequi nobis
+                        magni itaque illum rerum, quisquam eaque, impedit illo eum harum voluptates id beatae, minus
+                        culpa!
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- MAP -->
 
-
+    <!-- TEAM -->
+    <!-- TEAM -->
+    <div class="container">
+        <div id="team" class="pt-3">
+            <div class="container">
+                <h3 class="text-center subheadline">The team</h3>
+                <p class="text-center">Meet the projects team. We are all students from the master degree DHDK of the
+                    <i>University of Bologna "Alma Mater Studiorum".</i>
+                </p>
+                <div class="row logos-container justify-content-center">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="team__item">
+                            <div id="irem" class="member_img"></div>
+                            <h3 class="subtitle">İrem Atmar</h3>
+                            <p>After the Bachelor's Degree in Humanities at the University of Bologna (2018-2021), is
+                                now
+                                attending the Master's Dregree in DHDK.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="team__item">
+                            <div id="ulzhan" class="member_img"></div>
+                            <h3 class="subtitle">Ulzhan Baizhankyzy</h3>
+                            <p>After the Bachelor's Degree in Humanities at the University of Bologna (2018-2021), is
+                                now
+                                attending the Master's Dregree in DHDK.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="team__item">
+                            <div id="rana" class="member_img"></div>
+                            <h3 class="subtitle">Rana Coskun</h3>
+                            <p>After the Bachelor's Degree at the Accademia di Belle Arti of Bologna (2010-2014), is now
+                                attending the Master's Dregree in DHDK.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+  }
+  body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Helvetica', sans-serif; letter-spacing: 0px; font-size: 17px; color: #8d8f90; font-weight: 400; line-height: 32px; background: rgba(255,255,255,1); }
+h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: 'Helvetica', sans-serif; font-weight: 700; letter-spacing: -1px; line-height: 1; }
+h1 { font-size: 34px; }
+h2 { font-size: 28px; line-height: 38px; }
+h3 { font-size: 22px; line-height: 32px; }
+h4 { font-size: 20px; }
+h5 { font-size: 17px; }
+h6 { font-size: 12px; }
+p { margin: 0 0 20px; line-height: 1.7; }
+p:last-child { margin: 0px; }
+ul, ol { }
+a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
+a:focus, a:hover { text-decoration: none; color: #f85759; }
+
+
+
+.page-header { position: relative; background-size: cover; }
+.page-caption {  padding-top: 50px; padding-bottom: 50px;
+}
+.page-title { line-height: 1; color: #54c3e5; text-align: center;  font-family: Kudryashev Headline;
+    font-weight: Sans;
+    font-size: 100px; }
+.page-sub {text-align: center; font-weight: lighter;}
+.card-section { position: relative; bottom: 60px; }
+.card-block { padding: 80px; }
+.section-title { margin-bottom: 60px; }
+
+
+.card-container {
+    padding: 100px 60px 60px 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+  
+.card {
+    display: grid;
+    place-items: center;
+    width: 80vw;
+    max-width: 21.875rem;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0.625rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    
+}
+  
+.card > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+  
+.card__background {
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+}
+  
+.card__content {
+    --flow-space: 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex;
+    width: 100%;
+    height: 100%;
+    padding: 12% 1.25rem 1.875rem;
+  
+}
+  
+.card__content--container {
+    --flow-space: 1.25rem;
+}
+  
+.card__title {
+    position: relative;
+    width: fit-content;
+    width: -moz-fit-content;
+}
+  
+.card__title::after {
+    content: "";
+    position: absolute;
+    height: 0.3125rem;
+    width: calc(100% + 1.25rem);
+    bottom: calc((1.25rem - 0.5rem) * -1);
+    left: -1.25rem;
+    background-color: rgb(255, 140, 0);
+}
+  
+/* Media properties */
+@media (any-hover: hover) and (any-pointer: fine) {
+    .media-hover .card__content {
+        transform: translateY(62%);
+        transition: transform 500ms ease-out;
+        transition-delay: 500ms;
+    }
+
+    .media-hover .card__title::after {
+        opacity: 0;
+        transform: scaleX(0);
+        transition: opacity 1000ms ease-in, transform 500ms ease-out;
+        transition-delay: 500ms;
+        transform-origin: right;
+    }
+
+    .media-hover .card__background {
+        transition: transform 500ms ease-in;
+    }
+
+    .media-hover .card__content--container > :not(.card__title),
+    .media-hover .card__button {
+        opacity: 0;
+        transition: transform 500ms ease-out, opacity 500ms ease-out;
+    }
+
+    .media-hover .card:hover,
+    .media-hover .card:focus-within {
+        transform: scale(1.0);
+        transition: transform 500ms ease-in;
+    }
+
+    .media-hover .card:hover .card__content,
+    .media-hover .card:focus-within .card__content {
+        transform: translateY(0);
+        transition: transform 500ms ease-in;
+        background: rgb(30, 72, 139);
+        opacity: 0.925;
+    }
+
+    .media-hover .card:focus-within .card__content {
+        transition-duration: 0ms;
+    }
+
+    .media-hover .card:hover .card__content--container > :not(.card__title),
+    .media-hover .card:hover .card__button,
+    .media-hover .card:focus-within .card__content--container > :not(.card__title),
+    .media-hover .card:focus-within .card__button {
+        opacity: 1;
+        transition: opacity 500ms ease-in;
+        transition-delay: 1000ms;
+    }
+
+    .media-hover .card:hover .card__title::after,
+    .media-hover .card:focus-within .card__title::after {
+        opacity: 1;
+        transform: scaleX(1);
+        transform-origin: left;
+        transition: opacity 500ms ease-in, transform 500ms ease-in;
+        transition-delay: 500ms;
+    }
+}
+
+
+.intro {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    position: relative;
+    justify-content: center;
+}
+
+.intro-text{
+    font-size: 20px;
+    text-align: justify;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+#team { padding: 100px 0 100px 0; }
+.team__intro { text-align: center; margin: auto; width: 50%; }
+.team__item { padding: 20px; margin-top: 40px; }
+.member_role { font-weight: bold; font-size: 14px; padding-left: 30px; position: relative; }
+.member_role:after { position: absolute; content: " "; height: 3px; width: 25px; position: absolute; left: 0; top: 12px; background: #000; }
+.member_img { background-repeat: no-repeat; background-size: contain; height: 250px; background-position: center center; }
+#irem { background-image: url(../img/minimalism/team/irem-minimalism.png); }
+#ulzhan { background-image: url(../img/minimalism/team/ulzhan-minimalism.png); }
+#rana { background-image: url(../img/minimalism/team/rana-minimalism.png); }
