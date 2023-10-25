@@ -15,15 +15,30 @@ ul, ol { }
 a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
 a:focus, a:hover { text-decoration: none; color: #f85759; }
 
+/*fonts*/
+@font-face {
+    font-family: 'arabesque-initialen'; 
+    src: url('arabesque-initialen/ArabesqueInitialen.ttf') format('ttf'), 
+}
 
-
-.page-header { position: relative; background-size: cover; }
+.page-header { position: relative; background-size: cover; background-image: url(background.png);}
 .page-caption {  padding-top: 50px; padding-bottom: 50px;
 }
-.page-title { line-height: 1; color: #b91818; text-align: center;  font-family: Kudryashev Headline;
-    font-weight: Sans;
-    font-size: 100px; }
-.page-sub {text-align: center; font-weight: lighter;}
+.page-title { color: #000;
+    font-family: Garamond;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;}
+
+.page-sub { text-align: center; 
+            color: #000;
+            font-family: Garamond;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: normal;}
 .card-section { position: relative; bottom: 60px; }
 .card-block { padding: 80px; }
 .section-title { margin-bottom: 60px; }
@@ -184,3 +199,103 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 #ulzhan { background-image: url(../img/baroque/team/ulzhan-baroque.jpg); }
 #rana { background-image: url(../img/baroque/team/rana-baroque.jpg); }
 
+/* BAROQUE - ARTICLE PAGE */
+.food-article-container 
+    {padding: 20px;}
+
+
+.food-text-container 
+    {background-color: #f0f0f0; /* will change for the whole page */
+     padding: 20px; 
+     text-align: justify; 
+    }
+
+.text-ornament {
+    justify-content: center;
+}
+
+
+.text-ornament img {
+    width: 70%;
+    height: auto;
+}
+
+.first-heading {
+    text-align: center; 
+}
+.left-image {
+    float: left;
+    width: 100%;
+    margin: 0 20px 20px 0;
+}
+
+.right-image {
+    float: right;
+    width: 100%;
+    margin: 0 0 20px 20px;
+}
+
+/* New CSS for the image container */
+.image-container {
+    float: left; /* Make the container and images float to the left */
+    width: 100%;
+}
+
+
+.text-title h2 {
+    color: black;
+    font-size: 35px;
+    font-family: Garamond;
+    font-weight: 700;
+    line-height: 56.35px;
+}
+
+.text-title h1 {
+    color: black;
+    font-size: 50px;
+    font-family: Garamond;
+    font-weight: 700;
+    line-height: 80.50px;
+}
+
+.text-title h2:last-child {
+    color: black;
+font-size: 35px;
+font-family: Garamond;
+font-weight: 700;
+line-height: 41.30px;
+}
+
+.text-publisher h3 {
+    color: black;
+    font-size: 28px;
+    font-family: Garamond;
+    font-style: italic;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+
+.text-sub-title p {
+    color: #000;
+    text-align: center;
+    font-family: Garamond;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 161%; /* 48.3px */
+    padding: 2%;
+}
+
+/* how to add dropcap? */
+.text-body p {
+    color: #000;
+    text-align: justify;
+    font-family: Garamond;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 3%;
+}

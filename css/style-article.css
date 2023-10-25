@@ -89,7 +89,7 @@ line-height: 41.30px;
 
 .ornament {
     width: 100px;
-    /* I need to align it with the grid, how? */
+    /* wievport height ve width kullan.  I need to align it with the grid, how? */
 }
 
 .sub-title p {
