@@ -22,7 +22,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
 .page-title { line-height: 1; color: #000000; text-align: center;  font-family: Kudryashev Headline;
     font-weight: 400;
-    font-size: 140px; }
+    font-size: 100px; }
 .page-sub {text-align: center; font-weight: lighter;}
 .card-section { position: relative; bottom: 60px; }
 .card-block { padding: 80px; }
