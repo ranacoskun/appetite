@@ -38,7 +38,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
         font-size: 28px;}
 
    /*page sub gets down, couldnt figure out why*/    
-    
+
 .card-section { position: relative; bottom: 60px; }
 .card-block { padding: 80px; }
 .section-title { margin-bottom: 60px; }
@@ -50,7 +50,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
-  
+  #mapBaklava { height: 180px; }
 .card {
     display: grid;
     place-items: center;
