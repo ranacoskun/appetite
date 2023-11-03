@@ -21,24 +21,24 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     src: url('arabesque-initialen/ArabesqueInitialen.ttf') format('ttf'), 
 }
 
-.page-header { position: relative; background-size: cover; background-image: url(background.png);}
+.page-header { position: relative; background-size: cover; background-image: url(background.png); height: 200px;}
 .page-caption {  padding-top: 50px; padding-bottom: 50px;
 }
 .page-title { color: #000;
     font-family: Garamond;
-    font-size: 120px;
+    font-size: 100px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-align: center;}
 
-.page-sub { text-align: center; 
-            color: #000;
+.page-sub { text-align: center; font-weight: lighter;
             font-family: Garamond;
-            font-size: 28px;
             font-style: italic;
-            font-weight: 400;
-            line-height: normal;}
+        font-size: 28px;}
+
+   /*page sub gets down, couldnt figure out why*/    
+    
 .card-section { position: relative; bottom: 60px; }
 .card-block { padding: 80px; }
 .section-title { margin-bottom: 60px; }
@@ -213,7 +213,6 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 .text-ornament {
     justify-content: center;
 }
-
 
 .text-ornament img {
     width: 70%;
