@@ -63,7 +63,6 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     font-size: 40px; /* Reduce the font size for the sticky header */
 }
 
-#mapBaklava { height: 180px; }
 .card-container {
     padding: 100px 60px 60px 100px;
     display: grid;
