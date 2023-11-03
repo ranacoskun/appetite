@@ -1,3 +1,5 @@
+// Call the setDefaultStyle function when the page loads
+window.onload = setDefaultStyle;
 // Use a window.onload event listener to ensure the document is ready
 function changeStyle(styleName) {
     // Create a new link element for the selected style
@@ -115,8 +117,7 @@ L.marker([40.1431, 47.5769]).addTo(mapBaklava)
     .openPopup();
 
 
-// Call the setDefaultStyle function when the page loads
-window.onload = setDefaultStyle;
+
 
 
 
