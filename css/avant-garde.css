@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
   }
-  body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Helvetica', sans-serif; letter-spacing: 0px; font-size: 17px; color: #8d8f90; font-weight: 400; line-height: 32px; background: rgba(255,255,255,1); }
+  body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Helvetica', sans-serif; letter-spacing: 0px; font-size: 17px; color: #8d8f90;  line-height: 32px; background: rgba(255,255,255,1); }
 h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: 'Helvetica', sans-serif; font-weight: 700; letter-spacing: -1px; line-height: 1; }
 h1 { font-size: 34px; }
 h2 { font-size: 28px; line-height: 38px; }
@@ -11,34 +11,19 @@ h5 { font-size: 17px; }
 h6 { font-size: 12px; }
 p { margin: 0 0 20px; line-height: 1.7; }
 p:last-child { margin: 0px; }
+ul, ol { }
 a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
 a:focus, a:hover { text-decoration: none; color: #f85759; }
 
-/*fonts*/
-@font-face {
-    font-family: 'arabesque-initialen'; 
-    src: url('arabesque-initialen/ArabesqueInitialen.ttf') format('ttf'), 
-}
 
-.page-header { position: relative; background-size: cover; background-image: url(background.png); height: 200px;}
+
+.page-header { position: relative; background-size: cover; height: 200px; background-image: none;}
 .page-caption {  padding-top: 50px; padding-bottom: 50px;
 }
-.page-title { color: #000;
-    font-family: Garamond;
-    font-size: 100px;
-    font-style: normal;
+.page-title { line-height: 1; color: #000000; text-align: center;  font-family: Kudryashev Headline;
     font-weight: 400;
-    line-height: normal;
-    text-align: center;
-}
-
-.page-sub { text-align: center; font-weight: lighter;
-            font-family: Garamond;
-            font-style: italic;
-        font-size: 28px;}
-
-   /*page sub gets down, couldnt figure out why*/    
-
+    font-size: 100px; }
+.page-sub {text-align: center; font-weight: lighter;}
 .card-section { position: relative; bottom: 60px; }
 .card-block { padding: 80px; }
 .section-title { margin-bottom: 60px; }
@@ -50,7 +35,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
-
+  
 .card {
     display: grid;
     place-items: center;
@@ -195,106 +180,6 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 .member_role { font-weight: bold; font-size: 14px; padding-left: 30px; position: relative; }
 .member_role:after { position: absolute; content: " "; height: 3px; width: 25px; position: absolute; left: 0; top: 12px; background: #000; }
 .member_img { background-repeat: no-repeat; background-size: contain; height: 250px; background-position: center center; }
-#irem { background-image: url(../img/baroque/team/irem-baroque.jpg); }
-#ulzhan { background-image: url(../img/baroque/team/ulzhan-baroque.jpg); }
-#rana { background-image: url(../img/baroque/team/rana-baroque.jpg); }
-
-/* BAROQUE - ARTICLE PAGE */
-.food-article-container 
-    {padding: 20px;}
-
-
-.food-text-container 
-    {background-color: #f0f0f0; /* will change for the whole page */
-     padding: 20px; 
-     text-align: justify; 
-    }
-
-.text-ornament {
-    justify-content: center;
-}
-
-.text-ornament img {
-    width: 70%;
-    height: auto;
-}
-
-.first-heading {
-    text-align: center; 
-}
-.left-image {
-    float: left;
-    width: 100%;
-    margin: 0 20px 20px 0;
-}
-
-.right-image {
-    float: right;
-    width: 100%;
-    margin: 0 0 20px 20px;
-}
-
-/* New CSS for the image container */
-.image-container {
-    float: left; /* Make the container and images float to the left */
-    width: 100%;
-}
-
-
-.text-title h2 {
-    color: black;
-    font-size: 35px;
-    font-family: Garamond;
-    font-weight: 700;
-    line-height: 56.35px;
-}
-
-.text-title h1 {
-    color: black;
-    font-size: 50px;
-    font-family: Garamond;
-    font-weight: 700;
-    line-height: 80.50px;
-}
-
-.text-title h2:last-child {
-    color: black;
-font-size: 35px;
-font-family: Garamond;
-font-weight: 700;
-line-height: 41.30px;
-}
-
-.text-publisher h3 {
-    color: black;
-    font-size: 28px;
-    font-family: Garamond;
-    font-style: italic;
-    font-weight: 400;
-    text-align: center;
-}
-
-
-
-.text-sub-title p {
-    color: #000;
-    text-align: center;
-    font-family: Garamond;
-    font-size: 30px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 161%; /* 48.3px */
-    padding: 2%;
-}
-
-/* how to add dropcap? */
-.text-body p {
-    color: #000;
-    text-align: justify;
-    font-family: Garamond;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding: 3%;
-}
+#irem { background-image: url(../img/minimalism/team/irem-minimalism.png); }
+#ulzhan { background-image: url(../img/minimalism/team/ulzhan-minimalism.png); }
+#rana { background-image: url(../img/minimalism/team/rana-minimalism.png); }

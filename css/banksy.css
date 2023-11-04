@@ -25,6 +25,14 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     font-size: 140px; }
 .page-sub {text-align: center; font-weight: lighter;}
 /* .card-section { position: relative; bottom: 60px; }
+.page-header { position: relative; background-size: cover; height: 200px; background-image: none;}
+.page-caption {  padding-top: 50px; padding-bottom: 50px;
+}
+.page-title { line-height: 1; color: #000000; text-align: center;  font-family: Kudryashev Headline;
+    font-weight: 400;
+    font-size: 100px; }
+.page-sub {text-align: center; font-weight: lighter;}
+.card-section { position: relative; bottom: 60px; }
 .card-block { padding: 80px; }
 .section-title { margin-bottom: 60px; }
 
@@ -94,6 +102,8 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
   
 /* Media properties */
 /*
+  
+/* Media properties */
 @media (any-hover: hover) and (any-pointer: fine) {
     .media-hover .card__content {
         transform: translateY(62%);
@@ -261,6 +271,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 .card-container .card.card--dark a .card--hover .link {
     color: #fde74c;
 }
+
 
 .intro {
     margin-top: 50px;

@@ -1,3 +1,5 @@
+// Call the setDefaultStyle function when the page loads
+window.onload = setDefaultStyle;
 
 // Use a window.onload event listener to ensure the document is ready
 function changeStyle(styleName) {
@@ -25,7 +27,9 @@ function setDefaultStyle() {
     changeStyle('../css/minimalism.css');
 }
 
-// Call the setDefaultStyle function when the page loads
-window.onload = setDefaultStyle;
+// The page opens up with a default page. not minimalism?!!!
+
+
+
 
 

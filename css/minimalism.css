@@ -17,8 +17,10 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 
 
-.page-header { position: relative; background-size: cover; }
-.page-caption {  padding-top: 50px; padding-bottom: 50px;
+.page-header {
+    position: relative;
+    background: none;
+    transition: padding 0.8s; /* Add a transition for smooth effect */
 }
 .page-title { line-height: 1; color: #000000; text-align: center;  font-family: Kudryashev Headline;
     font-weight: 400;
@@ -49,6 +51,45 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 .card-block { padding: 80px; }
 .section-title { margin-bottom: 60px; }
 
+.page-caption {
+    padding-top: 20px; /* Reduce the top padding */
+    padding-bottom: 20px; /* Reduce the bottom padding */
+}
+
+.page-title {
+    color: #000000;
+    font-family: Kudryashev Headline;
+    font-size: 100px; 
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+}
+
+.page-sub {
+    text-align: center;
+    font-weight: lighter;
+}
+
+/* Make the header sticky */
+.page-header.sticky {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgb(214, 214, 214);
+    box-shadow: 0 4px 6px -6px #222;
+}
+
+/* Adjust the styles for the sticky header */
+.page-header.sticky .page-caption {
+    padding-top: 10px; /* Reduce the top padding for the sticky header */
+    padding-bottom: 10px; /* Reduce the bottom padding for the sticky header */
+}
+
+.page-header.sticky .page-title {
+    font-size: 40px; /* Reduce the font size for the sticky header */
+}
 
 
 .card-container {
@@ -340,7 +381,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     color: #fde74c;
 }
 
-.intro {
+.welcome-intro {
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 50px;
@@ -349,7 +390,12 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     justify-content: center;
 }
 
-.intro-text{
+.welcome-title{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.welcome-body{
     font-size: 20px;
     text-align: justify;
     padding-bottom: 50px;
@@ -360,11 +406,25 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
  */
 
 #team { padding: 100px 0 100px 0; }
-.team__intro { text-align: center; margin: auto; width: 50%; }
-.team__item { padding: 20px; margin-top: 40px; }
-.member_role { font-weight: bold; font-size: 14px; padding-left: 30px; position: relative; }
-.member_role:after { position: absolute; content: " "; height: 3px; width: 25px; position: absolute; left: 0; top: 12px; background: #000; }
-.member_img { background-repeat: no-repeat; background-size: contain; height: 250px; background-position: center center; }
+.team-title {    
+    padding-top: 50px;
+    text-align: center;
+}
+.team-intro { text-align: center; margin: auto; width: 50%; }
+.team-item { padding: 20px; margin-top: 40px; }
+.team-body{
+    font-size: 20px;
+    text-align: justify;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.member-role { font-weight: bold; font-size: 14px; padding-left: 30px; position: relative; }
+.member-role:after { position: absolute; content: " "; height: 3px; width: 25px; position: absolute; left: 0; top: 12px; background: #000; }
+.member-img { background-repeat: no-repeat; background-size: contain; height: 250px; background-position: center center; }
 #irem { background-image: url(../img/minimalism/team/irem-minimalism.png); }
 #ulzhan { background-image: url(../img/minimalism/team/ulzhan-minimalism.png); }
 #rana { background-image: url(../img/minimalism/team/rana-minimalism.png); }
+
+#mapBaklava { height: 180px; }
