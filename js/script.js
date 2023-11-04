@@ -1,5 +1,6 @@
 // Call the setDefaultStyle function when the page loads
 window.onload = setDefaultStyle;
+
 // Use a window.onload event listener to ensure the document is ready
 function changeStyle(styleName) {
     // Create a new link element for the selected style
