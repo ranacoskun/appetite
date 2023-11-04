@@ -18,10 +18,19 @@
 
     <link rel="stylesheet" href="css/normalize.min.css">
 
+    <!--For cards-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+
+        crossorigin="anonymous">
     <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -59,7 +68,7 @@
             </div>
         </div>
 
-        <!-- dummy navbar -->
+        <!-- dummy navbar 
         <nav class="navbar custom-navbar">
             <div class="container">
                 <ul class="nav justify-content-center">
@@ -75,109 +84,154 @@
                 </ul>
             </div>
         </nav>
-    </div>
+    </div> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent gx-5">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Articles
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#a">Turkey issue</a></li>
+                            <li><a class="dropdown-item" href="#">Italy issue</a></li>
+                            <li><a class="dropdown-item" href="#">Kazakhstan issue</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Disclaimer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Documentation</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    
+
+
+
 
     <!-- CARD LAYOUT -->
-    <div class="container">
-
+     <div class="container">
+       
         <button onclick="changeStyle('css/minimalism.css')">Style 1</button>
         <button onclick="changeStyle('css/baroque.css')">Style 2</button>
-        <button onclick="changeStyle('css/bauhaus.css')">Style 3</button>
-
-        <!-- <div class="card-container">
-            <div class="card">
+        <button onclick="changeStyle('css/bauhaus.css')">Style 3</button> 
+        
+        <div class="container">
+        <div class="row gy-5">
+            <div class="col-lg col-md col-sm">
+                <div class="card">
                 <img class="card__background" src="img/minimalism/covers/tur-minimalism.png"
                     alt="Turkey Magazine Cover" />
-                <div class="card__content | flow">
-                    <div class="card__content--container | flow">
+                <div class="card_overflow">
                         <h2 class="card__title">Choose Article</h2>
                         <ul class="card__description">
                             <li><a href="article.html">First Article</a></li>
                             <li><a href="article.html">Second Article</a></li>
                             <li><a href="article.html">Third Article</a></li>
                         </ul>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-lg col-md col-sm">
+                <div class="card">
+                    <img class="card__background" src="img/minimalism/covers/ita-minimalism.png"
+                        alt="Italy Magazine Cover" />
+                    <div class="card_overflow">
+                            <h2 class="card__title">Choose Article</h2>
+                            <ul class="card__description">
+                                <li><a href="article.html">First Article</a></li>
+                                <li><a href="article.html">Second Article</a></li>
+                                <li><a href="article.html">Third Article</a></li>
+                            </ul>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <img class="card__background" src="img/minimalism/covers/ita-minimalism.png"
-                    alt="Italy Magazine Cover" />
-                <div class="card__content | flow">
-                    <div class="card__content--container | flow">
-                        <h2 class="card__title">Choose Article</h2>
-                        <ul class="card__description">
-                            <li><a href="article.html">First Article</a></li>
-                            <li><a href="article.html">Second Article</a></li>
-                            <li><a href="article.html">Third Article</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            
+            <div class="col-lg col-md col-sm">
             <div class="card">
                 <img class="card__background" src="img/minimalism/covers/kaz-minimalism.png"
                     alt="Kazakhstan Magazine Cover" />
-                <div class="card__content | flow">
-                    <div class="card__content--container | flow">
+                <div class="card_overflow">
                         <h2 class="card__title">Choose Article</h2>
                         <ul class="card__description">
                             <li><a href="article.html">First Article</a></li>
                             <li><a href="article.html">Second Article</a></li>
                             <li><a href="article.html">Third Article</a></li>
                         </ul>
-                    </div>
                 </div>
             </div>
-        </div> -->
+            </div>
+        </div> 
+    </div>
+       
+        
+                        
+    <!-- CARD LAYOUT END -->
+
+
+    <!--Ulzhan's cards
+    <div class="body-cards">
         <div class="row">
-            <!-- Card 1 -->
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="img/minimalism/covers/tur-minimalism.png" alt="Turkey Magazine Cover"
-                        class="card-img-top">
-                    <!-- <div class="card-body">
-                        <h5 class="card-title">Choose Article</h5>
-                        <ul class="list-group">
-                            <li class="list-group-item"><a href="article.html">First Article</a></li>
-                            <li class="list-group-item"><a href="article.html">Second Article</a></li>
-                            <li class="list-group-item"><a href="article.html">Third Article</a></li>
-                        </ul>
-                    </div> -->
-                </div>
+            <div class="card"><a href="hottub">
+                <img class="card-img-top" src="img/minimalism/covers/tur-minimalism.png" alt="Italy Magazine Cover">
+                    <div class="card--hover">
+                        <h2>Articles</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie pellentesque mi nec lacinia. Cras volutpat arcu sit amet elit sodales, nec volutpat velit bibendum.</p>
+                        <p class="link">A taste of Turkey: Gastronomy destinations for foodies</p>
+                        <p class="link">Deconstructing baklava, a Turkish classic with a noble past</p>
+                        <p class="link">Raki and everything you need to know about the culture of raki</p>
+                    </div>
+                </a>
+                <div class="card--border"></div>
             </div>
-
-            <!-- Card 2 -->
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="img/minimalism/covers/ita-minimalism.png" alt="Italy Magazine Cover" class="card-img-top">
-                    <!-- <div class="card-body">
-                        <h5 class="card-title">Choose Article</h5>
-                        <ul class="list-group">
-                            <li class="list-group-item"><a href="article.html">First Article</a></li>
-                            <li class="list-group-item"><a href="article.html">Second Article</a></li>
-                            <li class="list-group-item"><a href="article.html">Third Article</a></li>
-                        </ul>
-                    </div> -->
-                </div>
+        </div>
+        <div class="card-container">
+            <div class="card"><a href="worldweb">
+                    <img class="card-img-top" src="img/minimalism/covers/ita-minimalism.png" alt="Italy Magazine Cover">
+                    <div class="card--hover">
+                        <h2>Contents</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci.</p>
+                        <p class="link">The Twisted History of Pasta</p>
+                        <p class="link">Italian Makers of Prosecco Seek Recognition</p>
+                        <p class="link">The Husband and Wife Whose Restaurant Gave the World Tiramisu</p>
+                    </div>
+                </a>
+                <div class="card--border"></div>
             </div>
-
-            <!-- Card 3 -->
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="img/minimalism/covers/kaz-minimalism.png" alt="Kazakhstan Magazine Cover"
-                        class="card-img-top">
-                    <!-- <div class="card-body">
-                        <h5 class="card-title">Choose Article</h5>
-                        <ul class="list-group">
-                            <li class="list-group-item"><a href="article.html">First Article</a></li>
-                            <li class="list-group-item"><a href="article.html">Second Article</a></li>
-                            <li class="list-group-item"><a href="article.html">Third Article</a></li>
-                        </ul>
-                    </div> -->
-                </div>
+        </div>
+        <div class="card-container">
+            <div class="card"><a href="trainthings">
+                <img class="card-img-top" src="img/minimalism/covers/kaz-minimalism.png" alt="Italy Magazine Cover">
+                    <div class="card--hover">
+                        <h2>Explore</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie pellentesque mi nec lacinia. Cras volutpat arcu sit amet elit sodales, nec volutpat velit bibendum.</p>
+                        <p class="link">20 Kazakh Foods You Need to Try</p>
+                        <p class="link">Beshbarmak: The Rich, Meaty Pasta from Central Asia</p>
+                        <p class="link">Kazakh National Food and Drinks</p>
+                    </div>
+                </a>
+                <div class="card--border"></div>
             </div>
         </div>
     </div>
-    <!-- CARD LAYOUT END -->
+ 
+    end of cards-->
+
 
     <!-- INTRO -->
     <div class="container">
@@ -251,9 +305,13 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+   
+
+    <script src="js/script.js"></script>
+    <!-- SWUP -->
+    <script src="js/swup.min.js"></script>
+    <script src="js/SwupBodyClassPlugin.min.js"></script>
+    <script src="js/SwupHeadPlugin.min.js"></script>
 
 </body>
 
