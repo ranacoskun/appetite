@@ -11,19 +11,25 @@ h5 { font-size: 17px; }
 h6 { font-size: 12px; }
 p { margin: 0 0 20px; line-height: 1.7; }
 p:last-child { margin: 0px; }
-ul, ol { }
 a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
 a:focus, a:hover { text-decoration: none; color: #f85759; }
-
-
 
 .page-header { position: relative; background-size: cover; }
 .page-caption {  padding-top: 50px; padding-bottom: 50px;
 }
-.page-title { line-height: 1; color: #000000; text-align: center;  font-family: Kudryashev Headline;
+.page-title { 
+    line-height: 1; 
+    color: #000000; 
+    text-align: center;  
+    font-family: Kudryashev Headline;
     font-weight: 400;
-    font-size: 100px; }
-.page-sub {text-align: center; font-weight: lighter;}
+    font-size: 100px; 
+}
+
+.page-sub {
+    text-align: center; 
+    font-weight: lighter;
+}
 
 
 /*nav-bar style*/
@@ -37,15 +43,15 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     border-top: 0.5px solid black;
     border-bottom: 0.5px solid black;
     padding: 5px;
-  }
+}
 
-  .navbar-nav > li{
+.navbar-nav > li{
     padding-left:80px;
     padding-right:80px;
     font-family: Helvetica, sans-serif ;
-  }
+}
   
- .card-section { position: relative; bottom: 60px; }
+.card-section { position: relative; bottom: 60px; }
 .card-block { padding: 80px; }
 .section-title { margin-bottom: 60px; }
 
@@ -67,7 +73,6 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     overflow: hidden;
     border-radius: 0.625rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
-    margin: 
 }
   
 /* .card > * {
@@ -157,6 +162,10 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     left: -1.25rem;
     background-color: rgb(255, 140, 0);
 }
+
+#card1{ background-image: url(../img/minimalism/covers/tur-minimalism.png);} 
+#card2{ background-image: url(../img/minimalism/covers/ita-minimalism.png);}
+#card3{ background-image: url(../img/minimalism/covers/kaz-minimalism.png);}
 
 
   
@@ -339,6 +348,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 .card-container .card.card--dark a .card--hover .link {
     color: #fde74c;
 }
+ */
 
 .intro {
     margin-top: 50px;
@@ -357,7 +367,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     padding-left: 50px;
     padding-right: 50px;
 }
- */
+
 
 #team { padding: 100px 0 100px 0; }
 .team__intro { text-align: center; margin: auto; width: 50%; }
@@ -368,3 +378,106 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 #irem { background-image: url(../img/minimalism/team/irem-minimalism.png); }
 #ulzhan { background-image: url(../img/minimalism/team/ulzhan-minimalism.png); }
 #rana { background-image: url(../img/minimalism/team/rana-minimalism.png); }
+
+#mapBaklava { height: 180px; }
+
+
+/* ARTICLE */
+.article-page-title{
+    line-height: 1; 
+    color: #000000; 
+    text-align: center;  
+    font-family: Kudryashev Headline;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.article-container {
+    margin: 20px;
+    padding: 20px;
+}
+
+.article-header {
+    padding: 50px; 
+    background-color: #000000; /* will change for the whole page */
+    border-radius: 25px;
+}
+
+.article-body {
+    padding: 20px; 
+    text-align: justify; 
+}
+
+.first-heading {
+    text-align: center; 
+}
+.left-image {
+    float: left;
+    width: 100%;
+    margin: 0 20px 20px 0;
+}
+
+.right-image {
+    float: right;
+    width: 100%;
+    margin: 0 0 20px 20px;
+}
+
+/* New CSS for the image container */
+.image-container {
+    float: left; /* Make the container and images float to the left */
+    width: 100%;
+}
+
+
+.text-title h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 56.35px;
+}
+
+.text-title h1 {
+    font-family: Kudryashev Headline;
+    color: white;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 80.50px;
+}
+
+.text-title h2:last-child {
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 41.30px;
+}
+
+.text-publisher h3 {
+    padding-top: 50px;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 20px;
+}
+
+.text-sub-title p {
+    color: black;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 161%; /* 48.3px */
+    padding: 2%;
+}
+
+/* how to add dropcap? */
+.text-body p {
+    color: #000;
+    text-align: justify;
+    font-size: 20px;
+    font-style: normal;
+    line-height:2-5vh;
+    padding: 3%;
+}
