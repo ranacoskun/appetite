@@ -31,57 +31,40 @@
         crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
     <script src="js/script.js"></script>
+
     <!-- SWUP -->
     <script src="js/swup.min.js"></script>
     <script src="js/SwupBodyClassPlugin.min.js"></script>
     <script src="js/SwupHeadPlugin.min.js"></script>
 
+    <!-- LEAFLET -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-        /* Custom CSS for the thin border around the navbar */
-        .custom-navbar {
-            border: 1px solid #ccc;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="site-container">
+    <header class="site-container">
         <div class="page-header">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-caption">
                             <h1 class="page-title">APPETITE</h1>
-                            <h5 class="page-sub">Journal about different world cuisines with XML.</h2>
+                            <h5 class="page-sub" id="page-sub">Journal about different world cuisines with XML.</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
-    <!-- <nav class="navbar custom-navbar">
-        <div class="container">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Topic 1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Topic 2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Topic 3</a>
-                </li>
-            </ul>
-        </div>
-    </nav> -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent gx-5">
         <div class="container">
@@ -115,96 +98,62 @@
     </nav>
 
     <!-- CARD LAYOUT -->
-     <div class="container">
-       
+    <div class="container">
+
         <button onclick="changeStyle('css/minimalism.css')">Style 1</button>
         <button onclick="changeStyle('css/baroque.css')">Style 2</button>
-        <button onclick="changeStyle('css/bauhaus.css')">Style 3</button> 
-        
-        <div class="container">
-        <div class="row gy-5">
-            <div class="col-lg col-md col-sm">
-                <div class="card">
-                <img class="card__background" src="img/minimalism/covers/tur-minimalism.png"
-                    alt="Turkey Magazine Cover" />
-                <div class="card_overflow">
-                        <h2 class="card__title">Choose Article</h2>
-                        <ul class="card__description">
-                            <li><a href="article.html">First Article</a></li>
-                            <li><a href="article.html">Second Article</a></li>
-                            <li><a href="article.html">Third Article</a></li>
-                        </ul>
-                </div>
-                </div>
-            </div>
+        <button onclick="changeStyle('css/bauhaus.css')">Style 3</button>
 
-            <div class="col-lg col-md col-sm">
-                <div class="card">
-                    <img class="card__background" src="img/minimalism/covers/ita-minimalism.png"
-                        alt="Italy Magazine Cover" />
-                    <div class="card_overflow">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg col-md col-sm">
+                    <div class="card">
+                        <img class="card__background" src="img/minimalism/covers/tur-minimalism.png"
+                            alt="Turkey Magazine Cover" />
+                        <div class="card_overflow">
                             <h2 class="card__title">Choose Article</h2>
                             <ul class="card__description">
                                 <li><a href="article.html">First Article</a></li>
                                 <li><a href="article.html">Second Article</a></li>
                                 <li><a href="article.html">Third Article</a></li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md col-sm">
+                    <div class="card">
+                        <img class="card__background" src="img/minimalism/covers/ita-minimalism.png"
+                            alt="Italy Magazine Cover" />
+                        <div class="card_overflow">
+                            <h2 class="card__title">Choose Article</h2>
+                            <ul class="card__description">
+                                <li><a href="article.html">First Article</a></li>
+                                <li><a href="article.html">Second Article</a></li>
+                                <li><a href="article.html">Third Article</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md col-sm">
+                    <div class="card">
+                        <img class="card__background" src="img/minimalism/covers/kaz-minimalism.png"
+                            alt="Kazakhstan Magazine Cover" />
+                        <div class="card_overflow">
+                            <h2 class="card__title">Choose Article</h2>
+                            <ul class="card__description">
+                                <li><a href="article.html">First Article</a></li>
+                                <li><a href="article.html">Second Article</a></li>
+                                <li><a href="article.html">Third Article</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-lg col-md col-sm">
-            <div class="card">
-                <img class="card__background" src="img/minimalism/covers/kaz-minimalism.png"
-                    alt="Kazakhstan Magazine Cover" />
-                <div class="card_overflow">
-                        <h2 class="card__title">Choose Article</h2>
-                        <ul class="card__description">
-                            <li><a href="article.html">First Article</a></li>
-                            <li><a href="article.html">Second Article</a></li>
-                            <li><a href="article.html">Third Article</a></li>
-                        </ul>
-                </div>
-            </div>
-            </div>
-        </div> 
+        </div>
     </div>
-       
-        
-                        
-    <!-- CARD LAYOUT END -->
 
-
-    <!--Ulzhan's cards
-    <div class="body-cards">
-        <div class="row">
-            <div class="card"><a href="hottub">
-                <img class="card-img-top" src="img/minimalism/covers/tur-minimalism.png" alt="Italy Magazine Cover">
-                    <div class="card--hover">
-                        <h2>Articles</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at est orci. Nam molestie pellentesque mi nec lacinia. Cras volutpat arcu sit amet elit sodales, nec volutpat velit bibendum.</p>
-                        <p class="link">A taste of Turkey: Gastronomy destinations for foodies</p>
-                        <p class="link">Deconstructing baklava, a Turkish classic with a noble past</p>
-                        <p class="link">Raki and everything you need to know about the culture of raki</p>
-                    </div>
-                </a>
-                <div class="card--border"></div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="img/minimalism/covers/ita-minimalism.png" alt="Italy Magazine Cover" class="card-img-top">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="img/minimalism/covers/kaz-minimalism.png" alt="Kazakhstan Magazine Cover"
-                        class="card-img-top">
-                </div>
-            </div>
-        </div> -->
-    </div>
- 
-    end of cards-->
 
 
     <!-- INTRO -->
