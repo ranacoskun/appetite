@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
   }
-  body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Helvetica', sans-serif; letter-spacing: 0px; font-size: 17px; color: #8d8f90; font-weight: 400; line-height: 32px; background: rgba(255,255,255,1); }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Helvetica', sans-serif; letter-spacing: 0px; font-size: 17px; color: #8d8f90;  line-height: 32px; background: rgba(255,255,255,1); }
 h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: 'Helvetica', sans-serif; font-weight: 700; letter-spacing: -1px; line-height: 1; }
 h1 { font-size: 34px; }
 h2 { font-size: 28px; line-height: 38px; }
@@ -11,22 +11,114 @@ h5 { font-size: 17px; }
 h6 { font-size: 12px; }
 p { margin: 0 0 20px; line-height: 1.7; }
 p:last-child { margin: 0px; }
-ul, ol { }
 a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
 a:focus, a:hover { text-decoration: none; color: #f85759; }
 
-
-
-.page-header { position: relative; background-size: cover; }
-.page-caption {  padding-top: 50px; padding-bottom: 50px;
+.section {
+    position: relative;
 }
-.page-title { line-height: 1; color: #54c3e5; text-align: center;  font-family: Kudryashev Headline;
-    font-weight: Sans;
-    font-size: 100px; }
-.page-sub {text-align: center; font-weight: lighter;}
-.card-section { position: relative; bottom: 60px; }
+.section.bg-static {
+    margin: auto;
+    background-color: #ECDDBE;
+}
+.section .bg-move {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 500px;
+    /* right: auto; */
+    width: 150vh;
+    height: auto;
+    /* max-width: ; */
+    background-size: contain;
+    /* background-image: url("https://www.pngall.com/wp-content/uploads/2016/03/Cat-PNG-5.png"); */
+    background-image: url("https://assets-global.website-files.com/5b13df51d0d5fe8211f203da/5b13f381541a8480ba1420db_square.svg");
+    background-position: 500px;
+    background-repeat: no-repeat;
+}
+  
+.page-header {
+    position: relative;
+    background: none;
+    transition: padding 0.8s; /* Add a transition for smooth effect */
+}
+
+.page-title { 
+    line-height: 1; 
+    color: #000000; 
+    text-align: center;  
+    font-family: Kudryashev Headline;
+    font-weight: 400;
+    font-size: 100px; 
+}
+
+.page-sub {
+    text-align: center; 
+    font-weight: lighter;
+}
+
+.page-caption {
+    padding-top: 20px; /* Reduce the top padding */
+    padding-bottom: 20px; /* Reduce the bottom padding */
+}
+
+.page-title {
+    color: #000000;
+    font-family: Kudryashev Headline;
+    font-size: 100px; 
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+}
+
+.page-sub {
+    text-align: center;
+    font-weight: lighter;
+}
+
+/* Make the header sticky */
+.page-header.sticky {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgb(214, 214, 214);
+    box-shadow: 0 4px 6px -6px #222;
+}
+
+/* Adjust the styles for the sticky header */
+.page-header.sticky .page-caption {
+    padding-top: 10px; /* Reduce the top padding for the sticky header */
+    padding-bottom: 10px; /* Reduce the bottom padding for the sticky header */
+}
+
+.page-header.sticky .page-title {
+    font-size: 40px; /* Reduce the font size for the sticky header */
+}
+
+/*nav-bar style*/
+
+.navbar li {
+    color:#000000;
+}
+
+.navbar {
+    margin-left: 1rem;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    padding: 5px;
+}
+
+.navbar-nav > li{
+    padding-left:80px;
+    padding-right:80px;
+    font-family: Helvetica, sans-serif ;
+}
+  
+/* .card-section { position: relative; bottom: 60px; }
 .card-block { padding: 80px; }
-.section-title { margin-bottom: 60px; }
+.section-title { margin-bottom: 60px; } */
 
 
 .card-container {
@@ -39,26 +131,70 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 .card {
     display: grid;
     place-items: center;
-    width: 80vw;
+    width: 21rem;
     max-width: 21.875rem;
     height: 100%;
     overflow: hidden;
     border-radius: 0.625rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
-    
 }
   
-.card > * {
+/* .card > * {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
-  
+*/
+
 .card__background {
     object-fit: cover;
     max-width: 100%;
     height: 100%;
 }
+
+
+/* NEW INSERT OF A STYLE */
+
+.card_overflow{
+    padding: 16px 8px 8px 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white; /* rgba(0, 0, 0, 0.75);  black with opacity */
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease; /* for smooth transition */
+}
+
+.card:hover .card_overflow{
+    height: 100%;
+}
+
+.card__title h2{
+    /* padding-left: 4px; */
+    width: 100%;
+    margin-top: 30%;
+    color:black;
+    font-size: 4wf;
+    position: absolute;
+    text-align: center;
+    transform: rotate(-5deg)skewX(-5deg); 
+}
+
+.card__description a {
+    text-align: left;
+    color: black;
+    font-size: 1.2 vw;
+   /* margin: 10% 0 0 18%; */
+    left: 20px;
+    width: 70%;
+    letter-spacing: 5px;
+    line-height: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
   
+
 .card__content {
     --flow-space: 0.9375rem;
     display: flex;
@@ -90,72 +226,8 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     left: -1.25rem;
     background-color: rgb(255, 140, 0);
 }
-  
-/* Media properties */
-@media (any-hover: hover) and (any-pointer: fine) {
-    .media-hover .card__content {
-        transform: translateY(62%);
-        transition: transform 500ms ease-out;
-        transition-delay: 500ms;
-    }
 
-    .media-hover .card__title::after {
-        opacity: 0;
-        transform: scaleX(0);
-        transition: opacity 1000ms ease-in, transform 500ms ease-out;
-        transition-delay: 500ms;
-        transform-origin: right;
-    }
-
-    .media-hover .card__background {
-        transition: transform 500ms ease-in;
-    }
-
-    .media-hover .card__content--container > :not(.card__title),
-    .media-hover .card__button {
-        opacity: 0;
-        transition: transform 500ms ease-out, opacity 500ms ease-out;
-    }
-
-    .media-hover .card:hover,
-    .media-hover .card:focus-within {
-        transform: scale(1.0);
-        transition: transform 500ms ease-in;
-    }
-
-    .media-hover .card:hover .card__content,
-    .media-hover .card:focus-within .card__content {
-        transform: translateY(0);
-        transition: transform 500ms ease-in;
-        background: rgb(30, 72, 139);
-        opacity: 0.925;
-    }
-
-    .media-hover .card:focus-within .card__content {
-        transition-duration: 0ms;
-    }
-
-    .media-hover .card:hover .card__content--container > :not(.card__title),
-    .media-hover .card:hover .card__button,
-    .media-hover .card:focus-within .card__content--container > :not(.card__title),
-    .media-hover .card:focus-within .card__button {
-        opacity: 1;
-        transition: opacity 500ms ease-in;
-        transition-delay: 1000ms;
-    }
-
-    .media-hover .card:hover .card__title::after,
-    .media-hover .card:focus-within .card__title::after {
-        opacity: 1;
-        transform: scaleX(1);
-        transform-origin: left;
-        transition: opacity 500ms ease-in, transform 500ms ease-in;
-        transition-delay: 500ms;
-    }
-}
-
-
-.intro {
+.welcome-intro {
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 50px;
@@ -164,7 +236,12 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     justify-content: center;
 }
 
-.intro-text{
+.welcome-title{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.welcome-body{
     font-size: 20px;
     text-align: justify;
     padding-bottom: 50px;
@@ -175,11 +252,127 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 
 #team { padding: 100px 0 100px 0; }
-.team__intro { text-align: center; margin: auto; width: 50%; }
-.team__item { padding: 20px; margin-top: 40px; }
-.member_role { font-weight: bold; font-size: 14px; padding-left: 30px; position: relative; }
-.member_role:after { position: absolute; content: " "; height: 3px; width: 25px; position: absolute; left: 0; top: 12px; background: #000; }
-.member_img { background-repeat: no-repeat; background-size: contain; height: 250px; background-position: center center; }
+.team-title {    
+    padding-top: 50px;
+    text-align: center;
+}
+.team-intro { text-align: center; margin: auto; width: 50%; }
+.team-item { padding: 20px; margin-top: 40px; }
+.team-body{
+    font-size: 20px;
+    text-align: justify;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.member-role { font-weight: bold; font-size: 14px; padding-left: 30px; position: relative; }
+.member-role:after { position: absolute; content: " "; height: 3px; width: 25px; position: absolute; left: 0; top: 12px; background: #000; }
+.member-img { background-repeat: no-repeat; background-size: contain; height: 250px; background-position: center center; }
 #irem { background-image: url(../img/minimalism/team/irem-minimalism.png); }
 #ulzhan { background-image: url(../img/minimalism/team/ulzhan-minimalism.png); }
 #rana { background-image: url(../img/minimalism/team/rana-minimalism.png); }
+
+#mapBaklava { height: 180px; }
+
+
+
+/* ARTICLE */
+.article-page-title{
+    line-height: 1; 
+    color: #000000; 
+    text-align: center;  
+    font-family: Kudryashev Headline;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.article-container {
+    margin: 20px;
+    padding: 20px;
+}
+
+.article-header {
+    padding: 50px; 
+    background-color: #000000; /* will change for the whole page */
+    border-radius: 25px;
+}
+
+.article-body {
+    padding: 20px; 
+    text-align: justify; 
+}
+
+.first-heading {
+    text-align: center; 
+}
+.left-image {
+    float: left;
+    width: 100%;
+    margin: 0 20px 20px 0;
+}
+
+.right-image {
+    float: right;
+    width: 100%;
+    margin: 0 0 20px 20px;
+}
+
+/* New CSS for the image container */
+.image-container {
+    float: left; /* Make the container and images float to the left */
+    width: 100%;
+}
+
+
+.text-title h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 56.35px;
+}
+
+.text-title h1 {
+    font-family: Kudryashev Headline;
+    color: white;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 80.50px;
+}
+
+.text-title h2:last-child {
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 41.30px;
+}
+
+.text-publisher h3 {
+    padding-top: 50px;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 20px;
+}
+
+.text-sub-title p {
+    color: black;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 161%; /* 48.3px */
+    padding: 2%;
+}
+
+/* how to add dropcap? */
+.text-body p {
+    color: #000;
+    text-align: justify;
+    font-size: 20px;
+    font-style: normal;
+    line-height:2-5vh;
+    padding: 3%;
+}
