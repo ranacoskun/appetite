@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
   body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: TakeOff; letter-spacing: 0px; font-size: 17px; color: #8d8f90;  line-height: 32px; background: rgba(255,255,255,1); 
-background-image: url('C:/Users/irema/OneDrive/Documents/GitHub/appetite/img/pop-art/elements/points-7.png');}
+background-image: url(../img/pop-art/elements/points-7.png);}
 h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: TakeOff; font-weight: 700; letter-spacing: -1px; line-height: 1; }
 h1 { font-size: 34px; }
 h2 { font-size: 28px; line-height: 38px; }
@@ -17,17 +17,17 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 @font-face {
     font-family: 'TakeOff';
-    src: url('C:/Users/irema/OneDrive/Documents/GitHub/appetite/img/pop-art/Take-Off-Hosehead/TakeOff.otf') format('opentype'), /* Specify the font file and format */
+    src: url('../img/pop-art/Take-Off-Hosehead/TakeOff.otf') format('opentype'), /* Specify the font file and format */
   }
   @font-face {
     font-family: 'TakeOff, YouHoser';
-    src: url('C:/Users/irema/OneDrive/Documents/GitHub/appetite/img/pop-art/Take-Off-Hosehead/TakeOffYouHoser.otf') format('opentype'), /* Specify the font file and format */
+    src: url('../img/pop-art/Take-Off-Hosehead/TakeOffYouHoser.otf') format('opentype'), /* Specify the font file and format */
   }
 
 .page-header {
     position: relative;
     transition: padding 0.8s;
-    background-image: url('C:/Users/irema/OneDrive/Documents/GitHub/appetite/img/pop-art/elements/background.png'); /* Add a transition for smooth effect */
+    background-image: url('../img/pop-art/elements/background.png'); /* Add a transition for smooth effect */
     background-size: cover; /* Adjust as needed */
     background-position: center bottom; /* Adjust as needed */
     background-repeat: no-repeat;
@@ -478,6 +478,13 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 
 /* ARTICLE */
+.article-page-caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
 .article-page-title{
     line-height: 1; 
     color: #000000; 
@@ -485,6 +492,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     font-family: TakeOff, YouHoser;
     font-weight: 800;
     font-size: 40px;
+    margin-right: 20px;
 }
 
 .article-container {
@@ -494,7 +502,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 .article-header {
     padding: 50px; 
-    background-image: url("C:/Users/irema/OneDrive/Documents/GitHub/appetite/img/pop-art/elements/pop-art-article-page-landing.svg");
+    background-image: url("../img/pop-art/elements/pop-art-article-page-landing.svg");
     background-size: cover; /* This will make the background image cover the entire container */
   background-position: center; /* Center the background image within the container */
   background-repeat: no-repeat;
@@ -575,5 +583,5 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
 
 .below-navbar {
-    background-image: url("C:/Users/irema/OneDrive/Documents/GitHub/appetite/img/pop-art/elements/points-7.png");    
+    background-image: url("../img/pop-art/elements/points-7.png");    
 }
