@@ -27,7 +27,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 .page-header {
     position: relative;
     transition: padding 0.8s;
-    background-image: url('../img/pop-art/elements/background.png'); /* Add a transition for smooth effect */
+    background-image: url(../img/pop-art/elements/background.png); /* Add a transition for smooth effect */
     background-size: cover; /* Adjust as needed */
     background-position: center bottom; /* Adjust as needed */
     background-repeat: no-repeat;
@@ -230,188 +230,6 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 #card3{ background-image: url(../img/pop-art/covers/kaz-pop-art.svg);}
 
 
-  
-/* Media properties 
-
-@media (any-hover: hover) and (any-pointer: fine) {
-    .media-hover .card__content {
-        transform: translateY(62%);
-        transition: transform 500ms ease-out;
-        transition-delay: 500ms;
-    }
-
-    .media-hover .card__title::after {
-        opacity: 0;
-        transform: scaleX(0);
-        transition: opacity 1000ms ease-in, transform 500ms ease-out;
-        transition-delay: 500ms;
-        transform-origin: right;
-    }
-
-    .media-hover .card__background {
-        transition: transform 500ms ease-in;
-    }
-
-    .media-hover .card__content--container > :not(.card__title),
-    .media-hover .card__button {
-        opacity: 0;
-        transition: transform 500ms ease-out, opacity 500ms ease-out;
-    }
-
-    .media-hover .card:hover,
-    .media-hover .card:focus-within {
-        transform: scale(1.0);
-        transition: transform 500ms ease-in;
-    }
-
-    .media-hover .card:hover .card__content,
-    .media-hover .card:focus-within .card__content {
-        transform: translateY(0);
-        transition: transform 500ms ease-in;
-        background: rgb(30, 72, 139);
-        opacity: 0.925;
-    }
-
-    .media-hover .card:focus-within .card__content {
-        transition-duration: 0ms;
-    }
-
-    .media-hover .card:hover .card__content--container > :not(.card__title),
-    .media-hover .card:hover .card__button,
-    .media-hover .card:focus-within .card__content--container > :not(.card__title),
-    .media-hover .card:focus-within .card__button {
-        opacity: 1;
-        transition: opacity 500ms ease-in;
-        transition-delay: 1000ms;
-    }
-
-    .media-hover .card:hover .card__title::after,
-    .media-hover .card:focus-within .card__title::after {
-        opacity: 1;
-        transform: scaleX(1);
-        transform-origin: left;
-        transition: opacity 500ms ease-in, transform 500ms ease-in;
-        transition-delay: 500ms;
-    }
-}
-
-*/
-
-
-
-
-
-
-
-
-/* Cards of ULZHAN
-
-.body-cards {
-    padding: 50px;
-    display: flex;
-    flex-flow: wrap;
-    font-family: "Ubuntu", sans-serif;
-}
-.body-cards * {
-    box-sizing: border-box;
-}
-
-.card-container {
-    flex: 300px;
-    margin: 30px;
-    overflow: hidden;
-}
-
-.card-container1 {
-    flex: 300px;
-    margin: 30px;
-    overflow: hidden;
-}
-.card-container .card {
-    font-weight: bold;
-    position: relative;
-    width: 100%;
-}
-
-.card-img-top{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.card-container .card a {
-    padding: 30px;
-    width: 100%;
-    height: 600px;
-    border: 1px solid black; 
-    background: white;
-    text-decoration: none;
-    color: black;
-    display: block;
-    transition: 0.25s ease;
-}
-.card-container .card a:hover {
-    transform: translate(-30px, -30px);
-    border-color: #5bc0eb;
-}
-.card-container .card a:hover .card--display {
-    display: none;
-}
-
-.card-container .card a:hover .card-img-top {
-    display: none;
-}
-.card-container .card a:hover .card--hover {
-    display: block;
-}
-
-.card-container .card a:hover .list-group {
-    display: block;
-}
-.card-container .card a .card--display i {
-    font-size: 60px;
-    margin-top: 200px;
-}
-.card-container .card a .card--display h2 {
-    margin: 20px 0 0;
-}
-.card-container .card a .card--hover {
-    display: none;
-}
-.card-container .card a .card--hover h2 {
-    margin: 20px 0;
-}
-.card-container .card a .card--hover p {
-    font-weight: normal;
-    line-height: 1.5;
-}
-.card-container .card a .card--hover p.link {
-    margin: 20px 0 0;
-    font-weight: bold;
-    color: #5bc0eb;
-}
-
-.card-container .card a:hover p.link::after {
-    color: red;
-}
-.card-container .card .card--border {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    border: 1px dashed black;
-    z-index: -1;
-}
-.card-container .card.card--dark a {
-    color: white;
-    background-color: black;
-    border-color: black;
-}
-.card-container .card.card--dark a .card--hover .link {
-    color: #fde74c;
-}
- */
-
 .welcome-intro {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -477,6 +295,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     background-color: #ffffff;}
 
 
+
 /* ARTICLE */
 .article-page-caption {
     display: flex;
@@ -502,12 +321,13 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 .article-header {
     padding: 50px; 
-    background-image: url("../img/pop-art/elements/pop-art-article-page-landing.svg");
-    background-size: cover; /* This will make the background image cover the entire container */
-  background-position: center; /* Center the background image within the container */
-  background-repeat: no-repeat;
-  width: 400vw;
-  height: auto;    
+    background-image: url(../img/pop-art/elements/pop-art-article-page-landing.svg);
+    /* background-size: contain; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: auto;    
     border-radius: 25px;
     border: 10px solid #000;
 }
@@ -583,5 +403,5 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
 
 .below-navbar {
-    background-image: url("../img/pop-art/elements/points-7.png");    
+    background-image: url(../img/pop-art/elements/points-7.png);    
 }

@@ -1,3 +1,51 @@
+@font-face {
+    font-family: 'Kudryashev Display';
+    src: url('KudryashevDisplay-Sans.eot');
+    src: local('Kudryashev Display Sans'), local('KudryashevDisplay-Sans'),
+        url('KudryashevDisplay-Sans.eot?#iefix') format('embedded-opentype'),
+        url('KudryashevDisplay-Sans.woff2') format('woff2'),
+        url('KudryashevDisplay-Sans.woff') format('woff'),
+        url('KudryashevDisplay-Sans.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kudryashev Headline';
+    src: url('KudryashevHeadline.eot');
+    src: local('Kudryashev Headline'), local('KudryashevHeadline'),
+        url('KudryashevHeadline.eot?#iefix') format('embedded-opentype'),
+        url('KudryashevHeadline.woff2') format('woff2'),
+        url('KudryashevHeadline.woff') format('woff'),
+        url('KudryashevHeadline.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kudryashev Display';
+    src: url('KudryashevDisplay.eot');
+    src: local('Kudryashev Display'), local('KudryashevDisplay'),
+        url('KudryashevDisplay.eot?#iefix') format('embedded-opentype'),
+        url('KudryashevDisplay.woff2') format('woff2'),
+        url('KudryashevDisplay.woff') format('woff'),
+        url('KudryashevDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kudryashev Headline';
+    src: url('KudryashevHeadline-Sans.eot');
+    src: local('Kudryashev Headline Sans'), local('KudryashevHeadline-Sans'),
+        url('KudryashevHeadline-Sans.eot?#iefix') format('embedded-opentype'),
+        url('KudryashevHeadline-Sans.woff2') format('woff2'),
+        url('KudryashevHeadline-Sans.woff') format('woff'),
+        url('KudryashevHeadline-Sans.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
   }
@@ -47,7 +95,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     line-height: 1; 
     color: #000000; 
     text-align: center;  
-    font-family: Kudryashev Headline;
+    font-family: 'Kudryashev Headline';
     font-weight: 400;
     font-size: 100px; 
 }
@@ -64,7 +112,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 .page-title {
     color: #000000;
-    font-family: Kudryashev Headline;
+    font-family: 'Kudryashev Headline';
     font-size: 100px; 
     font-weight: 400;
     line-height: 1;
@@ -273,9 +321,31 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 #ulzhan { background-image: url(../img/minimalism/team/ulzhan-minimalism.png); }
 #rana { background-image: url(../img/minimalism/team/rana-minimalism.png); }
 
-#mapBaklava { height: 180px; }
+#mapBaklava { height: 500px; }
+.map {
+    margin: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
+}
 
+/* FOOTER */
+.footer {
+    background-color: #222;
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
 
+.footer-body {
+    text-align: center;
+    color: white;
+}
+
+.footer-body p{
+    padding-bottom: 1em;
+}
+.footer-body p:last-child{
+    color: #dbf857;
+}
 
 /* ARTICLE */
 
@@ -290,7 +360,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     line-height: 1; 
     color: #000000; 
     text-align: center;  
-    font-family: Kudryashev Headline;
+    font-family: 'Kudryashev Headline';
     font-weight: 400;
     font-size: 40px;
     margin-right: 20px;
@@ -342,7 +412,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
 
 .text-title h1 {
-    font-family: Kudryashev Headline;
+    font-family: 'Kudryashev Headline';
     color: white;
     font-size: 80px;
     font-weight: 700;
