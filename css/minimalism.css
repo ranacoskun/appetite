@@ -158,12 +158,17 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     padding: 5px;
 }
 
+
 .navbar-nav > li{
     padding-left:80px;
     padding-right:80px;
     font-family: Helvetica, sans-serif ;
 }
-  
+
+li.nav-item {
+    width: 290.33px;
+    text-align: center;
+}
 /* .card-section { position: relative; bottom: 60px; }
 .card-block { padding: 80px; }
 .section-title { margin-bottom: 60px; } */
@@ -177,6 +182,22 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
   
 .card {
+    /* display: grid; */
+    place-items: center;
+    /* width: 21rem; */
+    min-width: 21.875rem;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0.625rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    min-height: 5rem;
+}
+
+.card_img {background-repeat: no-repeat; background-size: contain; height: 500px; background-position: center center;}
+
+.card_tur {
+    background-image: url(../img/minimalism/covers/tur-minimalism.png);
+    background-size: cover;
     display: grid;
     place-items: center;
     width: 21rem;
@@ -186,7 +207,21 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     border-radius: 0.625rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
 }
-  
+
+#turkey_cover {
+    background-image: url(../img/minimalism/covers/tur-minimalism.png);
+    width: 20rem;
+    /* background-size: cover; */
+} 
+#italy_cover {
+    background-image: url(../img/minimalism/covers/ita-minimalism.png);
+    /* background-size: cover; */
+}
+
+#kaz_cover {
+    background-image: url(../img/minimalism/covers/kaz-minimalism.png);
+    /* background-size: cover; */
+}
 /* .card > * {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -197,6 +232,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     object-fit: cover;
     max-width: 100%;
     height: 100%;
+    min-height: 5rem;
 }
 
 
