@@ -330,6 +330,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     background-color: #1B1D28;
     padding-top: 3em;
     padding-bottom: 1em;
+    font-family: Peignot;
 }
 
 .footer-body {
@@ -347,6 +348,18 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 /* ARTICLE */
 
+/* .article-page-header {
+    background: none;
+    background-color: #1B1D28;
+    background-image: url(../img/art-deco/elements/ellipse.svg),url(../img/art-deco/elements/banner.svg);
+    background-position: bottom, right bottom;
+    background-repeat: no-repeat, repeat;
+    background-size: 50vw, 300px;
+    position: relative;
+    transition: padding 0.2s;
+    padding-top: 2em;
+} */
+
 .article-page-caption {
     display: flex;
     align-items: center;
@@ -362,6 +375,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     font-family: Peignot;
     font-size: 40px;
     margin-right: 20px;
+
 }
 
 .article-container {
@@ -371,8 +385,14 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 .article-header {
     padding: 50px; 
-    background-color: #000000;
     border-radius: 25px;
+    border-width: 1px !important;
+    border-color: #000 !important;
+    border-style: solid;
+    background-image: url(../img/art-deco/elements/woman-header.png);
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    background-position: center;
 }
 
 .article-body {
@@ -411,6 +431,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 .text-title h1 {
     /* font-family: Kudryashev Headline; */
+    font-family: Peignot;
     color: white;
     font-size: 80px;
     font-weight: 700;
@@ -450,6 +471,13 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     text-align: justify;
     font-size: 20px;
     font-style: normal;
-    line-height:2-5vh;
+    font-family: Peignot;
+    line-height: 2-5vh;
     padding: 3%;
+}
+
+#text-block {
+    background-color: #cfcbc0;
+    font-weight: 300;
+    font-style: italic;
 }
