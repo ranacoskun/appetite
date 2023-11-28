@@ -1,70 +1,61 @@
-/* @font-face {
-    font-family: 'TakeOff';
-    src: url('../img/pop-art/Take-Off-Hosehead/TakeOff.otf') format('opentype'), 
-  }
-@font-face {
-    font-family: 'TakeOff, YouHoser';
-    src: url('../img/pop-art/Take-Off-Hosehead/TakeOffYouHoser.otf') format('opentype'), 
-  } */
-@font-face {
-    font-family: 'Blambot-Casual-Regular';
-    src: url(../Fonts/BlambotCasualRegular/Blambot-Casual-Regular.ttf) format('truetype'), /* Specify the font file and format */
-  }
 
+/*fonts*/
+@font-face {
+    font-family: 'arabesque-initialen'; 
+    src: url('../Fonts/arabesque-initialen/ArabesqueInitialen.ttf') format('truetype');
+}
 * {
     box-sizing: border-box;
   }
-body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Blambot-Casual-Regular'; letter-spacing: 0px; font-size: 17px; color: #8d8f90;  line-height: 32px; background: rgba(255,255,255,1); 
-    background-color: #f4b424 !important;
-    
-/*background-image:url(../img/pop-art/elements/points-7.png);  9cd4dc*/}
-h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: 'Blambot-Casual-Regular'; font-weight: 700; letter-spacing: -1px; line-height: 1; }
+body {
+     background-color:#f3ebe1 !important;
+     -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Garamond', 'Times New Roman', serif; letter-spacing: 0px; font-size: 17px; color: #8d8f90;  line-height: 32px; background: rgba(255,255,255,1); }
+h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: 'Garamond', 'Times New Roman', serif; font-weight: 700; letter-spacing: -1px; line-height: 1; }
 h1 { font-size: 34px; }
 h2 { font-size: 28px; line-height: 38px; }
 h3 { font-size: 22px; line-height: 32px; }
 h4 { font-size: 20px; }
 h5 { font-size: 17px; }
 h6 { font-size: 12px; }
-p { margin: 0 0 20px; line-height: 1.7; }
+p { margin: 0 0 20px; line-height: 1.7;     font-family: Garamond, serif;}
 p:last-child { margin: 0px; }
 a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
 a:focus, a:hover { text-decoration: none; color: #f85759; }
 
-
-.pop-art-left {
-    background-image: url(../img/pop-art/elements/calling.png);
-    background-size: contain;
-    height: 10vh; width: auto;
-}
-
-.pop-art-right {
-    background-image: url(../img/pop-art/elements/egg.png);
-    background-size: contain;
-    height: 10vh; width: auto;
-}
-.page-header {
-    position: relative;
+.page-header { 
+    position: relative; 
+    background-size: cover; 
+    /* background-image: url(../img/baroque/elements/banner-front.svg), url(../img/baroque/elements/banner-bakground.svg); 
+    background-color:#000; 
+    background-position:center, center; 
+    position: relative; 
     transition: padding 0.8s;
-    background-image: url(../img/pop-art/elements/background.png); /* Add a transition for smooth effect */
-    background-size: cover; /* Adjust as needed */
-    background-position: center bottom; /* Adjust as needed */
-    background-repeat: no-repeat;
-
+     */
+     background-image: url(../img/baroque/elements/APPETITE.svg);
+     background-color: #000;
 }
+
 .page-title { 
     line-height: 1; 
     color: #000000; 
     text-align: center;  
-    font-family: 'Blambot-Casual-Regular';
+    font-family: 'Garamond', 'Times New Roman', serif;
     font-weight: 400;
-    font-size: 150px; 
+    font-size: 90px; 
+    background-color: #f3ebe1;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 5px #000 solid;
 }
+
 
 .page-sub {
     text-align: center; 
-    font-weight: bold;
-    /* font-family: 'Blambot Casual Regular'; */
-    font-size: 20px;
+    font-weight: lighter;
+    background-color: #f3ebe1;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 5px #000 solid;
 
 }
 
@@ -73,55 +64,11 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     padding-bottom: 20px; /* Reduce the bottom padding */
 }
 
-/*nav-bar style*/
-
-
-.navbar {
-    background-color: #5E9EA7;
-    border-top: 4px solid #000000;
-    border-bottom: 4px solid #000000;
-    font-size: larger;
-    font-weight: 800;
-    padding: 0% !important;
-    
-}
-
-.navbar li {
-    color:#5E9EA7;
-    font-weight: bolder;
-    font-size: 20px;
-}
-
-
-.navbar-nav > li{
-    padding-left:80px;
-    padding-right:80px;
-    font-family: 'Blambot-Casual-Regular';
-    background-color: #5E9EA7;
-}
-  
-/* .card-section { position: relative; bottom: 60px; }
-.card-block { padding: 80px; }
-.section-title { margin-bottom: 60px; } */
-
-
-/* .page-title {
-    color: #000000;
-    /* font-family: 'Blambot Casual Regular'; */
-    /* font-size: 100px; 
-    font-weight: normal;
-    line-height: 1;
-    text-align: center;
-} */ 
-
-/* .page-sub {
-    text-align: center;
-    font-weight: lighter;
-} */
 
 /* Make the header sticky */
 .page-header.sticky {
-    background-color: white;
+    background-image: url(../img/baroque/elements/APPETITE.svg);
+    background-size: cover;
     position: fixed;
     top: 0;
     width: 100%;
@@ -129,6 +76,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     border-bottom: 1px solid rgb(214, 214, 214);
     box-shadow: 0 4px 6px -6px #222;
 }
+
 
 /* Adjust the styles for the sticky header */
 .page-header.sticky .page-caption {
@@ -140,7 +88,33 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     font-size: 40px; /* Reduce the font size for the sticky header */
 }
 
+/*nav-bar style*/
 
+.navbar li {
+    color:#F7EDE1;
+}
+.all-navbar
+    {   background-size: cover; 
+        background-position: center;
+    }
+    
+.navbar {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    padding: 0 !important;    
+    background-color:#F7EDE1;
+}
+
+.nav-link {
+    font-weight: bolder !important;   
+}
+
+.navbar-nav > li{
+    padding-left:80px;
+    padding-right:80px;
+ }
+
+  
 /* CARDS LAYOUT */
 
 .card-container {
@@ -174,7 +148,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(../img/pop-art/covers/pop-art-back.svg);
+    background-image: url(../img/baroque/covers/card-background.svg);
     background-size: cover ;
     overflow: hidden;
     width: 100%;
@@ -194,8 +168,8 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
   
 .card__description a {
     color: #000;
-    font-family: 'Blambot-Casual-Regular';
-    font-size: 1.2 vw;
+    font-family: Garamond, serif;
+    font-size: 2vw;
     letter-spacing: 5px;
     line-height: 30px;
     text-decoration: none;
@@ -214,7 +188,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     align-self: flex;
     width: 100%;
     height: 100%;
-    padding: 12% 1rem 1rem;
+    padding: 12% 1.25rem 1.875rem;
   
 }
   
@@ -224,6 +198,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
   
 .card__title {
     color: #000;
+    font-size: 3vw;
     padding-bottom: 1em;
     padding-top: 2em;
     position: relative;
@@ -231,17 +206,8 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     width: -moz-fit-content;
 }
 
-/* INTRO */
-.welcome-ornament {
-    background-image: url(../img/pop-art/elements/index-ornament.svg);
-    background-size: cover;
-    background-position: center;
-    width: 300px;
-    height: 120px;
-    margin-top: 4rem;
-    margin-right: auto;
-    margin-left: auto;
-}
+/*INTRO*/
+
 .welcome-intro {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -249,114 +215,125 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     margin-right: 50px;
     position: relative;
     justify-content: center;
-    font-family: 'Blambot-Casual-Regular';
+    
 }
 
+
 .welcome-title{
-    padding-top: 25px;
+    padding-top: 20px;
     text-align: center;
-    font-weight: 700;
-    font-family: 'Blambot-Casual-Regular';
-    font-size: 30px;
-
-
+    font-family: Garamond, serif;
+    font-weight: bold;
+    font-size: 40px;
 }
 
 .welcome-body{
     font-size: 20px;
     text-align: justify;
-    padding-bottom: 50px;
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    border: #000 solid 3px;
-    border-radius: 20px;
-    background-color: #ffffff;
-}
+    padding: 30px;
+    font-family: Garamond, serif;
+    border-image: url(../img/baroque/elements/orn5.svg) 20 round !important;
+    border: 25px solid;
 
-
-#team { padding: 100px 0 100px 0; }
-.team-title {    
-    margin-top: 30px;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 500;
 }
-.team-intro { text-align: center; margin: auto; width: 50%; }
-.team-item {    font-family: 'Blambot-Casual-Regular';
-    padding: 20px; margin-top: 40px; text-align: justify; 
-}
-.team-item h3{ padding:10px; margin-top: 20px; text-align: center;}
-.team-item p{
+/* .welcome-body p {   
+    border-image: url(../img/baroque/elements/orn5.svg) 20 round !important;
+    border: 25px solid;
     font-size: 20px;
     text-align: justify;
-    padding-top: 20px;
+    padding: 1%;
+   
+} */
+
+#team { padding: 100px 0 100px 0; 
 }
+.team-title {    
+    padding-top: 50px;
+    text-align: center; 
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Garamond, serif;
+}
+.team-intro {text-align: center; margin: auto; width: 50%; font-family: Garamond, serif;}
+.team-item { padding: 20px; margin-top: 40px; }
 .team-body{
     font-size: 20px;
-    text-align: justify;
-    padding-bottom: 50px;
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-family: 'Blambot-Casual-Regular';
-    border: #000 solid 3px;
-    border-radius: 20px;
-    background-color: #ffffff;
-    margin-left: 5%;
-    margin-right: 5%;
+    text-align: center;
+    font-family: Garamond, serif;
+    padding: 30px;
+    border-image: url(../img/baroque/elements/orn5.svg) 20 round !important;
+    border: 25px solid;
+    margin-left: 40px;
+    margin-right: 40px;
 }
-.member-role { font-family: 'Blambot Casual Regular'; font-size: 10px; padding-left: 30px; position: relative;  border: #000 solid 3px;
-    border-radius: 20px;
-    background-color: #ffffff;}
-.member-role:after { font-family: 'Blambot Casual Regular'; position: absolute; content: " "; height: 3px; width: 25px; position: absolute; left: 0; top: 12px; background: #000; }
-.member-img {font-family: 'Blambot Casual Regular'; background-repeat: no-repeat; background-size: cover; width: 250px; height: 250px; background-position: center center; }
-#irem {background-image: url(../img/pop-art/team/irem-pop1.png);}
-#ulzhan { background-image: url(../img/pop-art/team/ulzhan-pop1.png); }
-#rana { background-image: url(../img/pop-art/team/rana-pop1.png); }
-.member-img p {font-family: 'Blambot Casual Regular';}
+.member-img p {font-family: Garamond, serif;}
+.member-role {font-family: Garamond, serif; font-weight: bold; font-size: 14px; padding-left: 30px; position: relative; }
+.member-role:after {font-family: Garamond, serif; position: absolute; content: " "; height: 3px; width: 25px; position: absolute; left: 0; top: 12px; background: #000; }
+.member-img {    font-family: Garamond, serif; background-repeat: no-repeat; background-size: contain; height: 250px; background-position: center center; }
+#irem { background-image: url(../img/baroque/team/irem-baroque.jpg); }
+#ulzhan { background-image: url(../img/baroque/team/ulzhan-baroque.jpg); }
+#rana { background-image: url(../img/baroque/team/rana-baroque.jpg); }
 
-#mapBaklava { height: 500px; 
-    border: #000 solid 3px;
-    border-radius: 20px;
-    background-color: #ffffff;
-}
-
+#mapBaklava { height: 500px; }
 .map {
-        margin: 2em;
-        padding-left: 3em;
-        padding-right: 3em;
-    }
+    margin: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
+}
 
 /* FOOTER */
-.footer {
-    font-family: 'Blambot Casual Regular';
-    background-color: #1B1D28;
+.footer {   background-color: #222;
+    background-size: cover;
     padding-top: 3em;
     padding-bottom: 1em;
 }
 
-/* .footer p{
-    font-family:'Blambot Casual Regular';
-} */
-
-.footer-body {
-    /* font-family: 'Blambot Casual Regular'; */
+.footer-body {     
+    font-family: Garamond, serif;
     text-align: center;
     color: white;
 }
 
 .footer-body p{
-    /* font-family: 'Blambot Casual Regular'; */
     padding-bottom: 1em;
+    font-family: Garamond, serif;
 }
 .footer-body p:last-child{
-    /* font-family: 'Blambot Casual Regular'; */
     color: #BE914C;
 }
 
+.footer-ornament{ 
+    background-image: url(../img/baroque/elements/footer.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 2em;
+    padding-bottom: 4em;
+    margin-bottom: 2%;
+}
+
+hr {    
+    font-family: Garamond, serif;
+    border: none;
+    height: 2px;
+    background-color: #000;
+    padding-left: 12px !important; 
+    padding-right: 12px !important; /* bunu değiştiremedim */
+  }
 
 /* ARTICLE */
+
+p.drop-cap::first-letter {
+    font-size: 5em; /* Adjust the size of the drop cap */
+    font-family: 'arabesque-initialen', serif; /* BU ÇALIŞMIYOR!!! */
+    float: left; /* Float the drop cap to the left */
+    margin-right: 0.1em; /* Add some space between the drop cap and the text */
+    font-weight: normal; /* Optionally make the drop cap bold */
+    color: #000000; /* Choose a color that complements the Baroque style */
+    /* text-shadow: 2px 2px 2px #000;  */
+    line-height: 1; /* Adjust line height for better visual alignment */
+  }
+
 .article-page-caption {
     display: flex;
     align-items: center;
@@ -368,55 +345,50 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     line-height: 1; 
     color: #000000; 
     text-align: center;  
-    font-weight: 800;
+    font-family: 'Garamond', 'Times New Roman', serif;
+    font-weight: 400;
     font-size: 40px;
     margin-right: 20px;
+    background-color: #f3ebe1;
+    border: 5px #000 solid;
+    padding-left: 25%;
+    padding-right: 25%;
 }
 
 .article-container {
-    margin: 10px;
-    padding: 10px;
+    margin: 20px;
+    padding: 20px;
 }
 
 .article-header {
-    padding: 0px; 
-    padding-right: 0.6%;
-    background-image: url(../img/pop-art/elements/background-without-bubble.svg);
-    /* background-size: contain; */
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    /* width: 100%; 
-    height: auto;     */
-    width: 100%;
-  height: 72vh;
+    padding: 50px; 
     border-radius: 25px;
-    border: 10px solid #000; 
 }
 
 .article-body {
-    margin-top: 10px;
     padding: 20px; 
-    margin-right: 0%;
-    text-align: justify;
-    border: #000 solid 5px;
-    border-radius: 20px;
-    background-color: #ffffff; 
-    font-family: 'Blambot Casual Regular';
-
+    text-align: justify; 
 }
 
 .first-heading {
-    text-align: right; 
-    margin-top: 0% !important; /* top margini silemiyorum!!!!! */
-    background-image: url(../img/pop-art/elements/bubble.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 25px;
-    padding-top: 0.8%;
+    text-align: center; 
+}
+.left-image {
+    float: left;
+    width: 100%;
+    margin: 0 20px 20px 0;
 }
 
+.right-image {
+    float: right;
+    width: 100%;
+    margin: 0 0 20px 20px;
+}
+
+.ornament-image {background-repeat: no-repeat; background-size: contain; height: 150px; background-position: center;} 
+#before-text-sub-title {background-image: url(../img/baroque/elements/ornament-before-sub-text.svg); } 
+/* .ornament-image2 {background-repeat: no-repeat; background-size: 100px; height: 150px; background-position: center;}  */
+#middle-of-text {background-image: url(../img/baroque/elements/ornament-article-body.svg); }
 
 /* New CSS for the image container */
 .image-container {
@@ -424,66 +396,96 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     width: 100%;
 }
 
-
-
-/* #line-heading::after {
-    content: "\a";
-    white-space: pre;
+/* .food-article-container {
+    border-image: url(../img/baroque/elements/orn5.svg) 70 round !important;
+    border: 25px solid;
 } */
 
 .text-title h2 {
-    color: black;
-    font-size: 40px;
-    font-weight: 500;
+    color: #000;
+    text-align: center;
+    font-family: 'Garamond', 'Times New Roman', serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
 }
 
 .text-title h1 {
-    color: black;
-    font-size: 40px;
-    font-weight: 500;
+    color: #000;
+    font-family: 'Garamond', 'Times New Roman', serif;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
 }
 
 .text-title h2:last-child {
-    color: black;
-    font-size: 40px;
-    font-weight: 500;
+    color: #000;
+    text-align: center;
+    font-family: 'Garamond', 'Times New Roman', serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
 }
 
 .text-publisher h3 {
-    /* padding-top: 50px; */
-    color: black;
+    color: #000;
+    text-align: center;
+    font-family: 'Garamond', 'Times New Roman', serif;
     font-size: 20px;
+    font-style: italic;
     font-weight: 400;
-    text-align: right;
-    padding-bottom: 20%;
-    /* line-height: 20px; */
+    line-height: normal;
 }
 
 .text-sub-title p {
     color: black;
-    font-family: 'Blambot Casual Regular';
+    font-family: 'Garamond', 'Times New Roman', serif;
     text-align: center;
     font-size: 25px;
     font-style: italic;
     font-weight: 400;
-    /* line-height: 161%;  */
-    padding: 2%;
+    line-height: 100%; /* 48.3px */
+    /* padding: 2%; */
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
+/* how to add dropcap? */
 .text-body p {
     color: #000;
     text-align: justify;
     font-size: 20px;
     font-style: normal;
+    line-height: 22px;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+ .special-container {
+    color: #000;
+    text-align: justify;
+    font-size: 18px;
+    font-style: normal;
     line-height:2-5vh;
-    padding: 3%;
-    font-family: 'Blambot Casual Regular' !important;
+    padding-right: 15%;
+    padding-left: 15%;
+ }
+
+ table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
 }
 
-/* 
-.below-navbar {
-    background-image: url(../img/pop-art/elements/points-7.png);    
-} */
+th, td {
+    padding: 8px;
+    text-align: left;
+    font-family: 'Garamond', 'Times New Roman', serif;
+
+}
+
 
 body{
     font-family: 'Roboto', sans-serif;
