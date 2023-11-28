@@ -33,9 +33,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
-        /* Custom CSS for the thin border around the navbar */
-        .custom-navbar {
-            border: 1px solid #ccc;
+        .category {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .dish.highlighted {
+            background-color: yellow;
+        }
+
+        .drink.highlighted {
+            background-color: lightblue;
+        }
+
+        .place.highlighted {
+            background-color: lightgreen;
+        }
+
+        .person.highlighted {
+            background-color: pink;
         }
     </style>
 </head>
@@ -94,12 +110,11 @@
                         <div class="row">
                             <div class="first-heading">
                                 <div class="text-title">
-                                    <h2>DECONSTRUCTING</h2>
-                                    <h1>BAKLAVA</h1>
+                                    <h2>DECONSTRUCTING BAKLAVA</h2>
                                     <h2>A TURKISH CLASSIC <br>WITH A NOBLE PAST</h2>
                                 </div>
                                 <div class="text-publisher">
-                                    <h3>By Mary Işın <br>PUBLISHED OCTOBER 6, 2022</h3>
+                                    <h3>By Mary Isin <br>PUBLISHED OCTOBER 6, 2022</h3>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +127,7 @@
                                 its own twist to the recipe"
                             </p>
                         </div>
-                        <div class="text-body ">
+                        <div class="text-body">
                             <p>
                                 Nightingale’s nests, twisted turbans, lover’s lips… In the UK, we may be most familiar
                                 with
@@ -172,6 +187,57 @@
             }
         };
     </script>
+     <script>function changeStyle(styleSheet) {
+        // Get all the link elements in the head
+        var links = document.head.getElementsByTagName('link');
+    
+        // Loop through the link elements
+        for (var i = 0; i < links.length; i++) {
+            // Check if the link element is a stylesheet
+            if (links[i].rel === 'stylesheet') {
+                // Set the href attribute to the new stylesheet
+                links[i].href = styleSheet;
+            }
+        }
+        document.getElementById('container-floating').classList.add('active');
+    
+    // Store the active state in localStorage
+    // localStorage.setItem('fabButtonActive', 'true');
+    }// 
+    // Check if the fab button should be active on page load
+    document.addEventListener('DOMContentLoaded', function () {
+    var isFabButtonActive = localStorage.getItem('fabButtonActive');
+    
+    if (isFabButtonActive === 'true') {
+    // Add 'active' class to the container-floating
+    document.getElementById('container-floating').classList.add('active');
+    }
+    });</script>
+
+
+<div class="fab-button">
+<div id="container-floating">
+  <div class="nd4 nds" onclick="changeStyle('css/baroque2.css')"> <img class="reminder" src="components/fab button/icons/baroque-plate.jpg">
+    <p class="letter">C</p>
+  </div>
+  <div class="nd3 nds" onclick="changeStyle('css/normalize.min.css')"><img class="reminder" src="components/fab button/icons/constructurism-plate.jpg" /></div>
+  
+  <div class="nd1 nds" onclick="changeStyle('css/art-deco.css')"><img class="reminder" src="components/fab button/icons/art-deco-plate.jpg" />
+    <p class="letter"></p>
+  </div>
+  <div class="nd-new nds" onclick="changeStyle('css/pop-art.css')"><img class="reminder" src="components/fab button/icons/pop-art-plate.jpg">
+</div>
+
+<div class="nd-new2 nds" onclick="changeStyle('css/banksy.css')"><img class="reminder" src="components/fab button/icons/banksy-plate.jpg">
+</div>
+
+<div class="nd-new3 nds" onclick="changeStyle('css/minimalism.css')"><img class="reminder" src="components/fab button/icons/minimalism-plate.jpg">
+       </div>
+  <div id="floating-button">
+    <p class="plus"><img src="components/fab button/icons/choosing-plate.png"></p>
+    <p class="edit"><img src="components/fab button/icons/x-plate.png"></p>
+  </div>
+</div></div>
 </body>
 
 </html>
