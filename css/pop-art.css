@@ -562,9 +562,10 @@ body{
   }
   
   #container-floating:hover{
-    height: 100px;
     width: 100px;
-    padding: 30px;
+    height: 500px;
+    /* display: inline-block; */
+    /* padding: 30px; */
   }
   
   #container-floating:hover .plus{
@@ -631,38 +632,35 @@ body{
   }
   
   .nd1{
-    background: #d3a411;
     right: 40px;
     bottom: 120px;
     animation-delay: 0.2s;
-      animation: bounce-out-nds 0.3s linear;
+    animation: bounce-out-nds 0.3s linear;
     animation-fill-mode:  forwards;
   }
   
   .nd3{
-    background: #3c80f6;
     right: 40px;
     bottom: 180px;
     animation-delay: 0.15s;
-      animation: bounce-out-nds 0.15s linear;
+    animation: bounce-out-nds 0.15s linear;
     animation-fill-mode:  forwards;
   }
   
   .nd4{
-    background: #ba68c8;
     right: 40px;
     bottom: 240px;
     animation-delay: 0.1s;
-      animation: bounce-out-nds 0.1s linear;
+    animation: bounce-out-nds 0.1s linear;
     animation-fill-mode:  forwards;
   }
   
   .nd-new {
-      right: 40px;
-      bottom: 300px;
-      animation-delay: 0.3s;
-      animation: bounce-out-nds 0.3s linear;
-      animation-fill-mode: forwards;
+    right: 40px;
+    bottom: 300px;
+    animation-delay: 0.3s;
+    animation: bounce-out-nds 0.3s linear;
+    animation-fill-mode: forwards;
   }
   
   .nd-new2 {
