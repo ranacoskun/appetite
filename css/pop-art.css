@@ -485,11 +485,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     background-image: url(../img/pop-art/elements/points-7.png);    
 } */
 
-body{
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    background: #f1f1f1;
-  }
+/*FAB*/
   
   #presentation{
     width: 480px;
@@ -564,7 +560,7 @@ body{
   #container-floating:hover{
     height: 100px;
     width: 100px;
-    padding: 30px;
+
   }
   
   #container-floating:hover .plus{
@@ -640,7 +636,6 @@ body{
   }
   
   .nd3{
-    background: #3c80f6;
     right: 40px;
     bottom: 180px;
     animation-delay: 0.15s;
@@ -649,7 +644,6 @@ body{
   }
   
   .nd4{
-    background: #ba68c8;
     right: 40px;
     bottom: 240px;
     animation-delay: 0.1s;
