@@ -558,9 +558,10 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
   }
   
   #container-floating:hover{
-    height: 100px;
     width: 100px;
-
+    height: 500px;
+    /* display: inline-block; */
+    /* padding: 30px; */
   }
   
   #container-floating:hover .plus{
@@ -627,11 +628,10 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
   }
   
   .nd1{
-    background: #d3a411;
     right: 40px;
     bottom: 120px;
     animation-delay: 0.2s;
-      animation: bounce-out-nds 0.3s linear;
+    animation: bounce-out-nds 0.3s linear;
     animation-fill-mode:  forwards;
   }
   
@@ -639,7 +639,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     right: 40px;
     bottom: 180px;
     animation-delay: 0.15s;
-      animation: bounce-out-nds 0.15s linear;
+    animation: bounce-out-nds 0.15s linear;
     animation-fill-mode:  forwards;
   }
   
@@ -647,16 +647,16 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     right: 40px;
     bottom: 240px;
     animation-delay: 0.1s;
-      animation: bounce-out-nds 0.1s linear;
+    animation: bounce-out-nds 0.1s linear;
     animation-fill-mode:  forwards;
   }
   
   .nd-new {
-      right: 40px;
-      bottom: 300px;
-      animation-delay: 0.3s;
-      animation: bounce-out-nds 0.3s linear;
-      animation-fill-mode: forwards;
+    right: 40px;
+    bottom: 300px;
+    animation-delay: 0.3s;
+    animation: bounce-out-nds 0.3s linear;
+    animation-fill-mode: forwards;
   }
   
   .nd-new2 {
