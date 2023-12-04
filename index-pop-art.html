@@ -289,20 +289,29 @@ window.onscroll = function () {
             links[i].href = styleSheet;
         }
     }
-    document.getElementById('container-floating').classList.add('active');
 
-// Store the active state in localStorage
- localStorage.setItem('fabButtonActive', 'true');
-} 
+    // Store the chosen stylesheet in localStorage
+    localStorage.setItem('chosenStylesheet', styleSheet);
+
+    // Add 'active' class to the container-floating
+    document.getElementById('container-floating').classList.add('active');
+}
+
 // Check if the fab button should be active on page load
 document.addEventListener('DOMContentLoaded', function () {
-var isFabButtonActive = localStorage.getItem('fabButtonActive');
+    var isFabButtonActive = localStorage.getItem('fabButtonActive');
+    var chosenStylesheet = localStorage.getItem('chosenStylesheet');
 
-if (isFabButtonActive === 'true') {
-// Add 'active' class to the container-floating
-document.getElementById('container-floating').classList.add('active');
-}
-});</script>
+    if (isFabButtonActive === 'true' && chosenStylesheet) {
+        // Add 'active' class to the container-floating
+        document.getElementById('container-floating').classList.add('active');
+
+        // Set the saved stylesheet
+        changeStyle(chosenStylesheet);
+    }
+});
+
+</script>
 
 <div class="fab-button">
     <div id="container-floating">
