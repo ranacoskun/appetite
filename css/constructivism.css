@@ -1,0 +1,516 @@
+/* @font-face {
+    font-family: 'Kudryashev Display';
+    src: url('../fonts/KudryashevDisplay/KudryashevDisplay-Sans.eot');
+    src: local('Kudryashev Display Sans'), local('KudryashevDisplay-Sans'),
+        url('../fonts/KudryashevDisplay/KudryashevDisplay-Sans.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/KudryashevDisplay/KudryashevDisplay-Sans.woff2') format('woff2'),
+        url('../fonts/KudryashevDisplay/KudryashevDisplay-Sans.woff') format('woff'),
+        url('../fonts/KudryashevDisplay/KudryashevDisplay-Sans.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kudryashev Headline';
+    src: url('../fonts/KudryashevDisplay/KudryashevHeadline.eot');
+    src: local('Kudryashev Headline'), local('KudryashevHeadline'),
+        url('../fonts/KudryashevDisplay/KudryashevHeadline.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/KudryashevDisplay/KudryashevHeadline.woff2') format('woff2'),
+        url('../fonts/KudryashevDisplay/KudryashevHeadline.woff') format('woff'),
+        url('../fonts/KudryashevDisplay/KudryashevHeadline.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kudryashev Display';
+    src: url('../fonts/KudryashevDisplay/KudryashevDisplay.eot');
+    src: local('Kudryashev Display'), local('KudryashevDisplay'),
+        url('../fonts/KudryashevDisplay/KudryashevDisplay.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/KudryashevDisplay/KudryashevDisplay.woff2') format('woff2'),
+        url('../fonts/KudryashevDisplay/KudryashevDisplay.woff') format('woff'),
+        url('../fonts/KudryashevDisplay/KudryashevDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kudryashev Headline';
+    src: url('../fonts/KudryashevDisplay/KudryashevHeadline-Sans.eot');
+    src: local('Kudryashev Headline Sans'), local('KudryashevHeadline-Sans'),
+        url('../fonts/KudryashevDisplay/KudryashevHeadline-Sans.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/KudryashevDisplay/KudryashevHeadline-Sans.woff2') format('woff2'),
+        url('../fonts/KudryashevDisplay/KudryashevHeadline-Sans.woff') format('woff'),
+        url('../fonts/KudryashevDisplay/KudryashevHeadline-Sans.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+} */
+
+* {
+    box-sizing: border-box;
+  }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family:'Courier New', Courier, monospace; letter-spacing: 0px; font-size: 17px;  line-height: 32px; background-color: #C40803; background-image: url(/img/constructivism/paper-bg.png); }
+h2 { font-size: 28px; line-height: 38px; }
+h3 { font-size: 22px; line-height: 32px; }
+h4 { font-size: 20px; }
+h5 { font-size: 17px; }
+h6 { font-size: 12px; }
+p { margin: 0 0 20px; line-height: 1.7; }
+p:last-child { margin: 0px; }
+a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
+a:focus, a:hover { text-decoration: none; color: #f85759; }
+
+.section {
+    position: relative;
+}
+.section.bg-static {
+    margin: auto;
+    background-color: white;
+}
+.section .bg-move {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 500px;
+    /* right: auto; */
+    width: 150vh;
+    height: auto;
+    /* max-width: ; */
+    background-size: contain;
+    /* background-image: url("https://www.pngall.com/wp-content/uploads/2016/03/Cat-PNG-5.png"); */
+    /*background-image: url("https://assets-global.website-files.com/5b13df51d0d5fe8211f203da/5b13f381541a8480ba1420db_square.svg"); */
+    background-position: 500px;
+    background-repeat: no-repeat;
+}
+  
+.page-header {
+    position: relative;
+    background: none;
+    transition: padding 0.8s; /* Add a transition for smooth effect */
+    background-image: url(../img/constructivism/star_with_hand.png);
+    background-position: 27% 20%, top, left center;
+    background-repeat: no-repeat;
+    background-size: 6vw;
+}
+
+.page-title { 
+    line-height: 1; 
+    color: #000000; 
+    text-align: center;  
+    font-family: 'Courier New';
+    font-weight: 400;
+    font-size: 100px; 
+}
+
+.page-sub {
+    text-align: center; 
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.page-caption {
+    padding-top: 20px; /* Reduce the top padding */
+    padding-bottom: 20px; /* Reduce the bottom padding */
+    /*background-image: url(/img/constructivism/woman_scr.png); */
+    background-repeat: no-repeat; 
+    background-size: 20rem; 
+    /* height: 250px; */
+    background-position: center center; 
+    /*width: 1000px; */
+    
+}
+
+.page-title {
+    color: white;
+    font-family: 'Red October';
+    font-size: 100px; 
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    /*background-image: url(/img/constructivism/head-b.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-sub {
+    text-align: center;
+    font-weight: lighter;
+}
+
+/* Make the header sticky */
+.page-header.sticky {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgb(214, 214, 214);
+    box-shadow: 0 4px 6px -6px #222;
+    background-size: 2vw;
+}
+
+/* Adjust the styles for the sticky header */
+.page-header.sticky .page-caption {
+    padding-top: 10px; /* Reduce the top padding for the sticky header */
+    padding-bottom: 10px; /* Reduce the bottom padding for the sticky header */
+    
+}
+
+.page-header.sticky .page-title {
+    font-size: 40px; /* Reduce the font size for the sticky header */
+}
+
+/*nav-bar style*/
+
+.navbar li {
+    color:#000000;
+}
+
+.navbar {
+    /* margin-left: 1rem; */
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    padding: 5px;
+    background-color: #000;
+}
+
+
+.navbar-nav > li{
+    padding-left:80px;
+    padding-right:80px;
+    font-family: 'Courier New';
+}
+
+.nav-item {
+    width: 290.33px;
+    text-align: center;
+    color: #000;
+    font-family: ;
+}
+/* .card-section { position: relative; bottom: 60px; }
+.card-block { padding: 80px; }
+.section-title { margin-bottom: 60px; } */
+
+
+.card-container {
+    /*padding: 100px 60px 60px 100px;*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+  
+.card {
+    /* display: grid; */
+    place-items: center;
+    /* width: 21rem; */
+    min-width: 21.875rem;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0.625rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    /* min-height: 5rem; */
+}
+
+.card_img {background-repeat: no-repeat; background-size: contain; height: 450px; background-position: center center;}
+
+
+
+
+#turkey_cover {
+    background-image: url(../img/constructivism/tur-cover.jpg);
+    width: 20rem;
+    background-size: cover; 
+} 
+#italy_cover {
+    background-image: url(../img/constructivism/ita-cover.jpg);
+    width: 20rem;
+    background-size: cover; 
+}
+
+#kaz_cover {
+    background-image: url(../img/constructivism/kaz-cover.jpg);
+    width: 20rem;
+    background-size: cover; 
+}
+/* .card > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+*/
+
+.card__background {
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+    min-height: 5rem;
+}
+
+
+/* NEW INSERT OF A STYLE */
+
+.card_overflow{
+    padding: 16px 8px 8px 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white; /* rgba(0, 0, 0, 0.75);  black with opacity */
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease; /* for smooth transition */
+}
+
+.card:hover .card_overflow{
+    height: 100%;
+}
+
+.card__title h2{
+    /* padding-left: 4px; */
+    width: 100%;
+    margin-top: 30%;
+    color:black;
+    font-size: 4wf;
+    position: absolute;
+    text-align: center;
+    transform: rotate(-5deg)skewX(-5deg); 
+}
+
+.card__description a {
+    text-align: left;
+    color: black;
+    font-size: 1.2 vw;
+   /* margin: 10% 0 0 18%; */
+    left: 20px;
+    width: 70%;
+    letter-spacing: 5px;
+    line-height: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+  
+
+.card__content {
+    --flow-space: 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex;
+    width: 100%;
+    height: 100%;
+    padding: 12% 1.25rem 1.875rem;
+  
+}
+  
+.card__content--container {
+    --flow-space: 1.25rem;
+}
+  
+.card__title {
+    position: relative;
+    width: fit-content;
+    width: -moz-fit-content;
+}
+  
+.card__title::after {
+    content: "";
+    position: absolute;
+    height: 0.3125rem;
+    width: calc(100% + 1.25rem);
+    bottom: calc((1.25rem - 0.5rem) * -1);
+    left: -1.25rem;
+    background-color: rgb(255, 140, 0);
+}
+
+.welcome-intro {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    position: relative;
+    justify-content: center;
+}
+
+
+.welcome-title{
+    margin-top: 30px;
+    text-align: left;
+    font-size: 70px;
+    font-family: 'Red October';
+}
+.welcome-body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: justify;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.mainpage_headings{
+    font-family: 'Red October';
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#team { padding: 100px 0 100px 0; }
+.team-title {    
+    padding-top: 50px;
+    text-align: center;
+}
+.team-intro { text-align: center; margin: auto; width: 50%; }
+.team-item { padding: 20px; margin-top: 40px; }
+.team-body{
+    font-size: 20px;
+    text-align: justify;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.member-role { font-weight: bold; font-size: 14px; padding-left: 30px; position: relative; }
+.member-role:after { position: absolute; content: " "; height: 3px; width: 25px; position: absolute; left: 0; top: 12px; background: #000; }
+.member-img { 
+    background-repeat: no-repeat; 
+    background-size: contain; 
+    height: 250px; 
+    background-position: center center; }
+#irem { background-image: url(../img/constructivism/teams/irem-constr.jpg); }
+#ulzhan { background-image: url(../img/constructivism/teams/ulzhan-constr.jpg); }
+#rana { background-image: url(../img/constructivism/teams/rana-constr.jpg); }
+
+#mapBaklava { height: 500px; }
+.map {
+    margin: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #222;
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
+
+.footer-body {
+    text-align: center;
+    color: white;
+}
+
+.footer-body p{
+    padding-bottom: 1em;
+}
+.footer-body p:last-child{
+    color: #dbf857;
+}
+
+/* ARTICLE */
+
+.article-page-caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.article-page-title{
+    line-height: 1; 
+    color: #000000; 
+    text-align: center;  
+    font-family: 'Kudryashev Headline';
+    font-weight: 400;
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.article-container {
+    margin: 20px;
+    padding: 20px;
+}
+
+.article-header {
+    padding: 50px; 
+    background-color: #000000; /* will change for the whole page */
+    border-radius: 25px;
+}
+
+.article-body {
+    padding: 20px; 
+    text-align: justify; 
+}
+
+.first-heading {
+    text-align: center; 
+}
+.left-image {
+    float: left;
+    width: 100%;
+    margin: 0 20px 20px 0;
+}
+
+.right-image {
+    float: right;
+    width: 100%;
+    margin: 0 0 20px 20px;
+}
+
+/* New CSS for the image container */
+.image-container {
+    float: left; /* Make the container and images float to the left */
+    width: 100%;
+}
+
+
+.text-title h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 56.35px;
+}
+
+.text-title h1 {
+    font-family: 'Kudryashev Headline';
+    color: white;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 80.50px;
+}
+
+.text-title h2:last-child {
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 41.30px;
+}
+
+.text-publisher h3 {
+    padding-top: 50px;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 20px;
+}
+
+.text-sub-title p {
+    color: black;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 161%; /* 48.3px */
+    padding: 2%;
+}
+
+/* how to add dropcap? */
+.text-body p {
+    color: #000;
+    text-align: justify;
+    font-size: 20px;
+    font-style: normal;
+    line-height:2-5vh;
+    padding: 3%;
+}
