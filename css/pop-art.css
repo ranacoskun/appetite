@@ -1,9 +1,24 @@
+/* @font-face {
+    font-family: 'TakeOff';
+    src: url('../img/pop-art/Take-Off-Hosehead/TakeOff.otf') format('opentype'), 
+  }
+@font-face {
+    font-family: 'TakeOff, YouHoser';
+    src: url('../img/pop-art/Take-Off-Hosehead/TakeOffYouHoser.otf') format('opentype'), 
+  } */
+@font-face {
+    font-family: 'Blambot-Casual-Regular';
+    src: url(../Fonts/BlambotCasualRegular/Blambot-Casual-Regular.ttf) format('truetype'), /* Specify the font file and format */
+  }
+
 * {
     box-sizing: border-box;
   }
-  body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: TakeOff; letter-spacing: 0px; font-size: 17px; color: #8d8f90;  line-height: 32px; background: rgba(255,255,255,1); 
-background-image: url(../img/pop-art/elements/points-7.png);}
-h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: TakeOff; font-weight: 700; letter-spacing: -1px; line-height: 1; }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Blambot-Casual-Regular'; letter-spacing: 0px; font-size: 17px; color: #8d8f90;  line-height: 32px; background: rgba(255,255,255,1); 
+    background-color: #f4b424 !important;
+    
+/*background-image:url(../img/pop-art/elements/points-7.png);  9cd4dc*/}
+h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: 'Blambot-Casual-Regular'; font-weight: 700; letter-spacing: -1px; line-height: 1; }
 h1 { font-size: 34px; }
 h2 { font-size: 28px; line-height: 38px; }
 h3 { font-size: 22px; line-height: 32px; }
@@ -15,15 +30,18 @@ p:last-child { margin: 0px; }
 a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
 a:focus, a:hover { text-decoration: none; color: #f85759; }
 
-@font-face {
-    font-family: 'TakeOff';
-    src: url('../img/pop-art/Take-Off-Hosehead/TakeOff.otf') format('opentype'), /* Specify the font file and format */
-  }
-  @font-face {
-    font-family: 'TakeOff, YouHoser';
-    src: url('../img/pop-art/Take-Off-Hosehead/TakeOffYouHoser.otf') format('opentype'), /* Specify the font file and format */
-  }
+/* 
+.pop-art-left {
+    background-image: url(../img/pop-art/elements/calling.png);
+    background-size: contain;
+    width: 10vh; height: auto;
+}
 
+.pop-art-right {
+    background-image: url(../img/pop-art/elements/egg.png);
+    background-size: contain;
+    height: 10vh; width: auto;
+} */
 .page-header {
     position: relative;
     transition: padding 0.8s;
@@ -36,66 +54,101 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 .page-title { 
     line-height: 1; 
     color: #000000; 
-    text-align: center;  
-    font-family: TakeOff, YouHoser;
+    text-align: center; 
+    align-items: center; 
+    font-family: 'Blambot-Casual-Regular';
     font-weight: 400;
-    font-size: 100px; 
+    font-size: 625%; 
+    display: inline-block;
+
 }
+
+.page-title::before,
+.page-title::after {
+  content: '';
+  height: 30vh; /* Set the height of your icons */
+  width: 9vw; /* Set the width of your icons */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  /* top: 50%; */
+  /* transform: translateY(-50%); */  
+  display: inline-block;
+  vertical-align: middle; /* hepsini aynı unit yap */
+}
+
+.page-title::before {
+  left: 27vw; /* Adjust the left offset */
+  background-image: url(../img/pop-art/elements/calling.png); /* Set the path to your left icon */
+}
+
+.page-title::after {
+  right: 27vw; /* Adjust the right offset */
+  background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your right icon */
+}
+
 
 .page-sub {
     text-align: center; 
     font-weight: bold;
-    font-family: TakeOff;
+    /* font-family: 'Blambot Casual Regular'; */
     font-size: 20px;
 
 }
 
+.page-caption {
+    padding-top: 20px; /* Reduce the top padding */
+    padding-bottom: 20px; /* Reduce the bottom padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /*nav-bar style*/
 
+
 .navbar {
     background-color: #5E9EA7;
-    border-top: 2px solid #000000;
-    border-bottom: 2px solid #000000;
+    border-top: 4px solid #000000;
+    border-bottom: 4px solid #000000;
     font-size: larger;
     font-weight: 800;
+    padding: 0% !important;
     
 }
 
 .navbar li {
     color:#5E9EA7;
+    font-weight: bolder;
+    font-size: 20px;
 }
 
 
 .navbar-nav > li{
     padding-left:80px;
     padding-right:80px;
-    font-family: TakeOff;
+    font-family: 'Blambot-Casual-Regular';
     background-color: #5E9EA7;
 }
   
-.card-section { position: relative; bottom: 60px; }
+/* .card-section { position: relative; bottom: 60px; }
 .card-block { padding: 80px; }
-.section-title { margin-bottom: 60px; }
+.section-title { margin-bottom: 60px; } */
 
-.page-caption {
-    padding-top: 20px; /* Reduce the top padding */
-    padding-bottom: 20px; /* Reduce the bottom padding */
-}
 
-.page-title {
+/* .page-title {
     color: #000000;
-    font-family: TakeOff;
-    font-size: 100px; 
-    font-weight: 400;
+    /* font-family: 'Blambot Casual Regular'; */
+    /* font-size: 100px; 
+    font-weight: normal;
     line-height: 1;
     text-align: center;
-}
+} */ 
 
-.page-sub {
+/* .page-sub {
     text-align: center;
     font-weight: lighter;
-}
+} */
 
 /* Make the header sticky */
 .page-header.sticky {
@@ -119,6 +172,32 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
 
 
+.page-header.sticky .page-title::before,
+.page-header.sticky .page-title::after {
+  content: '';
+  height: 10vh; /* Set the height of your icons */
+  width: 9vw; /* Set the width of your icons */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  /* top: 50%; */
+  /* transform: translateY(-50%); */  
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.page-header.sticky .page-title::before {
+  left: 40vw; /* Adjust the left offset */
+  background-image: url(../img/pop-art/elements/calling.png); /* Set the path to your left icon */
+}
+
+.page-header.sticky .page-title::after {
+  right: 33vw; /* Adjust the right offset */
+  background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your right icon */
+}
+
+/* CARDS LAYOUT */
+
 .card-container {
     padding: 100px 60px 60px 100px;
     display: grid;
@@ -127,22 +206,52 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
   
 .card {
-    display: grid;
+    /* display: grid; */
     place-items: center;
-    width: 21rem;
+    /* width: 21rem; */
     max-width: 21.875rem;
     height: 100%;
     overflow: hidden;
     border-radius: 0.625rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    min-height: 5rem;
+
 }
-  
+.card_img {background-repeat: no-repeat; background-size: contain; height: 500px; background-position: center center;}
+
+/* 
+.card_tur {
+  background-image: url(../img/minimalism/covers/tur-minimalism.png);
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  width: 21rem;
+  max-width: 21.875rem;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+#turkey_cover {
+  background-image: url(../img/pop-art/covers/tur-pop-art-front.svg);
+  width: 20rem;
+  /* background-size: cover; */
+/* }
+#italy_cover {
+  background-image: url(../img/pop-art/covers/ita-pop-art-front.svg);
+  /* background-size: cover; 
+}*/
+
+/* #kaz_cover {
+  background-image: url(../img/pop-art/covers/kaz-pop-art-front.svg); */
+  /* background-size: cover; */
+/* } */ 
 /* .card > * {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 */
-
 .card__background {
     object-fit: cover;
     max-width: 100%;
@@ -150,48 +259,42 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
 
 
-/* NEW INSERT OF A STYLE */
-
 .card_overflow{
-    padding: 16px 8px 8px 16px;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: white; /* rgba(0, 0, 0, 0.75);  black with opacity */
+    background-image: url(../img/pop-art/covers/pop-art-back.svg);
+    background-size: cover ;
     overflow: hidden;
     width: 100%;
     height: 0;
+    text-align: center;
     transition: .5s ease; /* for smooth transition */
 }
 
 .card:hover .card_overflow{
+    padding-top: 2em;
     height: 100%;
 }
 
-.card__title h2{
-    /* padding-left: 4px; */
-    width: 100%;
-    margin-top: 30%;
-    color:black;
-    font-size: 4wf;
-    position: absolute;
-    text-align: center;
-    transform: rotate(-5deg)skewX(-5deg); 
-}
-
-.card__description a {
-    text-align: left;
-    color: black;
-    font-size: 1.2 vw;
-   /* margin: 10% 0 0 18%; */
-    left: 20px;
-    width: 70%;
-    letter-spacing: 5px;
-    line-height: 30px;
-    font-family: TakeOff;
+.card__description {
+    padding-left: 0 !important;
 }
   
+.card__description a {
+    color: #000;
+    font-family: 'Blambot-Casual-Regular';
+    font-size: 1.2 vw;
+    letter-spacing: 5px;
+    line-height: 30px;
+    text-decoration: none;
+}
+  
+.card__description a:hover {
+    color: #000;
+    text-decoration: underline;
+}
 
 .card__content {
     --flow-space: 0.9375rem;
@@ -201,7 +304,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     align-self: flex;
     width: 100%;
     height: 100%;
-    padding: 12% 1.25rem 1.875rem;
+    padding: 12% 1rem 1rem;
   
 }
   
@@ -210,26 +313,25 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
   
 .card__title {
+    color: #000;
+    padding-bottom: 1em;
+    padding-top: 2em;
     position: relative;
-    width: fit-content;
+    text-align: center;
     width: -moz-fit-content;
 }
-  
-.card__title::after {
-    content: "";
-    position: absolute;
-    height: 0.3125rem;
-    width: calc(100% + 1.25rem);
-    bottom: calc((1.25rem - 0.5rem) * -1);
-    left: -1.25rem;
-    background-color: rgb(255, 140, 0);
+
+/* INTRO */
+.welcome-ornament {
+    background-image: url(../img/pop-art/elements/index-ornament.svg);
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 120px;
+    margin-top: 4rem;
+    margin-right: auto;
+    margin-left: auto;
 }
-
-#card1{ background-image: url(../img/pop-art/covers/tur-pop-art.svg);} 
-#card2{ background-image: url(../img/pop-art/covers/ita-pop-art.svg);}
-#card3{ background-image: url(../img/pop-art/covers/kaz-pop-art.svg);}
-
-
 .welcome-intro {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -237,13 +339,17 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     margin-right: 50px;
     position: relative;
     justify-content: center;
-    font-family: TakeOff;
+    font-family: 'Blambot-Casual-Regular';
 }
 
 .welcome-title{
-    padding-top: 50px;
+    padding-top: 25px;
     text-align: center;
     font-weight: 700;
+    font-family: 'Blambot-Casual-Regular';
+    font-size: 30px;
+
+
 }
 
 .welcome-body{
@@ -261,39 +367,82 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 #team { padding: 100px 0 100px 0; }
 .team-title {    
-    padding-top: 50px;
+    margin-top: 30px;
     text-align: center;
-    font-size: 45px;
+    font-size: 30px;
     font-weight: 500;
 }
 .team-intro { text-align: center; margin: auto; width: 50%; }
-.team-item { padding: 20px; margin-top: 40px; text-align: justify; width: 250px; height: 250px;}
+.team-item {    font-family: 'Blambot-Casual-Regular';
+    padding: 20px; margin-top: 40px; text-align: justify; 
+}
+.team-item h3{ padding:10px; margin-top: 20px; text-align: center;}
+.team-item p{
+    font-size: 20px;
+    text-align: justify;
+    padding-top: 20px;
+}
 .team-body{
-    font-size: 24px;
+    font-size: 20px;
     text-align: justify;
     padding-bottom: 50px;
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
-    font-family: TakeOff;
+    font-family: 'Blambot-Casual-Regular';
+    border: #000 solid 3px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.member-role { font-family: 'Blambot Casual Regular'; font-size: 10px; padding-left: 30px; position: relative;  border: #000 solid 3px;
+    border-radius: 20px;
+    background-color: #ffffff;}
+.member-role:after { font-family: 'Blambot Casual Regular'; position: absolute; content: " "; height: 3px; width: 25px; position: absolute; left: 0; top: 12px; background: #000; }
+.member-img {font-family: 'Blambot Casual Regular'; background-repeat: no-repeat; background-size: cover; width: 250px; height: 250px; background-position: center center; }
+#irem {background-image: url(../img/pop-art/team/irem-pop1.png);}
+#ulzhan { background-image: url(../img/pop-art/team/ulzhan-pop1.png); }
+#rana { background-image: url(../img/pop-art/team/rana-pop1.png); }
+.member-img p {font-family: 'Blambot Casual Regular';}
+
+#mapBaklava { height: 500px; 
     border: #000 solid 3px;
     border-radius: 20px;
     background-color: #ffffff;
 }
-.member-role { font-family: TakeOff; font-size: 14px; padding-left: 30px; position: relative;  border: #000 solid 3px;
-    border-radius: 20px;
-    background-color: #ffffff;}
-.member-role:after { font-family: TakeOff; position: absolute; content: " "; height: 3px; width: 25px; position: absolute; left: 0; top: 12px; background: #000; }
-.member-img { background-repeat: no-repeat; background-size: cover; width: 250px; height: 250px; background-position: center center; }
-#irem { background-image: url(../img/pop-art/team/irem-pop1.png);}
-#ulzhan { background-image: url(../img/pop-art/team/ulzhan-pop1.png); }
-#rana { background-image: url(../img/pop-art/team/rana-pop1.png); }
 
-#mapBaklava { height: 180px; 
-    border: #000 solid 3px;
-    border-radius: 20px;
-    background-color: #ffffff;}
+.map {
+        margin: 2em;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
 
+/* FOOTER */
+.footer {
+    /* font-family: 'Blambot Casual Regular'; */
+    background-color: #1B1D28;
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
+
+.footer p{
+    /* font-family:'Blambot Casual Regular'; */
+}
+.footer-body {
+    font-family: 'Blambot-Casual-Regular';
+    text-align: center;
+    color: white;
+}
+
+.footer-body p{
+    /* font-family: 'Blambot Casual Regular'; */
+    padding-bottom: 1em;
+}
+.footer-body p:last-child{
+    /* font-family: 'Blambot Casual Regular'; */
+    color: #BE914C;
+}
 
 
 /* ARTICLE */
@@ -308,49 +457,92 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     line-height: 1; 
     color: #000000; 
     text-align: center;  
-    font-family: TakeOff, YouHoser;
     font-weight: 800;
     font-size: 40px;
     margin-right: 20px;
+    display: inline-block;
+
+}
+
+
+.article-page-title::before,
+.article-page-title::after {
+content: '';
+height: 7vh; /* Set the height of your icons */
+width: 9vw; /* Set the width of your icons */
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+/* top: 50%; */
+/* transform: translateY(-50%); */  
+display: inline-block;
+vertical-align: middle; /* hepsini aynı unit yap */
+}
+
+.article-page-title::before {
+left: 40vw; /* Adjust the left offset */
+background-image: url(../img/pop-art/elements/calling.png); /* Set the path to your left icon */
+}
+
+.article-page-title::after {
+right: 35vw; /* Adjust the right offset */
+background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your right icon */
 }
 
 .article-container {
-    margin: 20px;
-    padding: 20px;
+    padding: 10px;
+    font-size: 'Blambot Causal Regular' ;
 }
 
 .article-header {
-    padding: 50px; 
-    background-image: url(../img/pop-art/elements/pop-art-article-page-landing.svg);
-    /* background-size: contain; */
+    padding: 0px; 
+    padding-right: 0.6%;
+    background-image: url(../img/pop-art/elements/pop-art-article-page.svg);
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
     background-repeat: no-repeat;
-    width: 100%; 
-    height: auto;    
+    /* width: 100%; 
+    height: auto;     */
+    /* width: 50vh;
+  height: auto; */
     border-radius: 25px;
-    border: 10px solid #000;
+    border: 10px solid #000; 
+    max-width: 800px;
+    max-height: 500px;
+    min-height: fit-content;
+    margin: 0 auto; 
 }
 
+.article-header .row .first-heading .text-title h2:first-of-type,
+.article-header .row .first-heading .text-title h1:first-of-type {
+    display: inline;
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+
 .article-body {
+    margin-top: 10px;
     padding: 20px; 
+    margin-right: 0%;
     text-align: justify;
     border: #000 solid 5px;
     border-radius: 20px;
     background-color: #ffffff; 
+    font-family: 'Blambot-Casual-Regular';
+
 }
 
 .first-heading {
-    text-align: center; 
-
+    text-align: right; 
+    margin-top: 0% ;
+    /* background-image: url(../img/pop-art/elements/bubble.svg); */
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    padding-top: 0.8%;
 }
 
-
-/* New CSS for the image container */
-.image-container {
-    float: left; /* Make the container and images float to the left */
-    width: 100%;
-}
 
 
 .text-title h2 {
@@ -372,26 +564,35 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
 
 .text-publisher h3 {
-    padding-top: 50px;
+    /* padding-top: 50px; */
     color: black;
     font-size: 20px;
     font-weight: 400;
-    text-align: center;
-    line-height: 20px;
+    text-align: right;
+    /* padding-bottom: 20%; */
+    /* line-height: 20px; */
+}
+.text-publisher h3:last-child {
+  /* padding-top: 50px; */
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: right;
+  padding-bottom: 40%;
+  /* line-height: 20px; */
 }
 
 .text-sub-title p {
     color: black;
-    font-family: TakeOff;
+    font-family: 'Blambot-Casual-Regular';
     text-align: center;
     font-size: 25px;
     font-style: italic;
     font-weight: 400;
-    line-height: 161%; /* 48.3px */
+    /* line-height: 161%;  */
     padding: 2%;
 }
 
-/* how to add dropcap? */
 .text-body p {
     color: #000;
     text-align: justify;
@@ -399,9 +600,270 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     font-style: normal;
     line-height:2-5vh;
     padding: 3%;
-    font-family: TakeOff;
+    /* font-family: 'Blambot Casual Regular' !important; */
 }
 
-.below-navbar {
-    background-image: url(../img/pop-art/elements/points-7.png);    
-}
+/*FAB*/
+  
+  #presentation{
+    width: 480px;
+    height: 120px;
+    padding: 20px;
+    margin: auto;
+    background: #FFF;
+    margin-top: 10px;
+    box-shadow: 0 3px 15px -5px rgba(0,0,0,0.1); 
+    transition: all 0.3s; 
+    border-radius: 10px;
+    
+    h1{
+      font-weight: 400;
+    }
+    
+    h3{
+      font-weight: 400;
+      color: #666;
+    }
+  }
+  
+  #presentation:hover{
+    box-shadow: 0 12px 28px -5px rgba(0,0,0,0.13);
+    transition: all 0.3s;
+    transform: translateZ(10px);
+  }
+  
+  #floating-button{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+  }
+  
+  .plus{
+    position: absolute;
+    top: 0;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 5px;
+    font-size: 38px;
+    font-weight: 300;
+    animation: plus-out 0.3s;
+    transition: all 0.3s;
+  }
+  .plus img {
+    width: 100%; 
+    height: 100%; 
+  }
+  
+  
+  #container-floating{
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    bottom: 30px;
+    right: 30px;
+    z-index: 50px;
+  }
+  
+  #container-floating:hover{
+    width: 100px;
+    height: 500px;
+    /* display: inline-block; */
+    /* padding: 30px; */
+  }
+  
+  #container-floating:hover .plus{
+    animation: plus-in 0.15s linear;
+    animation-fill-mode: forwards;
+  }
+  
+  .edit{
+    position: absolute;
+    top: 0;
+    display: block;
+    bottom: 0;
+    left: 0;
+    display: block;
+    right: 0;
+    padding-left: 12px;
+    opacity: 0;
+    margin: auto;
+    line-height: 50px;
+    transform: rotateZ(-70deg);
+    transition: all 0.3s;
+    animation: edit-out 0.3s;
+    
+  }
+  .edit img {
+    width: 65%;
+    height: 65%;
+  }
+  
+  #container-floating:hover .edit{
+    animation: edit-in 0.2s;
+     animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes edit-in{
+      from {opacity: 0; transform: rotateZ(-70deg);}
+      to {opacity: 1; transform: rotateZ(0deg);}
+  }
+  
+  @keyframes edit-out{
+      from {opacity: 1; transform: rotateZ(0deg);}
+      to {opacity: 0; transform: rotateZ(-70deg);}
+  }
+  
+  @keyframes plus-in{
+      from {opacity: 1; transform: rotateZ(0deg);}
+      to {opacity: 0; transform: rotateZ(180deg);}
+  }
+  
+  @keyframes plus-out{
+      from {opacity: 0; transform: rotateZ(180deg);}
+      to {opacity: 1; transform: rotateZ(0deg);}
+  }
+  
+  .nds{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 300;
+    transform:  scale(0);
+    cursor: pointer;
+  }
+  
+  .nd1{
+    right: 40px;
+    bottom: 120px;
+    animation-delay: 0.2s;
+    animation: bounce-out-nds 0.3s linear;
+    animation-fill-mode:  forwards;
+  }
+  
+  .nd3{
+    right: 40px;
+    bottom: 180px;
+    animation-delay: 0.15s;
+    animation: bounce-out-nds 0.15s linear;
+    animation-fill-mode:  forwards;
+  }
+  
+  .nd4{
+    right: 40px;
+    bottom: 240px;
+    animation-delay: 0.1s;
+    animation: bounce-out-nds 0.1s linear;
+    animation-fill-mode:  forwards;
+  }
+  
+  .nd-new {
+    right: 40px;
+    bottom: 300px;
+    animation-delay: 0.3s;
+    animation: bounce-out-nds 0.3s linear;
+    animation-fill-mode: forwards;
+  }
+  
+  .nd-new2 {
+    right: 40px;
+    bottom: 360px;
+    animation-delay: 0.3s;
+    animation: bounce-out-nds 0.3s linear;
+    animation-fill-mode: forwards;
+  }
+  
+  .nd-new3 {
+   right: 40px;
+    bottom: 420px;
+    animation-delay: 0.3s;
+    animation: bounce-out-nds 0.3s linear;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes bounce-nds{
+      from {opacity: 0;}
+      to {opacity: 1; transform: scale(1);}
+  }
+  
+  @keyframes bounce-out-nds{
+      from {opacity: 1; transform: scale(1);}
+      to {opacity: 0; transform: scale(0);}
+  }
+  
+  #container-floating:hover .nds{
+    
+    animation: bounce-nds 0.1s linear;
+    animation-fill-mode:  forwards;
+  }
+  
+  #container-floating:hover .nd3{
+    animation-delay: 0.08s;
+  }
+  #container-floating:hover .nd4{
+    animation-delay: 0.15s;
+  }
+  #container-floating:hover .nd5{
+    animation-delay: 0.2s;
+  }
+  #container-floating:hover .nd-new{
+    animation-delay: 0.25s;
+  }
+  #container-floating:hover .nd-new2{
+    animation-delay: 0.3s;
+  }
+  #container-floating:hover .nd-new3{
+    animation-delay: 0.35s;
+  }
+  .letter{
+    font-size: 23px;
+    /* font-family: 'Roboto'; */
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    line-height: 40px;
+  }
+  
+  img.reminder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .reminder{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    line-height: 40px;
+  }
+  
+  .profile{
+    border-radius: 50%;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 20px;
+  } 
+  
+  
