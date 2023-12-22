@@ -354,7 +354,7 @@ li.nav-item {
     line-height: 1; 
     color: #000000; 
     text-align: center;  
-    font-family: 'Kudryashev Headline';
+    font-family: 'Misdemeanor';
     font-weight: 400;
     font-size: 40px;
     margin-right: 20px;
@@ -367,6 +367,7 @@ li.nav-item {
 
 .article-header {
     padding: 50px; 
+    background-image: url(/img/banksy/banksy_article_banner.jpg);
     background-color: #000000; /* will change for the whole page */
     border-radius: 25px;
 }
@@ -406,15 +407,15 @@ li.nav-item {
 }
 
 .text-title h1 {
-    font-family: 'Kudryashev Headline';
-    color: white;
+    font-family: 'Courier New';
+    color: black;
     font-size: 80px;
     font-weight: 700;
     line-height: 80.50px;
 }
 
 .text-title h2:last-child {
-    color: white;
+    color: black;
     font-size: 25px;
     font-weight: 400;
     line-height: 41.30px;
@@ -431,10 +432,9 @@ li.nav-item {
 
 .text-sub-title p {
     color: black;
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+    font-family: 'Staatliches';
     text-align: center;
     font-size: 25px;
-    font-style: italic;
     font-weight: 400;
     line-height: 161%; /* 48.3px */
     padding: 2%;

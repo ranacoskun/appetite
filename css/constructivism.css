@@ -46,10 +46,13 @@
     font-style: normal;
 } */
 
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
+/* smaller heading font */
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 * {
     box-sizing: border-box;
   }
-body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family:'Courier New', Courier, monospace; letter-spacing: 0px; font-size: 17px;  line-height: 32px; background-color: #C40803; background-image: url(/img/constructivism/paper-bg.png); }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family:'Courier Prime'; font-weight:bold; font-size: 17px;  line-height: 32px; background-color: #C40803; background-image: url(/img/constructivism/paper-bg.png); }
 h2 { font-size: 28px; line-height: 38px; }
 h3 { font-size: 22px; line-height: 32px; }
 h4 { font-size: 20px; }
@@ -57,15 +60,15 @@ h5 { font-size: 17px; }
 h6 { font-size: 12px; }
 p { margin: 0 0 20px; line-height: 1.7; }
 p:last-child { margin: 0px; }
-a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
-a:focus, a:hover { text-decoration: none; color: #f85759; }
+/* a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
+a:focus, a:hover { text-decoration: none; color: #f85759; } */
 
 .section {
     position: relative;
 }
 .section.bg-static {
     margin: auto;
-    background-color: white;
+    background-color:#f85759;
 }
 .section .bg-move {
     position: absolute;
@@ -87,10 +90,11 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     position: relative;
     background: none;
     transition: padding 0.8s; /* Add a transition for smooth effect */
-    background-image: url(../img/constructivism/star_with_hand.png);
-    background-position: 27% 20%, top, left center;
+    /*background-image: url(../img/constructivism/star_with_hand.png); */
+    background-position: 25% 22%, top, left center;
     background-repeat: no-repeat;
-    background-size: 6vw;
+    background-size: 110px;
+    padding-top: 2em;
 }
 
 .page-title { 
@@ -105,7 +109,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 .page-sub {
     text-align: center; 
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Staatliches';
 }
 
 .page-caption {
@@ -163,7 +167,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 /*nav-bar style*/
 
 .navbar li {
-    color:#000000;
+    color: whitesmoke;
 }
 
 .navbar {
@@ -178,13 +182,14 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 .navbar-nav > li{
     padding-left:80px;
     padding-right:80px;
-    font-family: 'Courier New';
+    font-family: 'Staatliches';
+    color: white;
 }
 
 .nav-item {
     width: 290.33px;
     text-align: center;
-    color: #000;
+    color: white;
     font-family: ;
 }
 /* .card-section { position: relative; bottom: 60px; }
@@ -217,18 +222,18 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 
 #turkey_cover {
-    background-image: url(../img/constructivism/tur-cover.jpg);
+    background-image: url(/img/constructivism/turkish_cover.png);
     width: 20rem;
     background-size: cover; 
 } 
 #italy_cover {
-    background-image: url(../img/constructivism/ita-cover.jpg);
+    background-image: url(/img/constructivism/italian.png);
     width: 20rem;
     background-size: cover; 
 }
 
 #kaz_cover {
-    background-image: url(../img/constructivism/kaz-cover.jpg);
+    background-image: url(/img/constructivism/kazakh_cover.png);
     width: 20rem;
     background-size: cover; 
 }
@@ -249,7 +254,6 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 /* NEW INSERT OF A STYLE */
 
 .card_overflow{
-    padding: 16px 8px 8px 16px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -262,22 +266,28 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
 
 .card:hover .card_overflow{
+    padding-top: 2em;
     height: 100%;
 }
 
-.card__title h2{
+.card__title {
     /* padding-left: 4px; */
+    font-family: 'Red October';
+    background-color: #C40803;
     width: 100%;
-    margin-top: 30%;
+    margin-top: 10%;
     color:black;
     font-size: 4wf;
     position: absolute;
     text-align: center;
     transform: rotate(-5deg)skewX(-5deg); 
+    justify-content: center;
+    padding-left: 10px;
 }
 
-.card__description a {
-    text-align: left;
+.card__description a{
+    margin-top: 60%;
+    text-align: center;
     color: black;
     font-size: 1.2 vw;
    /* margin: 10% 0 0 18%; */
@@ -285,40 +295,39 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     width: 70%;
     letter-spacing: 5px;
     line-height: 30px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Staatliches';
 }
   
-
-.card__content {
-    --flow-space: 0.9375rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-self: flex;
-    width: 100%;
-    height: 100%;
-    padding: 12% 1.25rem 1.875rem;
-  
-}
   
 .card__content--container {
     --flow-space: 1.25rem;
 }
   
-.card__title {
+/*.card__title {
     position: relative;
     width: fit-content;
     width: -moz-fit-content;
-}
+} */
   
 .card__title::after {
-    content: "";
+    /* content: "";
     position: absolute;
     height: 0.3125rem;
     width: calc(100% + 1.25rem);
     bottom: calc((1.25rem - 0.5rem) * -1);
     left: -1.25rem;
-    background-color: rgb(255, 140, 0);
+    background-color:#f85759; */
+    
+    font-family: 'Red October';
+    width: 100%;
+    margin-top: 30%;
+    color:black;
+    font-size: 4wf;
+    position: absolute;
+    text-align: center;
+    transform: rotate(-5deg)skewX(-5deg); 
+    justify-content: center;
+    padding-left: 10px;
 }
 
 .welcome-intro {
@@ -332,9 +341,8 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 
 .welcome-title{
-    margin-top: 30px;
-    text-align: left;
-    font-size: 70px;
+    margin-top: 60px;
+    text-align: center;
     font-family: 'Red October';
 }
 .welcome-body{
@@ -354,18 +362,29 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     padding-bottom: 30px;
 }
 
-#team { padding: 100px 0 100px 0; }
+#team { padding: 50px 0 100px 0; }
 .team-title {    
     padding-top: 50px;
     text-align: center;
 }
 .team-intro { text-align: center; margin: auto; width: 50%; }
-.team-item { padding: 20px; margin-top: 40px; }
+.team-item { padding: 20px; margin-top: 20px; background-color: antiquewhite;}
+.team-item h3{
+    text-align: center;
+    font-family: 'Staatliches';
+}
+
+.team-item p{
+    text-align: center;
+    line-height: 1;
+    background-color: antiquewhite;
+}
+
 .team-body{
     font-size: 20px;
-    text-align: justify;
+    text-align: center;
     padding-bottom: 30px;
-    padding-top: 30px;
+    padding-top: 0px;
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -376,9 +395,9 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     background-size: contain; 
     height: 250px; 
     background-position: center center; }
-#irem { background-image: url(../img/constructivism/teams/irem-constr.jpg); }
-#ulzhan { background-image: url(../img/constructivism/teams/ulzhan-constr.jpg); }
-#rana { background-image: url(../img/constructivism/teams/rana-constr.jpg); }
+#irem { background-image: url(../img/constructivism/teams/irem-constr.jpg); margin-bottom: 10px;}
+#ulzhan { background-image: url(../img/constructivism/teams/ulzhan-constr.jpg);  margin-bottom: 10px; }
+#rana { background-image: url(../img/constructivism/teams/rana-constr.jpg);  margin-bottom: 10px;}
 
 #mapBaklava { height: 500px; }
 .map {
@@ -409,20 +428,25 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 /* ARTICLE */
 
 .article-page-caption {
+    background-image: url(/img/constructivism/appetite_const_head.png);
+    background-size: 20rem;
+    background-position:center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .article-page-title{
     line-height: 1; 
     color: #000000; 
     text-align: center;  
-    font-family: 'Kudryashev Headline';
+    font-family: 'Red October';
     font-weight: 400;
     font-size: 40px;
     margin-right: 20px;
+    
 }
 
 .article-container {
@@ -432,15 +456,25 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 .article-header {
     padding: 50px; 
-    background-color: #000000; /* will change for the whole page */
+    /* background-color: #000000; /* will change for the whole page */
     border-radius: 25px;
+    background-image: url(/img/constructivism/article1_banner.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
 }
 
 .article-body {
     padding: 20px; 
     text-align: justify; 
+    font-family: 'Courier Prime';
+    font-weight: lighter;
 }
 
+
+.numer_dish_name{
+    font-family: "Staatliches";
+    color: #C40803;
+}
 .first-heading {
     text-align: center; 
 }
@@ -468,10 +502,11 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     font-size: 30px;
     font-weight: 700;
     line-height: 56.35px;
+    font-family: 'Red October';
 }
 
 .text-title h1 {
-    font-family: 'Kudryashev Headline';
+    font-family: 'Staatliches';
     color: white;
     font-size: 80px;
     font-weight: 700;
@@ -496,10 +531,9 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 .text-sub-title p {
     color: black;
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+    font-family: "Staatliches";
     text-align: center;
     font-size: 25px;
-    font-style: italic;
     font-weight: 400;
     line-height: 161%; /* 48.3px */
     padding: 2%;
