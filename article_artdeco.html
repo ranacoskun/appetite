@@ -57,7 +57,7 @@
 
 <body>
     <div class="site-container">
-        <header class="page-header" id="page-header">
+        <header class="article-page-header" id="page-header">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -67,7 +67,6 @@
                     </div>
                 </div>
             </div>
-
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -101,8 +100,8 @@
 
         <!-- ARTICLE LAYOUT -->
         <main>
-            <div class=" article-container position-relative">
-                <div class="article-header col-lg-12">
+            <div class="article-container position-relative">
+                <div class="article-header col-lg-8 mx-auto">
                     <div class="row">
                         <div class="first-heading">
                             <div class="text-title">
@@ -116,6 +115,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- <div class="body-ornament"></div> -->
+
                 <div class="article-body col-8 mx-auto">
                     <div class="text-sub-title">
                         <p>"This sweet, layered pastry has spread across the Middle East and beyond,with each country
@@ -179,7 +180,7 @@
         crossorigin="anonymous"></script>
     <script>
         window.onscroll = function () {
-            var header = document.querySelector(".page-header");
+            var header = document.querySelector(".article-page-header");
             if (window.pageYOffset > 0) {
                 header.classList.add("sticky");
             } else {

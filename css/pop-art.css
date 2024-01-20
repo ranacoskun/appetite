@@ -330,10 +330,10 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 /* FOOTER */
 .footer {
-    font-family: 'Blambot Casual Regular';
-    background-color: #1B1D28;
-    padding-top: 3em;
-    padding-bottom: 1em;
+  font-family: 'Blambot-Casual-Regular';
+  background-color: #1B1D28;
+  padding-top: 3em;
+  padding-bottom: 1em;
 }
 
 /* .footer p{
