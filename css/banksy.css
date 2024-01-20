@@ -13,8 +13,8 @@
 * {
     box-sizing: border-box;
   }
-body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Helvetica', sans-serif; letter-spacing: 0px; font-size: 17px; color: #8d8f90;  line-height: 32px; background: rgba(255,255,255,1); }
-h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: 'Helvetica', sans-serif; font-weight: 700; letter-spacing: -1px; line-height: 1; }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Courier New', sans-serif; letter-spacing: 0px; font-size: 17px; color: #8d8f90;  line-height: 32px; background-color: #F3E9E9; background-image: url(/img/banksy/concrete-wall-2.png);  }
+h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: 'Courier New', sans-serif; font-weight: 700; letter-spacing: -1px; line-height: 1; }
 h1 { font-size: 34px; }
 h2 { font-size: 28px; line-height: 38px; }
 h3 { font-size: 22px; line-height: 32px; }
@@ -31,7 +31,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
 .section.bg-static {
     margin: auto;
-    background-color: white;
+    background-image: url(/img/banksy/concrete-wall-2.png);
 }
 .section .bg-move {
     position: absolute;
@@ -76,7 +76,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 .page-title {
     color: #000000;
-    font-family: 'Kudryashev Headline';
+    font-family: 'Misdemeanor';
     font-size: 100px; 
     font-weight: 400;
     line-height: 1;
@@ -90,7 +90,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 /* Make the header sticky */
 .page-header.sticky {
-    background-color: white;
+    background-image: url(/img/banksy/concrete-wall-2.png);
     position: fixed;
     top: 0;
     width: 100%;
@@ -146,42 +146,35 @@ li.nav-item {
 }
   
 .card {
-    display: grid;
+    /* display: grid; */
     place-items: center;
-    width: 21rem;
-    max-width: 21.875rem;
+    /* width: 21rem; */
+    min-width: 21.875rem;
     height: 100%;
     overflow: hidden;
     border-radius: 0.625rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    /*min-height: 5rem; */
 }
 
 
-.card_tur {
-    background-image: url(../img/banksy/tur-banksy.png);
-    background-size: cover;
-    display: grid;
-    place-items: center;
-    width: 21rem;
-    max-width: 21.875rem;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 0.625rem;
-    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
-}
+.card_img {background-repeat: no-repeat; background-size: contain; height: 450px; background-position: center center;}
 
 #turkey_cover {
-    background-image: url(../img/minimalism/covers/tur-minimalism.png);
+    background-image: url(../img/banksy/tur-banksy.png);
+    width: 20rem;
     background-size: cover;
 } 
 #italy_cover {
     background-image: url(../img/banksy/ita-banksy.png);
-    background-size: cover;
+    width: 20rem;
+    /* background-size: cover; */
 }
 
 #kaz_cover {
     background-image: url(../img/banksy/kaz-banksy.png);
-    background-size: cover;
+    width: 20rem;
+    /* background-size: cover; */
 }
 /* .card > * {
     grid-column: 1 / 2;
@@ -313,15 +306,20 @@ li.nav-item {
 .member-role { font-weight: bold; font-size: 14px; padding-left: 30px; position: relative; }
 .member-role:after { position: absolute; content: " "; height: 3px; width: 25px; position: absolute; left: 0; top: 12px; background: #000; }
 .member-img { background-repeat: no-repeat; background-size: contain; height: 250px; background-position: center center; }
-#irem { background-image: url(../img/minimalism/team/irem-minimalism.png); }
-#ulzhan { background-image: url(../img/minimalism/team/ulzhan-minimalism.png); }
-#rana { background-image: url(../img/minimalism/team/rana-minimalism.png); }
+#irem { background-image: url(../img/banksy/team/irem-banksy.png); }
+#ulzhan { background-image: url(../img/banksy/team/ulzhan-banksy.png); }
+#rana { background-image: url(../img/banksy/team/rana-banksy.png); }
 
 #mapBaklava { height: 500px; }
 .map {
     margin: 2em;
     padding-left: 3em;
     padding-right: 3em;
+}
+
+
+.before_footer{
+    background-image: url(../img/banksy/maid.png);
 }
 
 /* FOOTER */
@@ -356,7 +354,7 @@ li.nav-item {
     line-height: 1; 
     color: #000000; 
     text-align: center;  
-    font-family: 'Kudryashev Headline';
+    font-family: 'Misdemeanor';
     font-weight: 400;
     font-size: 40px;
     margin-right: 20px;
@@ -369,6 +367,7 @@ li.nav-item {
 
 .article-header {
     padding: 50px; 
+    background-image: url(/img/banksy/banksy_article_banner.jpg);
     background-color: #000000; /* will change for the whole page */
     border-radius: 25px;
 }
@@ -408,15 +407,15 @@ li.nav-item {
 }
 
 .text-title h1 {
-    font-family: 'Kudryashev Headline';
-    color: white;
+    font-family: 'Courier New';
+    color: black;
     font-size: 80px;
     font-weight: 700;
     line-height: 80.50px;
 }
 
 .text-title h2:last-child {
-    color: white;
+    color: black;
     font-size: 25px;
     font-weight: 400;
     line-height: 41.30px;
@@ -433,10 +432,9 @@ li.nav-item {
 
 .text-sub-title p {
     color: black;
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+    font-family: 'Staatliches';
     text-align: center;
     font-size: 25px;
-    font-style: italic;
     font-weight: 400;
     line-height: 161%; /* 48.3px */
     padding: 2%;

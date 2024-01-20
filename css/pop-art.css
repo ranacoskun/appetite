@@ -30,18 +30,18 @@ p:last-child { margin: 0px; }
 a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
 a:focus, a:hover { text-decoration: none; color: #f85759; }
 
-
+/* 
 .pop-art-left {
     background-image: url(../img/pop-art/elements/calling.png);
     background-size: contain;
-    height: 10vh; width: auto;
+    width: 10vh; height: auto;
 }
 
 .pop-art-right {
     background-image: url(../img/pop-art/elements/egg.png);
     background-size: contain;
     height: 10vh; width: auto;
-}
+} */
 .page-header {
     position: relative;
     transition: padding 0.8s;
@@ -54,11 +54,39 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 .page-title { 
     line-height: 1; 
     color: #000000; 
-    text-align: center;  
+    text-align: center; 
+    align-items: center; 
     font-family: 'Blambot-Casual-Regular';
     font-weight: 400;
-    font-size: 150px; 
+    font-size: 625%; 
+    display: inline-block;
+
 }
+
+.page-title::before,
+.page-title::after {
+  content: '';
+  height: 30vh; /* Set the height of your icons */
+  width: 9vw; /* Set the width of your icons */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  /* top: 50%; */
+  /* transform: translateY(-50%); */  
+  display: inline-block;
+  vertical-align: middle; /* hepsini aynı unit yap */
+}
+
+.page-title::before {
+  left: 27vw; /* Adjust the left offset */
+  background-image: url(../img/pop-art/elements/calling.png); /* Set the path to your left icon */
+}
+
+.page-title::after {
+  right: 27vw; /* Adjust the right offset */
+  background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your right icon */
+}
+
 
 .page-sub {
     text-align: center; 
@@ -71,6 +99,9 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 .page-caption {
     padding-top: 20px; /* Reduce the top padding */
     padding-bottom: 20px; /* Reduce the bottom padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*nav-bar style*/
@@ -141,6 +172,30 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
 
 
+.page-header.sticky .page-title::before,
+.page-header.sticky .page-title::after {
+  content: '';
+  height: 10vh; /* Set the height of your icons */
+  width: 9vw; /* Set the width of your icons */
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  /* top: 50%; */
+  /* transform: translateY(-50%); */  
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.page-header.sticky .page-title::before {
+  left: 40vw; /* Adjust the left offset */
+  background-image: url(../img/pop-art/elements/calling.png); /* Set the path to your left icon */
+}
+
+.page-header.sticky .page-title::after {
+  right: 33vw; /* Adjust the right offset */
+  background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your right icon */
+}
+
 /* CARDS LAYOUT */
 
 .card-container {
@@ -151,17 +206,52 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
   
 .card {
-    display: grid;
+    /* display: grid; */
     place-items: center;
-    width: 21rem;
+    /* width: 21rem; */
     max-width: 21.875rem;
     height: 100%;
     overflow: hidden;
     border-radius: 0.625rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    min-height: 5rem;
+
+}
+.card_img {background-repeat: no-repeat; background-size: contain; height: 500px; background-position: center center;}
+
+/* 
+.card_tur {
+  background-image: url(../img/minimalism/covers/tur-minimalism.png);
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  width: 21rem;
+  max-width: 21.875rem;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
 }
 
+#turkey_cover {
+  background-image: url(../img/pop-art/covers/tur-pop-art-front.svg);
+  width: 20rem;
+  /* background-size: cover; */
+/* }
+#italy_cover {
+  background-image: url(../img/pop-art/covers/ita-pop-art-front.svg);
+  /* background-size: cover; 
+}*/
 
+/* #kaz_cover {
+  background-image: url(../img/pop-art/covers/kaz-pop-art-front.svg); */
+  /* background-size: cover; */
+/* } */ 
+/* .card > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+*/
 .card__background {
     object-fit: cover;
     max-width: 100%;
@@ -336,12 +426,11 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
   padding-bottom: 1em;
 }
 
-/* .footer p{
-    font-family:'Blambot Casual Regular';
-} */
-
+.footer p{
+    /* font-family:'Blambot Casual Regular'; */
+}
 .footer-body {
-    /* font-family: 'Blambot Casual Regular'; */
+    font-family: 'Blambot-Casual-Regular';
     text-align: center;
     color: white;
 }
@@ -371,28 +460,65 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     font-weight: 800;
     font-size: 40px;
     margin-right: 20px;
+    display: inline-block;
+
+}
+
+
+.article-page-title::before,
+.article-page-title::after {
+content: '';
+height: 7vh; /* Set the height of your icons */
+width: 9vw; /* Set the width of your icons */
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+/* top: 50%; */
+/* transform: translateY(-50%); */  
+display: inline-block;
+vertical-align: middle; /* hepsini aynı unit yap */
+}
+
+.article-page-title::before {
+left: 40vw; /* Adjust the left offset */
+background-image: url(../img/pop-art/elements/calling.png); /* Set the path to your left icon */
+}
+
+.article-page-title::after {
+right: 35vw; /* Adjust the right offset */
+background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your right icon */
 }
 
 .article-container {
-    margin: 10px;
     padding: 10px;
+    font-size: 'Blambot Causal Regular' ;
 }
 
 .article-header {
     padding: 0px; 
     padding-right: 0.6%;
-    background-image: url(../img/pop-art/elements/background-without-bubble.svg);
-    /* background-size: contain; */
+    background-image: url(../img/pop-art/elements/pop-art-article-page.svg);
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
     /* width: 100%; 
     height: auto;     */
-    width: 100%;
-  height: 72vh;
+    /* width: 50vh;
+  height: auto; */
     border-radius: 25px;
     border: 10px solid #000; 
+    max-width: 800px;
+    max-height: 500px;
+    min-height: fit-content;
+    margin: 0 auto; 
 }
+
+.article-header .row .first-heading .text-title h2:first-of-type,
+.article-header .row .first-heading .text-title h1:first-of-type {
+    display: inline;
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
 
 .article-body {
     margin-top: 10px;
@@ -402,34 +528,22 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     border: #000 solid 5px;
     border-radius: 20px;
     background-color: #ffffff; 
-    font-family: 'Blambot Casual Regular';
+    font-family: 'Blambot-Casual-Regular';
 
 }
 
 .first-heading {
     text-align: right; 
-    margin-top: 0% !important; /* top margini silemiyorum!!!!! */
-    background-image: url(../img/pop-art/elements/bubble.svg);
+    margin-top: 0% ;
+    /* background-image: url(../img/pop-art/elements/bubble.svg); */
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
     background-repeat: no-repeat;
     border-radius: 25px;
     padding-top: 0.8%;
 }
 
 
-/* New CSS for the image container */
-.image-container {
-    float: left; /* Make the container and images float to the left */
-    width: 100%;
-}
-
-
-
-/* #line-heading::after {
-    content: "\a";
-    white-space: pre;
-} */
 
 .text-title h2 {
     color: black;
@@ -455,13 +569,22 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     font-size: 20px;
     font-weight: 400;
     text-align: right;
-    padding-bottom: 20%;
+    /* padding-bottom: 20%; */
     /* line-height: 20px; */
+}
+.text-publisher h3:last-child {
+  /* padding-top: 50px; */
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: right;
+  padding-bottom: 40%;
+  /* line-height: 20px; */
 }
 
 .text-sub-title p {
     color: black;
-    font-family: 'Blambot Casual Regular';
+    font-family: 'Blambot-Casual-Regular';
     text-align: center;
     font-size: 25px;
     font-style: italic;
@@ -477,19 +600,10 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     font-style: normal;
     line-height:2-5vh;
     padding: 3%;
-    font-family: 'Blambot Casual Regular' !important;
+    /* font-family: 'Blambot Casual Regular' !important; */
 }
 
-/* 
-.below-navbar {
-    background-image: url(../img/pop-art/elements/points-7.png);    
-} */
-
-body{
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    background: #f1f1f1;
-  }
+/*FAB*/
   
   #presentation{
     width: 480px;
@@ -540,7 +654,7 @@ body{
     text-align: center;
     padding: 0;
     margin: 0;
-    line-height: 55px;
+    line-height: 5px;
     font-size: 38px;
     font-weight: 300;
     animation: plus-out 0.3s;
@@ -581,10 +695,10 @@ body{
     left: 0;
     display: block;
     right: 0;
-    padding: 0;
+    padding-left: 12px;
     opacity: 0;
     margin: auto;
-    line-height: 80px;
+    line-height: 50px;
     transform: rotateZ(-70deg);
     transition: all 0.3s;
     animation: edit-out 0.3s;
@@ -715,7 +829,7 @@ body{
   }
   .letter{
     font-size: 23px;
-    font-family: 'Roboto';
+    /* font-family: 'Roboto'; */
     color: white;
     position: absolute;
     left: 0;
