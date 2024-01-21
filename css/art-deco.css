@@ -556,7 +556,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     text-align: center;
     padding: 0;
     margin: 0;
-    line-height: 55px;
+    line-height: 5px;
     font-size: 38px;
     font-weight: 300;
     animation: plus-out 0.3s;
@@ -597,10 +597,10 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     left: 0;
     display: block;
     right: 0;
-    padding: 0;
+    padding-left: 12px;
     opacity: 0;
     margin: auto;
-    line-height: 80px;
+    line-height: 50px;
     transform: rotateZ(-70deg);
     transition: all 0.3s;
     animation: edit-out 0.3s;
