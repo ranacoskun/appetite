@@ -17,21 +17,21 @@
     <link rel="apple-touch-icon" href="img/icon/favicon.png">
 
     <link rel="stylesheet" href="css/normalize.min.css">
+    <script src="js/fab.js" defer></script>
+    <script src="js/map.js" defer></script>
 
     <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="js/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- SWUP -->
     <script src="js/swup.min.js"></script>
     <script src="js/SwupBodyClassPlugin.min.js"></script>
     <script src="js/SwupHeadPlugin.min.js"></script>
 
-    <!-- LEAFLET -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- MAPBOX -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.js"></script>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-caption">
-                            <h1 class="page-title">APPETITE</h1>
+                            <h1 class="page-title mx-auto">APPETITE</h1>
                             <h5 class="page-sub" id="page-sub">Journal about different world cuisines with XML.</h5>
                         </div>
                     </div>
@@ -84,11 +84,7 @@
         </header>
         <main>
             <div class="container">
-
-                <button onclick="changeStyle('css/minimalism.css')">Style 1</button>
-                <button onclick="changeStyle('css/baroque.css')">Style 2</button>
-                <button onclick="changeStyle('css/bauhaus.css')">Style 3</button>
-
+                <h3 class="welcome-title">Issues</h3>
                 <div class="container">
                     <div class="row">
                         <div class="d-flex col-lg col-md col-sm justify-content-center">
@@ -103,9 +99,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!--<img class="card__background" 
-                                    alt="Turkey Magazine Cover" /> -->
-                        <!--src="img/minimalism/covers/tur-minimalism.png"-->
                         <div class="d-flex col-lg col-md col-sm justify-content-center">
                             <div id="italy_cover" class="card card_img">
                                 <div class="card_overflow">
@@ -135,12 +128,12 @@
                 </div>
             </div>
             <!-- INTRO -->
+            <div class="welcome-ornament"></div>
             <div class="container">
-                <div class="row ">
+                <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="welcome-intro">
-                            <hr>
-                            <h3 class="welcome-title">Welcome to Appetite</h3>
+                            <h3 class="welcome-title">Welcome to <span class="welcome-highlight">Appetite</span></h3>
                             <p class="welcome-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
                                 quia
                                 neque
@@ -185,16 +178,15 @@
 
             <!-- MAP -->
             <div class="container">
-                <div class="map">
-                    <div id="mapBaklava"></div>
-                </div>
+                <div class="welcome-title">Discover the <span class="welcome-highlight">Map</span></div>
+                <div id="map"></div>
             </div>
 
             <!-- TEAM -->
             <div class="container">
                 <div id="team" class="pt-3">
                     <div class="container">
-                        <h3 class="team-title">The team</h3>
+                        <h3 class="team-title">Meet the <span class="team-highlight">Team</span></h3>
                         <p class="team-body">Meet the projects team. We are all students from the master degree DHDK of
                             the
                             <i>University of Bologna "Alma Mater Studiorum".</i>
@@ -204,7 +196,7 @@
                                 <div class="team-item">
                                     <div id="irem" class="member-img"></div>
                                     <h3>İrem Atmar</h3>
-                                    <p class="member-role">Lorem, ipsum.</p>
+                                    <!-- <p class="member-role">Lorem, ipsum.</p> -->
                                     <p>After the Bachelor's Degree in Humanities at the University of Bologna
                                         (2018-2021),
                                         is
@@ -248,53 +240,65 @@
             </div>
         </footer>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="js/map.js"></script>
-    <script>
-        window.onscroll = function () {
-            var header = document.querySelector(".page-header");
-            var pageSub = document.getElementById("page-sub");
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
 
-            if (window.pageYOffset > 0) {
-                if (pageSub) {
-                    pageSub.style.display = "none"; // Hide the page-sub element
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // setDefaultStyle();
+
+            window.onscroll = function () {
+                var header = document.querySelector(".page-header");
+                var pageSub = document.getElementById("page-sub");
+
+                if (window.pageYOffset > 0) {
+                    if (pageSub) {
+                        pageSub.style.display = "none"; // Hide the page-sub element
+                    }
+                    header.classList.add("sticky");
+                } else {
+                    if (pageSub) {
+                        pageSub.style.display = "block"; // Show the page-sub element
+                    }
+                    header.classList.remove("sticky");
                 }
-                header.classList.add("sticky");
-            } else {
-                if (pageSub) {
-                    pageSub.style.display = "block"; // Show the page-sub element
-                }
-                header.classList.remove("sticky");
-            }
-        };
+            };
+            // initializeMap();
+        })
     </script>
-    
-<div class="fab-button">
-    <div id="container-floating">
-      <div class="nd4 nds" onclick="changeStyle('css/baroque2.css')"> <img class="reminder" src="components/fab button/icons/baroque-plate.jpg">
-        <p class="letter">C</p>
-      </div>
-      <div class="nd3 nds" onclick="changeStyle('css/constructivism.css')"><img class="reminder" src="components/fab button/icons/constructurism-plate.jpg" /></div>
-      
-      <div class="nd1 nds" onclick="changeStyle('css/art-deco.css')"><img class="reminder" src="components/fab button/icons/art-deco-plate.jpg" />
-        <p class="letter"></p>
-      </div>
-      <div class="nd-new nds" onclick="changeStyle('css/pop-art.css')"><img class="reminder" src="components/fab button/icons/pop-art-plate.jpg">
+
+
+    <div class="fab-button">
+        <div id="container-floating">
+            <div class="nd4 nds" onclick="changeStyle('css/baroque2.css')"> <img class="reminder"
+                    src="components/fab button/icons/baroque-plate.jpg">
+                <p class="letter">C</p>
+            </div>
+            <div class="nd3 nds" onclick="changeStyle('css/constructivism.css')"><img class="reminder"
+                    src="components/fab button/icons/constructurism-plate.jpg" /></div>
+
+            <div class="nd1 nds" onclick="changeStyle('css/art-deco.css')"><img class="reminder"
+                    src="components/fab button/icons/art-deco-plate.jpg" />
+                <p class="letter"></p>
+            </div>
+            <div class="nd-new nds" onclick="changeStyle('css/pop-art.css')"><img class="reminder"
+                    src="components/fab button/icons/pop-art-plate.jpg">
+            </div>
+
+            <div class="nd-new2 nds" onclick="changeStyle('css/banksy.css')"><img class="reminder"
+                    src="components/fab button/icons/banksy-plate.jpg">
+            </div>
+
+            <div class="nd-new3 nds" onclick="changeStyle('css/minimalism.css')"><img class="reminder"
+                    src="components/fab button/icons/minimalism-plate.jpg">
+            </div>
+            <div id="floating-button">
+                <p class="plus"><img src="components/fab button/icons/choosing-plate.png"></p>
+                <p class="edit"><img src="components/fab button/icons/x-plate.png"></p>
+            </div>
+        </div>
     </div>
-    
-    <div class="nd-new2 nds" onclick="changeStyle('css/banksy.css')"><img class="reminder" src="components/fab button/icons/banksy-plate.jpg">
-    </div>
-    
-    <div class="nd-new3 nds" onclick="changeStyle('css/minimalism.css')"><img class="reminder" src="components/fab button/icons/minimalism-plate.jpg">
-           </div>
-      <div id="floating-button">
-        <p class="plus"><img src="components/fab button/icons/choosing-plate.png"></p>
-        <p class="edit"><img src="components/fab button/icons/x-plate.png"></p>
-      </div>
-    </div></div>
 </body>
 
 </html>

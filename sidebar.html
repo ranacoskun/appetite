@@ -16,13 +16,12 @@
     <link rel="apple-touch-icon" href="img/icon/favicon.png">
 
     <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/minimalism.css">
 
+    <script src="js/metadata.js"></script>
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <script src="js/script.js"></script>
-    <script src="js/metadata.js"></script>
 
 
     <!-- SWUP -->
@@ -161,6 +160,9 @@
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <div class="list-group">
+            <label class="list-group-item" style="text-align: center; color:rgb(218, 68, 73)">
+                <label class="check-label">Show Entities</label>
+            </label>
             <label class="list-group-item list-group-item-action">
                 <input class="category-checkbox" type="checkbox" data-class="dish">
                 <label class="check-label">Dish</label>
@@ -182,20 +184,6 @@
         <div class="list-group">
             <label class="list-group-item"> <strong> <u>Annotated Words</u></strong></label>
             <ul id="annotated-words-list" class="list-group-item"></ul>
-        </div>
-        <div class="list-group">
-            <input type="text" id="find" onkeypress="preGo(event)" placeholder="Enter search term" />
-            <span>
-                <button onclick="markText()">Search</button>
-            </span>
-            <span id="hoppers" class="hidden">
-                <button onclick="move('p')">◀</button>
-                <button onclick="move('n')">▶</button>
-            </span>
-            <span class="clear">
-                <button onclick="cls()">Clear</button>
-            </span>
-            <div class="found"><span id="count"></span> Found</div>
         </div>
     </div>
 
@@ -273,7 +261,7 @@
                                 Italian nobles.
                             </p>
                         </div>
-                        <div class="text-body ">
+                        <div class="text-body">
                             <p>During the 20th century, Americans developed a love affair with <span class="dish"><a
                                         href="https://it.wikipedia.org/wiki/Pasta">pasta</a></span>. On the big
                                 screen, <span class="dish"><a
@@ -717,63 +705,6 @@
         };
 
     </script>
-    <!-- <script>
-        let tarea, hilite, find, count, hoppers;
-
-        function preGo(evt) {
-            if (evt.key === "Enter") {
-                event.preventDefault();
-                markText();
-            }
-        }
-
-        function markText() {
-            let arg = document.getElementById('find').value;
-            //let sens = document.getElementById('sens').value;
-            //let word = document.getElementById('word').value;
-
-            if (arg) {
-                //hilite.search(arg, sens, word);
-                hilite.search(arg);
-                count.textContent = hilite.count();
-                hopperButtons();
-            }
-        }
-
-        function cls() {
-            hilite.clear();
-            count.textContent = '0';
-            find.value = '';
-            hopperButtons();
-            find.focus();
-        }
-
-        function move(op) {
-            if (op == 'p') { hilite.prev(); } else { hilite.next(); }
-        }
-
-        function inputHandler() {
-            count.textContent = hilite.count();
-            hopperButtons();
-        }
-
-        function hopperButtons() {
-            +count.textContent ? hoppers.classList.remove('hidden') : hoppers.classList.add('hidden');
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            tarea = document.getElementById('txt');
-            find = document.getElementById('find');
-            count = document.getElementById('count');
-            hoppers = document.getElementById('hoppers');
-            hilite = createTextHighlight(tarea);
-
-            count.textContent = '0';
-            //hilite = createTextHighlight(tarea); // Initialize the text highlighter
-            tarea.addEventListener('input', inputHandler);
-            inputHandler();
-        });
-    </script>  -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const elements = document.querySelectorAll(".dish, .drink, .place, .person");
@@ -785,12 +716,10 @@
                 person: new Map(),
             };
 
-            // Function to normalize text (case-insensitive and remove spaces)
             function normalizeText(text) {
                 return text.toLowerCase().trim();
             }
 
-            // Function to highlight annotated words of a specific class
             function highlightWords(className) {
                 elements.forEach(element => {
                     if (element.classList.contains(className)) {
@@ -820,102 +749,50 @@
                 highlightWords(className);
             }
 
-
-
             function updateHighlightedWords() {
                 const selectedCategories = Array.from(document.querySelectorAll('.category-checkbox:checked'))
                     .map(checkbox => checkbox.getAttribute('data-class'));
 
-                // Create a Set to store all selected words
-                const allSelectedWords = new Set();
+                // Create a Map to store all selected words and their frequencies
+                const allSelectedWords = new Map();
 
-                // Update the list for each selected category
-                selectedCategories.forEach(className => {
-                    const wordMap = annotatedWords[className];
-                    for (const [word] of wordMap.entries()) {  // Fix: Use .entries() for iteration
-                        allSelectedWords.add(word);
-                    }
-                    updateList(className);
-                });
-
-                // Highlight words for all selected categories
-                elements.forEach(element => {
-                    const word = normalizeText(element.textContent);
-                    if (allSelectedWords.has(word)) {
-                        element.classList.add("highlighted");
-                    } else {
-                        element.classList.remove("highlighted");
-                    }
-                });
-
-                count.textContent = allSelectedWords.size;
-                hopperButtons();
-
-                // Display the list of annotated words for the selected categories
-                displayAnnotatedWordList(allSelectedWords);
-            }
-
-
-
-            /* function updateHighlightedWords() {
-                const selectedCategories = Array.from(document.querySelectorAll('.category-checkbox:checked'))
-                    .map(checkbox => checkbox.getAttribute('data-class'));
-
-                // Update the list for each selected category
-                selectedCategories.forEach(className => {
-                    updateList(className);
-                });
-
-                // Highlight words for all selected categories
-                const allSelectedWords = new Set();
-                selectedCategories.forEach(className => {
-                    const wordMap = annotatedWords[className];
-                    for (const [word] of wordMap) {
-                        allSelectedWords.add(word);
-                    }
-                });
-
-                elements.forEach(element => {
-                    const word = normalizeText(element.textContent);
-                    if (allSelectedWords.has(word)) {
-                        element.classList.add("highlighted");
-                    } else {
-                        element.classList.remove("highlighted");
-                    }
-                });
-
-                count.textContent = allSelectedWords.size;
-                hopperButtons();
-
-                // Create a list of annotated words for the selected categories
-                const annotatedWordList = [];
-                selectedCategories.forEach(className => {
-                    const wordMap = annotatedWords[className];
-                    for (const [word] of wordMap) {
-                        annotatedWordList.push(word);
-                    }
-                });
-
-                // Display the list of annotated words
-                displayAnnotatedWordList(wordMap);
-                // displayAnnotatedWordList(annotatedWordList);
-
-            }
-
-             function displayAnnotatedWordList(wordList) {
+                // Clear the list before updating for all selected categories
                 const listContainer = document.getElementById("annotated-words-list");
                 listContainer.innerHTML = "";
 
-                wordList.forEach(word => {
+                // Update the list for each selected category
+                selectedCategories.forEach(className => {
+                    const wordMap = annotatedWords[className];
+                    for (const [word, count] of wordMap.entries()) {
+                        // Add or update the frequency of the word
+                        allSelectedWords.set(word, (allSelectedWords.get(word) || 0) + count);
+                    }
+                });
+
+                // Update the list for all selected categories
+                allSelectedWords.forEach((count, word) => {
                     const listItem = document.createElement("li");
-                    listItem.textContent = word;
+                    listItem.textContent = `${word} (${count})`;
                     listItem.addEventListener("click", function () {
                         find.value = word;
                         markText();
                     });
                     listContainer.appendChild(listItem);
                 });
-            } */
+
+                // Highlight words for all selected categories
+                elements.forEach(element => {
+                    const word = normalizeText(element.textContent);
+                    if (allSelectedWords.has(word)) {
+                        element.classList.add("highlighted");
+                    } else {
+                        element.classList.remove("highlighted");
+                    }
+                });
+
+                count.textContent = allSelectedWords.size;
+                hopperButtons();
+            }
 
             function displayAnnotatedWordList(wordSet) {
                 const listContainer = document.getElementById("annotated-words-list");
@@ -932,9 +809,6 @@
                 });
             }
 
-
-
-            // Function to initialize the text highlighter
             function initializeTextHighlighter() {
                 tarea = document.getElementById('txt');
                 find = document.getElementById('find');

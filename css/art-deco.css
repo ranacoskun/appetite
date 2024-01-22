@@ -9,7 +9,7 @@
 * {
     box-sizing: border-box;
   }
-body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Peignot';  line-height: 32px; }
+body {min-height: -webkit-fill-available; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Peignot';  line-height: 32px; }
 h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: 'Peignot'; font-weight: 700; letter-spacing: -1px; line-height: 1; }
 h1 { font-size: 34px; }
 h2 { font-size: 28px; line-height: 38px; }
@@ -24,6 +24,8 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 .site-container{
     background-color: #ebe5d7;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .section {
@@ -119,7 +121,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     font-size: 40px; 
 }
 
-/*nav-bar style*/
+/* NAVBAR SECTION */
 
 .navbar li {
     color:#000000;
@@ -141,10 +143,143 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     padding-right:80px;
 }
 
+li.nav-item {
+    width: 290.33px;
+    text-align: center;
+}
+
+.nav-item a{
+    color:#000;
+}
 
 /* CARDS LAYOUT */
 
 .card-container {
+    padding: 100px 60px 60px 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+  
+.card {
+    display: grid;
+    place-items: center;
+    width: 21rem;
+    min-width: 21.875rem;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0.625rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    /* min-height: 5rem; */
+}
+
+.card_img {
+    background-repeat: no-repeat;
+    background-size: contain; 
+    height: 500px; 
+    background-position: center center;
+}
+
+
+.card__background {
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+    /* min-height: 5rem; */
+}
+
+
+.card_overflow{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/art-deco/covers/menu.png);
+    background-size: cover ;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    text-align: center;
+    transition: .5s ease;
+}
+
+
+.card:hover .card_overflow{
+    padding-top: 2em;
+    height: 100%;
+}
+
+/* .card__title h2{
+    padding-left: 4px;
+    width: 100%;
+    margin-top: 30%;
+    color:black;
+    font-size: 4wf;
+    position: absolute;
+    text-align: center;
+    transform: rotate(-5deg)skewX(-5deg); 
+} */
+
+.card__description {
+    padding-left: 0 !important;
+}
+
+.card__description a {
+    color: #ffffff;
+    font-family: Peignot;
+    font-size: 1.2 vw;
+    letter-spacing: 5px;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.card__description a:hover {
+    color: #BE914C;
+    text-decoration: underline;
+} 
+
+.card__content {
+    --flow-space: 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex;
+    width: 100%;
+    height: 100%;
+    padding: 12% 1.25rem 1.875rem;
+  
+}
+  
+.card__content--container {
+    --flow-space: 1.25rem;
+}
+
+.card__title {
+    color: #BE914C;
+    padding-bottom: 1em;
+    padding-top: 2em;
+    position: relative;
+    text-align: center;
+    width: -moz-fit-content;
+}
+  
+
+#turkey_cover {
+    background-image: url(../img/art-deco/covers/tur-artdeco.png);
+    width: 20rem;
+    background-color: #bba88a;
+} 
+#italy_cover {
+    background-image: url(../img/art-deco/covers/ita-artdeco.png);
+    background-color: #bba88a;
+}
+
+#kaz_cover {
+    background-image: url(../img/art-deco/covers/kaz-artdeco.png);
+    background-color: #bba88a;
+}
+
+/* .card-container {
     padding: 100px 60px 60px 100px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -181,7 +316,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     width: 100%;
     height: 0;
     text-align: center;
-    transition: .5s ease; /* for smooth transition */
+    transition: .5s ease;
 }
 
 .card:hover .card_overflow{
@@ -232,17 +367,22 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     width: -moz-fit-content;
 }
 
+#turkey_cover {
+    background-image: url(../img/art-deco/covers/tur-artdeco.png);
+    width: 20rem;
+} 
+#italy_cover {
+    background-image: url(../img/art-deco/covers/ita-artdeco.png);
+}
+
+#kaz_cover {
+    background-image: url(../img/art-deco/covers/kaz-artdeco.png);
+} */
+
+
 
  /* INTRO */
-.welcome-ornament {
-    background-image: url(../img/art-deco/elements/ornament.svg);
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 100px;
-    margin-top: 2rem;
-    display: block;
-}
+
 
 .welcome-intro {
     margin-top: 50px;
@@ -254,10 +394,12 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
 
 .welcome-title{
-    margin-top: 30px;
-    text-align: center;
-    font-size: 70px;
+    font-size: 75px;
     font-family: Peignot;
+    font-weight: 100;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
 }
 
 .welcome-highlight{
@@ -277,19 +419,46 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     padding-right: 50px;
 }
 
+.welcome-ornament {
+    background-image: url(../img/art-deco/elements/ornament.svg);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100px;
+    margin-top: 2rem;
+    display: block;
+}
+
+/* MAP SECTION */
+
+#map { 
+    width: 100%;
+    height: 400px;
+}
+
+.mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
+
+
+/* TEAM SECTION */
 
 #team { padding: 100px 0 100px 0; }
 .team-title {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 70px;
+    font-size: 75px;
     font-family: Peignot;
+    font-weight: 100;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
 }
 .team-highlight{
     font-style: oblique;
     color: #f85759;
 }
 .team-intro { text-align: center; margin: auto; width: 50%; }
+.team-item { padding: 20px; margin-top: 40px; }
 .team-body{
     font-size: 20px;
     font-family: Peignot;
@@ -299,7 +468,6 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     padding-left: 50px;
     padding-right: 50px;
 }
-.team-item { padding: 20px; margin-top: 40px; }
 .team-item h3{ padding:10px; margin-top: 20px; text-align: center;}
 .team-item p{
     font-size: 20px;
@@ -318,13 +486,6 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 #irem { background-image: url(../img/art-deco/team/irem.jpg); }
 #ulzhan { background-image: url(../img/art-deco/team/ulzhan.jpg); }
 #rana { background-image: url(../img/art-deco/team/rana.jpg); }
-
-#mapBaklava { height: 500px; }
-.map {
-    margin: 2em;
-    padding-left: 3em;
-    padding-right: 3em;
-}
 
 /* FOOTER */
 .footer {

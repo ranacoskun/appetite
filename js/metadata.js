@@ -1,13 +1,8 @@
 function createTextHighlight(ele) {
-    if (ele.tagName != 'TEXTAREA') {
-        throw 'The element must be a textarea';
-    }
-
     let styles = window.getComputedStyle(ele);
     let origBkgColor = styles.backgroundColor;
 
     let searchArg = '';
-    //let sensitive = false;
     let sel = -1;
 
     const handlers = {
@@ -15,37 +10,34 @@ function createTextHighlight(ele) {
         scroll: scrollHandler
     };
 
-    ele.classList.add('hlta-textarea');
-    ele.addEventListener('input', handlers.input);
-    ele.addEventListener('scroll', handlers.scroll);
+    // ele.classList.add('hlta-textarea');
+    //ele.addEventListener('input', handlers.input);
+    //ele.addEventListener('scroll', handlers.scroll);
 
-    let nodeCont = document.createElement('div');
-    nodeCont.classList.add('hlta-container');
-    let container = nodeCont;
+    // let nodeCont = document.createElement('div');
+    // nodeCont.classList.add('hlta-container');
+    // let container = nodeCont;
 
-    let nodeBack = document.createElement('div');
-    nodeBack.classList.add('hlta-backdrop');
-    let backdrop = nodeBack;
+    // let nodeBack = document.createElement('div');
+    // nodeBack.classList.add('hlta-backdrop');
+    // let backdrop = nodeBack;
 
     let nodeHilite = document.createElement('div');
     nodeHilite.classList.add('hlta-highlight');
     let hilite = nodeHilite;
 
-    ele.parentNode.insertBefore(nodeCont, ele.nextSibling);
-    backdrop.append(hilite);
-    container.append(backdrop);
-    container.appendChild(ele);
+    // ele.parentNode.insertBefore(nodeCont, ele.nextSibling);
+    // backdrop.append(hilite);
+    // container.append(backdrop);
+    // container.appendChild(ele);
 
-    let observer = new ResizeObserver(resizeObs);
-    observer.observe(ele);
-    inputHandler();
+    // let observer = new ResizeObserver(resizeObs);
+    // observer.observe(ele);
+    // inputHandler();
 
     return {
-        //search: function (arg, isSensitive, isWord) {
         search: function (arg) {
             searchArg = arg;
-            //sensitive = !!isSensitive;
-            //word = !!isWord;
             inputHandler();
             sel = -1;
             next();
@@ -80,7 +72,7 @@ function createTextHighlight(ele) {
         let height = ele.offsetHeight;
 
         let css = `width: ${width}px; height: ${height}px; margin: ${styles.marginTop} ${styles.marginRight} ${styles.marginBottom} ${styles.marginLeft}; 
-                       background-color: ${origBkgColor}`;
+                   background-color: ${origBkgColor}`;
         backdrop.style.cssText = css;
         copyStyles(ele, hilite, ['width', 'paddingLeft', 'paddingRight', 'paddingTop', 'paddingBottom', 'borderTop', 'letterSpacing',
             'borderLeft', 'borderRight', 'borderBottom', 'fontFamily', 'fontSize', 'fontWeight', 'lineHeight']);
@@ -100,13 +92,10 @@ function createTextHighlight(ele) {
     }
 
     function markText() {
-        let txt = ele.value.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        let txt = ele.innerText; // Use innerText to get the text content of the element
         if (searchArg) {
-            searchArg = searchArg.replace(/</g, '&lt;').replace(/>/g, '&gt;');
             let boundary = '\\b';
-
-            //let re = new RegExp(boundary + '(' + escapeString(searchArg) + ')' + boundary, 'g' + (sensitive ? '' : 'i'));
-            let re = new RegExp(boundary + '(' + escapeString(searchArg) + ')' + boundary, 'g' + 'i');
+            let re = new RegExp(boundary + '(' + escapeString(searchArg) + ')' + boundary, 'gi');
             return txt.replace(re, '<mark>$&</mark>');
         } else {
             return txt;

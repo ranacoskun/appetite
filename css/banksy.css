@@ -310,12 +310,17 @@ li.nav-item {
 #ulzhan { background-image: url(../img/banksy/team/ulzhan-banksy.png); }
 #rana { background-image: url(../img/banksy/team/rana-banksy.png); }
 
-#mapBaklava { height: 500px; }
-.map {
-    margin: 2em;
-    padding-left: 3em;
-    padding-right: 3em;
+/* MAP SECTION */
+
+#map { 
+    width: 100%;
+    height: 400px;
 }
+
+.mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
 
 
 .before_footer{
