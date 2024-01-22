@@ -1,245 +1,923 @@
+function initializeMap() {
+    mapboxgl.accessToken = 'pk.eyJ1IjoicmVuYWNza24iLCJhIjoiY2xyaHJvOG04MDI3ejJ0b3N1cmt6a29vNiJ9.ZCS9Bm3qbHLJFEZPBNM5dg';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        // style: 'mapbox://styles/renacskn/clrhub2ni00l401pd6nt505f4',
+        center: [27.142826, 38.423733],
+        zoom: 1.15
+    });
 
-//Didnt add Turkey as a pin to the map 
-// for the map for Baklava
-var mapBaklava = L.map('mapBaklava').setView([45.4397, 15.9434], 3);
+    map.on('load', () => {
+        map.addSource('places', {
+            'type': 'geojson',
+            'data': {
+                'type': 'FeatureCollection',
+                'features': [
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Portugal</strong><p><a href="">Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                -8.27264,
+                                39.389903
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Genoa</strong><p><a href="#">Pasta</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                8.946256,
+                                44.405649
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'name': 'Alaska Point',
+                            'description': '<strong>Alaska</strong><p><a href="">Tiramisu</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                -149.4937,
+                                64.2008
+                            ]
+                        }
+                    },
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '© OpenStreetMap'
-}).addTo(mapBaklava);
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>UK</strong><p><a href="">Baklava, Tiramisu</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-1.924574, 54.073407]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Spain</strong><p><a href="">Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                -4.138169,
+                                41.095412
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>France</strong><p><a href="">Food Cities, Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                2.618897,
+                                47.350476
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Algeria</strong><p><a href="">Baklava</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                2.484282,
+                                27.853446
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Europe</strong><p><a href="">Food Cities</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                14.285256,
+                                49.505439
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Austria</strong><p><a href="">Baklava</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                14.262487,
+                                47.578457
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Italy</strong><p><a href="">Rakı, Pasta, Tiramisu</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                12.791356,
+                                42.396941
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Naples</strong><p><a href="#">Pasta</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                14.2681,
+                                40.8522
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Agrigento</strong><p><a href="#">Pasta</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                13.5765,
+                                37.3114
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Paris</strong><p><a href="#">Pasta</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                2.3522,
+                                48.8566
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Soho, London</strong><p><a href="#">Tiramisu</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                -0.1340,
+                                51.5136
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>London</strong><p><a href="#">Tiramisu</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                -0.1280,
+                                51.5074
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Treviso</strong><p><a href="#">Tiramisu</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                12.2430,
+                                45.6669
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'name': 'Friuli Venezia Giulia Point',
+                            'description': '<strong>Friuli Venezia Giulia</strong><p><a href="#">Tiramisu</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                13.3922,
+                                45.9654
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Sicilia</strong><p><a href="">Rakı, Pasta</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                14.253654,
+                                37.535768
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Belgrade</strong><p><a href="">Baklava</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                20.455798,
+                                44.814537
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Albania</strong><p><a href="">Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                19.986816,
+                                40.730122
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>North Macedonia</strong><p><a href="">Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                21.72737,
+                                41.572005
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Bulgaria</strong><p><a href="">Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                25.067686,
+                                42.630208
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Greece</strong><p><a href="">Baklava, Food Cities, Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                23.925394,
+                                38.598456
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Edirne</strong><p><a href="">Baklava</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                26.653419,
+                                41.696719
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Aegean Region</strong><p><a href="">Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                27.075857,
+                                39.072643
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>İzmir</strong><p><a href="">Food Cities, Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                26.85264,
+                                38.322571
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Bodrum</strong><p><a href="">Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                27.420764,
+                                37.018237
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Istanbul</strong><p><a href="">Baklava, Food Cities, Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                28.906004,
+                                41.133219
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Topkapı Palace</strong><p><a href="">Baklava</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                28.984262,
+                                41.01272
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Marmara Region</strong><p><a href="">Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                29.105544,
+                                40.315287
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Şuhut</strong><p><a href="">Baklava</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                30.545624,
+                                38.535513
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Antalya</strong><p><a href="">Food Cities</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                30.751737,
+                                36.944236
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Turkey</strong><p><a href="">Baklava, Food Cities, Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                32.226453,
+                                39.558001
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Konya</strong><p><a href="">Food Cities</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                32.682271,
+                                37.87567
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Cyprus</strong><p><a href="">Baklava</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                33.285296,
+                                35.03345
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Ankara</strong><p><a href="">Baklava</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                32.841563,
+                                39.923154
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Black Sea</strong><p><a href="">Food Cities</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                33.930267,
+                                42.792959
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Black Sea Region</strong><p><a href="">Food Cities, Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                34.033007,
+                                41.54932
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Veneto</strong><p><a href="#">Tiramisu</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                11.8819,
+                                45.4344
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Tolmezzo</strong><p><a href="#">Tiramisu</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                12.6737,
+                                46.3988
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>New York City</strong><p><a href="#">Tiramisu</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                -74.006,
+                                40.7128
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>University of Oxford</strong><p><a href="">Tiramisu</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                -1.2577,
+                                51.7548
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'name': 'Locanda Locatelli',
+                            'description': '<strong>Locanda Locatelli</strong><p><a href="#">Tiramisu</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                -0.1552,
+                                51.5141
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'name': 'Australia Point',
+                            'description': '<strong>Australia</strong><p><a href="#">Tiramisu</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                133.7751,
+                                -25.2744
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'name': 'Venice',
+                            'description': '<strong>Venice</strong><p><a href="">Tiramisu</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                12.3155,
+                                45.4408
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'name': 'Le Beccherie',
+                            'description': '<strong>Le Beccherie</strong><p><a href="#">Tiramisu</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                12.3142,
+                                45.4382
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Anatolia</strong><p><a href="">Food Cities, Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                33.581188,
+                                38.668761
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Seyhan River</strong><p><a href="">Food Cities</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                35.336768,
+                                36.992168
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Adana</strong><p><a href="">Food Cities</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                35.427494,
+                                36.913659
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Antakya</strong><p><a href="">Food Cities</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                36.28033,
+                                36.442921
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Lebanon</strong><p><a href="">Baklava</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                35.93758,
+                                33.926736
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Gaziantep</strong><p><a href="">Food Cities</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                37.549417,
+                                37.021528
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Trabzon</strong><p><a href="">Food Cities, Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                39.776014,
+                                40.951005
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Şanlıurfa</strong><p><a href="">Baklava</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                38.866517,
+                                37.206597
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Syria</strong><p><a href="">Food Cities</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                38.583432,
+                                34.963949
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Armenia</strong><p><a href="">Baklava</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                44.61824,
+                                40.416023
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Iraq</strong><p><a href="">Rakı</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                43.115855,
+                                33.23717
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Azerbaijan</strong><p><a href="">Baklava</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                47.678443,
+                                40.444857
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Iran</strong><p><a href="">Baklava</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                53.27299,
+                                33.886208
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Central Asia</strong><p><a href="">Food Cities</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                74.616297,
+                                47.669996
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Asia</strong><p><a href="">Food Cities</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                76.66802,
+                                37.024945
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>China</strong><p><a href="">Food Cities, Pasta</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                100.769565,
+                                34.662834
+                            ]
+                        }
+                    }
+                ]
+            }
+        });
+        // Add a layer showing the places.
+        map.addLayer({
+            'id': 'places',
+            'type': 'circle',
+            'source': 'places',
+            'paint': {
+                'circle-color': '#4264fb',
+                'circle-radius': 6,
+                'circle-stroke-width': 2,
+                'circle-stroke-color': '#ffffff'
+            }
+        });
 
-// Marker for Edirne
-L.marker([41.6772, 26.5550]).addTo(mapBaklava)
-    .bindPopup('Edirne, Turkey')
-    .openPopup();
+        // Create a popup, but don't add it to the map yet.
+        const popup = new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false
+        });
 
-// Marker for Topkapı Palace in Istanbul
-L.marker([41.0116, 28.9834]).addTo(mapBaklava)
-    .bindPopup('Topkapı Palace, Istanbul')
-    .openPopup();
+        map.on('mouseenter', 'places', (e) => {
+            // Change the cursor style as a UI indicator.
+            map.getCanvas().style.cursor = 'pointer';
 
-// Marker for Şuhut, Afyonkarahisar
-L.marker([38.7367, 30.5392]).addTo(mapBaklava)
-    .bindPopup('Şuhut, Afyonkarahisar')
-    .openPopup();
+            // Copy coordinates array.
+            const coordinates = e.features[0].geometry.coordinates.slice();
+            const description = e.features[0].properties.description;
 
-// Marker for Istanbul
-L.marker([41.0082, 28.9784]).addTo(mapBaklava)
-    .bindPopup('Istanbul, Turkey')
-    .openPopup();
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
 
-// Marker for Şanlıurfa
-L.marker([37.1671, 38.7937]).addTo(mapBaklava)
-    .bindPopup('Şanlıurfa, Turkey')
-    .openPopup();
+            // Populate the popup and set its coordinates
+            // based on the feature found.
+            popup.setLngLat(coordinates).setHTML(description).addTo(map);
+        });
 
-// Marker for Ankara
-L.marker([39.9334, 32.8597]).addTo(mapBaklava)
-    .bindPopup('Ankara, Turkey')
-    .openPopup();
+        map.on('mouseleave', 'places', () => {
+            map.getCanvas().style.cursor = '';
+            //popup.remove();
+        });
+    });
+}
 
-// Marker for UK
-L.marker([51.5074, -0.1278]).addTo(mapBaklava)
-    .bindPopup('United Kingdom')
-    .openPopup();
-
-// Marker for Austria
-L.marker([48.2082, 16.3738]).addTo(mapBaklava)
-    .bindPopup('Austria')
-    .openPopup();
-
-// Marker for Iran
-L.marker([32.4279, 53.6880]).addTo(mapBaklava)
-    .bindPopup('Iran')
-    .openPopup();
-
-// Marker for Belgrade
-L.marker([44.7866, 20.4489]).addTo(mapBaklava)
-    .bindPopup('Belgrade')
-    .openPopup();
-
-// Marker for Lebanon
-L.marker([33.8547, 35.8623]).addTo(mapBaklava)
-    .bindPopup('Lebanon')
-    .openPopup();
-
-// Marker for Algeria
-L.marker([28.0339, 1.6596]).addTo(mapBaklava)
-    .bindPopup('Algeria')
-    .openPopup();
-
-// Marker for Armenia
-L.marker([40.0691, 45.0382]).addTo(mapBaklava)
-    .bindPopup('Armenia')
-    .openPopup();
-
-// Marker for Greece
-L.marker([37.9838, 23.7275]).addTo(mapBaklava)
-    .bindPopup('Greece')
-    .openPopup();
-
-// Marker for Cyprus
-L.marker([35.1264, 33.4299]).addTo(mapBaklava)
-    .bindPopup('Cyprus')
-    .openPopup();
-
-// Marker for Azerbaijan
-L.marker([40.1431, 47.5769]).addTo(mapBaklava)
-    .bindPopup('Azerbaijan')
-    .openPopup();
-
-
-
-
-// for the map for food-cities
-var mapFood = L.map('mapFood').setView([45.4397, 15.9434], 3); // Centered on Europe and Asia, lower zoom level
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(mapFood);
-
-// Marker for France
-L.marker([48.8566, 2.3522]).addTo(mapFood)
-    .bindPopup('France')
-    .openPopup();
-
-// Marker for China
-L.marker([35.8617, 104.1954]).addTo(mapFood)
-    .bindPopup('China')
-    .openPopup();
-
-// Marker for Gaziantep
-L.marker([37.0662, 37.3833]).addTo(mapFood)
-    .bindPopup('Gaziantep, Turkey')
-    .openPopup();
-
-// Marker for Syria
-L.marker([34.8021, 38.9968]).addTo(mapFood)
-    .bindPopup('Syria')
-    .openPopup();
-
-// Marker for Antakya
-L.marker([36.2066, 36.1572]).addTo(mapFood)
-    .bindPopup('Antakya, Turkey')
-    .openPopup();
-
-// Marker for Antalya
-L.marker([36.8969, 30.7133]).addTo(mapFood)
-    .bindPopup('Antalya, Turkey')
-    .openPopup();
-
-// Marker for Konya
-L.marker([37.8714, 32.5023]).addTo(mapFood)
-    .bindPopup('Konya, Turkey')
-    .openPopup();
-
-// Marker for Trabzon
-L.marker([41.0053, 39.7248]).addTo(mapFood)
-    .bindPopup('Trabzon, Turkey')
-    .openPopup();
-
-// Marker for Black Sea
-L.marker([42.0000, 35.0000]).addTo(mapFood)
-    .bindPopup('Black Sea')
-    .openPopup();
-
-// Marker for İzmir
-L.marker([38.4192, 27.1287]).addTo(mapFood)
-    .bindPopup('İzmir, Turkey')
-    .openPopup();
-
-// Marker for Adana
-L.marker([37.0000, 35.3213]).addTo(mapFood)
-    .bindPopup('Adana, Turkey')
-    .openPopup();
-
-// Marker for Seyhan River
-L.marker([37.0000, 35.3213]).addTo(mapFood)
-    .bindPopup('Seyhan River, Turkey')
-    .openPopup();
-
-// Marker for Istanbul
-L.marker([41.0082, 28.9784]).addTo(mapFood)
-    .bindPopup('Istanbul, Turkey')
-    .openPopup();
-
-
-
-// for the map for Rakı
-var mapRaki = L.map('mapRaki').setView([45.4397, 15.9434], 3); // Centered on Europe and Asia, lower zoom level
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(mapRaki);
-
-// Marker for Iraq
-L.marker([33.3152, 44.3661]).addTo(mapRaki)
-    .bindPopup('Iraq')
-    .openPopup();
-
-// Marker for Sicilia (Sicily)
-L.marker([37.5998, 14.0154]).addTo(mapRaki)
-    .bindPopup('Sicilia (Sicily)')
-    .openPopup();
-
-// Marker for Trabzon
-L.marker([41.0053, 39.7248]).addTo(mapRaki)
-    .bindPopup('Trabzon, Turkey')
-    .openPopup();
-
-// Marker for İzmir
-L.marker([38.4192, 27.1287]).addTo(mapRaki)
-    .bindPopup('İzmir, Turkey')
-    .openPopup();
-
-// Marker for Bodrum
-L.marker([37.0359, 27.4303]).addTo(mapRaki)
-    .bindPopup('Bodrum, Turkey')
-    .openPopup();
-
-// Marker for İstanbul
-L.marker([41.0082, 28.9784]).addTo(mapRaki)
-    .bindPopup('Istanbul, Turkey')
-    .openPopup();
-
-// Marker for Aegean Region
-L.marker([37.9000, 27.2500]).addTo(mapRaki)
-    .bindPopup('Aegean Region, Turkey')
-    .openPopup();
-
-// Marker for Marmara Region
-L.marker([40.7500, 29.5000]).addTo(mapRaki)
-    .bindPopup('Marmara Region, Turkey')
-    .openPopup();
-
-// Marker for Black Sea
-L.marker([42.0000, 35.0000]).addTo(mapRaki)
-    .bindPopup('Black Sea')
-    .openPopup();
-
-// Marker for Portugal
-L.marker([38.7223, -9.1393]).addTo(mapRaki)
-    .bindPopup('Portugal')
-    .openPopup();
-
-// Marker for France
-L.marker([48.8566, 2.3522]).addTo(mapRaki)
-    .bindPopup('France')
-    .openPopup();
-
-// Marker for Spain
-L.marker([40.4168, -3.7038]).addTo(mapRaki)
-    .bindPopup('Spain')
-    .openPopup();
-
-// Marker for Macedonia
-L.marker([41.6086, 21.7453]).addTo(mapRaki)
-    .bindPopup('Macedonia')
-    .openPopup();
-
-// Marker for Albania
-L.marker([41.3275, 19.8187]).addTo(mapRaki)
-    .bindPopup('Albania')
-    .openPopup();
-
-
+document.addEventListener('DOMContentLoaded', function () {
+    initializeMap();
+});

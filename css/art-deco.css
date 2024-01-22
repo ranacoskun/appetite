@@ -9,7 +9,7 @@
 * {
     box-sizing: border-box;
   }
-body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Peignot';  line-height: 32px; }
+body {min-height: -webkit-fill-available; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Peignot';  line-height: 32px; }
 h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: 'Peignot'; font-weight: 700; letter-spacing: -1px; line-height: 1; }
 h1 { font-size: 34px; }
 h2 { font-size: 28px; line-height: 38px; }
@@ -24,6 +24,8 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 .site-container{
     background-color: #ebe5d7;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .section {
@@ -58,7 +60,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     background-repeat: no-repeat, no-repeat, repeat;
     background-size: 25vw, 50vw, 300px;
     position: relative;
-    transition: padding 0.2s;
+    transition: padding 0.2s ;
     padding-top: 2em;
 }
 
@@ -95,10 +97,9 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     padding-top: 1em;
 }
 
-/* Make the header sticky */
 .page-header.sticky {
     background-color: #1B1D28;
-    background-image: url(../img/art-deco/elements/ellipse.svg),url(../img/art-deco/elements/banner.svg);
+    background-image: url(../img/art-deco/elements/ellipse.svg), url(../img/art-deco/elements/banner.svg);
     background-position: bottom, right bottom;
     background-repeat: no-repeat, repeat;
     background-size: 50vw, 300px;
@@ -111,17 +112,16 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     z-index: 1000;
 }
 
-/* Adjust the styles for the sticky header */
 .page-header.sticky .page-caption {
-    padding-top: 10px; /* Reduce the top padding for the sticky header */
-    padding-bottom: 10px; /* Reduce the bottom padding for the sticky header */
+    padding-top: 10px; 
+    padding-bottom: 10px;
 }
 
 .page-header.sticky .page-title {
-    font-size: 40px; /* Reduce the font size for the sticky header */
+    font-size: 40px; 
 }
 
-/*nav-bar style*/
+/* NAVBAR SECTION */
 
 .navbar li {
     color:#000000;
@@ -143,10 +143,143 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     padding-right:80px;
 }
 
+li.nav-item {
+    width: 290.33px;
+    text-align: center;
+}
+
+.nav-item a{
+    color:#000;
+}
 
 /* CARDS LAYOUT */
 
 .card-container {
+    padding: 100px 60px 60px 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+  
+.card {
+    display: grid;
+    place-items: center;
+    width: 21rem;
+    min-width: 21.875rem;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0.625rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    /* min-height: 5rem; */
+}
+
+.card_img {
+    background-repeat: no-repeat;
+    background-size: contain; 
+    height: 500px; 
+    background-position: center center;
+}
+
+
+.card__background {
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+    /* min-height: 5rem; */
+}
+
+
+.card_overflow{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/art-deco/covers/menu.png);
+    background-size: cover ;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    text-align: center;
+    transition: .5s ease;
+}
+
+
+.card:hover .card_overflow{
+    padding-top: 2em;
+    height: 100%;
+}
+
+/* .card__title h2{
+    padding-left: 4px;
+    width: 100%;
+    margin-top: 30%;
+    color:black;
+    font-size: 4wf;
+    position: absolute;
+    text-align: center;
+    transform: rotate(-5deg)skewX(-5deg); 
+} */
+
+.card__description {
+    padding-left: 0 !important;
+}
+
+.card__description a {
+    color: #ffffff;
+    font-family: Peignot;
+    font-size: 1.2 vw;
+    letter-spacing: 5px;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.card__description a:hover {
+    color: #BE914C;
+    text-decoration: underline;
+} 
+
+.card__content {
+    --flow-space: 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex;
+    width: 100%;
+    height: 100%;
+    padding: 12% 1.25rem 1.875rem;
+  
+}
+  
+.card__content--container {
+    --flow-space: 1.25rem;
+}
+
+.card__title {
+    color: #BE914C;
+    padding-bottom: 1em;
+    padding-top: 2em;
+    position: relative;
+    text-align: center;
+    width: -moz-fit-content;
+}
+  
+
+#turkey_cover {
+    background-image: url(../img/art-deco/covers/tur-artdeco.png);
+    width: 20rem;
+    background-color: #bba88a;
+} 
+#italy_cover {
+    background-image: url(../img/art-deco/covers/ita-artdeco.png);
+    background-color: #bba88a;
+}
+
+#kaz_cover {
+    background-image: url(../img/art-deco/covers/kaz-artdeco.png);
+    background-color: #bba88a;
+}
+
+/* .card-container {
     padding: 100px 60px 60px 100px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -183,7 +316,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     width: 100%;
     height: 0;
     text-align: center;
-    transition: .5s ease; /* for smooth transition */
+    transition: .5s ease;
 }
 
 .card:hover .card_overflow{
@@ -234,17 +367,22 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     width: -moz-fit-content;
 }
 
+#turkey_cover {
+    background-image: url(../img/art-deco/covers/tur-artdeco.png);
+    width: 20rem;
+} 
+#italy_cover {
+    background-image: url(../img/art-deco/covers/ita-artdeco.png);
+}
+
+#kaz_cover {
+    background-image: url(../img/art-deco/covers/kaz-artdeco.png);
+} */
+
+
 
  /* INTRO */
-.welcome-ornament {
-    background-image: url(../img/art-deco/elements/ornament.svg);
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 100px;
-    margin-top: 2rem;
-    display: block;
-}
+
 
 .welcome-intro {
     margin-top: 50px;
@@ -256,10 +394,12 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
 
 .welcome-title{
-    margin-top: 30px;
-    text-align: center;
-    font-size: 70px;
+    font-size: 75px;
     font-family: Peignot;
+    font-weight: 100;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
 }
 
 .welcome-highlight{
@@ -279,19 +419,46 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     padding-right: 50px;
 }
 
+.welcome-ornament {
+    background-image: url(../img/art-deco/elements/ornament.svg);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100px;
+    margin-top: 2rem;
+    display: block;
+}
+
+/* MAP SECTION */
+
+#map { 
+    width: 100%;
+    height: 400px;
+}
+
+.mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
+
+
+/* TEAM SECTION */
 
 #team { padding: 100px 0 100px 0; }
 .team-title {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 70px;
+    font-size: 75px;
     font-family: Peignot;
+    font-weight: 100;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
 }
 .team-highlight{
     font-style: oblique;
     color: #f85759;
 }
 .team-intro { text-align: center; margin: auto; width: 50%; }
+.team-item { padding: 20px; margin-top: 40px; }
 .team-body{
     font-size: 20px;
     font-family: Peignot;
@@ -301,7 +468,6 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     padding-left: 50px;
     padding-right: 50px;
 }
-.team-item { padding: 20px; margin-top: 40px; }
 .team-item h3{ padding:10px; margin-top: 20px; text-align: center;}
 .team-item p{
     font-size: 20px;
@@ -320,13 +486,6 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 #irem { background-image: url(../img/art-deco/team/irem.jpg); }
 #ulzhan { background-image: url(../img/art-deco/team/ulzhan.jpg); }
 #rana { background-image: url(../img/art-deco/team/rana.jpg); }
-
-#mapBaklava { height: 500px; }
-.map {
-    margin: 2em;
-    padding-left: 3em;
-    padding-right: 3em;
-}
 
 /* FOOTER */
 .footer {
@@ -363,6 +522,18 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     padding-top: 2em;
 } */
 
+.article-page-header {
+    background: none;
+    background-color: #1B1D28;
+    background-image: url(../img/art-deco/elements/ellipse.svg),url(../img/art-deco/elements/banner.svg);
+    background-position: bottom, right bottom;
+    background-repeat: no-repeat, repeat;
+    background-size: 50vw, 300px;
+    position: relative;
+    transition: padding 0.2s;
+    padding-top: 2em;
+}
+
 .article-page-caption {
     display: flex;
     align-items: center;
@@ -392,10 +563,17 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     border-width: 1px !important;
     border-color: #000 !important;
     border-style: solid;
-    background-image: url(../img/art-deco/elements/woman-header.png);
-    background-size: contain;
-    /* background-repeat: no-repeat; */
-    background-position: center;
+    background-image: url(../img/art-deco/elements/woman-header.png), url(../img/art-deco/elements/woman-header5.png);
+    background-size: contain, contain;
+    /* background-image: url(../img/art-deco/elements/beige_tulle.png), url(../img/art-deco/elements/woman-header5.png);
+    background-size: 40vw, contain; */
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, right;
+    background-color: #1B1D28;
+    /* background-image: url(../img/art-deco/elements/woman-header.png), url(../img/art-deco/elements/woman-header2.png), url(../img/art-deco/elements/woman-header3.png),  url(../img/art-deco/elements/woman-header4.png);
+    background-size: contain, contain, contain, contain;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 0, 350px, 700px, 1050px; */
 }
 
 .article-body {
@@ -405,17 +583,6 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 .first-heading {
     text-align: center;
-}
-.left-image {
-    float: left;
-    width: 100%;
-    margin: 0 20px 20px 0;
-}
-
-.right-image {
-    float: right;
-    width: 100%;
-    margin: 0 0 20px 20px;
 }
 
 /* New CSS for the image container */
@@ -477,6 +644,19 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     font-family: Peignot;
     line-height: 2-5vh;
     padding: 3%;
+
+}
+
+.body-ornament{
+    height:100px;
+    width: 100px;
+    background-image: url(../img/art-deco/elements/body-orn.png);
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 5%; 
+    top: 15%;
 }
 
 #text-block {
@@ -537,7 +717,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     text-align: center;
     padding: 0;
     margin: 0;
-    line-height: 55px;
+    line-height: 5px;
     font-size: 38px;
     font-weight: 300;
     animation: plus-out 0.3s;
@@ -578,10 +758,10 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     left: 0;
     display: block;
     right: 0;
-    padding: 0;
+    padding-left: 12px;
     opacity: 0;
     margin: auto;
-    line-height: 80px;
+    line-height: 50px;
     transform: rotateZ(-70deg);
     transition: all 0.3s;
     animation: edit-out 0.3s;

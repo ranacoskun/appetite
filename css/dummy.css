@@ -1,0 +1,99 @@
+.card-container {
+    padding: 100px 60px 60px 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    display: grid;
+    place-items: center;
+    width: 21rem;
+    max-width: 21.875rem;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0.625rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+
+.card__background {
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+}
+
+
+.card_overflow{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/art-deco/covers/menu.png);
+    background-size: cover ;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    text-align: center;
+    transition: .5s ease;
+}
+
+.card:hover .card_overflow{
+    padding-top: 2em;
+    height: 100%;
+}
+
+.card__description {
+    padding-left: 0 !important;
+}
+
+.card__description a {
+    color: #ffffff;
+    font-family: Peignot;
+    font-size: 1.2 vw;
+    letter-spacing: 5px;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.card__description a:hover {
+    color: #BE914C;
+    text-decoration: underline;
+}
+
+.card__content {
+    --flow-space: 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex;
+    width: 100%;
+    height: 100%;
+    padding: 12% 1.25rem 1.875rem;
+
+}
+
+.card__content--container {
+    --flow-space: 1.25rem;
+}
+
+.card__title {
+    color: #BE914C;
+    padding-bottom: 1em;
+    padding-top: 2em;
+    position: relative;
+    text-align: center;
+    width: -moz-fit-content;
+}
+
+#turkey_cover {
+    background-image: url(../img/art-deco/covers/tur-artdeco.png);
+    width: 20rem;
+} 
+#italy_cover {
+    background-image: url(../img/art-deco/covers/ita-artdeco.png);
+}
+
+#kaz_cover {
+    background-image: url(../img/art-deco/covers/kaz-artdeco.png);
+} 
