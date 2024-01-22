@@ -331,15 +331,7 @@ li.nav-item.dropend {
     padding-left: 10px;
 }
 
-.welcome-ornament {
-    background-image: url(../img/banksy/grafiti_transparent_stroke.png);
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 100px;
-    margin-top: 2rem;
-    display: block;
-}
+
 
 .welcome-intro {
     margin-top: 50px;

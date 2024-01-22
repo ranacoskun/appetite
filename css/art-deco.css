@@ -151,6 +151,36 @@ li.nav-item {
 .nav-item a{
     color:#000;
 }
+ /*for nested dropdowns in navbar */
+a.nav-link.dropdown-toggle.turkeyDropdown{
+    color: black;
+    text-align: center;
+    width: 150px;
+}
+
+a.nav-link.dropdown-toggle.turkeyDropdown:hover{
+    color: red;
+}
+
+navbar-dark .navbar-nav .nav-link:hover {
+ color:#000;}
+
+li.nav-item.dropend {
+    width:max-content;
+}
+
+.dropdown:hover > .dropdown-menu, .dropend:hover > .dropdown-menu{
+    display: block;
+    margin-top: .125em;
+}
+
+.dropend:hover > .dropdown-menu{
+    position:absolute;
+    top:0;
+    left:100%;
+    margin-left: .125em;
+}
+
 
 .nav-item {
     width: 290.33px;
