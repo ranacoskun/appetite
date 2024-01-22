@@ -549,6 +549,11 @@ li.nav-item.dropend {
     padding: 2%;
 }
 
+.footer-body p:last-child{
+    /* font-family: 'Blambot Casual Regular'; */
+    color:#C40803;
+}
+
 /* how to add dropcap? */
 .text-body p {
     color: #000;
