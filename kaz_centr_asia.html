@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- meta tag specifying the document mode and compatibility settings for Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Appetite</title>
+    <meta name="description" content="A food magazine about different cuisines from all over the world.">
+    <meta name="author" content="Irem Atmar, Ulzhan Baizhankyzy, Rana Coskun">
+
+    <link rel="icon" href="img/icon/favicon.ico">
+    <link rel="icon" href="img/icon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/icon/favicon.png">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/art-deco.css">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- SWUP -->
+    <!-- <script src="js/swup.min.js"></script>
+    <script src="js/SwupBodyClassPlugin.min.js"></script>
+    <script src="js/SwupHeadPlugin.min.js"></script> -->
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        .category {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .dish.highlighted {
+            background-color: yellow;
+        }
+
+        .drink.highlighted {
+            background-color: lightblue;
+        }
+
+        .place.highlighted {
+            background-color: lightgreen;
+        }
+
+        .person.highlighted {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="site-container">
+        <header class="page-header" id="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="article-page-caption">
+                            <h1 class="article-page-title">APPETITE</h1> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Articles
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <li class="nav-item dropend">
+                                    <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Turkey issue
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li><a class="dropdown-item" href="TURKISH ARTICLES/FOOD CITIES.html">Food cities</a></li>
+                                      <li><a class="dropdown-item" href="TURKISH ARTICLES/BAKLAVA.html">Baklava</a></li>
+                                      <li><a class="dropdown-item" href="TURKISH ARTICLES/RAKI.html">Raki</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="nav-item dropend">
+                                    <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Italian issue
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li><a class="dropdown-item" href="pasta.html">Pasta</a></li>
+                                      <li><a class="dropdown-item" href="tiramisu.html">Tiramisu</a></li>
+                                      <li><a class="dropdown-item" href="prosecco.html">Prosecco</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="nav-item dropend">
+                                    <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Kazakh issue
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li><a class="dropdown-item" href="kaz_food_drinks.html">Kazakh food and drinks</a></li>
+                                      <li><a class="dropdown-item" href="beshbarmak.html">Beshbarmak</a></li>
+                                      <li><a class="dropdown-item" href="kaz_centr_asia.html">Central Asian food</a></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Disclaimer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Documentation</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- ARTICLE LAYOUT -->
+        <main>
+            <div class=" article-container position-relative">
+                <div class="article-header col-lg-12">
+                    <div class="row">
+                        <div class="first-heading">
+                            <div class="text-title">
+                                <h2>Kazakh and Central Asian</h2>
+                                <h1>TRADITIONAL FOOD</h1>
+                            </div>
+                            <div class="text-publisher">
+                                <h3>By Kazakh Central Guide <br>PUBLISHED April 1st, 2023</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-body col-8 mx-auto">
+                    <div class="text-sub-title">
+                        <p>"Kazakh food is profoundly based on the nomadic past of the Kazakh people."
+                        </p>
+                    </div>
+                    <div class="text-body ">
+                        <p> Meat has always been dominating the main meals with mutton and horse together with numerous milk products. The methods of food preparation of the nomadic culture developed essentially in order to secure food preservation. Therefore, there are many dishes based on smoked meat and soured milk. There was almost no possibility to grow vegetables, but it was possible to exchange some things with neighboring settled nations. The main foods in Kazakh cuisine are still based on the combination of meat dough and onion.</p>
+                        <p>    
+                        When Kazakhs began a more settled way of life, they started to adopt various culinary traditions and enrich their cuisine with the influence of kitchens of those who lived nearby - Russians, Ukrainians, Belarussians, Koreans, Uzbeks, Kyrgyz (very close to Kazakh food culture), Uighurs, Dungans and even Chinese. The result that is a unique blend of food cultures, is today's <span classs="place">Kazakhstan</span>'s national cuisine.
+                        </p>
+
+                        <p>By necessity, this lifestyle has also ensured that Kazakh food is both highly nutritious and can be preserved for long periods of time. The list below is by no means exhaustive but includes many of the timeless Kazakh dishes still popular today.</p>
+
+
+
+<h4 class="numer_dish_name">KAZAKH NOODLES</span></h4>
+    <p>What differentiates the Kazakh cuisine from other Central Asian cuisines are the noodles. There are more varieties of noodles here and they are taken very seriously. It is also not uncommon to have hand made noodles in Kazakh restaurants and especially in the homes of the rural villages.
+    </p>
+
+             
+    
+
+<h4 class="numer_dish_name">KAZAKH FEAST TABLE</span></h4>
+<h3 class="numer_dish_name"><span class="dish">Nauryz Kozhe</span></h3>
+
+
+<p> <span class="dish">Nauryz Kozhe</span> is a traditional food for Nauryz (Persian celebration of a new season). This dish combines seven ingredients: smoked meat, milk, millet, wheat, corn, water and butter. Today the recipe for "<span class="dish">kozhe</span>" is changing as it often started to have some additions depending on the taste preferences of the one preparing it.
+    
+    <h3 class="numer_dish_name"> 1 <span class="concept">Dastarkhan</span> </h3>
+    
+    <p> <span class="concept">Dastarkhan</span> is a covered table with many dishes, it is believed that the richer the dastarkhan is in the house, the more hospitable the owner is and the more favorable the fate is to them.
+    
+    In <span class="place">Kazakhstan</span> they say "before doing any business with the guest, feed him first".
+    
+    <span class="concept">Dastarkhan</span> is typical for all <span class="place">Central Asia</span> and the grandest tables are usually seen in weddings and other large celebrations. It is also customary that the quests take home what remains in the table at the end of the party. Nowadays it is also com to have other than strictly Kazakh dishes dishes
+    
+    in
+</p>
+
+<h4 class="numer_dish_name">KAZAKH MEAT DISHES</span></h4>
+
+
+<p> 
+    Most Kazakh dishes consists of meat, particularly from the meat of horses, camels, cows and sheep.
+    Horse and camel meat are the two primary types of festival meats compared to Kyrgyzstan where camel meat is a rarity. 
+    On the other hand, camel is still not as typical for festivities as camels are not as common as horses in <span class="place">Kazakhstan</span>. Mutton and beef are as more common as the meat of the dishes eaten daily.
+</p>
+
+
+<h4 class="numer_dish_name">UYGHUR CUISINE IN <span class="place">KAZAKHSTAN</span></span></h4>
+<h3 class="numer_dish_name"><span class="dish">Lagman</span></h3>
+
+<p>
+    <span class="place">Central Asia</span> is a home for Uigur diaspora residents.
+    They are Central Asian people of Turkic origin, who once lost their territories during the Chinese expansion. Many residents of the newly formed <span class="place">Xinjiang Uyghur Autonomous Region of the People's Republic of China</span> moved across <span class="place">Central Asian countries<span> fearing Chinese pressure. Today, the Uighurs live compactly in <span class="place">Almaty</span>, <span class="place">Bishkek</span>, <span class="place">Tashkent</span> as well as other countries and regions of <span class="place">Central Asia</span>.
+</p>    
+    <p>
+    The main and favorite Uighur dish in <span class="place">Central Asia</span> is served everywhere is. Lagman. It is hand-pulled noodles with meat and vegetable gravy.
+    There are several types of <span class="dish">Lagman</span> which vary in the bright tastes, ingredients, and well as name.
+    For example, the <span class="dish"> Uzbek Lagman</span>, which is also widespread in the border areas with this country, smells quite differently than the <span class="dish"> Uighur Lagman</span>.
+    <span class="dish"> Uzbek Lagman</span> always looks like soup, while Uighur one can be liquid, dry, boiled, and fried,
+    </p>  
+
+<p><span class="dish">Lagman</span> is a dish that is very common in <span class="place">Central Asia</span>, <span class="place">China</span>, and many <span class="place">Middle Eastern countries</span>. It can also be found in <span class="place">Russia</span> and the <span class="place">Caucasus</span> and is a popular dish among the Crimean Tatars. The basic recipe, which combines noodles with meat, has hundreds of variations. In <span class="place">Uzbekistan</span>, the dish tends be a plate of noodles with a thick tomato-based sauce atop it, with meat, vegetables, and often a fried egg. In <span class="place">Kyrgyzstan</span>, on the other hand, the dish is more commonly a soup, with the noodles, meat, and vegetables served in a rich broth. <span class="dish"> Tadzhik Lagman</span> sets itself apart by a particularly wide array of ingredients, which can include unique additions like green beans, kidney beans, chick peas, and radish.</p>
+
+<p>While there are recognized national versions, there are also local versions. Many “national” versions are also found and enjoyed in other countries, meaning that the dish is truly a regional phenomenon.</p>
+
+<h4>How <span class="dish">Lagman</span> Got Its Name: A Critical History</h4>
+<p>Thought to have first appeared in what is now <span class="place">China</span>, <span class="dish">Lagman</span> most likely came to <span class="place">Central Asia</span> via the <span class="concept">Uighur</span> and <span class="concept">Dungan(Hui)</span> peoples. These largely <span class="concept">Muslim</span> minorities of <span class="place">China</span> became part of the Central Asian community over time thanks to religious ties with <span class="place">Central Asia</span> and the economic draw of participation in the Silk Road trade routes. These routes ran through <span class="place">Central Asia</span> and the <span class="place">Caucasus</span>. The dish spread to <span class="place">Persia</span> and <span class="place">Russia</span> as those empires conquered the area.</p>
+
+<p>The name <span class="dish">lagman</span> comes from a modification of the <span class="concept">Dungan</span> word “<span class="dish">lyuman</span>,” which literally means “stretched out dough.” The name is likely even older than that, however, and likely has wide cultural connections. The <span class="concept">Chinese</span>, for instance, have a dish made of wheat noodles called “<span class="dish">lamian</span>” and the <span class="concept">Greeks</span> had a pasta dish called <span class="dish">laganon</span>.” That name lives on in <span class="concept">English</span> as the source of the word <span class="dish">lasagne</span>.” In short, <span class="dish">pasta</span>, as a high-calorie food with a long shelf life, likely spread like wildfire through human populations once it was invented - fast enough that the original name was kept largely intact as it was transferred between cultures and languages.</p>
+
+<p>Some in the <span class="place">Middle East</span> consider the dish to have developed in the <span class="concept">Persian Empire</span> and then spread from there. The <span class="concept">Persians</span> called the dish <span class="dish">laksa</span>.” In <span class="concept">Old Persian</span>, this word meant “slippery” and is thought to have referred to the texture of the noodles. The Russian word for “noodles,” incidentally, is “<span class="dish">lapsha</span>”, and is derived from the <span class="concept">Persian</span> term.</p>
+
+<p>Proponents of a <span class="concept">Persian</span> origin often point to the map of the <span class="concept">Persian Empire</span> at its height and its rough correspondence to the spread of <span class="dish">lagman</span>. Seafaring <span class="concept">Persian</span> traders also likely introduced the dish to <span class="place">South East Asia</span>, where it took on multiple unique forms, and is to this day widely knwon . This might be explained, but also may have come from nearby Chinese influence. The <span class="concept">Chinese</span> themselves may well have adopted the dish from the <span class="concept">Uighurs</span> or <span class="concept">Dungan(Hui)</span>. The oldest archeological evidence of dumplings, another dough-and-meat dish, has been found in what is now regarded as the <span class="concept">Uighur</span> homeland.</p>
+
+<p>Such disputes about ancient artifacts are common, especially with subjects such as food, which can have a large and timeless impact on identity. Culinary historians, however, should be careful to note that while imperial cultures often bequeathed cultural artifacts and traditions to the peoples they conquered, they also absorbed and assimilated culture from those same peoples (and then later bequeathed it to others as their own). A particularly vibrant debate concerning this exists around baklava, for instance.</p>
+
+<h4>How and When <span class="dish">Lagman</span> is Eaten: Cultural Significance</h4>
+<p><span class="dish">Lagman</span>, a simple, filling, and flexible dish, is a staple of diets and commonly eaten across <span class="place">Central Asia</span> and <span class="place">China</span>. Easily made in large quantities, it is also commonly eaten for special occasions and holidays as well.</p>
+
+<p>It is sometimes served with the various components (noodles and broth, vegetables, meat, sauces, etc.) in separate bowls, and diners mix and match as they please. However, it is also often served plated with everything assembled - and all ingredients cooked together so that the flavors mix.</p>
+
+<p>The methods for eating lagman are as numerous as the ways to prepare it. You can use a fork or chopsticks. Chopsticks are known in most <span class="concept">Turkic</span>  and <span class="concept">Slavic</span> as “sticks” - in <span class="concept">Turkic</span> languages, this is some variant of the word “tyakchalar” and in <span class="concept">Slavic</span> languages, it is some variant of “palochki”. The broth is usually drunk straight from the bowl or can be dispensed with a spoon. Although uncommon today, many <span class="concept">Central Asian</span> cultures traditionally ate with their fingers.</p>
+
+<p>In its cultural relevance, this simple food is somewhat akin to soup and bread in the West and has many connotations of hospitality, community, and good fortune. One <span class="concept">Asian</span> legend states that the first <span class="dish">lagman</span> was prepared when three traveling merchants met at a crossroads. One had a cauldron, another flour and meat, and the last vegetables and spices. The last man also had culinary and diplomatic skills and suggested that they all pool their resources. Thus, they settled near a spring and the cook/diplomat produced the first <span class="dish">lagman</span>. The legend continues, saying that a <span class="concept">Chinese</span> dignitary passed by, smelled the cooking, asked for some, and, upon eating it, was so amazed that he granted the three travelers a safe and duty-free stay in his territory.</p>
+
+<p>The <span class="concept">Chinese</span>, whose culture is steeped in symbolism, also consider <span class="dish">lagman</span> a dish which connotes love, perhaps a connection to previously mentioned story of its origin. Three weary travelers coming together, pooling their resources, and producing a dish that is definitely comfort food par excellence.</p>
+
+<h4>Preparing Traditional <span class="dish">Lagman</span></h4>
+
+<p>As the name implies, the main component of lagman is noodles. Meat is almost always included as well - most commonly mutton or beef - however, there are modern vegetarian versions as well see below for a recipe that uses soy sprouts instead of meat as a protein source. Beyond that, the choices and combinations for vegetables, meat, and seasoning for <span class="dish">lagman</span> are endless.</p>
+
+<p>When <span class="dish">lagman</span> is plate of noodles with toppings, the topping portion is referred to as “<span class="dish">vadzha</span>”. <span class="dish">Vadzha</span> refers to something resembling a very thick stew that is not meant to be eaten on its own, but rather added to broth or other ingredients.</p>
+
+<p>Many <span class="concept">Central Asian</span> recipes, including for <span class="dish">lagman</span>, call for potatoes. Despite the fact that the potato was only introduced to <span class="place">Central Asia</span> in the mid-nineteenth century, they have quickly become a staple of most cuisines there.</p>
+
+<p>The most convenient tool for cooking <span class="dish">lagman</span> is a good, thick cauldron (known as a “<span class="concept">kazan</span>” in most <span class="concept">Turkic</span> and <span class="concept">Slavic</span> languages). A wok or cast-iron frying pan can also be used.</p>
+
+<h4>A Note About The Noodles</h4>
+
+<p>The best <span class="dish">lagman</span> features homemade, hand-stretched noodles. Of course, today, store-bought noodles are far more common, but making these noodles isn't too hard, even if it requires some patience. Make sure the dough is as elastic as possible by using high quality pasta flour. For each kilogram, you'll need 300 milliliters of water, 2 eggs, one teaspoon of vinegar, and salt to taste. Pasta recipes will often skip the vinegar, but it is precisely that which will give your dough the extra plasticity and allow you to stretch it without too much exertion.</p>
+
+<p>Pour the flour into a deep bowl, make a well, gently pour in the beaten eggs, and a little warm water. Carefully fold the mixture into dough, and add extra flour to thicken it if need be (but don't add too much or the dough will be too thick to stretch!). Then aggressively knead the dough until it's homogeneous and stretchy. The longer and stronger you knead the dough, the more elastic and adhesive it becomes, making it easier for you to stretch it later. Make the dough into a ball, wrap it in cellophane, and put in a cool place for thirty minutes to an hour to rest.</p>
+
+<p>Next, divide the dough into pieces and roll it into thick strands. Carefully coat each strand with vegetable oil and let them sit for 10-15 minutes. After that, start to stretch the dough by rolling it tightly between your palms and the table, trying not to break it. Do this to each strip twice and then stretch it with your hands. The pasta should remain on the table, which makes it easy to roll and keeps it from breaking. If it doesn't turn out like you want, keep trying. Fresh noodles are an unforgettable and tasty experience!</p>
+
+<p>Cook the pasta immediately. Fill a deep pot with water, add salt and bring to a boil. Without lowering the heat, put the pasta into the water for 3-5 minutes. Don't stir the pasta, otherwise it will clump. Then, put it into a strainer and rinse with cold water. Put the pasta in a deep dish and coat it with vegetable oil so it won't stick together.</p>
+
+<p>If you do use store bought noodles, use regular spaghetti. This has the right texture to eat with a thick dish like <span class="dish">lagman</span>.</p>
+
+
+    <h4 class="numer_dish_name"><span class="concept">DUNGAN</span> CUISINE IN KAZAKHSTAN</span></h4>
+<h3 class="numer_dish_name"><span class="dish">Ashlyam-Fu</span></h3>
+
+<p>
+The <span class="concept">Dungans</span> are other minority people who once entered <span class="place">Central Asia</span> in search of a better life from <span class="place">China</span>. They are Chinese-speaking <span class="concept">Muslims</span>, who were not always accepted in the <span class="concept">Celestial Empire</span>, and many of them found refuge in <span class="place">Kazakhstan</span> and <span class="place">Kyrgyzstan</span>.
+</p>
+<p>
+    <span class="concept">Dungan</span> cuisine has a much greater similarity to <span class="concept">Chinese</span> culinary traditions. They also have <span class="dish">lagman</span>, <span class="dish">manty</span>, and many more amazing foods, but there are more spices. The most famous and favorite dish of <span class="concept">Dungan</span> cuisine in <span class="place">Kazakhstan</span> and <span class="place">Kyrgyzstan</span> <span class="dish">Ashlyam-Fu</span>. It is a cold vegetable soup with starch noodles or pieces of starch served in the summer heat. Quite an unusual dish with a characteristic bitterness and very unusual structure. There is a lively community of them in <span class="place">Karakol(Kyrgyzstan)</span> there is also a <span class="concept">Dungan</span> mosque in the town. You can also enjoy a <span class="concept">Dungan</span> dinner and see how the <span class="concept">Chinese</span> and <span class="concept">Central Asian</span> cuisines have mixed.
+    </p>  
+
+                </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container footer-body">
+            <p class="border-bottom">DHDK - Alma Mater Studiorum Università di Bologna <br> This is a non-commercial
+                project for scholarly purposes only. </p>
+            <p class="text-center">Copyright &copy; Appetite 2023</p>
+        </div>
+    </footer>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script>
+        window.onscroll = function () {
+            var header = document.querySelector(".page-header");
+            if (window.pageYOffset > 0) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        };
+
+    </script>
+</body>
+
+</html>

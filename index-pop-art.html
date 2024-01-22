@@ -28,11 +28,9 @@
     <script src="js/SwupBodyClassPlugin.min.js"></script>
     <script src="js/SwupHeadPlugin.min.js"></script>
 
-    <!-- LEAFLET -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- MAPBOX -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.js"></script>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,11 +47,10 @@
                             <h1 class="page-title mx-auto">APPETITE</h1>
                         </div>
                     </div>
-                    <h5 class="page-sub" id="page-sub">Journal about different world cuisines with XML.</h5>
                 </div>
             </div>
 
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,9 +64,43 @@
                                     Articles
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#a">Turkey issue</a></li>
-                                    <li><a class="dropdown-item" href="#">Italy issue</a></li>
-                                    <li><a class="dropdown-item" href="#">Kazakhstan issue</a></li>
+                                    <li class="nav-item dropend">
+                                        <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Turkey issue
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="TURKISH ARTICLES/FOOD CITIES.html">Food
+                                                    cities</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="TURKISH ARTICLES/BAKLAVA.html">Baklava</a></li>
+                                            <li><a class="dropdown-item" href="TURKISH ARTICLES/RAKI.html">Raki</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropend">
+                                        <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Italian issue
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="pasta.html">Pasta</a></li>
+                                            <li><a class="dropdown-item" href="tiramisu.html">Tiramisu</a></li>
+                                            <li><a class="dropdown-item" href="prosecco.html">Prosecco</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropend">
+                                        <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Kazakh issue
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="kaz_food_drinks.html">Kazakh food and
+                                                    drinks</a></li>
+                                            <li><a class="dropdown-item" href="beshbarmak.html">Beshbarmak</a></li>
+                                            <li><a class="dropdown-item" href="kaz_centr_asia.html">Central Asian
+                                                    food</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -83,15 +114,26 @@
                 </div>
             </nav>
         </header>
+        <!-- CARD LAYOUT -->
         <main>
             <div class="container">
                 <h3 class="welcome-title">Issues</h3>
                 <div class="container">
                     <div class="row">
-                        <div class=" d-flex col-lg col-md col-sm justify-content-center">
-                            <div class="card">
-                                <img class="card__background" src="img/pop-art/covers/tur-pop-art-front.svg"
-                                    alt="Turkey Magazine Cover" />
+                        <div class="d-flex col-lg col-md col-sm justify-content-center">
+                            <div id="turkey_cover" class="card card_img">
+                                <div class="card_overflow">
+                                    <h2 class="card__title">Choose Article</h2>
+                                    <ul class="card__description">
+                                        <li><a href="article.html">First Article</a></li>
+                                        <li><a href="article.html">Second Article</a></li>
+                                        <li><a href="article.html">Third Article</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex col-lg col-md col-sm justify-content-center">
+                            <div id="italy_cover" class="card card_img">
                                 <div class="card_overflow">
                                     <h2 class="card__title">Choose Article</h2>
                                     <ul class="card__description">
@@ -104,24 +146,7 @@
                         </div>
 
                         <div class="d-flex col-lg col-md col-sm justify-content-center">
-                            <div class="card">
-                                <img class="card__background" src="img/pop-art/covers/ita-pop-art-front.svg"
-                                    alt="Italy Magazine Cover" />
-                                <div class="card_overflow">
-                                    <h2 class="card__title">Choose Article</h2>
-                                    <ul class="card__description">
-                                        <li><a href="article.html">First Article</a></li>
-                                        <li><a href="article.html">Second Article</a></li>
-                                        <li><a href="article.html">Third Article</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="d-flex col-lg col-md col-sm justify-content-center">
-                            <div class="card">
-                                <img class="card__background" src="img/pop-art/covers/kaz-pop-art-front.svg"
-                                    alt="Kazakhstan Magazine Cover" />
+                            <div id="kaz_cover" class="card card_img">
                                 <div class="card_overflow">
                                     <h2 class="card__title">Choose Article</h2>
                                     <ul class="card__description">
@@ -142,43 +167,17 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="welcome-intro">
                             <h3 class="welcome-title">Welcome to <span class="welcome-highlight">Appetite</span></h3>
-                            <p class="welcome-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-                                quia
-                                neque
-                                culpa, ut iste beatae non illo tempore veniam molestiae, explicabo unde esse. Modi
-                                distinctio
-                                soluta assumenda libero quod, totam nisi corporis illum accusantium minima vitae ut iure
-                                tempora
-                                molestias quam aut, nam, harum accusamus hic aspernatur officia quidem? Exercitationem
-                                error
-                                eum
-                                nisi a quo perspiciatis non odit, deleniti, velit ad vel voluptate molestiae aspernatur
-                                nobis.
-                                Voluptatem provident distinctio officiis eveniet necessitatibus suscipit blanditiis
-                                minima
-                                quam
-                                labore sapiente possimus at doloribus debitis, consectetur minus ut architecto sunt
-                                veniam
-                                reiciendis laborum consequuntur qui hic cumque. Repellat earum ad sint culpa nam?
+                            <p class="welcome-body">Welcome to APPETITE, where the culinary journey meets artistic
+                                exploration! As avid food enthusiasts, we've crafted a unique online magazine that
+                                transcends the traditional boundaries of culinary storytelling. APPETITE is not just a
+                                collection of delectable recipes; it's an immersive experience that blends the richness
+                                of diverse cuisines with the captivating allure of art and design.
                             </p>
-                            <p class="welcome-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam ex
-                                veritatis
-                                exercitationem tempora, eveniet beatae recusandae numquam dolore. Autem dignissimos
-                                delectus
-                                culpa obcaecati? Vero maiores numquam sed totam officiis est suscipit ratione officia
-                                natus
-                                ullam. Placeat quaerat aliquam quibusdam reprehenderit nulla consequuntur porro natus
-                                minima
-                                eos
-                                nemo quidem totam esse quisquam, omnis dolore autem, necessitatibus eligendi. Minus
-                                sapiente
-                                optio sed impedit expedita eius nostrum odit vitae ad corrupti eaque laudantium tenetur
-                                harum
-                                pariatur earum ducimus corporis, dolorum ullam ex culpa, facilis itaque! Voluptate sequi
-                                nobis
-                                magni itaque illum rerum, quisquam eaque, impedit illo eum harum voluptates id beatae,
-                                minus
-                                culpa!
+                            <p class="welcome-body">Explore the culinary world through the lens of history and art.
+                                Immerse yourself in different time periods with our switchable themes, each carefully
+                                chosen to transport you to eras ranging from the opulence of Baroque to the sleek
+                                elegance of Minimalism. With a simple click, witness the fusion of flavors and
+                                aesthetics.
                         </div>
                     </div>
                 </div>
@@ -195,9 +194,8 @@
                 <div id="team" class="pt-3">
                     <div class="container">
                         <h3 class="team-title">Meet the <span class="team-highlight">Team</span></h3>
-                        <p class="team-body">Meet the projects team. We are all students from the master degree DHDK of
-                            the
-                            <i>University of Bologna "Alma Mater Studiorum".</i>
+                        <p class="team-body">Meet the passionate minds behind APPETITE, a team united by a shared love
+                            for food, design, and the art of storytelling.
                         </p>
                         <div class="row logos-container justify-content-center">
                             <div class="col-lg-3 col-md-6 col-sm-12">
@@ -205,8 +203,7 @@
                                     <div id="irem" class="member-img"></div>
                                     <h3>Irem Atmar</h3>
                                     <!-- <p class="member-role">Lorem, ipsum.</p> -->
-                                    <p>After the Bachelor's Degree in Humanities at the University of Bologna
-                                        (2018-2021),
+                                    <p>After the Bachelor's Degree in Translation and Interpretation (2015-2019),
                                         is
                                         now
                                         attending the Master's Dregree in DHDK.</p>
@@ -242,8 +239,9 @@
         <!-- FOOTER -->
         <footer class="footer">
             <div class="container footer-body">
-                <p class="border-bottom">DHDK - Alma Mater Studiorum Università di Bologna <br> This is a non-commercial
+                <p>DHDK - Alma Mater Studiorum Università di Bologna <br> This is a non-commercial
                     project for scholarly purposes only. </p>
+                <div class="footer-ornament"></div>
                 <p class="text-center">Copyright &copy; Appetite 2023</p>
             </div>
         </footer>

@@ -13,7 +13,7 @@
 * {
     box-sizing: border-box;
   }
-body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Courier New', sans-serif; letter-spacing: 0px; font-size: 17px; color: #8d8f90;  line-height: 32px; background-color: #F3E9E9; background-image: url(/img/banksy/concrete-wall-2.png);  }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Courier New', sans-serif; letter-spacing: 0px; font-size: 17px; color: #8d8f90;  line-height: 32px; background-color: #F3E9E9; background-image: url(/img/banksy/dark-wall.png);  }
 h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: 'Courier New', sans-serif; font-weight: 700; letter-spacing: -1px; line-height: 1; }
 h1 { font-size: 34px; }
 h2 { font-size: 28px; line-height: 38px; }
@@ -31,7 +31,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
 .section.bg-static {
     margin: auto;
-    background-image: url(/img/banksy/concrete-wall-2.png);
+    background-image: url(/img/banksy/dark-wall.png);
 }
 .section .bg-move {
     position: absolute;
@@ -53,20 +53,17 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     position: relative;
     background: none;
     transition: padding 0.8s; /* Add a transition for smooth effect */
+    background-color: #000;
+    background-image: url(/img/banksy/dark-wall.png);
 }
 
-.page-title { 
-    line-height: 1; 
-    color: #000000; 
-    text-align: center;  
-    font-family: 'Misdemeanor';
-    font-weight: 400;
-    font-size: 100px; 
-}
 
 .page-sub {
     text-align: center; 
     font-weight: lighter;
+    color: #8d8f90;
+    margin-top: 20px;
+    font-family: 'cityburn';
 }
 
 .page-caption {
@@ -75,22 +72,19 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
 
 .page-title {
-    color: #000000;
-    font-family: 'Misdemeanor';
+    color: #ED2024;
+    font-family: 'cityburn';
     font-size: 100px; 
     font-weight: 400;
     line-height: 1;
     text-align: center;
 }
 
-.page-sub {
-    text-align: center;
-    font-weight: lighter;
-}
+
 
 /* Make the header sticky */
 .page-header.sticky {
-    background-image: url(/img/banksy/concrete-wall-2.png);
+    /* background-image: url(/img/banksy/concrete-wall-2.png); */
     position: fixed;
     top: 0;
     width: 100%;
@@ -117,22 +111,82 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 .navbar {
     /* margin-left: 1rem; */
-    border-top: 0.5px solid black;
-    border-bottom: 0.5px solid black;
-    padding: 5px;
+    border-top: 0.5px solid #8d8f90;
+    border-bottom: 0.5px solid #8d8f90;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 
-.navbar-nav > li{
+.navbar-nav li{
     padding-left:80px;
     padding-right:80px;
-    font-family: Helvetica, sans-serif ;
+    font-family: 'cityburn';
+    color:#8d8f90;
 }
 
-li.nav-item {
+/* .nav-item a {
     width: 290.33px;
     text-align: center;
+    color: white;
+    font-size: 22px;
+} */
+.nav-item {
+    width: 290.33px;
+    text-align: center;
+    color: white;
+    /* font-family: ; */
 }
+
+.nav-item.dropdown {
+    width: auto;
+}
+
+.nav-main a{
+    color: white;
+}
+
+.nav-link a{
+    color: white;
+}
+
+a.nav-link.dropdown-toggle.turkeyDropdown{
+    color: black;
+    text-align: left;
+    width: 150px;
+}
+
+a.nav-link.dropdown-toggle.turkeyDropdown:hover{
+    color: red;
+}
+
+navbar-dark .navbar-nav .nav-link:hover {
+ color:#000;}
+
+li.nav-item.dropend {
+    width:max-content;
+}
+
+
+
+.dropdown:hover > .dropdown-menu, .dropend:hover > .dropdown-menu{
+    display: block;
+    margin-top: .125em;
+}
+
+.dropend:hover > .dropdown-menu{
+    position:absolute;
+    top:0;
+    left:100%;
+    margin-left: .125em;
+}
+
+
+
+.turkeyDropdown {
+    color:#000;
+}
+
 /* .card-section { position: relative; bottom: 60px; }
 .card-block { padding: 80px; }
 .section-title { margin-bottom: 60px; } */
@@ -192,12 +246,13 @@ li.nav-item {
 /* NEW INSERT OF A STYLE */
 
 .card_overflow{
-    padding: 16px 8px 8px 16px;
+    padding: 0px 8px 8px 16px;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: white; /* rgba(0, 0, 0, 0.75);  black with opacity */
+    background-color: darkgray; /* rgba(0, 0, 0, 0.75);  black with opacity */
+    background-image: url(/img/banksy/dark-wall.png);
     overflow: hidden;
     width: 100%;
     height: 0;
@@ -206,12 +261,12 @@ li.nav-item {
 
 .card:hover .card_overflow{
     height: 100%;
+    padding-top: 5em;
 }
 
 .card__title h2{
     /* padding-left: 4px; */
     width: 100%;
-    margin-top: 30%;
     color:black;
     font-size: 4wf;
     position: absolute;
@@ -219,7 +274,9 @@ li.nav-item {
     transform: rotate(-5deg)skewX(-5deg); 
 }
 
-.card__description a {
+.card__description a{
+    margin-top: 30px;
+    padding-top: 30px;
     text-align: left;
     color: black;
     font-size: 1.2 vw;
@@ -228,7 +285,7 @@ li.nav-item {
     width: 70%;
     letter-spacing: 5px;
     line-height: 30px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Staatliches';
 }
   
 
@@ -249,6 +306,7 @@ li.nav-item {
 }
   
 .card__title {
+    font-family: 'cityburn';
     position: relative;
     width: fit-content;
     width: -moz-fit-content;
@@ -261,11 +319,23 @@ li.nav-item {
     width: calc(100% + 1.25rem);
     bottom: calc((1.25rem - 0.5rem) * -1);
     left: -1.25rem;
-    background-color: rgb(255, 140, 0);
+    background-color:#ED2024;
 }
 
+.welcome-ornament {
+    background-image: url(../img/banksy/grafiti_transparent_stroke.png);
+    background-size:auto;
+    background-position: center;
+    width: 85vw;
+    height: 200px;
+    margin-top: 2rem;
+    display: block;
+    background-repeat: no-repeat;
+}
+
+
 .welcome-intro {
-    margin-top: 50px;
+    margin-top: 24px;
     margin-bottom: 50px;
     margin-left: 50px;
     margin-right: 50px;
@@ -274,8 +344,9 @@ li.nav-item {
 }
 
 .welcome-title{
-    padding-top: 50px;
+    padding-top: 16px;
     text-align: center;
+    font-family: 'cityburn';
 }
 
 .welcome-body{
@@ -285,28 +356,49 @@ li.nav-item {
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
+    font-family: 'Open Sans';
 }
 
 
 #team { padding: 100px 0 100px 0; }
 .team-title {    
+    background-image: url(/img/banksy/creative-stroke.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 150px;
+    background-position: 20vw;
     padding-top: 50px;
     text-align: center;
+    font-family: 'cityburn';
 }
 .team-intro { text-align: center; margin: auto; width: 50%; }
-.team-item { padding: 20px; margin-top: 40px; }
+.team-item { padding: 20px; margin-top: 20px; }
+
+.team-item h3{
+    font-family: 'cityburn';
+    text-align: center;
+}
+
+.team-item p{
+    text-align: center;
+}
+
 .team-body{
     font-size: 20px;
     text-align: justify;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding-top: 20px;
     padding-left: 50px;
     padding-right: 50px;
+    background-image:url(/img/banksy/grafiti_transparent_stroke.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: auto;
 }
-.member-role { font-weight: bold; font-size: 14px; padding-left: 30px; position: relative; }
+.member-role { font-weight: bold; font-size: 14px; padding-left: 30px; position: relative; text-align: center;}
 .member-role:after { position: absolute; content: " "; height: 3px; width: 25px; position: absolute; left: 0; top: 12px; background: #000; }
-.member-img { background-repeat: no-repeat; background-size: contain; height: 250px; background-position: center center; }
-#irem { background-image: url(../img/banksy/team/irem-banksy.png); }
+.member-img { background-repeat: no-repeat; background-size: contain; height: 250px; background-position: center center; background-image: url(/img/banksy/spray-paint.png);}
+
+#irem { background-image: url(../img/banksy/team/irem-banksy.png)}
 #ulzhan { background-image: url(../img/banksy/team/ulzhan-banksy.png); }
 #rana { background-image: url(../img/banksy/team/rana-banksy.png); }
 
@@ -323,9 +415,6 @@ li.nav-item {
   }
 
 
-.before_footer{
-    background-image: url(../img/banksy/maid.png);
-}
 
 /* FOOTER */
 .footer {
@@ -343,7 +432,7 @@ li.nav-item {
     padding-bottom: 1em;
 }
 .footer-body p:last-child{
-    color: #dbf857;
+    color: #ED2024;
 }
 
 /* ARTICLE */
@@ -357,7 +446,7 @@ li.nav-item {
 
 .article-page-title{
     line-height: 1; 
-    color: #000000; 
+    color:#ED2024; 
     text-align: center;  
     font-family: 'Misdemeanor';
     font-weight: 400;
