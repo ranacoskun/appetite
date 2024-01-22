@@ -136,6 +136,12 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
 }
 
+.card_img {
+  background-repeat: no-repeat; 
+  background-size: contain; 
+  height: 500px; 
+  background-position: center center;
+}
 
 .card__background {
     object-fit: cover;
@@ -145,27 +151,24 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 
 .card_overflow{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-image: url(../img/baroque/covers/card-background.svg);
-    background-size: cover ;
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    text-align: center;
-    transition: .5s ease; /* for smooth transition */
+  /* padding: 16px 8px 8px 16px; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;  
+  background-image: url(../img/baroque/covers/card-background.svg);
+  background-size: cover ;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  text-align: center;
+  transition: .5s ease;
 }
 
 .card:hover .card_overflow{
-    padding-top: 2em;
     height: 100%;
 }
 
-.card__description {
-    padding-left: 0 !important;
-}
   
 .card__description a {
     color: #000;
@@ -205,6 +208,20 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     position: relative;
     text-align: center;
     width: -moz-fit-content;
+}
+#turkey_cover {
+  background-image: url(../img/baroque/covers/tur-baroque-front.svg);
+  width: 20rem;
+  background-color: #bba88a;
+} 
+#italy_cover {
+  background-image: url(../img/baroque/covers/ita-baroque-front.svg);
+  background-color: #bba88a;
+}
+
+#kaz_cover {
+  background-image: url(../img/baroque/covers/kaz-baroque-front.svg);
+  background-color: #bba88a;
 }
 
 /*INTRO*/

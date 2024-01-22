@@ -18,85 +18,29 @@
 
     <link rel="stylesheet" href="css/normalize.min.css">
 
-    <!-- 
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <!-- Bootstrap JS (optional) -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
 
     <!-- SWUP -->
     <script src="js/swup.min.js"></script>
     <script src="js/SwupBodyClassPlugin.min.js"></script>
     <script src="js/SwupHeadPlugin.min.js"></script>
 
-    <!-- LEAFLET -->
+    <!-- LEAFLET
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> -->
+
+         <!-- MAPBOX -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.js"></script>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
-
-<!-- <body>
-    <header class="site-container">
-        <div class="page-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="page-caption">
-                            <h1 class="page-title"><span class="highlight">APPETITE</span></h1>
-                            <h5 class="page-sub" id="page-sub">Journal about different world cuisines with XML.</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header> -->
-
-<!-- <nav class="navbar navbar-expand-lg">
-       <div class="col-12 all-navbar">  
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Articles
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#a">Turkey issue</a></li>
-                                <li><a class="dropdown-item" href="#">Italy issue</a></li>
-                                <li><a class="dropdown-item" href="#">Kazakhstan issue</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Disclaimer</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Documentation</a>
-                        </li>
-    
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-    </nav> -->
 
 <body>
     <div class="site-container">
@@ -151,10 +95,20 @@
                 <h3 class="welcome-title">Issues</h3>
                 <div class="container">
                     <div class="row">
-                        <div class=" d-flex col-lg col-md col-sm justify-content-center">
-                            <div class="card">
-                                <img class="card__background" src="img/baroque/covers/tur-baroque-front.svg"
-                                    alt="Turkey Magazine Cover" />
+                        <div class="d-flex col-lg col-md col-sm justify-content-center">
+                            <div id="turkey_cover" class="card card_img">
+                                <div class="card_overflow">
+                                    <h2 class="card__title">Choose Article</h2>
+                                    <ul class="card__description">
+                                        <li><a href="article.html">First Article</a></li>
+                                        <li><a href="article.html">Second Article</a></li>
+                                        <li><a href="article.html">Third Article</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex col-lg col-md col-sm justify-content-center">
+                            <div id="italy_cover" class="card card_img">
                                 <div class="card_overflow">
                                     <h2 class="card__title">Choose Article</h2>
                                     <ul class="card__description">
@@ -167,24 +121,7 @@
                         </div>
 
                         <div class="d-flex col-lg col-md col-sm justify-content-center">
-                            <div class="card">
-                                <img class="card__background" src="img/baroque/covers/ita-baroque-front.svg"
-                                    alt="Italy Magazine Cover" />
-                                <div class="card_overflow">
-                                    <h2 class="card__title">Choose Article</h2>
-                                    <ul class="card__description">
-                                        <li><a href="article.html">First Article</a></li>
-                                        <li><a href="article.html">Second Article</a></li>
-                                        <li><a href="article.html">Third Article</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="d-flex col-lg col-md col-sm justify-content-center">
-                            <div class="card">
-                                <img class="card__background" src="img/baroque/covers/kaz-baroque-front.svg"
-                                    alt="Kazakhstan Magazine Cover" />
+                            <div id="kaz_cover" class="card card_img">
                                 <div class="card_overflow">
                                     <h2 class="card__title">Choose Article</h2>
                                     <ul class="card__description">
@@ -197,7 +134,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                       
 
             <!-- INTRO -->
             <div class="welcome-ornament"></div>
@@ -225,9 +162,7 @@
             <!-- MAP -->
             <div class="container">
                 <div class="welcome-title">Discover the <span class="welcome-highlight">Map</span></div>
-                <div class="map">
-                    <div id="map"></div>
-                </div>
+                <div id="map"></div>
             </div>
 
             <!-- TEAM -->
@@ -309,37 +244,6 @@
                 }
             };
         </script>
-
-        <div class="fab-button">
-            <div id="container-floating">
-                <div class="nd4 nds" onclick="changeStyle('css/baroque2.css')"> <img class="reminder"
-                        src="components/fab button/icons/baroque-plate.jpg">
-                    <p class="letter">C</p>
-                </div>
-                <div class="nd3 nds" onclick="changeStyle('css/constructivism.css')"><img class="reminder"
-                        src="components/fab button/icons/constructurism-plate.jpg" /></div>
-
-                <div class="nd1 nds" onclick="changeStyle('css/art-deco.css')"><img class="reminder"
-                        src="components/fab button/icons/art-deco-plate.jpg" />
-                    <p class="letter"></p>
-                </div>
-                <div class="nd-new nds" onclick="changeStyle('css/pop-art.css')"><img class="reminder"
-                        src="components/fab button/icons/pop-art-plate.jpg">
-                </div>
-
-                <div class="nd-new2 nds" onclick="changeStyle('css/banksy.css')"><img class="reminder"
-                        src="components/fab button/icons/banksy-plate.jpg">
-                </div>
-
-                <div class="nd-new3 nds" onclick="changeStyle('css/minimalism.css')"><img class="reminder"
-                        src="components/fab button/icons/minimalism-plate.jpg">
-                </div>
-                <div id="floating-button">
-                    <p class="plus"><img src="components/fab button/icons/choosing-plate.png"></p>
-                    <p class="edit"><img src="components/fab button/icons/x-plate.png"></p>
-                </div>
-            </div>
-        </div>
 
 </body>
 
