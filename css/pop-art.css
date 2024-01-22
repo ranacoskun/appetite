@@ -55,7 +55,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     line-height: 1; 
     color: #000000; 
     text-align: center; 
-    align-items: center; 
+    /* align-items: center;  */
     font-family: 'Blambot-Casual-Regular';
     font-weight: 400;
     font-size: 625%; 
@@ -206,52 +206,19 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 }
   
 .card {
-    /* display: grid; */
-    place-items: center;
-    /* width: 21rem; */
-    max-width: 21.875rem;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 0.625rem;
-    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
-    min-height: 5rem;
-
-}
-.card_img {background-repeat: no-repeat; background-size: contain; height: 500px; background-position: center center;}
-
-/* 
-.card_tur {
-  background-image: url(../img/minimalism/covers/tur-minimalism.png);
-  background-size: cover;
   display: grid;
   place-items: center;
   width: 21rem;
-  max-width: 21.875rem;
+  min-width: 21.875rem;
   height: 100%;
   overflow: hidden;
   border-radius: 0.625rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+  /* min-height: 5rem; */
 }
 
-#turkey_cover {
-  background-image: url(../img/pop-art/covers/tur-pop-art-front.svg);
-  width: 20rem;
-  /* background-size: cover; */
-/* }
-#italy_cover {
-  background-image: url(../img/pop-art/covers/ita-pop-art-front.svg);
-  /* background-size: cover; 
-}*/
+.card_img {background-repeat: no-repeat; background-size: contain; height: 500px; background-position: center center;}
 
-/* #kaz_cover {
-  background-image: url(../img/pop-art/covers/kaz-pop-art-front.svg); */
-  /* background-size: cover; */
-/* } */ 
-/* .card > * {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-*/
 .card__background {
     object-fit: cover;
     max-width: 100%;
@@ -273,6 +240,20 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     transition: .5s ease; /* for smooth transition */
 }
 
+#turkey_cover {
+  background-image: url(../img/pop-art/covers/tur-pop-art-front.svg);
+  width: 20rem;
+  /* background-size: cover; */
+} 
+#italy_cover {
+  background-image: url(../img/pop-art/covers/ita-pop-art-front.svg);
+  /* background-size: cover; */
+}
+
+#kaz_cover {
+  background-image: url(../img/pop-art/covers/kaz-pop-art-front.svg);
+  /* background-size: cover; */
+}
 .card:hover .card_overflow{
     padding-top: 2em;
     height: 100%;
