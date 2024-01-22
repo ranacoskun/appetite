@@ -918,6 +918,6 @@ function initializeMap() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    initializeMap();
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//     initializeMap();
+// });

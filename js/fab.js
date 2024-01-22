@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', function () {
-    setDefaultStyle();
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//     setDefaultStyle();
+// });
 
 function changeStyle(styleSheet) {
     var links = document.head.getElementsByTagName('link');
