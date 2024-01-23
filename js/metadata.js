@@ -140,3 +140,160 @@ function createTextHighlight(ele) {
         setSelection(true);
     }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const elements = document.querySelectorAll(".dish, .drink, .place, .person");
+
+    const annotatedWords = {
+        dish: new Map(),
+        drink: new Map(),
+        place: new Map(),
+        person: new Map(),
+    };
+
+    function normalizeText(text) {
+        return text.toLowerCase().trim();
+    }
+
+    function highlightWords(className) {
+        elements.forEach(element => {
+            if (element.classList.contains(className)) {
+                element.classList.add("highlighted");
+            } else {
+                element.classList.remove("highlighted");
+            }
+        });
+    }
+
+    // Update the list of words for a specific class
+    function updateList(className) {
+        const wordMap = annotatedWords[className];
+        const list = document.getElementById("annotated-words-list");
+        list.innerHTML = ``;
+
+        // Check if wordMap is defined before iterating over its entries
+        if (wordMap) {
+            for (const [word, count] of wordMap.entries()) {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${word} (${count})`;
+                list.appendChild(listItem);
+            }
+        }
+
+        // Highlight words with the corresponding class
+        highlightWords(className);
+    }
+
+    function updateHighlightedWords() {
+        const selectedCategories = Array.from(document.querySelectorAll('.category-checkbox:checked'))
+            .map(checkbox => checkbox.getAttribute('data-class'));
+
+        // Create a Map to store all selected words and their frequencies
+        const allSelectedWords = new Map();
+
+        // Clear the list before updating for all selected categories
+        const listContainer = document.getElementById("annotated-words-list");
+        listContainer.innerHTML = "";
+
+        // Update the list for each selected category
+        selectedCategories.forEach(className => {
+            const wordMap = annotatedWords[className];
+            for (const [word, count] of wordMap.entries()) {
+                // Add or update the frequency of the word
+                allSelectedWords.set(word, (allSelectedWords.get(word) || 0) + count);
+            }
+        });
+
+        // Update the list for all selected categories
+        allSelectedWords.forEach((count, word) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${word} (${count})`;
+            listItem.addEventListener("click", function () {
+                find.value = word;
+                markText();
+            });
+            listContainer.appendChild(listItem);
+        });
+
+        // Highlight words for all selected categories
+        elements.forEach(element => {
+            const word = normalizeText(element.textContent);
+            if (allSelectedWords.has(word)) {
+                element.classList.add("highlighted");
+            } else {
+                element.classList.remove("highlighted");
+            }
+        });
+
+        count.textContent = allSelectedWords.size;
+        hopperButtons();
+    }
+
+    function displayAnnotatedWordList(wordSet) {
+        const listContainer = document.getElementById("annotated-words-list");
+        listContainer.innerHTML = "";
+
+        wordSet.forEach(word => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${word}`;
+            listItem.addEventListener("click", function () {
+                find.value = word;
+                markText();
+            });
+            listContainer.appendChild(listItem);
+        });
+    }
+
+    function initializeTextHighlighter() {
+        tarea = document.getElementById('txt');
+        find = document.getElementById('find');
+        count = document.getElementById('count');
+        hoppers = document.getElementById('hoppers');
+        hilite = createTextHighlight(tarea);
+
+        count.textContent = '0';
+        tarea.addEventListener('input', inputHandler);
+        inputHandler();
+    }
+
+    // Function to handle input changes
+    function inputHandler() {
+        count.textContent = hilite.count();
+        hopperButtons();
+    }
+
+    // Function to handle hopper buttons visibility
+    function hopperButtons() {
+        +count.textContent ? hoppers.classList.remove('hidden') : hoppers.classList.add('hidden');
+    }
+
+    // Attach event listeners to category checkboxes
+    document.querySelectorAll('.category-checkbox').forEach(checkbox => {
+        checkbox.addEventListener('change', updateHighlightedWords);
+    });
+
+    // Populate the annotated words and counts
+    elements.forEach(element => {
+        const className = element.classList[0];
+        const word = normalizeText(element.textContent);
+        annotatedWords[className].set(word, (annotatedWords[className].get(word) || 0) + 1);
+    });
+
+    // Initially populate the list with "dish" class words ??
+    updateList("");
+    initializeTextHighlighter();
+
+});
+
+function openNav() {
+    document.getElementById("mySidebar").style.zIndex = "1001";
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("openbtn").style.display = "none";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.getElementById("openbtn").style.display = "block";
+}
