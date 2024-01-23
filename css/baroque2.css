@@ -118,8 +118,12 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
  .nav-item {
   width: 290.33px;
   text-align: center;
-  color: white;
+  color: black;
   /* font-family: ; */
+}
+
+li.nav-item{
+  color:#000;
 }
 
 .nav-item.dropdown {
@@ -130,8 +134,8 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
   color: white;
 }
 
-.nav-link a{
-  color: white;
+a.nav-link.dropdown-toggle{
+  color: #000;
 }
 
 a.nav-link.dropdown-toggle.turkeyDropdown{
