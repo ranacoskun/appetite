@@ -915,25 +915,25 @@ li.nav-item.dropend {
   
   /* SIDEBAR SECTION */
 
-  .category {
+.category {
     cursor: pointer;
     text-decoration: underline;
 }
 
 .dish.highlighted {
-    background-color: yellow;
+    background-color: #EACC4A
 }
 
 .drink.highlighted {
-    background-color: lightblue;
+    background-color: #8AA7CC
 }
 
 .place.highlighted {
-    background-color: lightgreen;
+    background-color: 	#8CA8A0;
 }
 
 .person.highlighted {
-    background-color: pink;
+    background-color: #d95f6b;
 }
 
 .sidebar {
