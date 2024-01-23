@@ -57,41 +57,7 @@
     </style>
 </head>
 
-<body>
-    <body>
-        <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <div class="list-group">
-                <label class="list-group-item" style="text-align: center; color:rgb(218, 68, 73)">
-                    <label class="check-label">Show Entities</label>
-                </label>
-                <label class="list-group-item list-group-item-action">
-                    <input class="category-checkbox" type="checkbox" data-class="dish">
-                    <label class="check-label">Dish</label>
-                </label>
-                <label class="list-group-item list-group-item-action">
-                    <input class="category-checkbox" type="checkbox" data-class="drink">
-                    <label class="check-label">Drink</label>
-                </label>
-                <label class="list-group-item list-group-item-action">
-                    <input class="category-checkbox" type="checkbox" data-class="place">
-                    <label class="check-label">Place</label>
-                </label>
-                <label class="list-group-item list-group-item-action">
-                    <input class="category-checkbox" type="checkbox" data-class="person">
-                    <label class="check-label">People</label>
-                </label>
-            </div>
-            <br>
-            <div class="list-group">
-                <label class="list-group-item"> <strong> <u>Annotated Words</u></strong></label>
-                <ul id="annotated-words-list" class="list-group-item"></ul>
-            </div>
-        </div>
-    
-        <div id="main">
-            <button class="openbtn" id="openbtn" onclick="openNav()">M</button>
-            <!-- <h2>Metadata Viewer</h2> -->
+<body>    
     <div class="site-container">
         <header class="page-header" id="page-header">
             <div class="container">
@@ -106,6 +72,7 @@
 
             <nav class="navbar navbar-expand-lg ">
                 <div class="container">
+                    <button class="openbtn" id="openbtn" onclick="openNav()">M</button>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -122,9 +89,9 @@
                                       Turkey issue
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                      <li><a class="dropdown-item" href="TURKISH ARTICLES/FOOD CITIES.html">Food cities</a></li>
-                                      <li><a class="dropdown-item" href="TURKISH ARTICLES/BAKLAVA.html">Baklava</a></li>
-                                      <li><a class="dropdown-item" href="TURKISH ARTICLES/RAKI.html">Raki</a></li>
+                                      <li><a class="dropdown-item" href="FOOD CITIES.html">Food cities</a></li>
+                                      <li><a class="dropdown-item" href="BAKLAVA.html">Baklava</a></li>
+                                      <li><a class="dropdown-item" href="RAKI.html">Raki</a></li>
                                     </ul>
                                   </li>
                                   <li class="nav-item dropend">
@@ -160,6 +127,43 @@
                 </div>
             </nav>
         </header>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <div class="list-group">
+                <label class="list-group-item"
+                    style="text-align: center; color:rgb(255, 255, 255); background-color: rgb(99, 99, 99);">
+                    <label class="check-label"><strong>Show Entities</strong></label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="dish">
+                    <label class="check-label">Dish</label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="drink">
+                    <label class="check-label">Drink</label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="place">
+                    <label class="check-label">Place</label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="person">
+                    <label class="check-label">People</label>
+                </label>
+            </div>
+            <br>
+            <div class="list-group">
+                <label class="list-group-item"
+                    style="text-align: center; color:white; background-color: rgb(99, 99, 99);"><strong>Annotated
+                        Words</strong></label>
+                <ul id="annotated-words-list" class="list-group-item"
+                    style="padding-left:35px; background-color: rgb(0, 0, 0); color:white;"></ul>
+            </div>
+        </div>
 
         <!-- ARTICLE LAYOUT -->
         <main>
