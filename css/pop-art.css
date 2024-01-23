@@ -288,7 +288,7 @@ li.nav-item.dropend {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(../img/pop-art/covers/pop-art-back.svg);
+    background-image: url(../img/pop-art/covers/pop-art-back.png);
     background-size: cover ;
     overflow: hidden;
     width: 100%;
@@ -298,17 +298,17 @@ li.nav-item.dropend {
 }
 
 #turkey_cover {
-  background-image: url(../img/pop-art/covers/tur-pop-art-front.svg);
+  background-image: url(../img/pop-art/covers/tur-pop-art-front.png);
   width: 20rem;
   /* background-size: cover; */
 } 
 #italy_cover {
-  background-image: url(../img/pop-art/covers/ita-pop-art-front.svg);
+  background-image: url(../img/pop-art/covers/ita-pop-art-front.png);
   /* background-size: cover; */
 }
 
 #kaz_cover {
-  background-image: url(../img/pop-art/covers/kaz-pop-art-front.svg);
+  background-image: url(../img/pop-art/covers/kaz-pop-art-front.png);
   /* background-size: cover; */
 }
 .card:hover .card_overflow{
@@ -932,7 +932,7 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 120px;
+    top: 126px;
     left: 0;
     background-color: #000000;
     overflow-x: hidden;

@@ -33,28 +33,7 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-        .category {
-            cursor: pointer;
-            text-decoration: underline;
-        }
 
-        .dish.highlighted {
-            background-color: yellow;
-        }
-
-        .drink.highlighted {
-            background-color: lightblue;
-        }
-
-        .place.highlighted {
-            background-color: lightgreen;
-        }
-
-        .person.highlighted {
-            background-color: pink;
-        }
-    </style>
 </head>
 
 <body>    
@@ -71,8 +50,8 @@
             </div>
 
             <nav class="navbar navbar-expand-lg ">
-                <div class="container">
                     <button class="openbtn" id="openbtn" onclick="openNav()">M</button>
+                    <div class="container">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -117,10 +96,10 @@
                                 </ul>
                               </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Disclaimer</a>
+                                <a class="nav-link" href="disclaimer.html">Disclaimer</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Documentation</a>
+                                <a class="nav-link" href="documentation.html">Documentation</a>
                             </li>
                         </ul>
                     </div>
@@ -166,7 +145,7 @@
         </div>
 
         <!-- ARTICLE LAYOUT -->
-        <main>
+        <main id="main">
             <div class=" article-container position-relative">
                 <div class="article-header col-lg-12">
                     <div class="row">
@@ -208,7 +187,9 @@
 
                         <p>For those who find themselves in <span class="place">Kazakhstan</span> without a local chef, beshbarmak can be ordered at restaurants specializing in traditional cuisine.
 
-                        <h2>Preparing Traditional <span class="dish">Beshbarmak</span></h2>
+                            <div class="ornament-image" id="middle-of-text"></div>
+
+                            <h2>Preparing Traditional <span class="dish">Beshbarmak</span></h2>
 
                         <p><span class="dish">Beshbarmak</span> can be prepared in a number of ways depending on the type of meat one would like to include in the dish. The most traditional form of the meal is cooked using horse meat, although beef and lamb are common substitutions. Pork and chicken are not recommended. For those looking to go truly authentic, horse meat sausage called "<span class="dish">qazy</span>" is cooked along with the other cuts.</p>
                         
