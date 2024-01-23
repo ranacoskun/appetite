@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta tag specifying the document mode and compatibility settings for Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Appetite</title>
+    <meta name="description" content="A food magazine about different cuisines from all over the world.">
+    <meta name="author" content="Irem Atmar, Ulzhan Baizhankyzy, Rana Coskun">
+
+    <link rel="icon" href="img/icon/favicon.ico">
+    <link rel="icon" href="img/icon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/icon/favicon.png">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/minimalism.css">
+
+    <script src="js/metadata.js"></script>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            
+
+    <!-- SWUP -->
+    <script src="js/swup.min.js"></script>
+    <script src="js/SwupBodyClassPlugin.min.js"></script>
+    <script src="js/SwupHeadPlugin.min.js"></script>
+
+    <!-- LEAFLET -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+        <div id="main">
+        <div class="site-container">
+            <header class="page-header" id="page-header">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="article-page-caption">
+                            <h1 class="article-page-title">APPETITE</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Articles
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li class="nav-item dropend">
+                                        <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          Turkey issue
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                          <li><a class="dropdown-item" href="FOOD CITIES.html">Food cities</a></li>
+                                          <li><a class="dropdown-item" href="BAKLAVA.html">Baklava</a></li>
+                                          <li><a class="dropdown-item" href="RAKI.html">Raki</a></li>
+                                        </ul>
+                                      </li>
+                                      <li class="nav-item dropend">
+                                        <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          Italian issue
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                          <li><a class="dropdown-item" href="pasta.html">Pasta</a></li>
+                                          <li><a class="dropdown-item" href="tiramisu.html">Tiramisu</a></li>
+                                          <li><a class="dropdown-item" href="prosecco.html">Prosecco</a></li>
+                                        </ul>
+                                      </li>
+                                      <li class="nav-item dropend">
+                                        <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          Kazakh issue
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                          <li><a class="dropdown-item" href="kaz_food_drinks.html">Kazakh food and drinks</a></li>
+                                          <li><a class="dropdown-item" href="beshbarmak.html">Beshbarmak</a></li>
+                                          <li><a class="dropdown-item" href="kaz_centr_asia.html">Central Asian food</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Disclaimer</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Documentation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- ARTICLE LAYOUT -->
+            <main>
+                <div class="article-container position-relative" id="txt" spellcheck="false">
+                        <div class="row">
+                            <div class="first-heading">
+                                <div class="text-title">
+                                    <h1 style="color: black; text-align: center;">DISCLAIMER</h1>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="article-body col-8 mx-auto">
+                        <!-- <div class="text-sub-title">
+                            <p> While today it’s an everyday meal for the masses, <span class="dish"><a
+                                        href="https://it.wikipedia.org/wiki/Pasta">pasta</a></span> was once only
+                                available for
+                                Italian nobles.
+                            </p>
+                        </div> -->
+                        <div class="text-body">
+                            <p>The purpose of this web site is to explore various types of typographic and 
+                                layout style for text documents, as an end-of-course project for the "Information 
+                                Modeling and Web technologies" course of the Master Degree in Digital Humanities
+                                and Digital Knowledge of the University of Bologna, under prof. Fabio Vitali.
+                            </p>
+                            <p>
+                                The documents contained in this web site have been selected for their length and 
+                                complexity from various sites and magazines. Their publication here is not intended to be an alternative or 
+                                replace their original locations. Here is a list of our articles and the places they have been taken:</p>
+
+                                <p> For Turkish Issue</p>
+                            <ul>
+                                <li><i><a href="https://www.dailysabah.com/travel/2018/10/06/a-taste-of-turkey-gastronomy-destinations-for-foodies">A taste of Turkey: Gastronomy destinations for foodies</a></i> published by DAILY SABAH</li>
+                                <li><i><a href="https://www.nationalgeographic.com/travel/article/deconstructing-baklava-turkish-classic">Deconstructing baklava, a Turkish classic with a noble past</a></i> published by NATIONAL GEOGRAPHIC</li>
+                                <li><i><a href="https://nomadsguidetoturkey.com/raki-and-everything-about-the-culture-of-raki-in-turkey/">Rakı and everything you need to know about the culture of rakı</a></i> published by İsmail Çamönü</li></ul>
+                                <p> For Italian Issue</p>    
+                                <ul>                    
+                                <li><i><a href="https://www.nationalgeographic.com/history/history-magazine/article/daily-life-pasta-italy-neapolitan-diet">The Twisted History of Pasta
+                                </a></i> published by NATIONAL GEOGRAPHIC</li>
+                                <li><i><a href="https://www.nytimes.com/2008/12/28/business/worldbusiness/28prosecco.html?searchResultPosition=2">Italian Makers of Prosecco Seek Recognition
+                                </a></i> published by THE NEW YORK TIMES</li>
+                                <li><i><a href="https://www.newyorker.com/news/afterword/the-husband-and-wife-whose-restaurant-gave-the-world-tiramisu">The Husband and Wife Whose Restaurant Gave the World Tiramisu</a></i> published by The New Yorker</li></ul>  
+                        
+                                <p> For Kazakh Issue</p>   
+                                <ul>  
+                                <li><i><a href="https://nomadparadise.com/kazakh-food/">20 Kazakh Foods You Need to Try
+                                </a></i> published by Nomad Paradise</li>
+                                <li><i><a href="https://folkways.today/beshbarmak/">Beshbarmak: The Rich, Meaty Pasta from Central Asia
+                                </a></i> published by Folkways</li>
+                                <li><i><a href="https://central-asia.guide/kazakhstan/kazakh-culture/kazakh-food/">Kazakh National Food and Drink</a></i> published by Central Asia Guide</li></ul>
+                            </p>
+                            <p>All copyrights and related rights on the content remain with their original owners. 
+                                All copyright on the typographic and layout choices are 2023 © APPETITE
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container footer-body">
+                <p class="border-bottom">DHDK - Alma Mater Studiorum Università di Bologna <br> This is a
+                    non-commercial
+                    project for scholarly purposes only. </p>
+                <p class="text-center">Copyright &copy; Appetite 2023</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        window.onscroll = function () {
+            var header = document.querySelector(".page-header");
+            if (window.pageYOffset > 0) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        };
+    </script>
+</body>
+
+</html>

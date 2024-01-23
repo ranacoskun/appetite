@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,16 +15,16 @@
     <link rel="icon" href="img/icon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icon/favicon.png">
 
+    <!-- <link rel="stylesheet" href="/css/pop-art.css"> -->
+
+    <script src="js/metadata.js"></script>
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/art-deco.css">
+    <link rel="stylesheet" href="css/baroque2.css">
 
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- SWUP -->
     <!-- <script src="js/swup.min.js"></script>
@@ -35,28 +34,6 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-        .category {
-            cursor: pointer;
-            text-decoration: underline;
-        }
-
-        .dish.highlighted {
-            background-color: yellow;
-        }
-
-        .drink.highlighted {
-            background-color: lightblue;
-        }
-
-        .place.highlighted {
-            background-color: lightgreen;
-        }
-
-        .person.highlighted {
-            background-color: pink;
-        }
-    </style>
 </head>
 
 <body>
@@ -66,14 +43,15 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="article-page-caption">
-                            <h1 class="article-page-title">APPETITE</h1> 
+                            <h1 class="article-page-title">APPETITE</h1>
                         </div>
                     </div>
                 </div>
             </div>
 
             <nav class="navbar navbar-expand-lg ">
-                <div class="container">
+                    <button class="openbtn" id="openbtn" onclick="openNav()">M</button>
+                    <div class="container">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -90,9 +68,9 @@
                                       Turkey issue
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                      <li><a class="dropdown-item" href="TURKISH ARTICLES/FOOD CITIES.html">Food cities</a></li>
-                                      <li><a class="dropdown-item" href="TURKISH ARTICLES/BAKLAVA.html">Baklava</a></li>
-                                      <li><a class="dropdown-item" href="TURKISH ARTICLES/RAKI.html">Raki</a></li>
+                                      <li><a class="dropdown-item" href="FOOD CITIES.html">Food cities</a></li>
+                                      <li><a class="dropdown-item" href="BAKLAVA.html">Baklava</a></li>
+                                      <li><a class="dropdown-item" href="RAKI.html">Raki</a></li>
                                     </ul>
                                   </li>
                                   <li class="nav-item dropend">
@@ -118,25 +96,63 @@
                                 </ul>
                               </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Disclaimer</a>
+                                <a class="nav-link" href="disclaimer.html">Disclaimer</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Documentation</a>
+                                <a class="nav-link" href="documentation.html">Documentation</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <div class="list-group">
+                <label class="list-group-item"
+                    style="text-align: center; color:rgb(255, 255, 255); background-color: rgb(99, 99, 99);">
+                    <label class="check-label"><strong>Show Entities</strong></label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="dish">
+                    <label class="check-label">Dish</label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="drink">
+                    <label class="check-label">Drink</label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="place">
+                    <label class="check-label">Place</label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="person">
+                    <label class="check-label">People</label>
+                </label>
+            </div>
+            <br>
+            <div class="list-group">
+                <label class="list-group-item"
+                    style="text-align: center; color:white; background-color: rgb(99, 99, 99);"><strong>Annotated
+                        Words</strong></label>
+                <ul id="annotated-words-list" class="list-group-item"
+                    style="padding-left:35px; background-color: rgb(0, 0, 0); color:white;"></ul>
+            </div>
+        </div>
 
         <!-- ARTICLE LAYOUT -->
-        <main>
+        <main id="main">
             <div class=" article-container position-relative">
                 <div class="article-header col-lg-12">
                     <div class="row">
                         <div class="first-heading">
                             <div class="text-title">
                                 <h2>Kazakh and Central Asian</h2>
+                                <div></div>
                                 <h1>TRADITIONAL FOOD</h1>
                             </div>
                             <div class="text-publisher">
@@ -193,6 +209,7 @@
     Horse and camel meat are the two primary types of festival meats compared to Kyrgyzstan where camel meat is a rarity. 
     On the other hand, camel is still not as typical for festivities as camels are not as common as horses in <span class="place">Kazakhstan</span>. Mutton and beef are as more common as the meat of the dishes eaten daily.
 </p>
+<div class="ornament-image" id="middle-of-text"></div>
 
 
 <h4 class="numer_dish_name">UYGHUR CUISINE IN <span class="place">KAZAKHSTAN</span></span></h4>

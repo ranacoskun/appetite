@@ -16,11 +16,16 @@
     <link rel="icon" href="img/icon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icon/favicon.png">
 
-    <link rel="stylesheet" href="/css/baroque2.css">
+    <!-- <link rel="stylesheet" href="/css/pop-art.css"> -->
 
+    <script src="js/metadata.js"></script>
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <!-- <link rel="stylesheet" href="css/baroque2.css"> -->
+    <link rel="stylesheet" href="css/pop-art.css">
 
 
     <!-- SWUP -->
@@ -31,28 +36,6 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-        .category {
-            cursor: pointer;
-            text-decoration: underline;
-        }
-
-        .dish.highlighted {
-            background-color: yellow;
-        }
-
-        .drink.highlighted {
-            background-color: lightblue;
-        }
-
-        .place.highlighted {
-            background-color: lightgreen;
-        }
-
-        .person.highlighted {
-            background-color: pink;
-        }
-    </style>
 </head>
 
 <body>
@@ -68,8 +51,9 @@
                 </div>
             </div>
 
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
+            <nav class="navbar navbar-expand-lg ">
+                    <button class="openbtn" id="openbtn" onclick="openNav()">M</button>
+                    <div class="container">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -77,30 +61,93 @@
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Articles
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Articles
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#a">Turkey issue</a></li>
-                                    <li><a class="dropdown-item" href="#">Italy issue</a></li>
-                                    <li><a class="dropdown-item" href="#">Kazakhstan issue</a></li>
+                                  <li class="nav-item dropend">
+                                    <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Turkey issue
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li><a class="dropdown-item" href="FOOD CITIES.html">Food cities</a></li>
+                                      <li><a class="dropdown-item" href="BAKLAVA.html">Baklava</a></li>
+                                      <li><a class="dropdown-item" href="RAKI.html">Raki</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="nav-item dropend">
+                                    <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Italian issue
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li><a class="dropdown-item" href="pasta.html">Pasta</a></li>
+                                      <li><a class="dropdown-item" href="tiramisu.html">Tiramisu</a></li>
+                                      <li><a class="dropdown-item" href="prosecco.html">Prosecco</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="nav-item dropend">
+                                    <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Kazakh issue
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li><a class="dropdown-item" href="kaz_food_drinks.html">Kazakh food and drinks</a></li>
+                                      <li><a class="dropdown-item" href="beshbarmak.html">Beshbarmak</a></li>
+                                      <li><a class="dropdown-item" href="kaz_centr_asia.html">Central Asian food</a></li>
+                                    </ul>
+                                  </li>
                                 </ul>
+                              </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="disclaimer.html">Disclaimer</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Disclaimer</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Documentation</a>
+                                <a class="nav-link" href="documentation.html">Documentation</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <div class="list-group">
+                <label class="list-group-item"
+                    style="text-align: center; color:rgb(255, 255, 255); background-color: rgb(99, 99, 99);">
+                    <label class="check-label"><strong>Show Entities</strong></label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="dish">
+                    <label class="check-label">Dish</label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="drink">
+                    <label class="check-label">Drink</label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="place">
+                    <label class="check-label">Place</label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="person">
+                    <label class="check-label">People</label>
+                </label>
+            </div>
+            <br>
+            <div class="list-group">
+                <label class="list-group-item"
+                    style="text-align: center; color:white; background-color: rgb(99, 99, 99);"><strong>Annotated
+                        Words</strong></label>
+                <ul id="annotated-words-list" class="list-group-item"
+                    style="padding-left:35px; background-color: rgb(0, 0, 0); color:white;"></ul>
+            </div>
+        </div>
 
     <!-- ARTICLE LAYOUT -->
-    <main>
+    <main id="main">
         <div class=" article-container position-relative">
             <div class="article-header col-lg-12">
                 <div class="row">

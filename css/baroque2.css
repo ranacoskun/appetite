@@ -115,29 +115,14 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     padding-right:80px;
  }
 
- .nav-item {
-  width: 290.33px;
-  text-align: center;
-  color: black;
-  /* font-family: ; */
-}
 
-li.nav-item{
-  color:#000;
-}
 
-.nav-item.dropdown {
-  width: auto;
-}
-
-.nav-main a{
-  color: white;
-}
-
+/*color of text for items in main nav bar */
 a.nav-link.dropdown-toggle{
   color: #000;
 }
 
+/*color and properies of text for items in nested nav bar*/
 a.nav-link.dropdown-toggle.turkeyDropdown{
   color: black;
   text-align: left;
@@ -155,7 +140,7 @@ li.nav-item.dropend {
   width:max-content;
 }
 
-
+/* functionality of nested navbar */
 
 .dropdown:hover > .dropdown-menu, .dropend:hover > .dropdown-menu{
   display: block;
@@ -740,6 +725,7 @@ th, td {
 .nd1{
   right: 40px;
   bottom: 300px;
+  bottom: 300px;
   animation-delay: 0.2s;
   animation: bounce-out-nds 0.3s linear;
   animation-fill-mode:  forwards;
@@ -747,6 +733,7 @@ th, td {
 
 .nd3{
   right: 40px;
+  bottom: 360px;
   bottom: 360px;
   animation-delay: 0.15s;
   animation: bounce-out-nds 0.15s linear;
@@ -756,6 +743,7 @@ th, td {
 .nd4{
   right: 40px;
   bottom: 420px;
+  bottom: 420px;
   animation-delay: 0.1s;
   animation: bounce-out-nds 0.1s linear;
   animation-fill-mode:  forwards;
@@ -763,6 +751,7 @@ th, td {
 
 .nd-new {
   right: 40px;
+  bottom: 240px;
   bottom: 240px;
   animation-delay: 0.3s;
   animation: bounce-out-nds 0.3s linear;
@@ -772,12 +761,15 @@ th, td {
 .nd-new2 {
   right: 40px;
   bottom: 180px;
+  bottom: 180px;
   animation-delay: 0.3s;
   animation: bounce-out-nds 0.3s linear;
   animation-fill-mode: forwards;
 }
 
 .nd-new3 {
+  right: 40px;
+  bottom: 120px;
   right: 40px;
   bottom: 120px;
   animation-delay: 0.3s;
@@ -887,7 +879,7 @@ img.reminder {
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 126px;
+    top: 132px;
     left: 0;
     background-color: #000000;
     overflow-x: hidden;
@@ -918,6 +910,7 @@ img.reminder {
 
 .openbtn {
     position: relative;
+    position: relative;
     font-size: 20px;
     cursor: pointer;
     background-color: #111;
@@ -926,6 +919,8 @@ img.reminder {
     border: none;
     overflow-x: hidden;
     z-index: 1001;
+    margin-left: 4px;
+    border-radius: 5px;
     margin-left: 4px;
     border-radius: 5px;
 }
