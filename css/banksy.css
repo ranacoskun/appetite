@@ -1,19 +1,9 @@
-/*@font-face {
-    font-family: 'Misdemeanor';
-    src: url('Misdemeanor-Oyx8.ttf');
-     src: local('Kudryashev Display Sans'), local('KudryashevDisplay-Sans'),
-        url('KudryashevDisplay-Sans.eot?#iefix') format('embedded-opentype'),
-        url('KudryashevDisplay-Sans.woff2') format('woff2'),
-        url('KudryashevDisplay-Sans.woff') format('woff'),
-        url('KudryashevDisplay-Sans.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-} */
+
 
 * {
     box-sizing: border-box;
   }
-body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Courier New', sans-serif; letter-spacing: 0px; font-size: 17px; color: #8d8f90;  line-height: 32px; background-color: #F3E9E9; background-image: url(/img/banksy/dark-wall.png);  }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Courier Prime', sans-serif; letter-spacing: 0px; font-size: 17px; color: black;  line-height: 32px; background-color: #F3E9E9; background-image: url(/img/banksy/dark-wall.png);  }
 h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: 'Courier New', sans-serif; font-weight: 700; letter-spacing: -1px; line-height: 1; }
 h1 { font-size: 34px; }
 h2 { font-size: 28px; line-height: 38px; }
@@ -105,51 +95,32 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 /*nav-bar style*/
 
-.navbar li {
-    color:#FFF;
-}
-
 .navbar {
     /* margin-left: 1rem; */
-    border-top: 0.5px solid #8d8f90;
-    border-bottom: 0.5px solid #8d8f90;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    padding: 5px;
+    background-color: #000;
 }
 
-
-.navbar-nav {
+/*font and centered navbar */
+.navbar-nav > li{
     padding-left:80px;
     padding-right:80px;
     font-family: 'cityburn';
     color: white;
 }
 
-/* .nav-item a {
-    width: 290.33px;
-    text-align: center;
-    color: white;
-    font-size: 22px;
-} */
-
-/*!!!!!nav bar items color */
-a.nav-item {
+.nav-item {
     width: 290.33px;
     text-align: center;
     color: white;
     /* font-family: ; */
 }
 
-.nav-item.dropdown {
-    width: auto;
-}
-
-.nav-main a{
-    color: white;
-}
-
-.nav-link {
-    color: white;
+/*color of text for main navbar */
+a.nav-link {
+    color: whitesmoke;
 }
 
 a.nav-link.dropdown-toggle.turkeyDropdown{
@@ -161,9 +132,6 @@ a.nav-link.dropdown-toggle.turkeyDropdown{
 a.nav-link.dropdown-toggle.turkeyDropdown:hover{
     color: red;
 }
-
-navbar-nav.nav-link:hover {
- color:#000;}
 
 li.nav-item.dropend {
     width:max-content;
@@ -347,7 +315,7 @@ li.nav-item.dropend {
 }
 
 .welcome-title{
-    padding-top: 16px;
+    padding-top: 32px;
     text-align: center;
     font-family: 'cityburn';
 }
@@ -359,7 +327,7 @@ li.nav-item.dropend {
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
-    font-family: 'Open Sans';
+    font-family: 'Courier Prime';
 }
 
 
@@ -445,13 +413,14 @@ li.nav-item.dropend {
     align-items: center;
     justify-content: center;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .article-page-title{
     line-height: 1; 
     color:#ED2024; 
     text-align: center;  
-    font-family: 'Misdemeanor';
+    font-family: 'cityburn';
     font-weight: 400;
     font-size: 40px;
     margin-right: 20px;
@@ -497,7 +466,7 @@ li.nav-item.dropend {
 
 
 .text-title h2 {
-    color: white;
+    color: black;
     font-size: 30px;
     font-weight: 700;
     line-height: 56.35px;
