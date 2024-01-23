@@ -37,28 +37,6 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-        .category {
-            cursor: pointer;
-            text-decoration: underline;
-        }
-
-        .dish.highlighted {
-            background-color: yellow;
-        }
-
-        .drink.highlighted {
-            background-color: lightblue;
-        }
-
-        .place.highlighted {
-            background-color: lightgreen;
-        }
-
-        .person.highlighted {
-            background-color: pink;
-        }
-    </style>
 </head>
 
 <body>
@@ -75,8 +53,8 @@
             </div>
 
             <nav class="navbar navbar-expand-lg ">
+                <button class="openbtn" id="openbtn" onclick="openNav()">M</button>
                 <div class="container">
-                    <button class="openbtn" id="openbtn" onclick="openNav()">M</button>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -93,9 +71,9 @@
                                       Turkey issue
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                      <li><a class="dropdown-item" href="TURKISH ARTICLES/FOOD CITIES.html">Food cities</a></li>
-                                      <li><a class="dropdown-item" href="TURKISH ARTICLES/BAKLAVA.html">Baklava</a></li>
-                                      <li><a class="dropdown-item" href="TURKISH ARTICLES/RAKI.html">Raki</a></li>
+                                      <li><a class="dropdown-item" href="FOOD CITIES.html">Food cities</a></li>
+                                      <li><a class="dropdown-item" href="BAKLAVA.html">Baklava</a></li>
+                                      <li><a class="dropdown-item" href="RAKI.html">Raki</a></li>
                                     </ul>
                                   </li>
                                   <li class="nav-item dropend">
@@ -121,10 +99,10 @@
                                 </ul>
                               </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Disclaimer</a>
+                                <a class="nav-link" href="disclaimer.html">Disclaimer</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Documentation</a>
+                                <a class="nav-link" href="documentation.html">Documentation</a>
                             </li>
                         </ul>
                     </div>
@@ -170,7 +148,7 @@
         </div>
 
         <!-- ARTICLE LAYOUT -->
-        <main>
+        <main id="main">
             <div class=" article-container position-relative">
                 <div class="article-header col-lg-12">
                     <div class="row">
