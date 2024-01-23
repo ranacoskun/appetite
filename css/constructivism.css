@@ -7,7 +7,7 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
    
-body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family:'Space Grotesk'; font-weight:bold; font-size: 17px;  line-height: 32px; background-color: whitesmoke; background-image: url(/img/constructivism/paper-bg.png); }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family:'Space Grotesk'; font-weight:regular; font-size: 17px;  line-height: 32px; background-color: whitesmoke; background-image: url(/img/constructivism/paper-bg.png); }
 h2 { font-size: 28px; line-height: 38px; }
 h3 { font-size: 22px; line-height: 32px; }
 h4 { font-size: 20px; }
@@ -471,7 +471,7 @@ li.nav-item.dropend {
 .article-body {
     padding: 20px; 
     text-align: justify; 
-    font-family: 'Courier Prime';
+    font-family:'Space Grotesk'; 
     font-weight: lighter;
 }
 
