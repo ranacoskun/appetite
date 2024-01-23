@@ -125,6 +125,12 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     color: white;
 }
 
+
+.navbar-nav > li{
+    padding-left:80px;
+    padding-right:80px;
+ }
+
 /* .nav-item a {
     width: 290.33px;
     text-align: center;

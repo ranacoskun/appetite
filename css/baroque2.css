@@ -115,29 +115,14 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     padding-right:80px;
  }
 
- .nav-item {
-  width: 290.33px;
-  text-align: center;
-  color: black;
-  /* font-family: ; */
-}
 
-li.nav-item{
-  color:#000;
-}
 
-.nav-item.dropdown {
-  width: auto;
-}
-
-.nav-main a{
-  color: white;
-}
-
+/*color of text for items in main nav bar */
 a.nav-link.dropdown-toggle{
   color: #000;
 }
 
+/*color and properies of text for items in nested nav bar*/
 a.nav-link.dropdown-toggle.turkeyDropdown{
   color: black;
   text-align: left;
@@ -155,7 +140,7 @@ li.nav-item.dropend {
   width:max-content;
 }
 
-
+/* functionality of nested navbar */
 
 .dropdown:hover > .dropdown-menu, .dropend:hover > .dropdown-menu{
   display: block;

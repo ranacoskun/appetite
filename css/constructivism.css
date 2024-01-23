@@ -7,7 +7,7 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
    
-body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family:'Space Grotesk'; font-weight:bold; font-size: 17px;  line-height: 32px; background-color: #C40803; background-image: url(/img/constructivism/paper-bg.png); }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family:'Space Grotesk'; font-weight:bold; font-size: 17px;  line-height: 32px; background-color: whitesmoke; background-image: url(/img/constructivism/paper-bg.png); }
 h2 { font-size: 28px; line-height: 38px; }
 h3 { font-size: 22px; line-height: 32px; }
 h4 { font-size: 20px; }
@@ -121,10 +121,6 @@ a:focus, a:hover { text-decoration: none; color: #f85759; } */
 
 /*nav-bar style*/
 
-.navbar li {
-    color: whitesmoke;
-}
-
 .navbar {
     /* margin-left: 1rem; */
     border-top: 0.5px solid black;
@@ -133,7 +129,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; } */
     background-color: #000;
 }
 
-
+/*font and centered navbar */
 .navbar-nav > li{
     padding-left:80px;
     padding-right:80px;
@@ -148,18 +144,18 @@ a:focus, a:hover { text-decoration: none; color: #f85759; } */
     /* font-family: ; */
 }
 
-.nav-item.dropdown {
-    width: auto;
-}
 
-.nav-main a{
+/*color of text for main navbar */
+a.nav-link {
+    color: whitesmoke;
+}
+ 
+/*color on hover*/
+a.nav-link:hover {
     color: white;
 }
 
-.nav-link a{
-    color: white;
-}
-
+/*color of text for nested navbar */
 a.nav-link.dropdown-toggle.turkeyDropdown{
     color: black;
     text-align: left;
@@ -177,7 +173,7 @@ li.nav-item.dropend {
     width:max-content;
 }
 
-
+/* functionality of nested navbar */
 
 .dropdown:hover > .dropdown-menu, .dropend:hover > .dropdown-menu{
     display: block;
@@ -442,11 +438,11 @@ li.nav-item.dropend {
     background-image: url(/img/constructivism/appetite_const_head.png);
     background-size: 20rem;
     background-position:center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .article-page-title{
@@ -471,7 +467,6 @@ li.nav-item.dropend {
     border-radius: 25px;
     background-image: url(/img/constructivism/article1_banner.jpg);
     background-size: cover;
-    background-blend-mode: darken;
 }
 
 .article-body {
