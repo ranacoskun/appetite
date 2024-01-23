@@ -3,13 +3,8 @@
 // });
 
 function changeStyle(styleSheet) {
-    var links = document.head.getElementsByTagName('link');
-
-    for (var i = 0; i < links.length; i++) {
-        if (links[i].rel === 'stylesheet') {
-            links[i].href = styleSheet;
-        }
-    }
+    let getThemeLink = document.querySelector('link#theme');
+    getThemeLink.href = styleSheet;
 
     localStorage.setItem('chosenStylesheet', styleSheet);
     document.getElementById('container-floating').classList.add('active');
