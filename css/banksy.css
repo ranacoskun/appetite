@@ -123,6 +123,10 @@ a.nav-link {
     color: whitesmoke;
 }
 
+a.nav-link:hover {
+    color:#25292a;
+}
+
 a.nav-link.dropdown-toggle.turkeyDropdown{
     color: black;
     text-align: left;
