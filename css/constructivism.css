@@ -152,7 +152,7 @@ a.nav-link {
  
 /*color on hover*/
 a.nav-link:hover {
-    color: white;
+    color:#818181;
 }
 
 /*color of text for nested navbar */
