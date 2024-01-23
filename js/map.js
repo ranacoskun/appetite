@@ -859,7 +859,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Middle East</strong><p><a href="">Kazakh food and drinks</a></p>'
+                                '<strong>Middle East</strong><p><a href="">Kazakh food and drinks</a><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -918,22 +918,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Russia</strong><p><a href="beshbarmak.html">Beshbarmak</a></p>'
-                        },
-                        'geometry': {
-                            'type': 'Point',
-                            'coordinates': [
-                                103.0,
-                                55.0
-                                
-                            ]
-                        }
-                    },
-                    {
-                        'type': 'Feature',
-                        'properties': {
-                            'description':
-                                '<strong>Kyrgyzstan</strong><p><a href="beshbarmak.html">Beshbarmak</a></p>'
+                                '<strong>Kyrgyzstan</strong><p><a href="beshbarmak.html">Beshbarmak</a><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -1013,7 +998,133 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>China</strong><p><a href="">Food Cities, Pasta</a></p>'
+                                '<strong>Almaty</strong><p><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                76.889709, 
+                                43.238949 
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Bishkek</strong><p><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                74.582748, 
+                                42.882004 
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Tashkent</strong><p><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                69.240562,
+                                41.311081
+                                 
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Xinjiang Uyghur autonomous region of the peoples republic of China </strong><p><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                81.258165634,
+                                40.509331296 
+                                 
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Caucasus</strong><p><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                44.119332856,
+                                42.25666564  
+                                 
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Uzbekistan</strong><p><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                64.5735819,
+                                41.381166   
+                                 
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Persia</strong><p><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                53.6830157, 
+                                32.4207423  
+                                 
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>South East Asia</strong><p><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                115.66283, 
+                                -2.21797  
+                                 
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>China</strong><p><a href="">Food Cities, Pasta</a><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
