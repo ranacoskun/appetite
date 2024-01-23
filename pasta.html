@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- meta tag specifying the document mode and compatibility settings for Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -15,25 +16,21 @@
     <link rel="icon" href="img/icon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icon/favicon.png">
 
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/minimalism.css">
+    <!-- <link rel="stylesheet" href="/css/pop-art.css"> -->
 
     <script src="js/metadata.js"></script>
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/baroque2.css">
+
 
     <!-- SWUP -->
-    <script src="js/swup.min.js"></script>
+    <!-- <script src="js/swup.min.js"></script>
     <script src="js/SwupBodyClassPlugin.min.js"></script>
-    <script src="js/SwupHeadPlugin.min.js"></script>
-
-    <!-- LEAFLET -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/SwupHeadPlugin.min.js"></script> -->
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,11 +38,9 @@
 </head>
 
 <body>
-    <div>
-        <!-- <h2>Metadata Viewer</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, omnis?</p> -->
-        <div class="site-container">
-            <header class="page-header" id="page-header">
+    <div class="site-container">
+        <header class="page-header" id="page-header">
+            <div class="container">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="article-page-caption">
@@ -53,116 +48,110 @@
                         </div>
                     </div>
                 </div>
-
-                <nav class="navbar navbar-expand-lg ">
-                    <button class="openbtn" id="openbtn" onclick="openNav()">M</button>
-                    <div class="container">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        Articles
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li class="nav-item dropend">
-                                            <a class="nav-link dropdown-toggle turkeyDropdown" href="#"
-                                                id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                Turkey issue
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><a class="dropdown-item"
-                                                        href="FOOD CITIES.html">Food cities</a></li>
-                                                <li><a class="dropdown-item"
-                                                        href="BAKLAVA.html">Baklava</a></li>
-                                                <li><a class="dropdown-item" href="RAKI.html">Raki</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item dropend">
-                                            <a class="nav-link dropdown-toggle turkeyDropdown" href="#"
-                                                id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                Italian issue
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><a class="dropdown-item" href="pasta.html">Pasta</a></li>
-                                                <li><a class="dropdown-item" href="tiramisu.html">Tiramisu</a></li>
-                                                <li><a class="dropdown-item" href="prosecco.html">Prosecco</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item dropend">
-                                            <a class="nav-link dropdown-toggle turkeyDropdown" href="#"
-                                                id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                Kazakh issue
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><a class="dropdown-item" href="kaz_food_drinks.html">Kazakh food and
-                                                        drinks</a></li>
-                                                <li><a class="dropdown-item" href="beshbarmak.html">Beshbarmak</a></li>
-                                                <li><a class="dropdown-item" href="kaz_centr_asia.html">Central Asian
-                                                        food</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Disclaimer</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Documentation</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-            <div id="mySidebar" class="sidebar">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <div class="list-group">
-                    <label class="list-group-item"
-                        style="text-align: center; color:rgb(255, 255, 255); background-color: rgb(99, 99, 99);">
-                        <label class="check-label"><strong>Show Entities</strong></label>
-                    </label>
-                    <label class="list-group-item list-group-item-action"
-                        style="color:white; background-color: rgb(0, 0, 0);">
-                        <input class="category-checkbox" type="checkbox" data-class="dish">
-                        <label class="check-label">Dish</label>
-                    </label>
-                    <label class="list-group-item list-group-item-action"
-                        style="color:white; background-color: rgb(0, 0, 0);">
-                        <input class="category-checkbox" type="checkbox" data-class="drink">
-                        <label class="check-label">Drink</label>
-                    </label>
-                    <label class="list-group-item list-group-item-action"
-                        style="color:white; background-color: rgb(0, 0, 0);">
-                        <input class="category-checkbox" type="checkbox" data-class="place">
-                        <label class="check-label">Place</label>
-                    </label>
-                    <label class="list-group-item list-group-item-action"
-                        style="color:white; background-color: rgb(0, 0, 0);">
-                        <input class="category-checkbox" type="checkbox" data-class="person">
-                        <label class="check-label">People</label>
-                    </label>
-                </div>
-                <br>
-                <div class="list-group">
-                    <label class="list-group-item"
-                        style="text-align: center; color:white; background-color: rgb(99, 99, 99);"><strong>Annotated
-                            Words</strong></label>
-                    <ul id="annotated-words-list" class="list-group-item"
-                        style="padding-left:35px; background-color: rgb(0, 0, 0); color:white;"></ul>
-                </div>
             </div>
 
-            <!-- ARTICLE LAYOUT -->
+            <nav class="navbar navbar-expand-lg ">
+                <button class="openbtn" id="openbtn" onclick="openNav()">M</button>
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Articles
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li class="nav-item dropend">
+                                        <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Turkey issue
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="FOOD CITIES.html">Food cities</a></li>
+                                            <li><a class="dropdown-item" href="BAKLAVA.html">Baklava</a></li>
+                                            <li><a class="dropdown-item" href="RAKI.html">Raki</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropend">
+                                        <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Italian issue
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="pasta.html">Pasta</a></li>
+                                            <li><a class="dropdown-item" href="tiramisu.html">Tiramisu</a></li>
+                                            <li><a class="dropdown-item" href="prosecco.html">Prosecco</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropend">
+                                        <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Kazakh issue
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="kaz_food_drinks.html">Kazakh food and
+                                                    drinks</a></li>
+                                            <li><a class="dropdown-item" href="beshbarmak.html">Beshbarmak</a></li>
+                                            <li><a class="dropdown-item" href="kaz_centr_asia.html">Central Asian
+                                                    food</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="disclaimer.html">Disclaimer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="documentation.html">Documentation</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <div class="list-group">
+                <label class="list-group-item"
+                    style="text-align: center; color:rgb(255, 255, 255); background-color: rgb(99, 99, 99);">
+                    <label class="check-label"><strong>Show Entities</strong></label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="dish">
+                    <label class="check-label">Dish</label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="drink">
+                    <label class="check-label">Drink</label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="place">
+                    <label class="check-label">Place</label>
+                </label>
+                <label class="list-group-item list-group-item-action"
+                    style="color:white; background-color: rgb(0, 0, 0);">
+                    <input class="category-checkbox" type="checkbox" data-class="person">
+                    <label class="check-label">People</label>
+                </label>
+            </div>
+            <br>
+            <div class="list-group">
+                <label class="list-group-item"
+                    style="text-align: center; color:white; background-color: rgb(99, 99, 99);"><strong>Annotated
+                        Words</strong></label>
+                <ul id="annotated-words-list" class="list-group-item"
+                    style="padding-left:35px; background-color: rgb(0, 0, 0); color:white;"></ul>
+            </div>
+        </div>
+        <!-- ARTICLE LAYOUT -->
+        <main id="main">
             <main id="main">
                 <div class="article-container position-relative" id="txt" spellcheck="false">
                     <div class="article-header col-lg-12">
@@ -257,6 +246,7 @@
                             </h2>
                             <p>
                                 <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">Pasta</a></span>'s
+                                <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">Pasta</a></span>'s
                                 ethnic roots have been long
                                 debated. Many theories
                                 have been put forward, some notably far-fetched. An enduring myth, based on the
@@ -347,6 +337,7 @@
                                         href="https://en.wikipedia.org/wiki/Naples">Naples</a></span> and the
                                 surrounding region, including
                                 <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</a></span>,
+                                <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</a></span>,
                                 saw a
                                 surge in the production
                                 of <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">pasta</a></span>
@@ -368,6 +359,9 @@
                                         href="https://it.wikipedia.org/wiki/Agrigento">Agrigento</a></span> in
                                 <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</a></span>
                                 with some friends. They stayed in the home of a family who gave them a dish of
+                                href="https://it.wikipedia.org/wiki/Agrigento">Agrigento</a></span> in
+                                <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</a></span>
+                                with some friends. They stayed in the home of a family who gave them a dish of
                                 <span class="dish"><a href="https://en.wikipedia.org/wiki/Macaroni">macaroni</a></span>,
                                 whose shape, texture,
                                 and color fascinated the German
@@ -384,6 +378,7 @@
                                 seemed unparalleled to me in its whiteness and fineness.”
                             </p>
                             <p>
+                                <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">Pasta</a></span>'s
                                 <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">Pasta</a></span>'s
                                 popularity is mentioned by
                                 the 14th-century writer
@@ -492,6 +487,7 @@
                                         href="https://en.wikipedia.org/wiki/Macaroni">macaroni</a></span> on
                                 his list of “fattening dishes.”
                             </p>
+                            <div class="ornament-image" id="middle-of-text"></div>
                             <h2>Food of Beggars and Kings</h2>
                             <p><span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">Pasta</a></span>, by
                                 the
@@ -515,6 +511,7 @@
                                 <span class="concept"><a href="https://en.wikipedia.org/wiki/Kingdom_of_Naples">Kingdom
                                         of Naples</a></span> or
                                 <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</a></span>
+                                <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</a></span>
                                 sold
                                 wheat relatively
                                 cheaply. Religious restrictions also had an influence on the changing
@@ -523,6 +520,7 @@
                                 days when eating meat was forbidden. But perhaps the
                                 main reason for <span class="dish"><a
                                         href="https://it.wikipedia.org/wiki/Pasta">pasta</a></span>'s dramatic
+                                href="https://it.wikipedia.org/wiki/Pasta">pasta</a></span>'s dramatic
                                 spread was that, from the 17th century, industrial
                                 <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">pasta</a></span>
                                 production was developed with
@@ -619,16 +617,16 @@
                     </div>
                 </div>
             </main>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-body">
+            <p class="border-bottom">DHDK - Alma Mater Studiorum Università di Bologna <br> This is a
+                non-commercial
+                project for scholarly purposes only. </p>
+            <p class="text-center">Copyright &copy; Appetite 2023</p>
         </div>
-        <!-- FOOTER -->
-        <footer class="footer">
-            <div class="container footer-body">
-                <p class="border-bottom">DHDK - Alma Mater Studiorum Università di Bologna <br> This is a
-                    non-commercial
-                    project for scholarly purposes only. </p>
-                <p class="text-center">Copyright &copy; Appetite 2023</p>
-            </div>
-        </footer>
+    </footer>
     </div>
     <script>
         window.onscroll = function () {

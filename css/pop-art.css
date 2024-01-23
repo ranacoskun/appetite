@@ -288,7 +288,7 @@ li.nav-item.dropend {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(../img/pop-art/covers/pop-art-back.svg);
+    background-image: url(../img/pop-art/covers/pop-art-back.png);
     background-size: cover ;
     overflow: hidden;
     width: 100%;
@@ -298,17 +298,17 @@ li.nav-item.dropend {
 }
 
 #turkey_cover {
-  background-image: url(../img/pop-art/covers/tur-pop-art-front.svg);
+  background-image: url(../img/pop-art/covers/tur-pop-art-front.png);
   width: 20rem;
   /* background-size: cover; */
 } 
 #italy_cover {
-  background-image: url(../img/pop-art/covers/ita-pop-art-front.svg);
+  background-image: url(../img/pop-art/covers/ita-pop-art-front.png);
   /* background-size: cover; */
 }
 
 #kaz_cover {
-  background-image: url(../img/pop-art/covers/kaz-pop-art-front.svg);
+  background-image: url(../img/pop-art/covers/kaz-pop-art-front.png);
   /* background-size: cover; */
 }
 .card:hover .card_overflow{
@@ -643,269 +643,322 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
 
 /*FAB*/
   
-  #presentation{
-    width: 480px;
-    height: 120px;
-    padding: 20px;
-    margin: auto;
-    background: #FFF;
-    margin-top: 10px;
-    box-shadow: 0 3px 15px -5px rgba(0,0,0,0.1); 
-    transition: all 0.3s; 
-    border-radius: 10px;
-    
-    h1{
-      font-weight: 400;
-    }
-    
-    h3{
-      font-weight: 400;
-      color: #666;
-    }
+#presentation{
+  width: 480px;
+  height: 120px;
+  padding: 20px;
+  margin: auto;
+  background: #FFF;
+  margin-top: 10px;
+  box-shadow: 0 3px 15px -5px rgba(0,0,0,0.1); 
+  transition: all 0.3s; 
+  border-radius: 10px;
+  
+  h1{
+    font-weight: 400;
   }
   
-  #presentation:hover{
-    box-shadow: 0 12px 28px -5px rgba(0,0,0,0.13);
-    transition: all 0.3s;
-    transform: translateZ(10px);
+  h3{
+    font-weight: 400;
+    color: #666;
   }
+}
+
+#presentation:hover{
+  box-shadow: 0 12px 28px -5px rgba(0,0,0,0.13);
+  transition: all 0.3s;
+  transform: translateZ(10px);
+}
+
+#floating-button{
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #ffffff;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+}
+
+.plus{
+  position: absolute;
+  top: 0;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  line-height: 5px;
+  font-size: 38px;
+  font-weight: 300;
+  animation: plus-out 0.3s;
+  transition: all 0.3s;
+}
+.plus img {
+  width: 100%; 
+  height: 100%; 
+}
+
+#container-outer{
+  position: fixed;
+  width: 150px;
+  height: 70px;
+  bottom: 30px;
+  right: 30px;
+  z-index: 50px;
+  background: transparent;
+  /* transition: all 0.3s; */
+  border-radius: 10px; 
+}
+
+#container-outer:hover{
+  width: 220px;
+  height: 450px;
+  background-color: #000000;
+}
+
+#container-floating{
+  position: fixed;
+  width: 120px;
+  height: 50px;
+  bottom: 30px;
+  right: 30px;
+  z-index: 50px;
+  background: transparent;
+  /* transition: all 0.3s; */
+  border-radius: 10px; 
+}
+
+#container-floating:hover{
+  margin: 10px 10px 10px 10px;
+  width: 200px;
+  height: 430px;
+  background-color: #000000;
+  border-color: #fefefe;
+  border-style: solid;
+}
+
+#container-floating:hover .plus{
+  animation: plus-in 0.15s linear;
+  animation-fill-mode: forwards;
+}
+
+.edit{
+  position: absolute;
+  top: 0;
+  display: block;
+  bottom: 0;
+  left: 0;
+  display: block;
+  right: 0;
+  padding-left: 12px;
+  opacity: 0;
+  margin: auto;
+  line-height: 50px;
+  transform: rotateZ(-70deg);
+  transition: all 0.3s;
+  animation: edit-out 0.3s;
   
-  #floating-button{
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    background: #ffffff;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    cursor: pointer;
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
-  }
+}
+.edit img {
+  width: 65%;
+  height: 65%;
+}
+
+#container-floating:hover .edit{
+  animation: edit-in 0.2s;
+   animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes edit-in{
+    from {opacity: 0; transform: rotateZ(-70deg);}
+    to {opacity: 1; transform: rotateZ(0deg);}
+}
+
+@keyframes edit-out{
+    from {opacity: 1; transform: rotateZ(0deg);}
+    to {opacity: 0; transform: rotateZ(-70deg);}
+}
+
+@keyframes plus-in{
+    from {opacity: 1; transform: rotateZ(0deg);}
+    to {opacity: 0; transform: rotateZ(180deg);}
+}
+
+@keyframes plus-out{
+    from {opacity: 0; transform: rotateZ(180deg);}
+    to {opacity: 1; transform: rotateZ(0deg);}
+}
+
+.nds {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #ffffff;
+  z-index: 300;
+  transform: scale(0);
+  /* background-color: #222; */
+}
+
+.nds .text {
+  position: absolute;
+  left: -150px; /* Adjust the distance based on your design */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff; /* Adjust the text color */
+  font-size: 18px; /* Adjust the font size */
+  white-space: nowrap;
+  font-weight: bolder;
+  /* -webkit-text-stroke: 1px #000000; */
+}
+
+.nds .reminder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.nds:hover {
+  animation: bounce-nds 0.1s linear;
+  animation-fill-mode: forwards;
+}
+
+.nd1{
+  right: 40px;
+  bottom: 300px;
+  animation-delay: 0.2s;
+  animation: bounce-out-nds 0.3s linear;
+  animation-fill-mode:  forwards;
+}
+
+.nd3{
+  right: 40px;
+  bottom: 360px;
+  animation-delay: 0.15s;
+  animation: bounce-out-nds 0.15s linear;
+  animation-fill-mode:  forwards;
+}
+
+.nd4{
+  right: 40px;
+  bottom: 420px;
+  animation-delay: 0.1s;
+  animation: bounce-out-nds 0.1s linear;
+  animation-fill-mode:  forwards;
+}
+
+.nd-new {
+  right: 40px;
+  bottom: 240px;
+  animation-delay: 0.3s;
+  animation: bounce-out-nds 0.3s linear;
+  animation-fill-mode: forwards;
+}
+
+.nd-new2 {
+  right: 40px;
+  bottom: 180px;
+  animation-delay: 0.3s;
+  animation: bounce-out-nds 0.3s linear;
+  animation-fill-mode: forwards;
+}
+
+.nd-new3 {
+  right: 40px;
+  bottom: 120px;
+  animation-delay: 0.3s;
+  animation: bounce-out-nds 0.3s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounce-nds{
+    from {opacity: 0;}
+    to {opacity: 1; transform: scale(1);}
+}
+
+@keyframes bounce-out-nds{
+    from {opacity: 1; transform: scale(1);}
+    to {opacity: 0; transform: scale(0);}
+}
+
+#container-floating:hover .nds{
   
-  .plus{
-    position: absolute;
-    top: 0;
-    display: block;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    line-height: 5px;
-    font-size: 38px;
-    font-weight: 300;
-    animation: plus-out 0.3s;
-    transition: all 0.3s;
-  }
-  .plus img {
-    width: 100%; 
-    height: 100%; 
-  }
-  
-  
-  #container-floating{
-    position: fixed;
-    width: 70px;
-    height: 70px;
-    bottom: 30px;
-    right: 30px;
-    z-index: 50px;
-  }
-  
-  #container-floating:hover{
-    width: 100px;
-    height: 500px;
-    /* display: inline-block; */
-    /* padding: 30px; */
-  }
-  
-  #container-floating:hover .plus{
-    animation: plus-in 0.15s linear;
-    animation-fill-mode: forwards;
-  }
-  
-  .edit{
-    position: absolute;
-    top: 0;
-    display: block;
-    bottom: 0;
-    left: 0;
-    display: block;
-    right: 0;
-    padding-left: 12px;
-    opacity: 0;
-    margin: auto;
-    line-height: 50px;
-    transform: rotateZ(-70deg);
-    transition: all 0.3s;
-    animation: edit-out 0.3s;
-    
-  }
-  .edit img {
-    width: 65%;
-    height: 65%;
-  }
-  
-  #container-floating:hover .edit{
-    animation: edit-in 0.2s;
-     animation-delay: 0.1s;
-    animation-fill-mode: forwards;
-  }
-  
-  @keyframes edit-in{
-      from {opacity: 0; transform: rotateZ(-70deg);}
-      to {opacity: 1; transform: rotateZ(0deg);}
-  }
-  
-  @keyframes edit-out{
-      from {opacity: 1; transform: rotateZ(0deg);}
-      to {opacity: 0; transform: rotateZ(-70deg);}
-  }
-  
-  @keyframes plus-in{
-      from {opacity: 1; transform: rotateZ(0deg);}
-      to {opacity: 0; transform: rotateZ(180deg);}
-  }
-  
-  @keyframes plus-out{
-      from {opacity: 0; transform: rotateZ(180deg);}
-      to {opacity: 1; transform: rotateZ(0deg);}
-  }
-  
-  .nds{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    position: fixed;
-    z-index: 300;
-    transform:  scale(0);
-    cursor: pointer;
-  }
-  
-  .nd1{
-    right: 40px;
-    bottom: 300px;
-    animation-delay: 0.2s;
-    animation: bounce-out-nds 0.3s linear;
-    animation-fill-mode:  forwards;
-  }
-  
-  .nd3{
-    right: 40px;
-    bottom: 360px;
-    animation-delay: 0.15s;
-    animation: bounce-out-nds 0.15s linear;
-    animation-fill-mode:  forwards;
-  }
-  
-  .nd4{
-    right: 40px;
-    bottom: 420px;
-    animation-delay: 0.1s;
-    animation: bounce-out-nds 0.1s linear;
-    animation-fill-mode:  forwards;
-  }
-  
-  .nd-new {
-    right: 40px;
-    bottom: 240px;
-    animation-delay: 0.3s;
-    animation: bounce-out-nds 0.3s linear;
-    animation-fill-mode: forwards;
-  }
-  
-  .nd-new2 {
-    right: 40px;
-    bottom: 180px;
-    animation-delay: 0.3s;
-    animation: bounce-out-nds 0.3s linear;
-    animation-fill-mode: forwards;
-  }
-  
-  .nd-new3 {
-    right: 40px;
-    bottom: 120px;
-    animation-delay: 0.3s;
-    animation: bounce-out-nds 0.3s linear;
-    animation-fill-mode: forwards;
-  }
-  
-  @keyframes bounce-nds{
-      from {opacity: 0;}
-      to {opacity: 1; transform: scale(1);}
-  }
-  
-  @keyframes bounce-out-nds{
-      from {opacity: 1; transform: scale(1);}
-      to {opacity: 0; transform: scale(0);}
-  }
-  
-  #container-floating:hover .nds{
-    
-    animation: bounce-nds 0.1s linear;
-    animation-fill-mode:  forwards;
-  }
-  
-  #container-floating:hover .nd3{
-    animation-delay: 0.08s;
-  }
-  #container-floating:hover .nd4{
-    animation-delay: 0.15s;
-  }
-  #container-floating:hover .nd5{
-    animation-delay: 0.2s;
-  }
-  #container-floating:hover .nd-new{
-    animation-delay: 0.25s;
-  }
-  #container-floating:hover .nd-new2{
-    animation-delay: 0.3s;
-  }
-  #container-floating:hover .nd-new3{
-    animation-delay: 0.35s;
-  }
-  .letter{
-    font-size: 23px;
-    /* font-family: 'Roboto'; */
-    color: white;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0;
-    top: 0;
-    bottom: 0;
-    text-align: center;
-    line-height: 40px;
-  }
-  
-  img.reminder {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-  }
-  .reminder{
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    line-height: 40px;
-  }
-  
-  .profile{
-    border-radius: 50%;
-    width: 40px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    right: 20px;
-  } 
+  animation: bounce-nds 0.1s linear;
+  animation-fill-mode:  forwards;
+}
+
+#container-floating:hover .nd3{
+  animation-delay: 0.08s;
+}
+#container-floating:hover .nd4{
+  animation-delay: 0.15s;
+}
+#container-floating:hover .nd5{
+  animation-delay: 0.2s;
+}
+#container-floating:hover .nd-new{
+  animation-delay: 0.25s;
+}
+#container-floating:hover .nd-new2{
+  animation-delay: 0.3s;
+}
+#container-floating:hover .nd-new3{
+  animation-delay: 0.35s;
+}
+.letter{
+  font-size: 23px;
+  /* font-family: 'Roboto'; */
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  line-height: 40px;
+}
+
+img.reminder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* .reminder{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  line-height: 40px;
+} */
+
+.profile{
+  border-radius: 50%;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 20px;
+} 
   
   /* SIDEBAR SECTION */
+  /* SIDEBAR SECTION */
 
+  .category {
+    cursor: pointer;
+    text-decoration: underline;
+}
   .category {
     cursor: pointer;
     text-decoration: underline;
@@ -914,7 +967,13 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
 .dish.highlighted {
     background-color: yellow;
 }
+.dish.highlighted {
+    background-color: yellow;
+}
 
+.drink.highlighted {
+    background-color: lightblue;
+}
 .drink.highlighted {
     background-color: lightblue;
 }
@@ -922,7 +981,13 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
 .place.highlighted {
     background-color: lightgreen;
 }
+.place.highlighted {
+    background-color: lightgreen;
+}
 
+.person.highlighted {
+    background-color: pink;
+}
 .person.highlighted {
     background-color: pink;
 }
@@ -932,7 +997,19 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 120px;
+    top: 126px;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidebar {
+    height: 90%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 126px;
     left: 0;
     background-color: #000000;
     overflow-x: hidden;
@@ -948,11 +1025,29 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
     display: block;
     transition: 0.3s;
 }
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
 
 .sidebar a:hover {
     color: #f1f1f1;
 }
+.sidebar a:hover {
+    color: #f1f1f1;
+}
 
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
 .sidebar .closebtn {
     position: absolute;
     top: 0;
@@ -974,11 +1069,31 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
     margin-left: 4px;
     border-radius: 5px;
 }
+.openbtn {
+    position: relative;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    overflow-x: hidden;
+    z-index: 1001;
+    margin-left: 4px;
+    border-radius: 5px;
+}
 
 .openbtn:hover {
     background-color: rgb(82, 82, 82);
 }
+.openbtn:hover {
+    background-color: rgb(82, 82, 82);
+}
 
+#main {
+    transition: margin-left .5s;
+    /* padding: 16px; */
+}
 #main {
     transition: margin-left .5s;
     /* padding: 16px; */
@@ -990,7 +1105,17 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
     .sidebar {
         padding-top: 15px;
     }
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/* But what about the mobile view? - how should we construct the layout? */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
 
+    .sidebar a {
+        font-size: 18px;
+    }
+}
     .sidebar a {
         font-size: 18px;
     }
@@ -1001,7 +1126,16 @@ input[type=text] {
     padding: 5px 10px;
     font-size: 16px;
 }
+input[type=text] {
+    max-width: 250px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
 
+select {
+    padding: 6px 10px;
+    font-size: 16px;
+}
 select {
     padding: 6px 10px;
     font-size: 16px;
@@ -1010,7 +1144,13 @@ select {
 .count {
     font-size: 14px;
 }
+.count {
+    font-size: 14px;
+}
 
+.hidden {
+    display: none;
+}
 .hidden {
     display: none;
 }
@@ -1018,7 +1158,13 @@ select {
 .smalltitle {
     margin-top: 0;
 }
+.smalltitle {
+    margin-top: 0;
+}
 
+.list-group {
+    margin: 10px;
+}
 .list-group {
     margin: 10px;
 }

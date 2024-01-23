@@ -16,7 +16,7 @@
     <link rel="icon" href="img/icon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icon/favicon.png">
 
-    <link rel="stylesheet" href="/css/art-deco.css">
+    <link rel="stylesheet" href="/css/pop-art.css">
 
     <script src="js/metadata.js"></script>
     <!--Bootstrap-->
@@ -32,28 +32,6 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-        .category {
-            cursor: pointer;
-            text-decoration: underline;
-        }
-
-        .dish.highlighted {
-            background-color: yellow;
-        }
-
-        .drink.highlighted {
-            background-color: lightblue;
-        }
-
-        .place.highlighted {
-            background-color: lightgreen;
-        }
-
-        .person.highlighted {
-            background-color: pink;
-        }
-    </style>
 </head>
 
 <body>
@@ -70,8 +48,8 @@
             </div>
 
             <nav class="navbar navbar-expand-lg ">
-                <div class="container">
                     <button class="openbtn" id="openbtn" onclick="openNav()">M</button>
+                    <div class="container">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -116,10 +94,10 @@
                                 </ul>
                               </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Disclaimer</a>
+                                <a class="nav-link" href="disclaimer.html">Disclaimer</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Documentation</a>
+                                <a class="nav-link" href="documentation.html">Documentation</a>
                             </li>
                         </ul>
                     </div>
@@ -165,7 +143,7 @@
         </div>
 
     <!-- ARTICLE LAYOUT -->
-    <main>
+    <main id="main">
         <div class=" article-container position-relative">
             <div class="article-header col-lg-12">
                 <div class="row">
