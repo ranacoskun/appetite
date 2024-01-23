@@ -677,7 +677,7 @@ th, td {
 
 .nd1{
   right: 40px;
-  bottom: 120px;
+  bottom: 300px;
   animation-delay: 0.2s;
   animation: bounce-out-nds 0.3s linear;
   animation-fill-mode:  forwards;
@@ -685,7 +685,7 @@ th, td {
 
 .nd3{
   right: 40px;
-  bottom: 180px;
+  bottom: 360px;
   animation-delay: 0.15s;
   animation: bounce-out-nds 0.15s linear;
   animation-fill-mode:  forwards;
@@ -693,7 +693,7 @@ th, td {
 
 .nd4{
   right: 40px;
-  bottom: 240px;
+  bottom: 420px;
   animation-delay: 0.1s;
   animation: bounce-out-nds 0.1s linear;
   animation-fill-mode:  forwards;
@@ -701,7 +701,7 @@ th, td {
 
 .nd-new {
   right: 40px;
-  bottom: 300px;
+  bottom: 240px;
   animation-delay: 0.3s;
   animation: bounce-out-nds 0.3s linear;
   animation-fill-mode: forwards;
@@ -709,15 +709,15 @@ th, td {
 
 .nd-new2 {
   right: 40px;
-  bottom: 360px;
+  bottom: 180px;
   animation-delay: 0.3s;
   animation: bounce-out-nds 0.3s linear;
   animation-fill-mode: forwards;
 }
 
 .nd-new3 {
- right: 40px;
-  bottom: 420px;
+  right: 40px;
+  bottom: 120px;
   animation-delay: 0.3s;
   animation: bounce-out-nds 0.3s linear;
   animation-fill-mode: forwards;
