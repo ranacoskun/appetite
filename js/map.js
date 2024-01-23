@@ -859,6 +859,160 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
+                                '<strong>Middle East</strong><p><a href="">Kazakh food and drinks</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                29.995368,
+                                31.268205
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Akmola camp for wives and mothers of traitors of the motherland</strong><p><a href="kaz_food_drinks.html">Kazakh food and drinks</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                51.077500,
+                                70.977222
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Kazakhstan</strong><p><a href="kaz_food_drinks.html">Kazakh food and drinks</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                66.9045434,
+                                48.005284
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Russia</strong><p><a href="beshbarmak.html">Beshbarmak</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                70.977222,
+                                51.077500
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Russia</strong><p><a href="beshbarmak.html">Beshbarmak</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                103.0,
+                                55.0
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Kyrgyzstan</strong><p><a href="beshbarmak.html">Beshbarmak</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                74.766098, 
+                                41.20438
+                                
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Xinjiang</strong><p><a href="beshbarmak.html">Beshbarmak</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                86.154785, 
+                                44.402393
+                                
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>London</strong><p><a href="beshbarmak.html">Beshbarmak</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                -0.118092, 
+                                51.509865
+                                
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Caspian Sea</strong><p><a href="beshbarmak.html">Beshbarmak</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                50.666668, 
+                                41.666668
+                                
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Kyzylorda Region</strong><p><a href="beshbarmak.html">Beshbarmak</a></p>'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [
+                                65.50917, 
+                                44.85278 
+                                
+                                
+                            ]
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
                                 '<strong>China</strong><p><a href="">Food Cities, Pasta</a></p>'
                         },
                         'geometry': {
