@@ -286,10 +286,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function openNav() {
-    document.getElementById("mySidebar").style.zIndex = "1001";
     document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("openbtn").style.display = "none";
     document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("openbtn").style.display = "none";
+    document.getElementById("mySidebar").style.zIndex = "1001";
+
 }
 
 function closeNav() {
