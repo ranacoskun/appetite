@@ -18,22 +18,24 @@
 
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/constructivism.css">
-    <script src="js/fab.js" defer></script>
-    <script src="js/map.js" defer></script>
+
 
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <script src="js/script.js"></script> -->
 
-   <!-- MAPBOX -->
-   <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.css" rel="stylesheet">
-   <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.js"></script>
 
-    <!-- SWUP -->
+    <!-- SWUP 
     <script src="js/swup.min.js"></script>
     <script src="js/SwupBodyClassPlugin.min.js"></script>
-    <script src="js/SwupHeadPlugin.min.js"></script>
+    <script src="js/SwupHeadPlugin.min.js"></script> -->
 
+    <!-- LEAFLET -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,14 +62,15 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-caption">
+
                             <h1 class="page-title">APPETITE</h1>
-                            <h5 class="page-sub" id="page-sub">Where Taste Meets Time, and Every Byte Tells a Story</h5>
+                            <h5 class="page-sub" id="page-sub">Journal about different world cuisines with XML.</h5>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <nav class="navbar navbar-expand-lg navbar-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,42 +79,16 @@
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Articles
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Articles
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                  <li class="nav-item dropend">
-                                    <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                      Turkey issue
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                      <li><a class="dropdown-item" href="TURKISH ARTICLES/FOOD CITIES.html">Food cities</a></li>
-                                      <li><a class="dropdown-item" href="TURKISH ARTICLES/BAKLAVA.html">Baklava</a></li>
-                                      <li><a class="dropdown-item" href="TURKISH ARTICLES/RAKI.html">Raki</a></li>
-                                    </ul>
-                                  </li>
-                                  <li class="nav-item dropend">
-                                    <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                      Italian issue
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                      <li><a class="dropdown-item" href="pasta.html">Pasta</a></li>
-                                      <li><a class="dropdown-item" href="tiramisu.html">Tiramisu</a></li>
-                                      <li><a class="dropdown-item" href="prosecco.html">Prosecco</a></li>
-                                    </ul>
-                                  </li>
-                                  <li class="nav-item dropend">
-                                    <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                      Kazakh issue
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                      <li><a class="dropdown-item" href="kaz_food_drinks.html">Kazakh food and drinks</a></li>
-                                      <li><a class="dropdown-item" href="beshbarmak.html">Beshbarmak</a></li>
-                                      <li><a class="dropdown-item" href="kaz_centr_asia.html">Central Asian food</a></li>
-                                    </ul>
-                                  </li>
+                                    <li><a class="dropdown-item" href="#a">Turkey issue</a></li>
+                                    <li><a class="dropdown-item" href="#">Italy issue</a></li>
+                                    <li><a class="dropdown-item" href="#">Kazakhstan issue</a></li>
                                 </ul>
-                              </li>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Disclaimer</a>
                             </li>
@@ -123,7 +100,6 @@
                 </div>
             </nav>
         </header>
-                        <!-- CARD LAYOUT -->
         <main>
             <div class="container">
                 <h1 class="mainpage_headings">Issues</h1>
@@ -134,9 +110,10 @@
                                 <div class="card_overflow">
                                     <h2 class="card__title">Choose Article</h2>
                                     <ul class="card__description">
-                                        <li><a href="article.html">First Article</a></li>
-                                        <li><a href="article.html">Second Article</a></li>
-                                        <li><a href="article.html">Third Article</a></li>
+                                        <a href="article.html">First Article</a>
+                                        <div></div>
+                                        <a href="article.html">Second Article</a>
+                                        <a href="article.html">Third Article</a>
                                     </ul>
                                 </div>
                             </div>
@@ -173,23 +150,49 @@
                 </div>
             </div>
             <!-- INTRO -->
-            <div class="welcome-ornament"></div>
             <div class="container">
                 <div class="row ">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="welcome-intro">
-                            <h3 class="welcome-title">Welcome to <span class="welcome-highlight">Appetite</span></h3>
-                            <p class="welcome-body">Welcome to APPETITE, where the culinary journey meets artistic
-                                exploration! As avid food enthusiasts, we've crafted a unique online magazine that
-                                transcends the traditional boundaries of culinary storytelling. APPETITE is not just a
-                                collection of delectable recipes; it's an immersive experience that blends the richness
-                                of diverse cuisines with the captivating allure of art and design.
+                            <hr>
+                            <h1 class="welcome-title">Welcome to Appetite</h1>
+                            <p class="welcome-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                                quia
+                                neque
+                                culpa, ut iste beatae non illo tempore veniam molestiae, explicabo unde esse. Modi
+                                distinctio
+                                soluta assumenda libero quod, totam nisi corporis illum accusantium minima vitae ut iure
+                                tempora
+                                molestias quam aut, nam, harum accusamus hic aspernatur officia quidem? Exercitationem
+                                error
+                                eum
+                                nisi a quo perspiciatis non odit, deleniti, velit ad vel voluptate molestiae aspernatur
+                                nobis.
+                                Voluptatem provident distinctio officiis eveniet necessitatibus suscipit blanditiis
+                                minima
+                                quam
+                                labore sapiente possimus at doloribus debitis, consectetur minus ut architecto sunt
+                                veniam
+                                reiciendis laborum consequuntur qui hic cumque. Repellat earum ad sint culpa nam?
                             </p>
-                            <p class="welcome-body">Explore the culinary world through the lens of history and art.
-                                Immerse yourself in different time periods with our switchable themes, each carefully
-                                chosen to transport you to eras ranging from the opulence of Baroque to the sleek
-                                elegance of Minimalism. With a simple click, witness the fusion of flavors and
-                                aesthetics.</p>
+                            <p class="welcome-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam ex
+                                veritatis
+                                exercitationem tempora, eveniet beatae recusandae numquam dolore. Autem dignissimos
+                                delectus
+                                culpa obcaecati? Vero maiores numquam sed totam officiis est suscipit ratione officia
+                                natus
+                                ullam. Placeat quaerat aliquam quibusdam reprehenderit nulla consequuntur porro natus
+                                minima
+                                eos
+                                nemo quidem totam esse quisquam, omnis dolore autem, necessitatibus eligendi. Minus
+                                sapiente
+                                optio sed impedit expedita eius nostrum odit vitae ad corrupti eaque laudantium tenetur
+                                harum
+                                pariatur earum ducimus corporis, dolorum ullam ex culpa, facilis itaque! Voluptate sequi
+                                nobis
+                                magni itaque illum rerum, quisquam eaque, impedit illo eum harum voluptates id beatae,
+                                minus
+                                culpa!
                         </div>
                     </div>
                 </div>
@@ -198,24 +201,28 @@
             <!-- MAP -->
             <div class="container">
                 <div class="welcome-title">Discover the <span class="welcome-highlight">Map</span></div>
-                <div id="map"></div>
+                <div class="map">
+                    <div id="map"></div>
+                </div>
             </div>
 
             <!-- TEAM -->
             <div class="container">
                 <div id="team" class="pt-3">
                     <div class="container">
-                        <h3 class="team-title">Meet the <span class="team-highlight">Team</span></h3>
-                        <p class="team-body">Meet the passionate minds behind APPETITE, a team united by a shared love
-                            for food, design, and the art of storytelling.
+                        <h1 class="mainpage_headings">The team</h1>
+                        <p class="team-body">Meet the projects team. We are all students from the master degree DHDK of
+                            the
+                            <i>University of Bologna "Alma Mater Studiorum".</i>
                         </p>
                         <div class="row logos-container justify-content-center">
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="team-item">
                                     <div id="irem" class="member-img"></div>
-                                    <h3>Irem Atmar</h3>
+                                    <h3>İrem Atmar</h3>
                                     <!-- <p class="member-role">Lorem, ipsum.</p> -->
-                                    <p>After the Bachelor's Degree in Translation and Interpretation (2015-2019),
+                                    <p>After the Bachelor's Degree in Humanities at the University of Bologna
+                                        (2018-2021),
                                         is
                                         now
                                         attending the Master's Dregree in DHDK.</p>
@@ -258,9 +265,9 @@
         </footer>
     </div>
 
-     <!-- Option 1: Bootstrap Bundle with Popper -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <script src="js/map.js"></script>
     <script>
         window.onscroll = function () {
@@ -282,7 +289,36 @@
     </script>
 
 
-    
-</body>
+    <!-- <div class="fab-button">
+        <div id="container-floating">
+            <div class="nd4 nds" onclick="changeStyle('css/baroque2.css')"> <img class="reminder"
+                    src="components/fab button/icons/baroque-plate.jpg">
+                <p class="letter">C</p>
+            </div>
+            <div class="nd3 nds" onclick="changeStyle('css/constructivism.css')"><img class="reminder"
+                    src="components/fab button/icons/constructurism-plate.jpg" /></div>
+
+            <div class="nd1 nds" onclick="changeStyle('css/art-deco.css')"><img class="reminder"
+                    src="components/fab button/icons/art-deco-plate.jpg" />
+                <p class="letter"></p>
+            </div>
+            <div class="nd-new nds" onclick="changeStyle('css/pop-art.css')"><img class="reminder"
+                    src="components/fab button/icons/pop-art-plate.jpg">
+            </div>
+
+            <div class="nd-new2 nds" onclick="changeStyle('css/banksy.css')"><img class="reminder"
+                    src="components/fab button/icons/banksy-plate.jpg">
+            </div>
+
+            <div class="nd-new3 nds" onclick="changeStyle('css/minimalism.css')"><img class="reminder"
+                    src="components/fab button/icons/minimalism-plate.jpg">
+            </div>
+            <div id="floating-button">
+                <p class="plus"><img src="components/fab button/icons/choosing-plate.png"></p>
+                <p class="edit"><img src="components/fab button/icons/x-plate.png"></p>
+            </div>
+        </div>
+    </div>
+</body> -->
 
 </html>

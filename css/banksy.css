@@ -214,7 +214,8 @@ li.nav-item.dropend {
 }
 
 
-.card_img {background-repeat: no-repeat; background-size: contain; height: 450px; background-position: center center;}
+.card_img {
+    background-repeat: no-repeat; background-size: contain; height: 450px; background-position: center center;}
 
 #turkey_cover {
     background-image: url(../img/banksy/tur-banksy.png);
