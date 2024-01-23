@@ -84,11 +84,6 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     background-position: 500px;
     background-repeat: no-repeat;
 }
-  
-.site-container{  
-    overflow-x: auto;
-    overflow-y: hidden;
-}
 
 .page-header {
     position: relative;
@@ -680,7 +675,7 @@ li.nav-item.dropend {
   }
   
   #container-outer:hover{
-    width: 220px;
+    width: 240px;
     height: 450px;
     background-color: #000000;
   }
@@ -699,7 +694,7 @@ li.nav-item.dropend {
   
   #container-floating:hover{
     margin: 10px 10px 10px 10px;
-    width: 200px;
+    width: 220px;
     height: 430px;
     background-color: #000000;
     border-color: #fefefe;
@@ -760,6 +755,7 @@ li.nav-item.dropend {
   }
   
   .nds {
+    margin-right: 10px;
     position: fixed;
     width: 40px;
     height: 40px;

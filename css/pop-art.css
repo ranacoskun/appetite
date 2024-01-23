@@ -716,7 +716,7 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
 }
 
 #container-outer:hover{
-  width: 220px;
+  width: 240px;
   height: 450px;
   background-color: #000000;
 }
@@ -735,7 +735,7 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
 
 #container-floating:hover{
   margin: 10px 10px 10px 10px;
-  width: 200px;
+  width: 220px;
   height: 430px;
   background-color: #000000;
   border-color: #fefefe;
@@ -796,6 +796,7 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
 }
 
 .nds {
+  margin-right: 10px;
   position: fixed;
   width: 40px;
   height: 40px;
@@ -951,8 +952,6 @@ img.reminder {
   margin: auto;
   right: 20px;
 } 
-  
-  /* SIDEBAR SECTION */
   /* SIDEBAR SECTION */
 
   .category {

@@ -608,7 +608,7 @@ th, td {
 }
 
 #container-outer:hover{
-  width: 220px;
+  width: 240px;
   height: 450px;
   background-color: #000000;
 }
@@ -627,7 +627,7 @@ th, td {
 
 #container-floating:hover{
   margin: 10px 10px 10px 10px;
-  width: 200px;
+  width: 220px;
   height: 430px;
   background-color: #000000;
   border-color: #fefefe;
@@ -688,6 +688,7 @@ th, td {
 }
 
 .nds {
+  margin-right: 10px;
   position: fixed;
   width: 40px;
   height: 40px;
@@ -725,7 +726,6 @@ th, td {
 .nd1{
   right: 40px;
   bottom: 300px;
-  bottom: 300px;
   animation-delay: 0.2s;
   animation: bounce-out-nds 0.3s linear;
   animation-fill-mode:  forwards;
@@ -733,7 +733,6 @@ th, td {
 
 .nd3{
   right: 40px;
-  bottom: 360px;
   bottom: 360px;
   animation-delay: 0.15s;
   animation: bounce-out-nds 0.15s linear;
@@ -743,7 +742,6 @@ th, td {
 .nd4{
   right: 40px;
   bottom: 420px;
-  bottom: 420px;
   animation-delay: 0.1s;
   animation: bounce-out-nds 0.1s linear;
   animation-fill-mode:  forwards;
@@ -751,7 +749,6 @@ th, td {
 
 .nd-new {
   right: 40px;
-  bottom: 240px;
   bottom: 240px;
   animation-delay: 0.3s;
   animation: bounce-out-nds 0.3s linear;
@@ -761,15 +758,12 @@ th, td {
 .nd-new2 {
   right: 40px;
   bottom: 180px;
-  bottom: 180px;
   animation-delay: 0.3s;
   animation: bounce-out-nds 0.3s linear;
   animation-fill-mode: forwards;
 }
 
 .nd-new3 {
-  right: 40px;
-  bottom: 120px;
   right: 40px;
   bottom: 120px;
   animation-delay: 0.3s;
