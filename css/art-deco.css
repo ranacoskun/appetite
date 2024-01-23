@@ -712,21 +712,43 @@ li.nav-item.dropend {
     height: 100%; 
   }
   
-  
-  #container-floating{
+  #container-outer{
     position: fixed;
-    width: 70px;
+    width: 150px;
     height: 70px;
     bottom: 30px;
     right: 30px;
     z-index: 50px;
+    background: transparent;
+    /* transition: all 0.3s; */
+    border-radius: 10px; 
+  }
+  
+  #container-outer:hover{
+    width: 220px;
+    height: 450px;
+    background-color: #000000;
+  }
+  
+  #container-floating{
+    position: fixed;
+    width: 120px;
+    height: 50px;
+    bottom: 30px;
+    right: 30px;
+    z-index: 50px;
+    background: transparent;
+    /* transition: all 0.3s; */
+    border-radius: 10px; 
   }
   
   #container-floating:hover{
-    width: 100px;
-    height: 500px;
-    /* display: inline-block; */
-    /* padding: 30px; */
+    margin: 10px 10px 10px 10px;
+    width: 200px;
+    height: 430px;
+    background-color: #000000;
+    border-color: #fefefe;
+    border-style: solid;
   }
   
   #container-floating:hover .plus{
@@ -782,19 +804,44 @@ li.nav-item.dropend {
       to {opacity: 1; transform: rotateZ(0deg);}
   }
   
-  .nds{
+  .nds {
+    position: fixed;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    position: fixed;
-    z-index: 300;
-    transform:  scale(0);
     cursor: pointer;
+    background: #ffffff;
+    z-index: 300;
+    transform: scale(0);
+    /* background-color: #222; */
+  }
+  
+  .nds .text {
+    position: absolute;
+    left: -150px; /* Adjust the distance based on your design */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff; /* Adjust the text color */
+    font-size: 18px; /* Adjust the font size */
+    white-space: nowrap;
+    font-weight: bolder;
+    /* -webkit-text-stroke: 1px #000000; */
+  }
+  
+  .nds .reminder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .nds:hover {
+    animation: bounce-nds 0.1s linear;
+    animation-fill-mode: forwards;
   }
   
   .nd1{
     right: 40px;
-    bottom: 120px;
+    bottom: 300px;
     animation-delay: 0.2s;
     animation: bounce-out-nds 0.3s linear;
     animation-fill-mode:  forwards;
@@ -802,7 +849,7 @@ li.nav-item.dropend {
   
   .nd3{
     right: 40px;
-    bottom: 180px;
+    bottom: 360px;
     animation-delay: 0.15s;
     animation: bounce-out-nds 0.15s linear;
     animation-fill-mode:  forwards;
@@ -810,7 +857,7 @@ li.nav-item.dropend {
   
   .nd4{
     right: 40px;
-    bottom: 240px;
+    bottom: 420px;
     animation-delay: 0.1s;
     animation: bounce-out-nds 0.1s linear;
     animation-fill-mode:  forwards;
@@ -818,7 +865,7 @@ li.nav-item.dropend {
   
   .nd-new {
     right: 40px;
-    bottom: 300px;
+    bottom: 240px;
     animation-delay: 0.3s;
     animation: bounce-out-nds 0.3s linear;
     animation-fill-mode: forwards;
@@ -826,15 +873,15 @@ li.nav-item.dropend {
   
   .nd-new2 {
     right: 40px;
-    bottom: 360px;
+    bottom: 180px;
     animation-delay: 0.3s;
     animation: bounce-out-nds 0.3s linear;
     animation-fill-mode: forwards;
   }
   
   .nd-new3 {
-   right: 40px;
-    bottom: 420px;
+    right: 40px;
+    bottom: 120px;
     animation-delay: 0.3s;
     animation: bounce-out-nds 0.3s linear;
     animation-fill-mode: forwards;
@@ -893,7 +940,8 @@ li.nav-item.dropend {
     height: 100%;
     border-radius: 50%;
   }
-  .reminder{
+  
+  /* .reminder{
     position: absolute;
     left: 0;
     right: 0;
@@ -901,7 +949,7 @@ li.nav-item.dropend {
     top: 0;
     bottom: 0;
     line-height: 40px;
-  }
+  } */
   
   .profile{
     border-radius: 50%;
@@ -937,13 +985,13 @@ li.nav-item.dropend {
 }
 
 .sidebar {
-    height: 100%;
+    height: 90%;
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 0;
+    top: 126px;
     left: 0;
-    background-color: #111;
+    background-color: #000000;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -971,7 +1019,7 @@ li.nav-item.dropend {
 }
 
 .openbtn {
-    position: fixed;
+    position: relative;
     font-size: 20px;
     cursor: pointer;
     background-color: #111;
@@ -980,6 +1028,8 @@ li.nav-item.dropend {
     border: none;
     overflow-x: hidden;
     z-index: 1001;
+    margin-left: 4px;
+    border-radius: 5px;
 }
 
 .openbtn:hover {

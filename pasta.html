@@ -16,16 +16,13 @@
     <link rel="apple-touch-icon" href="img/icon/favicon.png">
 
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/minimalism.css">
+    <link rel="stylesheet" href="css/art-deco.css">
 
     <script src="js/metadata.js"></script>
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/minimalism.css">
-    
+
 
     <!-- SWUP -->
     <script src="js/swup.min.js"></script>
@@ -44,38 +41,7 @@
 </head>
 
 <body>
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <div class="list-group">
-            <label class="list-group-item" style="text-align: center; color:rgb(218, 68, 73)">
-                <label class="check-label">Show Entities</label>
-            </label>
-            <label class="list-group-item list-group-item-action">
-                <input class="category-checkbox" type="checkbox" data-class="dish">
-                <label class="check-label">Dish</label>
-            </label>
-            <label class="list-group-item list-group-item-action">
-                <input class="category-checkbox" type="checkbox" data-class="drink">
-                <label class="check-label">Drink</label>
-            </label>
-            <label class="list-group-item list-group-item-action">
-                <input class="category-checkbox" type="checkbox" data-class="place">
-                <label class="check-label">Place</label>
-            </label>
-            <label class="list-group-item list-group-item-action">
-                <input class="category-checkbox" type="checkbox" data-class="person">
-                <label class="check-label">People</label>
-            </label>
-        </div>
-        <br>
-        <div class="list-group">
-            <label class="list-group-item"> <strong> <u>Annotated Words</u></strong></label>
-            <ul id="annotated-words-list" class="list-group-item"></ul>
-        </div>
-    </div>
-
-    <div id="main">
-        <button class="openbtn" id="openbtn" onclick="openNav()">M</button>
+    <div>
         <!-- <h2>Metadata Viewer</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, omnis?</p> -->
         <div class="site-container">
@@ -89,6 +55,7 @@
                 </div>
 
                 <nav class="navbar navbar-expand-lg">
+                    <button class="openbtn" id="openbtn" onclick="openNav()">M</button>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -116,9 +83,46 @@
                     </div>
                 </nav>
             </header>
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <div class="list-group">
+                    <label class="list-group-item"
+                        style="text-align: center; color:rgb(255, 255, 255); background-color: rgb(99, 99, 99);">
+                        <label class="check-label"><strong>Show Entities</strong></label>
+                    </label>
+                    <label class="list-group-item list-group-item-action"
+                        style="color:white; background-color: rgb(0, 0, 0);">
+                        <input class="category-checkbox" type="checkbox" data-class="dish">
+                        <label class="check-label">Dish</label>
+                    </label>
+                    <label class="list-group-item list-group-item-action"
+                        style="color:white; background-color: rgb(0, 0, 0);">
+                        <input class="category-checkbox" type="checkbox" data-class="drink">
+                        <label class="check-label">Drink</label>
+                    </label>
+                    <label class="list-group-item list-group-item-action"
+                        style="color:white; background-color: rgb(0, 0, 0);">
+                        <input class="category-checkbox" type="checkbox" data-class="place">
+                        <label class="check-label">Place</label>
+                    </label>
+                    <label class="list-group-item list-group-item-action"
+                        style="color:white; background-color: rgb(0, 0, 0);">
+                        <input class="category-checkbox" type="checkbox" data-class="person">
+                        <label class="check-label">People</label>
+                    </label>
+                </div>
+                <br>
+                <div class="list-group">
+                    <label class="list-group-item"
+                        style="text-align: center; color:white; background-color: rgb(99, 99, 99);"><strong>Annotated
+                            Words</strong></label>
+                    <ul id="annotated-words-list" class="list-group-item"
+                        style="padding-left:35px; background-color: rgb(0, 0, 0); color:white;"></ul>
+                </div>
+            </div>
 
             <!-- ARTICLE LAYOUT -->
-            <main>
+            <main id="main">
                 <div class="article-container position-relative" id="txt" spellcheck="false">
                     <div class="article-header col-lg-12">
                         <div class="row">
@@ -209,7 +213,7 @@
                                 Tree
                             </h2>
                             <p>
-                                <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">Pasta's</a></span>
+                                <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">Pasta</a></span>'s
                                 ethnic roots have been long
                                 debated. Many theories
                                 have been put forward, some notably far-fetched. An enduring myth, based on the
@@ -299,7 +303,7 @@
                                 The city of <span class="place"><a
                                         href="https://en.wikipedia.org/wiki/Naples">Naples</a></span> and the
                                 surrounding region, including
-                                <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</span>,
+                                <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</a></span>,
                                 saw a
                                 surge in the production
                                 of <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">pasta</a></span>
@@ -318,11 +322,9 @@
                                 it is
                                 simply cooked in water
                                 and seasoned with grated cheese.” One day he was visiting <span class="place"><a
-                                        href="https://it.wikipedia.org/wiki/Agrigento">Agrigento</a></span>in
-                                <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</span>
-                                with
-                                some friends. They stayed
-                                in the home of a family who gave them a dish of
+                                        href="https://it.wikipedia.org/wiki/Agrigento">Agrigento</a></span> in
+                                <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</a></span>
+                                with some friends. They stayed in the home of a family who gave them a dish of
                                 <span class="dish"><a href="https://en.wikipedia.org/wiki/Macaroni">macaroni</a></span>,
                                 whose shape, texture,
                                 and color fascinated the German
@@ -339,7 +341,7 @@
                                 seemed unparalleled to me in its whiteness and fineness.”
                             </p>
                             <p>
-                                <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">Pasta's</a></span>
+                                <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">Pasta</a></span>'s
                                 popularity is mentioned by
                                 the 14th-century writer
                                 <span class="person"><a
@@ -469,7 +471,7 @@
                                 in the
                                 <span class="concept"><a href="https://en.wikipedia.org/wiki/Kingdom_of_Naples">Kingdom
                                         of Naples</a></span> or
-                                <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</span>
+                                <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</a></span>
                                 sold
                                 wheat relatively
                                 cheaply. Religious restrictions also had an influence on the changing
@@ -477,7 +479,7 @@
                                 was an ideal food for
                                 days when eating meat was forbidden. But perhaps the
                                 main reason for <span class="dish"><a
-                                        href="https://it.wikipedia.org/wiki/Pasta">pasta's</a></span> dramatic
+                                        href="https://it.wikipedia.org/wiki/Pasta">pasta</a></span>'s dramatic
                                 spread was that, from the 17th century, industrial
                                 <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">pasta</a></span>
                                 production was developed with
