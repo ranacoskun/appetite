@@ -18,15 +18,13 @@
 
     <!-- <link rel="stylesheet" href="/css/pop-art.css"> -->
 
-    <script src="js/metadata.js"></script>
+    <<script src="js/metadata.js"></script>
+    <link rel="stylesheet" href="css/normalize.min.css">
+
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <!-- <link rel="stylesheet" href="css/baroque2.css"> -->
-    <link rel="stylesheet" href="css/pop-art.css">
-
+    <link rel="stylesheet" href="css/minimalism.css" id="theme" />
 
     <!-- SWUP -->
     <!-- <script src="js/swup.min.js"></script>
@@ -321,6 +319,47 @@
             };
     
         </script>
+
+<script src="js/fab.js" defer></script>
+
+<div class="fab-button">
+    <div id="container-outer">
+        <div id="container-floating">
+            <div class="nd4 nds" onclick="changeStyle('css/baroque2.css')">
+                <div class="text">Baroque</div>
+                <img class="reminder" src="components/fab button/icons/baroque-plate.jpg">
+            </div>
+            <div class="nd3 nds" onclick="changeStyle('css/constructivism.css')">
+                <div class="text">Constructivism</div>
+                <img class="reminder" src="components/fab button/icons/constructurism-plate.jpg" />
+            </div>
+
+            <div class="nd1 nds" onclick="changeStyle('css/art-deco.css')">
+                <div class="text">Art Deco</div>
+                <img class="reminder" src="components/fab button/icons/art-deco-plate.jpg" />
+            </div>
+            <div class="nd-new nds" onclick="changeStyle('css/pop-art.css')">
+                <div class="text">Pop Art</div>
+                <img class="reminder" src="components/fab button/icons/pop-art-plate.jpg">
+            </div>
+
+            <div class="nd-new2 nds" onclick="changeStyle('css/banksy.css')">
+                <div class="text">Banksy</div>
+                <img class="reminder" src="components/fab button/icons/banksy-plate.jpg">
+            </div>
+
+            <div class="nd-new3 nds" onclick="changeStyle('css/minimalism.css')">
+                <div class="text">Minimalism</div>
+                <img class="reminder" src="components/fab button/icons/minimalism-plate.jpg">
+            </div>
+            <div id="floating-button">
+                <p class="plus"><img src="components/fab button/icons/choosing-plate.png"></p>
+                <p class="edit"><img src="components/fab button/icons/x-plate.png"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 
 </html>

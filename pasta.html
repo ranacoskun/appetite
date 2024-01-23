@@ -19,12 +19,11 @@
     <!-- <link rel="stylesheet" href="/css/pop-art.css"> -->
 
     <script src="js/metadata.js"></script>
+    <link rel="stylesheet" href="css/normalize.min.css">
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/baroque2.css">
+    <link rel="stylesheet" href="css/minimalism.css" id="theme" />
 
 
     <!-- SWUP -->
@@ -51,8 +50,8 @@
             </div>
 
             <nav class="navbar navbar-expand-lg ">
-                    <button class="openbtn" id="openbtn" onclick="openNav()">M</button>
-                    <div class="container">
+                <button class="openbtn" id="openbtn" onclick="openNav()">M</button>
+                <div class="container">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -60,42 +59,48 @@
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Articles
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Articles
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                  <li class="nav-item dropend">
-                                    <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                      Turkey issue
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                      <li><a class="dropdown-item" href="FOOD CITIES.html">Food cities</a></li>
-                                      <li><a class="dropdown-item" href="BAKLAVA.html">Baklava</a></li>
-                                      <li><a class="dropdown-item" href="RAKI.html">Raki</a></li>
-                                    </ul>
-                                  </li>
-                                  <li class="nav-item dropend">
-                                    <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                      Italian issue
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                      <li><a class="dropdown-item" href="pasta.html">Pasta</a></li>
-                                      <li><a class="dropdown-item" href="tiramisu.html">Tiramisu</a></li>
-                                      <li><a class="dropdown-item" href="prosecco.html">Prosecco</a></li>
-                                    </ul>
-                                  </li>
-                                  <li class="nav-item dropend">
-                                    <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                      Kazakh issue
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                      <li><a class="dropdown-item" href="kaz_food_drinks.html">Kazakh food and drinks</a></li>
-                                      <li><a class="dropdown-item" href="beshbarmak.html">Beshbarmak</a></li>
-                                      <li><a class="dropdown-item" href="kaz_centr_asia.html">Central Asian food</a></li>
-                                    </ul>
-                                  </li>
+                                    <li class="nav-item dropend">
+                                        <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Turkey issue
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="FOOD CITIES.html">Food cities</a></li>
+                                            <li><a class="dropdown-item" href="BAKLAVA.html">Baklava</a></li>
+                                            <li><a class="dropdown-item" href="RAKI.html">Raki</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropend">
+                                        <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Italian issue
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="pasta.html">Pasta</a></li>
+                                            <li><a class="dropdown-item" href="tiramisu.html">Tiramisu</a></li>
+                                            <li><a class="dropdown-item" href="prosecco.html">Prosecco</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropend">
+                                        <a class="nav-link dropdown-toggle turkeyDropdown" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Kazakh issue
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="kaz_food_drinks.html">Kazakh food and
+                                                    drinks</a></li>
+                                            <li><a class="dropdown-item" href="beshbarmak.html">Beshbarmak</a></li>
+                                            <li><a class="dropdown-item" href="kaz_centr_asia.html">Central Asian
+                                                    food</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
-                              </li>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="disclaimer.html">Disclaimer</a>
                             </li>
@@ -144,7 +149,8 @@
                     style="padding-left:35px; background-color: rgb(0, 0, 0); color:white;"></ul>
             </div>
         </div>
-            <!-- ARTICLE LAYOUT -->
+        <!-- ARTICLE LAYOUT -->
+        <main id="main">
             <main id="main">
                 <div class="article-container position-relative" id="txt" spellcheck="false">
                     <div class="article-header col-lg-12">
@@ -239,6 +245,7 @@
                             </h2>
                             <p>
                                 <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">Pasta</a></span>'s
+                                <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">Pasta</a></span>'s
                                 ethnic roots have been long
                                 debated. Many theories
                                 have been put forward, some notably far-fetched. An enduring myth, based on the
@@ -329,6 +336,7 @@
                                         href="https://en.wikipedia.org/wiki/Naples">Naples</a></span> and the
                                 surrounding region, including
                                 <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</a></span>,
+                                <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</a></span>,
                                 saw a
                                 surge in the production
                                 of <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">pasta</a></span>
@@ -350,6 +358,9 @@
                                         href="https://it.wikipedia.org/wiki/Agrigento">Agrigento</a></span> in
                                 <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</a></span>
                                 with some friends. They stayed in the home of a family who gave them a dish of
+                                href="https://it.wikipedia.org/wiki/Agrigento">Agrigento</a></span> in
+                                <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</a></span>
+                                with some friends. They stayed in the home of a family who gave them a dish of
                                 <span class="dish"><a href="https://en.wikipedia.org/wiki/Macaroni">macaroni</a></span>,
                                 whose shape, texture,
                                 and color fascinated the German
@@ -366,6 +377,7 @@
                                 seemed unparalleled to me in its whiteness and fineness.”
                             </p>
                             <p>
+                                <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">Pasta</a></span>'s
                                 <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">Pasta</a></span>'s
                                 popularity is mentioned by
                                 the 14th-century writer
@@ -498,6 +510,7 @@
                                 <span class="concept"><a href="https://en.wikipedia.org/wiki/Kingdom_of_Naples">Kingdom
                                         of Naples</a></span> or
                                 <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</a></span>
+                                <span class="place"><a href="https://en.wikipedia.org/wiki/Sicily">Sicily</a></span>
                                 sold
                                 wheat relatively
                                 cheaply. Religious restrictions also had an influence on the changing
@@ -506,6 +519,7 @@
                                 days when eating meat was forbidden. But perhaps the
                                 main reason for <span class="dish"><a
                                         href="https://it.wikipedia.org/wiki/Pasta">pasta</a></span>'s dramatic
+                                href="https://it.wikipedia.org/wiki/Pasta">pasta</a></span>'s dramatic
                                 spread was that, from the 17th century, industrial
                                 <span class="dish"><a href="https://it.wikipedia.org/wiki/Pasta">pasta</a></span>
                                 production was developed with
@@ -602,16 +616,16 @@
                     </div>
                 </div>
             </main>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-body">
+            <p class="border-bottom">DHDK - Alma Mater Studiorum Università di Bologna <br> This is a
+                non-commercial
+                project for scholarly purposes only. </p>
+            <p class="text-center">Copyright &copy; Appetite 2023</p>
         </div>
-        <!-- FOOTER -->
-        <footer class="footer">
-            <div class="container footer-body">
-                <p class="border-bottom">DHDK - Alma Mater Studiorum Università di Bologna <br> This is a
-                    non-commercial
-                    project for scholarly purposes only. </p>
-                <p class="text-center">Copyright &copy; Appetite 2023</p>
-            </div>
-        </footer>
+    </footer>
     </div>
     <script>
         window.onscroll = function () {
@@ -623,6 +637,45 @@
             }
         };
     </script>
+    <script src="js/fab.js" defer></script>
+
+    <div class="fab-button">
+        <div id="container-outer">
+            <div id="container-floating">
+                <div class="nd4 nds" onclick="changeStyle('css/baroque2.css')">
+                    <div class="text">Baroque</div>
+                    <img class="reminder" src="components/fab button/icons/baroque-plate.jpg">
+                </div>
+                <div class="nd3 nds" onclick="changeStyle('css/constructivism.css')">
+                    <div class="text">Constructivism</div>
+                    <img class="reminder" src="components/fab button/icons/constructurism-plate.jpg" />
+                </div>
+    
+                <div class="nd1 nds" onclick="changeStyle('css/art-deco.css')">
+                    <div class="text">Art Deco</div>
+                    <img class="reminder" src="components/fab button/icons/art-deco-plate.jpg" />
+                </div>
+                <div class="nd-new nds" onclick="changeStyle('css/pop-art.css')">
+                    <div class="text">Pop Art</div>
+                    <img class="reminder" src="components/fab button/icons/pop-art-plate.jpg">
+                </div>
+    
+                <div class="nd-new2 nds" onclick="changeStyle('css/banksy.css')">
+                    <div class="text">Banksy</div>
+                    <img class="reminder" src="components/fab button/icons/banksy-plate.jpg">
+                </div>
+    
+                <div class="nd-new3 nds" onclick="changeStyle('css/minimalism.css')">
+                    <div class="text">Minimalism</div>
+                    <img class="reminder" src="components/fab button/icons/minimalism-plate.jpg">
+                </div>
+                <div id="floating-button">
+                    <p class="plus"><img src="components/fab button/icons/choosing-plate.png"></p>
+                    <p class="edit"><img src="components/fab button/icons/x-plate.png"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
