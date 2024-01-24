@@ -18,6 +18,9 @@ p:last-child { margin: 0px; }
 /* a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
 a:focus, a:hover { text-decoration: none; color: #f85759; } */
 
+#logo {color: #ffffff; }
+#logo:hover {color: #ffffff;}
+
 .section {
     position: relative;
 }
