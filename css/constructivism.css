@@ -225,18 +225,18 @@ li.nav-item.dropend {
 
 
 #turkey_cover {
-    background-image: url(/img/constructivism/turkish_cover.png);
+    background-image: url(../img/constructivism/turkish_cover.png);
     width: 20rem;
     background-size: cover; 
 } 
 #italy_cover {
-    background-image: url(/img/constructivism/italian.png);
+    background-image: url(../img/constructivism/italian.png);
     width: 20rem;
     background-size: cover; 
 }
 
 #kaz_cover {
-    background-image: url(/img/constructivism/kazakh_cover.png);
+    background-image: url(../img/constructivism/kazakh_cover.png);
     width: 20rem;
     background-size: cover; 
 }
@@ -467,7 +467,7 @@ li.nav-item.dropend {
     padding: 50px; 
     /* background-color: #000000; /* will change for the whole page */
     border-radius: 25px;
-    background-image: url(/img/constructivism/article1_banner.jpg);
+    background-image: url(../img/constructivism/article1_banner.jpg);
     background-size: cover;
 }
 
