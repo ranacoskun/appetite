@@ -1,4 +1,5 @@
- @font-face {
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Limelight&family=Modak&family=Open+Sans:wght@400&family=Prompt:wght@300&display=swap');
+@font-face {
     font-family: 'Kudryashev Display';
     src: url('../fonts/KudryashevDisplay/KudryashevDisplay-Sans.eot');
     src: local('Kudryashev Display Sans'), local('KudryashevDisplay-Sans'),
@@ -21,30 +22,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
-@font-face {
-    font-family: 'Kudryashev Display';
-    src: url('../fonts/KudryashevDisplay/KudryashevDisplay.eot');
-    src: local('Kudryashev Display'), local('KudryashevDisplay'),
-        url('../fonts/KudryashevDisplay/KudryashevDisplay.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/KudryashevDisplay/KudryashevDisplay.woff2') format('woff2'),
-        url('../fonts/KudryashevDisplay/KudryashevDisplay.woff') format('woff'),
-        url('../fonts/KudryashevDisplay/KudryashevDisplay.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Kudryashev Headline';
-    src: url('../fonts/KudryashevDisplay/KudryashevHeadline-Sans.eot');
-    src: local('Kudryashev Headline Sans'), local('KudryashevHeadline-Sans'),
-        url('../fonts/KudryashevDisplay/KudryashevHeadline-Sans.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/KudryashevDisplay/KudryashevHeadline-Sans.woff2') format('woff2'),
-        url('../fonts/KudryashevDisplay/KudryashevHeadline-Sans.woff') format('woff'),
-        url('../fonts/KudryashevDisplay/KudryashevHeadline-Sans.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-} 
 
 * {
     box-sizing: border-box;
@@ -96,7 +73,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     line-height: 1; 
     color: #000000; 
     text-align: center;  
-    font-family: 'Kudryashev Display Sans';
+    font-family: 'Kudryashev Display';
     font-weight: 400;
     font-size: 100px; 
 }
@@ -111,14 +88,14 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     padding-bottom: 20px; /* Reduce the bottom padding */
 }
 
-.page-title {
+/* .page-title {
     color: #000000;
-    font-family: 'Kudryashev Headline';
+    font-family: 'Kudryashev Display';
     font-size: 100px; 
     font-weight: 400;
     line-height: 1;
     text-align: center;
-}
+} */
 
 .page-sub {
     text-align: center;
@@ -505,7 +482,7 @@ li.nav-item.dropend {
     line-height: 1; 
     color: #000000; 
     text-align: center;  
-    font-family: 'Kudryashev Headline';
+    font-family: 'Kudryashev Display';
     font-weight: 400;
     font-size: 40px;
     margin-right: 20px;
@@ -591,6 +568,18 @@ li.nav-item.dropend {
     padding: 2%;
 }
 
+.text-sub-title a {
+    color: #000000;    
+    font-style: oblique;
+    text-decoration: none;
+}
+
+.text-sub-title a:hover {
+    color: rgb(68, 64, 64);
+    font-style: oblique;
+    text-decoration: none;
+}
+
 /* how to add dropcap? */
 .text-body p {
     color: #000;
@@ -599,6 +588,178 @@ li.nav-item.dropend {
     font-style: normal;
     line-height:2-5vh;
     padding: 3%;
+    font-weight: 200;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text-body a {
+    color: #000;
+    font-style: oblique;
+    text-decoration: none;
+}
+
+.text-body a:hover {
+    font-style: oblique;
+    text-decoration: none;
+    color: rgb(210, 65, 65);
+}
+
+.text-body h2 {
+    color: #000;
+    text-align: justify;
+    font-size: 40px;
+    font-weight: bold;
+    /* font-style: normal; */
+    font-family: 'Kudryashev Display';
+    text-align: center;
+    line-height: 2-5vh;
+    padding: 1%;
+}
+
+/* .food-city{
+    text-decoration: underline;
+} */
+
+#food-city-1{
+    background-image: url('../img/minimalism/elements/text-block5.jpg');
+    margin-bottom: 20px;
+    border: 1px solid black;
+    padding: 15px;
+    font-family: '';
+    /* border-image: url(../img/art-deco/elements/banner.svg) 30 round; */
+    text-align: center !important;
+    background-size: cover;
+    background-position: center;
+}
+
+.text-body h3 {
+    color: #000;
+    text-align: justify;
+    font-size: 30px;
+    font-weight: lighter;
+    /* font-style: normal; */
+    font-family: 'Kudryashev Display';
+    text-align: center;
+    line-height: 2-5vh;
+    padding: 1%;
+}
+
+.text-body h4 {
+    color: #000;
+    text-align: justify;
+    font-size: 30px;
+    font-weight: lighter;
+    /* font-style: normal; */
+    font-family: 'Kudryashev Display';
+    text-align: center;
+    line-height: 2-5vh;
+    padding: 1%;
+}
+
+#text-block1 {
+    margin: 20px 20px;
+    padding: 20px 20px;
+    background-color: #cfcbc0;
+    opacity: 0.75;
+    align-items: center;
+}
+
+#text-block {
+    margin: 20px 20px;
+    padding: 50px 50px;
+    background-color: #cfcbc0;
+    opacity: 0.75;
+    align-items: center;
+}
+
+#text-block2 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-image: url(../img/minimalism/elements/text-block6.jpg);
+    background-size:cover;
+    background-position:top;
+    /* filter: grayscale(); */
+    font-weight: bolder;
+    border-image: auto;
+    margin-bottom: 20px;
+}
+
+#text-block2 h2{
+    text-align: center;
+    font-family: 'Kudryashev Display';
+}
+
+#text-block2 p{
+    /* text-align: center; */
+    font-family: 'Josefin Sans';
+    font-weight: 200;
+}
+
+#text-block3 {
+    padding: 15px;
+    font-family: 'Josefin Sans';
+    text-align: center !important;
+    background-image: url(../img/minimalism/elements/text-block7.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#must-eats{
+    text-align: center !important;
+    font-weight: 900;
+    /* font-family: ParkLane;    */
+    /* font-family: 'CoventryGarden'; */
+}
+
+#text-block-city {
+    margin-bottom: 20px;
+    border: 1px solid black;
+    padding: 15px;
+    font-family: '';
+    /* border-image: url(../img/art-deco/elements/banner.svg) 30 round; */
+    text-align: center !important;
+}
+
+#text-block3 p{
+    font-family: 'Open Sans';
+    text-align: center !important;
+}
+
+
+#text-block4 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-image: url(../img/minimalism/elements/text-block2.jpg);
+    background-size: cover;
+    background-position:center;
+    /* filter: grayscale(); */
+    font-weight: 200;
+    font-style: italic;
+    border-image: auto;
+}
+
+#text-block4 h2{
+    text-align: center;
+    font-family: 'Kudryashev Display';
+}
+
+#text-block4 table{
+    /* text-align: center; */
+    font-family: 'Josefin Sans';
+}
+#text-block4 p{
+    /* text-align: center; */
+    font-family: 'Josefin Sans';
+}
+.ornament-image {background-repeat: no-repeat; background-size: cover; height: 150px; background-position: center;} 
+#middle-of-text {    
+    border-bottom: 1px solid #888;
+    display: block;
+    /* width: 65vw; */
+    height: 100px;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 /*FAB*/
