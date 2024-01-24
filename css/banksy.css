@@ -329,6 +329,7 @@ li.nav-item.dropend {
 
 .welcome-title{
     padding-top: 32px;
+    padding-bottom: 32px;
     text-align: center;
     font-family: 'cityburn';
     font-weight: 100;
@@ -356,6 +357,8 @@ li.nav-item.dropend {
     padding-top: 50px;
     text-align: center;
     font-family: 'cityburn';
+    font-size: 3vw;
+    font-weight: 100;
 }
 .team-intro { text-align: center; margin: auto; width: 50%; }
 .team-item { padding: 20px; margin-top: 20px; }
@@ -363,6 +366,7 @@ li.nav-item.dropend {
 .team-item h3{
     font-family: 'cityburn';
     text-align: center;
+    font-weight: 100;
 }
 
 .team-item p{

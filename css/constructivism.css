@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
 /* smaller heading font */
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+@import url('https://www.fontspace.com/red-october-font-f5368');
+
 * {
     box-sizing: border-box;
   }
@@ -138,6 +141,10 @@ a:focus, a:hover { text-decoration: none; color: #f85759; } */
     text-align: center;
     color: white;
     /* font-family: ; */
+}
+
+a {
+    color:#FFF;
 }
 
 
@@ -469,14 +476,14 @@ li.nav-item.dropend {
 .article-body {
     padding: 20px; 
     text-align: justify; 
-    font-family:'Space Grotesk'; 
+    font-family:'Staatliches'; 
     font-weight: lighter;
 }
 
 
 .numer_dish_name{
     font-family: "Staatliches";
-    color: #C40803;
+    color: black;
     text-align: center;
 }
 
