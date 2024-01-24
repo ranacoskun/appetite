@@ -645,16 +645,46 @@
             <p class="text-center">Copyright &copy; Appetite 2023</p>
         </div>
     </footer>
-    </div>
     <script>
-        window.onscroll = function () {
-            var header = document.querySelector(".page-header");
-            if (window.pageYOffset > 0) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
+        document.addEventListener('DOMContentLoaded', function () {
+            setDefaultStyle();
+
+            window.onscroll = function () {
+                var header = document.querySelector(".page-header");
+                if (window.pageYOffset > 0) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            };
+
+            var isFabButtonActive = localStorage.getItem('fabButtonActive');
+            var chosenStylesheet = localStorage.getItem('chosenStylesheet');
+
+            if (isFabButtonActive === 'true' && chosenStylesheet) {
+                document.getElementById('container-floating').classList.add('active');
+                changeStyle(chosenStylesheet);
             }
-        };
+
+        });
+
+        function changeStyle(styleSheet) {
+            let getThemeLink = document.querySelector('link#theme');
+            getThemeLink.href = styleSheet;
+
+            localStorage.setItem('chosenStylesheet', styleSheet);
+            localStorage.setItem('fabButtonActive', 'true'); // Store fab button state
+            document.getElementById('container-floating').classList.add('active');
+        }
+
+        function setDefaultStyle() {
+            let chosenStylesheet = localStorage.getItem('chosenStylesheet');
+            if (!chosenStylesheet) {
+                chosenStylesheet = 'css/minimalism.css';
+            }
+
+            changeStyle(chosenStylesheet);
+        }
     </script>
     <!-- <script src="js/fab.js" defer></script> -->
 
