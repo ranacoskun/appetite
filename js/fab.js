@@ -11,6 +11,8 @@ function changeStyle(styleSheet) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    setDefaultStyle();
+
     var isFabButtonActive = localStorage.getItem('fabButtonActive');
     var chosenStylesheet = localStorage.getItem('chosenStylesheet');
 
