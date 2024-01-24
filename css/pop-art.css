@@ -29,7 +29,8 @@ p { margin: 0 0 20px; line-height: 1.7; }
 p:last-child { margin: 0px; }
 a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
 a:focus, a:hover { text-decoration: none; color: #f85759; }
-
+#logo {color: #000;}
+#logo:hover {color: #000;}
 /* 
 .pop-art-left {
     background-image: url(../img/pop-art/elements/calling.png);
@@ -626,9 +627,11 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
     text-align: center;
     font-size: 25px;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 600;
     /* line-height: 161%;  */
-    padding: 2%;
+    padding-right: 3%;
+    padding-left: 3%;
+    padding-bottom: 6%;
 }
 
 .text-body p {
@@ -637,7 +640,9 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
     font-size: 20px;
     font-style: normal;
     line-height:2-5vh;
-    padding: 3%;
+    padding-right: 3%;
+    padding-left: 3%;
+    padding-bottom: 2%;
     /* font-family: 'Blambot Casual Regular' !important; */
 }
 
@@ -716,7 +721,7 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
 }
 
 #container-outer:hover{
-  width: 220px;
+  width: 240px;
   height: 450px;
   background-color: #000000;
 }
@@ -735,7 +740,7 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
 
 #container-floating:hover{
   margin: 10px 10px 10px 10px;
-  width: 200px;
+  width: 220px;
   height: 430px;
   background-color: #000000;
   border-color: #fefefe;
@@ -796,6 +801,7 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
 }
 
 .nds {
+  margin-right: 10px;
   position: fixed;
   width: 40px;
   height: 40px;
@@ -951,8 +957,6 @@ img.reminder {
   margin: auto;
   right: 20px;
 } 
-  
-  /* SIDEBAR SECTION */
   /* SIDEBAR SECTION */
 
   .category {

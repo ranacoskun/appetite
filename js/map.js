@@ -18,7 +18,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Portugal</strong><p><a href="">Rakı</a></p>'
+                                '<strong>Portugal</strong><p><a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -31,7 +31,7 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
-                            'description': '<strong>Genoa</strong><p><a href="#">Pasta</a></p>'
+                            'description': '<strong>Genoa</strong><p><a href="../pasta.html">Pasta</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -44,8 +44,65 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
+                          'name': 'Cartizze',
+                          'description': '<strong>Cartizze</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            12.0401,
+                            45.8763
+                          ]
+                        }
+                      },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                          'name': 'Times Square',
+                          'description': '<strong>Times Square</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            -73.9857,
+                            40.7589
+                          ]
+                        }
+                      },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                          'name': 'Manhattan',
+                          'description': '<strong>Manhattan</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            -73.9712,
+                            40.7831
+                          ]
+                        }
+                      },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                          'name': 'Romania Point',
+                          'description': '<strong>Romania</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            24.9668,
+                            45.9432
+                          ]
+                        }
+                      }
+                      ,
+                    {
+                        'type': 'Feature',
+                        'properties': {
                             'name': 'Alaska Point',
-                            'description': '<strong>Alaska</strong><p><a href="">Tiramisu</a></p>'
+                            'description': '<strong>Alaska</strong><p><a href="../tiramisu.html">Tiramisu</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -60,7 +117,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>UK</strong><p><a href="">Baklava, Tiramisu</a></p>'
+                                '<strong>UK</strong><p><a href="../BAKLAVA.html">Baklava</a><br> <a href="../tiramisu.html">Tiramisu</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -71,7 +128,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Spain</strong><p><a href="">Rakı</a></p>'
+                                '<strong>Spain</strong><p><a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -85,7 +142,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>France</strong><p><a href="">Food Cities, Rakı</a></p>'
+                                '<strong>France</strong><p><a href="../FOOD CITIES.html">Food Cities</a><br> <a href="../RAKI.html">Rakı</a><br> <a href="../prosecco.html">Prosecco</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -98,8 +155,64 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
+                          'name': 'Germany Point',
+                          'description': '<strong>Germany</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            10.4515,
+                            51.1657
+                          ]
+                        }
+                      },
+                      {
+                        'type': 'Feature',
+                        'properties': {
+                          'name': 'Union Square Cafe',
+                          'description': '<strong>Union Square Cafe</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            -73.9874,
+                            40.7363
+                          ]
+                        }
+                      },
+                      {
+                        'type': 'Feature',
+                        'properties': {
+                          'name': 'India Point',
+                          'description': '<strong>India</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            78.9629,
+                            20.5937
+                          ]
+                        }
+                      },
+                      {
+                        'type': 'Feature',
+                        'properties': {
+                          'name': 'Vietnam Point',
+                          'description': '<strong>Vietnam</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            106.6297,
+                            16.0544
+                          ]
+                        }
+                      },
+                    {
+                        'type': 'Feature',
+                        'properties': {
                             'description':
-                                '<strong>Algeria</strong><p><a href="">Baklava</a></p>'
+                                '<strong>Algeria</strong><p><a href="../BAKLAVA.html">Baklava</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -113,7 +226,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Europe</strong><p><a href="">Food Cities</a></p>'
+                                '<strong>Europe</strong><p><a href="../FOOD CITIES.html">Food Cities</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -126,8 +239,36 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
+                          'name': 'Trieste',
+                          'description': '<strong>Trieste</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            13.7681,
+                            45.6495
+                          ]
+                        }
+                      },
+                      {
+                        'type': 'Feature',
+                        'properties': {
+                          'name': 'Conegliano',
+                          'description': '<strong>Conegliano</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            12.2984,
+                            45.8889
+                          ]
+                        }
+                      },
+                    {
+                        'type': 'Feature',
+                        'properties': {
                             'description':
-                                '<strong>Austria</strong><p><a href="">Baklava</a></p>'
+                                '<strong>Austria</strong><p><a href="../BAKLAVA.html">Baklava</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -141,7 +282,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Italy</strong><p><a href="">Rakı, Pasta, Tiramisu</a></p>'
+                                '<strong>Italy</strong><p><a href="../RAKI.html">Rakı</a> <br> <a href="../pasta.html">Pasta</a><br> <a href="../tiramisu.html">Tiramisu</a><br> <a href="../prosecco.html">Prosecco</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -154,7 +295,7 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
-                            'description': '<strong>Naples</strong><p><a href="#">Pasta</a></p>'
+                            'description': '<strong>Naples</strong><p><a href="../pasta.html">Pasta</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -167,7 +308,7 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
-                            'description': '<strong>Agrigento</strong><p><a href="#">Pasta</a></p>'
+                            'description': '<strong>Agrigento</strong><p><a href="../pasta.html">Pasta</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -180,7 +321,7 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
-                            'description': '<strong>Paris</strong><p><a href="#">Pasta</a></p>'
+                            'description': '<strong>Paris</strong><p><a href="../pasta.html">Pasta</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -193,7 +334,21 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
-                            'description': '<strong>Soho, London</strong><p><a href="#">Tiramisu</a></p>'
+                          'name': 'Argentina Point',
+                          'description': '<strong>Argentina</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            -64.3225,
+                            -34.6118
+                          ]
+                        }
+                      },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description': '<strong>Soho, London</strong><p><a href="../tiramisu.html">Tiramisu</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -206,7 +361,7 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
-                            'description': '<strong>London</strong><p><a href="#">Tiramisu</a></p>'
+                            'description': '<strong>London</strong><p><a href="../tiramisu.html">Tiramisu</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -219,7 +374,7 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
-                            'description': '<strong>Treviso</strong><p><a href="#">Tiramisu</a></p>'
+                            'description': '<strong>Treviso</strong><p><a href="../tiramisu.html">Tiramisu</a><br> <a href="../prosecco.html">Prosecco</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -233,7 +388,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'name': 'Friuli Venezia Giulia Point',
-                            'description': '<strong>Friuli Venezia Giulia</strong><p><a href="#">Tiramisu</a></p>'
+                            'description': '<strong>Friuli Venezia Giulia</strong><p><a href="../tiramisu.html">Tiramisu</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -247,7 +402,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Sicilia</strong><p><a href="">Rakı, Pasta</a></p>'
+                                '<strong>Sicilia</strong><p><a href="../RAKI.html">Rakı</a><br> <a href="../pasta.html">Pasta</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -261,7 +416,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Belgrade</strong><p><a href="">Baklava</a></p>'
+                                '<strong>Belgrade</strong><p><a href="../BAKLAVA.html">Baklava</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -275,7 +430,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Albania</strong><p><a href="">Rakı</a></p>'
+                                '<strong>Albania</strong><p><a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -288,8 +443,36 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
+                          'name': 'North America Point',
+                          'description': '<strong>North America</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            -100.4459,
+                            39.8283
+                          ]
+                        }
+                      },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                          'name': 'Northern Italy Point',
+                          'description': '<strong>Northern Italy</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            11.8781,
+                            45.5655
+                          ]
+                        }
+                      },
+                    {
+                        'type': 'Feature',
+                        'properties': {
                             'description':
-                                '<strong>North Macedonia</strong><p><a href="">Rakı</a></p>'
+                                '<strong>North Macedonia</strong><p><a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -303,7 +486,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Bulgaria</strong><p><a href="">Rakı</a></p>'
+                                '<strong>Bulgaria</strong><p><a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -317,7 +500,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Greece</strong><p><a href="">Baklava, Food Cities, Rakı</a></p>'
+                                '<strong>Greece</strong><p><a href="../BAKLAVA.html">Baklava</a><br> <a href="../FOOD CITIES.html">Food Cities</a><br> <a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -331,7 +514,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Edirne</strong><p><a href="">Baklava</a></p>'
+                                '<strong>Edirne</strong><p><a href="../BAKLAVA.html">Baklava</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -345,7 +528,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Aegean Region</strong><p><a href="">Rakı</a></p>'
+                                '<strong>Aegean Region</strong><p><a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -359,7 +542,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>İzmir</strong><p><a href="">Food Cities, Rakı</a></p>'
+                                '<strong>İzmir</strong><p><a href=""><a href="../FOOD CITIES.html">Food Cities</a><br> <a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -373,7 +556,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Bodrum</strong><p><a href="">Rakı</a></p>'
+                                '<strong>Bodrum</strong><p><a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -387,7 +570,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Istanbul</strong><p><a href="">Baklava, Food Cities, Rakı</a></p>'
+                                '<strong>Istanbul</strong><p><a href="../BAKLAVA.html">Baklava</a><br> <a href="../FOOD CITIES.html">Food Cities</a><br> <a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -401,7 +584,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Topkapı Palace</strong><p><a href="">Baklava</a></p>'
+                                '<strong>Topkapı Palace</strong><p><a href="../BAKLAVA.html">Baklava</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -415,7 +598,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Marmara Region</strong><p><a href="">Rakı</a></p>'
+                                '<strong>Marmara Region</strong><p><a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -429,7 +612,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Şuhut</strong><p><a href="">Baklava</a></p>'
+                                '<strong>Şuhut</strong><p><a href="../BAKLAVA.html">Baklava</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -443,7 +626,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Antalya</strong><p><a href="">Food Cities</a></p>'
+                                '<strong>Antalya</strong><p><a href="../FOOD CITIES.html">Food Cities</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -457,7 +640,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Turkey</strong><p><a href="">Baklava, Food Cities, Rakı</a></p>'
+                                '<strong>Turkey</strong><p><a href="../BAKLAVA.html">Baklava</a><br> <a href="../FOOD CITIES.html">Food Cities</a><br> <a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -471,7 +654,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Konya</strong><p><a href="">Food Cities</a></p>'
+                                '<strong>Konya</strong><p><a href="../FOOD CITIES.html">Food Cities</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -485,7 +668,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Cyprus</strong><p><a href="">Baklava</a></p>'
+                                '<strong>Cyprus</strong><p><a href="../BAKLAVA.html">Baklava</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -498,8 +681,50 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
+                          'name': 'Valdobbiadene',
+                          'description': '<strong>Valdobbiadene</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            11.9935,
+                            45.8885
+                          ]
+                        }
+                      },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                          'name': 'Brazil Point',
+                          'description': '<strong>Brazil</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            -51.9253,
+                            -14.2350
+                          ]
+                        }
+                      },
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                          'name': 'USA Point',
+                          'description': '<strong>United States</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            -98.5795,
+                            39.8283
+                          ]
+                        }
+                      },
+                    {
+                        'type': 'Feature',
+                        'properties': {
                             'description':
-                                '<strong>Ankara</strong><p><a href="">Baklava</a></p>'
+                                '<strong>Ankara</strong><p><a href="../BAKLAVA.html">Baklava</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -513,7 +738,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Black Sea</strong><p><a href="">Food Cities</a></p>'
+                                '<strong>Black Sea</strong><p><a href="../FOOD CITIES.html">Food Cities</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -527,7 +752,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Black Sea Region</strong><p><a href="">Food Cities, Rakı</a></p>'
+                                '<strong>Black Sea Region</strong><p><a href="../FOOD CITIES.html">Food Cities</a><br> <a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -540,7 +765,7 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
-                            'description': '<strong>Veneto</strong><p><a href="#">Tiramisu</a></p>'
+                            'description': '<strong>Veneto</strong><p><a href="../tiramisu.html">Tiramisu</a><br><a href="../prosecco.html">Prosecco</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -553,7 +778,7 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
-                            'description': '<strong>Tolmezzo</strong><p><a href="#">Tiramisu</a></p>'
+                            'description': '<strong>Tolmezzo</strong><p><a href="../tiramisu.html">Tiramisu</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -566,7 +791,7 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
-                            'description': '<strong>New York City</strong><p><a href="#">Tiramisu</a></p>'
+                            'description': '<strong>New York City</strong><p><a href="../tiramisu.html">Tiramisu</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -579,7 +804,7 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
-                            'description': '<strong>University of Oxford</strong><p><a href="">Tiramisu</a></p>'
+                            'description': '<strong>University of Oxford</strong><p><a href="../tiramisu.html">Tiramisu</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -593,7 +818,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'name': 'Locanda Locatelli',
-                            'description': '<strong>Locanda Locatelli</strong><p><a href="#">Tiramisu</a></p>'
+                            'description': '<strong>Locanda Locatelli</strong><p><a href="../tiramisu.html">Tiramisu</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -607,7 +832,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'name': 'Australia Point',
-                            'description': '<strong>Australia</strong><p><a href="#">Tiramisu</a></p>'
+                            'description': '<strong>Australia</strong><p><a href="../tiramisu.html">Tiramisu</a><br> <a href="../prosecco.html">Prosecco</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -621,7 +846,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'name': 'Venice',
-                            'description': '<strong>Venice</strong><p><a href="">Tiramisu</a></p>'
+                            'description': '<strong>Venice</strong><p><a href="../tiramisu.html">Tiramisu</a><br> <a href="../prosecco.html">Prosecco</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -635,7 +860,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'name': 'Le Beccherie',
-                            'description': '<strong>Le Beccherie</strong><p><a href="#">Tiramisu</a></p>'
+                            'description': '<strong>Le Beccherie</strong><p><a href="../tiramisu.html">Tiramisu</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -649,7 +874,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Anatolia</strong><p><a href="">Food Cities, Rakı</a></p>'
+                                '<strong>Anatolia</strong><p><a href="../FOOD CITIES.html">Food Cities</a><br><a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -663,7 +888,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Seyhan River</strong><p><a href="">Food Cities</a></p>'
+                                '<strong>Seyhan River</strong><p><a href="../FOOD CITIES.html">Food Cities</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -677,7 +902,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Adana</strong><p><a href="">Food Cities</a></p>'
+                                '<strong>Adana</strong><p><a href="../FOOD CITIES.html">Food Cities</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -691,7 +916,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Antakya</strong><p><a href="">Food Cities</a></p>'
+                                '<strong>Antakya</strong><p><a href="../FOOD CITIES.html">Food Cities</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -705,7 +930,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Lebanon</strong><p><a href="">Baklava</a></p>'
+                                '<strong>Lebanon</strong><p><a href="../BAKLAVA.html">Baklava</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -719,7 +944,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Gaziantep</strong><p><a href="">Food Cities</a></p>'
+                                '<strong>Gaziantep</strong><p><a href="../FOOD CITIES.html">Food Cities</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -733,7 +958,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Trabzon</strong><p><a href="">Food Cities, Rakı</a></p>'
+                                '<strong>Trabzon</strong><p><a href="../FOOD CITIES.html">Food Cities</a><br> <a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -747,7 +972,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Şanlıurfa</strong><p><a href="">Baklava</a></p>'
+                                '<strong>Şanlıurfa</strong><p><a href="../BAKLAVA.html">Baklava</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -761,7 +986,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Syria</strong><p><a href="">Food Cities</a></p>'
+                                '<strong>Syria</strong><p><a href="../FOOD CITIES.html">Food Cities</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -775,7 +1000,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Armenia</strong><p><a href="">Baklava</a></p>'
+                                '<strong>Armenia</strong><p><a href="../BAKLAVA.html">Baklava</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -789,7 +1014,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Iraq</strong><p><a href="">Rakı</a></p>'
+                                '<strong>Iraq</strong><p><a href="../RAKI.html">Rakı</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -803,7 +1028,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Azerbaijan</strong><p><a href="">Baklava</a></p>'
+                                '<strong>Azerbaijan</strong><p><a href="../BAKLAVA.html">Baklava</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -817,7 +1042,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Iran</strong><p><a href="">Baklava</a></p>'
+                                '<strong>Iran</strong><p><a href="../BAKLAVA.html">Baklava</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -831,7 +1056,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Central Asia</strong><p><a href="">Food Cities</a></p>'
+                                '<strong>Central Asia</strong><p><a href="../FOOD CITIES.html">Food Cities</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -845,7 +1070,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Asia</strong><p><a href="">Food Cities</a></p>'
+                                '<strong>Asia</strong><p><a href="../FOOD CITIES.html">Food Cities</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -858,8 +1083,22 @@ function initializeMap() {
                     {
                         'type': 'Feature',
                         'properties': {
+                          'name': 'Ischgl',
+                          'description': '<strong>Ischgl</strong><p><a href="../prosecco.html">Prosecco</a></p>'
+                        },
+                        'geometry': {
+                          'type': 'Point',
+                          'coordinates': [
+                            10.2905,
+                            47.0144
+                          ]
+                        }
+                      },
+                    {
+                        'type': 'Feature',
+                        'properties': {
                             'description':
-                                '<strong>Middle East</strong><p><a href="">Kazakh food and drinks</a><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
+                                '<strong>Middle East</strong><p><a href="../kaz_food_drinks.html">Kazakh food and drinks</a><br><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -918,7 +1157,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>Kyrgyzstan</strong><p><a href="beshbarmak.html">Beshbarmak</a><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
+                                '<strong>Kyrgyzstan</strong><p><a href="beshbarmak.html">Beshbarmak</a><br><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -1124,7 +1363,7 @@ function initializeMap() {
                         'type': 'Feature',
                         'properties': {
                             'description':
-                                '<strong>China</strong><p><a href="">Food Cities, Pasta</a><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
+                                '<strong>China</strong><p><a href="../FOOD CITIES.html">Food Cities</a><br> <a href="../pasta.html">Pasta</a><a href="kaz_centr_asia.html">Central Asian Food</a></p>'
                         },
                         'geometry': {
                             'type': 'Point',

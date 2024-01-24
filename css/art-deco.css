@@ -5,7 +5,25 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'ParkLane';
+    src: url('../fonts/ParkLane/ParkLaneNF.ttf'), format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CoventryGarden';
+    src: url('../fonts/CoventryGarden/CoventryGardenNF.ttf'), format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'Semplicita';
+    src: url('../fonts/Semplicita/Semplicita\ Light.otf'), format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 * {
     box-sizing: border-box;
   }
@@ -21,11 +39,11 @@ p { margin: 0 0 20px; line-height: 1.7; }
 p:last-child { margin: 0px; }
 a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
 a:focus, a:hover { text-decoration: none; color: #f85759; }
+#logo {color:  #BE914C;}
+#logo:hover {color:  #BE914C;}
 
 .site-container{
     background-color: #ebe5d7;
-    overflow-x: auto;
-    overflow-y: hidden;
 }
 
 .section {
@@ -41,12 +59,9 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     top: 0;
     bottom: 0;
     right: 500px;
-    /* right: auto; */
     width: 150vh;
     height: auto;
-    /* max-width: ; */
     background-size: contain;
-    /* background-image: url("https://www.pngall.com/wp-content/uploads/2016/03/Cat-PNG-5.png"); */
     background-image: url("https://assets-global.website-files.com/5b13df51d0d5fe8211f203da/5b13f381541a8480ba1420db_square.svg");
     background-position: 500px;
     background-repeat: no-repeat;
@@ -55,10 +70,14 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 .page-header {
     /* background: none; */
     background-color: #1B1D28;
-    background-image: url(../img/art-deco/elements/gold.png), url(../img/art-deco/elements/ellipse.svg),url(../img/art-deco/elements/banner.svg);
+    /* background-image: url(../img/art-deco/elements/gold.png), url(../img/art-deco/elements/ellipse.svg),url(../img/art-deco/elements/banner.svg);
     background-position: 50% 13%, bottom, right bottom;
     background-repeat: no-repeat, no-repeat, repeat;
-    background-size: 25vw, 50vw, 300px;
+    background-size: 25vw, 50vw, 300px; */
+    background-image: url(../img/art-deco/elements/ellipse.svg),url(../img/art-deco/elements/banner.svg);
+    background-position: bottom, right bottom;
+    background-repeat: no-repeat, repeat;
+    background-size: 50vw, 300px;
     position: relative;
     transition: padding 0.2s ;
     padding-top: 2em;
@@ -125,7 +144,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
 
 .navbar li {
     color:#000000;
-    font-family: Peignot;
+    font-family: 'Peignot';
     font-weight: bolder;
     font-size: 20px;
 }
@@ -314,7 +333,7 @@ li.nav-item.dropend {
 
 .card__description a {
     color: #ffffff;
-    font-family: Peignot;
+    font-family: 'Peignot';
     font-size: 1.2 vw;
     letter-spacing: 5px;
     line-height: 30px;
@@ -381,7 +400,7 @@ li.nav-item.dropend {
 
 .welcome-title{
     font-size: 75px;
-    font-family: Peignot;
+    font-family: 'Peignot';
     font-weight: 100;
     padding-top: 50px;
     padding-bottom: 30px;
@@ -396,7 +415,7 @@ li.nav-item.dropend {
 .welcome-body{
     /* font-family: Limelight;
     font-weight: 100; */
-    font-family: Peignot;
+    font-family: 'Peignot';
     font-size:25px;
     text-align: justify;
     padding-bottom: 50px;
@@ -433,7 +452,7 @@ li.nav-item.dropend {
 #team { padding: 100px 0 100px 0; }
 .team-title {
     font-size: 75px;
-    font-family: Peignot;
+    font-family: 'Peignot';
     font-weight: 100;
     padding-top: 50px;
     padding-bottom: 30px;
@@ -447,7 +466,7 @@ li.nav-item.dropend {
 .team-item { padding: 20px; margin-top: 40px; }
 .team-body{
     font-size: 20px;
-    font-family: Peignot;
+    font-family: 'Peignot';
     text-align: justify;
     padding-bottom: 50px;
     padding-top: 50px;
@@ -459,7 +478,7 @@ li.nav-item.dropend {
     font-size: 20px;
     text-align: justify;
     padding-top: 20px;
-    font-family: Peignot;
+    font-family: 'Peignot';
 
 }
 .member-role { font-weight: bold; font-size: 14px; padding-left: 30px; position: relative; }
@@ -509,16 +528,21 @@ li.nav-item.dropend {
 } */
 
 .article-page-header {
-    background: none;
+    /* background: none; */
     background-color: #1B1D28;
+    /* background-image: url(../img/art-deco/elements/gold.png), url(../img/art-deco/elements/ellipse.svg),url(../img/art-deco/elements/banner.svg);
+    background-position: 50% 13%, bottom, right bottom;
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-size: 25vw, 50vw, 300px; */
     background-image: url(../img/art-deco/elements/ellipse.svg),url(../img/art-deco/elements/banner.svg);
     background-position: bottom, right bottom;
     background-repeat: no-repeat, repeat;
-    background-size: 50vw, 300px;
+    background-size: 50vw, 200px;
     position: relative;
-    transition: padding 0.2s;
+    transition: padding 0.2s ;
     padding-top: 2em;
 }
+
 
 .article-page-caption {
     display: flex;
@@ -532,15 +556,15 @@ li.nav-item.dropend {
     color: #BE914C;
     text-align: center;
     font-weight: 400;
-    font-family: Peignot;
+    font-family: 'Peignot';
     font-size: 40px;
     margin-right: 20px;
 
 }
 
 .article-container {
-    margin: 20px;
-    padding: 20px;
+    /* margin: 20px; */
+    padding: 40px;
 }
 
 .article-header {
@@ -548,7 +572,6 @@ li.nav-item.dropend {
     border-radius: 25px;
     border-width: 1px !important;
     border-color: #000 !important;
-    border-style: solid;
     background-image: url(../img/art-deco/elements/woman-header.png), url(../img/art-deco/elements/woman-header5.png);
     background-size: contain, contain;
     /* background-image: url(../img/art-deco/elements/beige_tulle.png), url(../img/art-deco/elements/woman-header5.png);
@@ -564,8 +587,10 @@ li.nav-item.dropend {
 
 .article-body {
     padding: 20px;
+    margin-top:20px;
     text-align: justify;
-}
+    border: 1px solid transparent;
+    border-color: #25292a;}
 
 .first-heading {
     text-align: center;
@@ -583,11 +608,11 @@ li.nav-item.dropend {
     font-size: 30px;
     font-weight: 700;
     line-height: 56.35px;
+    /* padding-top: 40px; */
 }
 
 .text-title h1 {
-    /* font-family: Kudryashev Headline; */
-    font-family: Peignot;
+    font-family: 'Limelight';
     color: white;
     font-size: 80px;
     font-weight: 700;
@@ -602,56 +627,203 @@ li.nav-item.dropend {
 }
 
 .text-publisher h3 {
-    padding-top: 50px;
+    padding-top: 90px;
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 20px;
+    font-family: 'ParkLane';
+    letter-spacing: 2px;
+}
+.text-publisher p {
+    padding-top: 40px;
     color: white;
     font-size: 14px;
     font-weight: 400;
     text-align: center;
     line-height: 20px;
+    font-family: 'Peignot';
 }
 
 .text-sub-title p {
-    color: black;
-    /* font-family: "Playfair Display", Georgia, "Times New Roman", serif; */
+    background-color: #cfcbc0;
+    color: #3c3b3b;    
+    font-family: 'Limelight';
     text-align: center;
+    font-weight: 100;
     font-size: 25px;
-    font-style: italic;
-    font-weight: 400;
+    font-style: oblique;
     line-height: 161%; /* 48.3px */
-    padding: 2%;
+    padding: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 15px solid transparent;
+    border-image: url(../img/art-deco/elements/banner.svg) 30 round;
 }
 
-/* how to add dropcap? */
+.text-sub-title a {
+    color: #3c3b3b;    
+    font-style: oblique;
+    text-decoration: none;
+}
+
+.text-sub-title a:hover {
+    color: rgb(64, 64, 64);
+    font-style: oblique;
+    text-decoration: none;
+}
+
 .text-body p {
     color: #000;
     text-align: justify;
     font-size: 20px;
     font-style: normal;
-    font-family: Peignot;
+    font-family: 'Semplicita';
+    font-weight: 550;
+    /* font-family: 'Limelight'; */
     line-height: 2-5vh;
-    padding: 3%;
-
+    padding: 1%;
+    text-indent: 7%;
 }
 
-.body-ornament{
-    height:100px;
-    width: 100px;
-    background-image: url(../img/art-deco/elements/body-orn.png);
-    background-position: left;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
-    left: 5%; 
-    top: 15%;
+.text-body a {
+    color: #000;
+    font-style: oblique;
+    text-decoration: none;
+}
+
+.text-body a:hover {
+    font-style: oblique;
+    text-decoration: none;
+    color: rgb(210, 65, 65);
+}
+
+.text-body h2 {
+    color: #000;
+    text-align: justify;
+    font-size: 40px;
+    font-weight: bold;
+    /* font-style: normal; */
+    font-family: 'Peignot';
+    text-align: center;
+    line-height: 2-5vh;
+    padding: 1%;
+}
+.food-city{
+    text-decoration: underline;
+}
+
+.text-body h3 {
+    color: #000;
+    text-align: justify;
+    font-size: 30px;
+    font-weight: lighter;
+    /* font-style: normal; */
+    font-family: 'CoventryGarden';
+    text-align: center;
+    line-height: 2-5vh;
+    padding: 1%;
+}
+.text-body h4 {
+    color: #000;
+    text-align: justify;
+    font-size: 30px;
+    font-weight: lighter;
+    /* font-style: normal; */
+    font-family: 'CoventryGarden';
+    text-align: center;
+    line-height: 2-5vh;
+    padding: 1%;
+}
+
+#text-block1 {
+    margin: 20px 20px;
+    padding: 20px 20px;
+    background-color: #cfcbc0;
+    opacity: 0.75;
+    align-items: center;
 }
 
 #text-block {
+    margin: 20px 20px;
+    padding: 150px 150px;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px; 
     background-color: #cfcbc0;
-    font-weight: 300;
-    font-style: italic;
+    opacity: 0.75;
+    align-items: center;
+}
+
+#text-block2 {
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;  
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-image: url(../img/art-deco/elements/text-block4.jpg);
+    background-size: cover;
+    background-position:top;
+    filter: grayscale();
+    font-weight: 200;
+    border-image: auto;
+    margin-bottom: 20px;
+}
+
+#text-block2 h2{
+    text-align: center;
+    font-family: 'ParkLane';
 }
 
 
+#text-block3 {
+    background-color: #cfcbc0;
+    border: 15px solid transparent;
+    padding: 15px;
+    font-family: 'ParkLane';
+    border-image: url(../img/art-deco/elements/banner.svg) 30 round;
+    text-align: center !important;
+}
+
+#must-eats{
+    text-align: center !important;
+    font-weight: 900;
+    /* font-family: ParkLane;    */
+    /* font-family: 'CoventryGarden'; */
+}
+
+#text-block-city {
+    margin-bottom: 20px;
+    border: 15px solid transparent;
+    padding: 15px;
+    font-family: 'ParkLane';
+    border-image: url(../img/art-deco/elements/banner.svg) 30 round;
+    text-align: center !important;
+}
+
+#text-block3 p{
+    font-family: 'Limelight';
+    text-align: center !important;
+}
+
+
+#text-block4 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-image: url(../img/art-deco/elements/text-block7.jpg);
+    background-size: cover;
+    background-position:center;
+    filter: grayscale();
+    font-weight: 200;
+    font-style: italic;
+    border-image: auto;
+}
+
+#text-block4 h2{
+    text-align: center;
+    font-family: 'ParkLane';
+}
+.ornament-image {background-repeat: no-repeat; background-size: cover; height: 150px; background-position: center;} 
+#middle-of-text {background-image: url(../img/art-deco/elements/ornament.svg); }
 /*FAB*/
   
 #presentation{
@@ -727,7 +899,7 @@ li.nav-item.dropend {
   }
   
   #container-outer:hover{
-    width: 220px;
+    width: 240px;
     height: 450px;
     background-color: #000000;
   }
@@ -746,7 +918,7 @@ li.nav-item.dropend {
   
   #container-floating:hover{
     margin: 10px 10px 10px 10px;
-    width: 200px;
+    width: 220px;
     height: 430px;
     background-color: #000000;
     border-color: #fefefe;
@@ -807,6 +979,7 @@ li.nav-item.dropend {
   }
   
   .nds {
+    margin-right: 10px;
     position: fixed;
     width: 40px;
     height: 40px;
@@ -1024,7 +1197,7 @@ li.nav-item.dropend {
     position: relative;
     font-size: 20px;
     cursor: pointer;
-    background-color: #111;
+    background-color: #1B1D28;
     padding: 10px 15px;
     color: white;
     border: none;

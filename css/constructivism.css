@@ -16,6 +16,9 @@ p:last-child { margin: 0px; }
 /* a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
 a:focus, a:hover { text-decoration: none; color: #f85759; } */
 
+#logo {color: #ffffff; }
+#logo:hover {color: #ffffff;}
+
 .section {
     position: relative;
 }
@@ -215,18 +218,18 @@ li.nav-item.dropend {
 
 
 #turkey_cover {
-    background-image: url(/img/constructivism/turkish_cover.png);
+    background-image: url(../img/constructivism/turkish_cover.png);
     width: 20rem;
     background-size: cover; 
 } 
 #italy_cover {
-    background-image: url(/img/constructivism/italian.png);
+    background-image: url(../img/constructivism/italian.png);
     width: 20rem;
     background-size: cover; 
 }
 
 #kaz_cover {
-    background-image: url(/img/constructivism/kazakh_cover.png);
+    background-image: url(../img/constructivism/kazakh_cover.png);
     width: 20rem;
     background-size: cover; 
 }
@@ -459,7 +462,7 @@ li.nav-item.dropend {
     padding: 50px; 
     /* background-color: #000000; /* will change for the whole page */
     border-radius: 25px;
-    background-image: url(/img/constructivism/article1_banner.jpg);
+    background-image: url(../img/constructivism/article1_banner.jpg);
     background-size: cover;
 }
 
@@ -631,7 +634,7 @@ li.nav-item.dropend {
   }
   
   #container-outer:hover{
-    width: 220px;
+    width: 240px;
     height: 450px;
     background-color: #000000;
   }
@@ -650,7 +653,7 @@ li.nav-item.dropend {
   
   #container-floating:hover{
     margin: 10px 10px 10px 10px;
-    width: 200px;
+    width: 220px;
     height: 430px;
     background-color: #000000;
     border-color: #fefefe;
@@ -711,6 +714,7 @@ li.nav-item.dropend {
   }
   
   .nds {
+    margin-right: 10px;
     position: fixed;
     width: 40px;
     height: 40px;
