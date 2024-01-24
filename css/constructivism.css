@@ -6,8 +6,8 @@
 
 @font-face {
     font-family: 'Red October';
-    src: url('RedOctober.woff2') format('woff2'),
-        url('RedOctober.woff') format('woff');
+    src: url(../Fonts/RedOctober/RedOctober.woff2) format('woff2'),
+        url(../Fonts/RedOctober/RedOctober) format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
