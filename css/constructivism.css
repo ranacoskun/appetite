@@ -4,6 +4,62 @@
 
 @import url('https://www.fontspace.com/red-october-font-f5368');
 
+@font-face {
+    font-family: 'Red October';
+    src: url('RedOctober.woff2') format('woff2'),
+        url('RedOctober.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Red October';
+    src: url('RedOctober-Fat.woff2') format('woff2'),
+        url('RedOctober-Fat.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Red October';
+    src: url('RedOctober-Light.woff2') format('woff2'),
+        url('RedOctober-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Red October Eroded';
+    src: url('RedOctoberErodedRegular.woff2') format('woff2'),
+        url('RedOctoberErodedRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Red October Stencil';
+    src: url('RedOctoberStencil.woff2') format('woff2'),
+        url('RedOctoberStencil.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Red October Rough';
+    src: url('RedOctoberRoughRegular.woff2') format('woff2'),
+        url('RedOctoberRoughRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 * {
     box-sizing: border-box;
   }
