@@ -40,7 +40,10 @@ a:focus, a:hover { text-decoration: none; color: #f85759; }
     background-position: 500px;
     background-repeat: no-repeat;
 }
-  
+
+
+
+
 .page-header {
     position: relative;
     background: none;
@@ -125,8 +128,10 @@ a.nav-link {
     color: whitesmoke;
 }
 
+
+
 a.nav-link:hover {
-    color:#25292a;
+    color:#ED2024;
 }
 
 a.nav-link.dropdown-toggle.turkeyDropdown{
