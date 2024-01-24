@@ -25,3 +25,5 @@ document.addEventListener('DOMContentLoaded', function () {
 function setDefaultStyle() {
     changeStyle('../css/minimalism.css');
 }
+
+
