@@ -260,7 +260,7 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script> -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             setDefaultStyle();
@@ -298,7 +298,7 @@
             getThemeLink.href = styleSheet;
 
             localStorage.setItem('chosenStylesheet', styleSheet);
-            localStorage.setItem('fabButtonActive', 'true'); // Store fab button state
+            localStorage.setItem('fabButtonActive', 'true');
             document.getElementById('container-floating').classList.add('active');
         }
 
@@ -312,11 +312,9 @@
         }
     </script>
 
-
     <!-- <script src="js/fab.js" defer></script> -->
     <script src="js/map.js" defer></script>
 
-    <!-- <script src="js/fab.js" defer></script> -->
 
     <div class="fab-button">
         <div id="container-outer">
