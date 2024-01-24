@@ -1203,22 +1203,17 @@
                 window.onscroll = function () {
                     var header = document.querySelector(".page-header");
                     var pageSub = document.getElementById("page-sub");
-                    var article = document.getElementById("article");
 
                     if (window.pageYOffset > 0) {
                         if (pageSub) {
                             pageSub.style.display = "none";
                         }
                         header.classList.add("sticky");
-                        article.style.paddingTop = "100px";
-                        console.log(article.style.paddingTop);
                     } else {
                         if (pageSub) {
                             pageSub.style.display = "block";
                         }
                         header.classList.remove("sticky");
-                        article.style.paddingTop = "0";
-                        console.log(article.style.paddingTop);
                     }
                 };
 

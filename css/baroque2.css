@@ -7,9 +7,8 @@
 * {
     box-sizing: border-box;
   }
-body {
-     background-color:#f3ebe1 !important;
-     -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Garamond', 'Times New Roman', serif; letter-spacing: 0px; font-size: 17px; color: #8d8f90;  line-height: 32px; background: rgba(255,255,255,1); }
+body {background-color:#f3ebe1 !important;
+     -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Garamond', 'Times New Roman', serif; letter-spacing: 0px; font-size: 17px; color: #000000;  line-height: 32px; background: rgba(255,255,255,1); }
 h1, h2, h3, h4, h5, h6 { color: #25292a; margin: 0px 0px 10px 0px; font-family: 'Garamond', 'Times New Roman', serif; font-weight: 700; letter-spacing: -1px; line-height: 1; }
 h1 { font-size: 34px; }
 h2 { font-size: 28px; line-height: 38px; }
@@ -289,6 +288,7 @@ li.nav-item.dropend {
     font-family: Garamond, serif;
     font-weight: bold;
     font-size: 40px;
+    color: #202020;
 }
 
 .welcome-body{
@@ -298,6 +298,7 @@ li.nav-item.dropend {
     font-family: Garamond, serif;
     border-image: url(../img/baroque/elements/orn5.svg) 20 round !important;
     border: 25px solid;
+    color: #202020;
 
 }
 /* .welcome-body p {   
@@ -318,8 +319,8 @@ li.nav-item.dropend {
     font-weight: bold;
     font-family: Garamond, serif;
 }
-.team-intro {text-align: center; margin: auto; width: 50%; font-family: Garamond, serif;}
-.team-item { padding: 20px; margin-top: 40px; }
+.team-intro { color: #202020; text-align: center; margin: auto; width: 50%; font-family: Garamond, serif;}
+.team-item { color: #202020; padding: 20px; margin-top: 40px; }
 .team-body{
     font-size: 20px;
     text-align: center;
@@ -329,11 +330,12 @@ li.nav-item.dropend {
     border: 25px solid;
     margin-left: 40px;
     margin-right: 40px;
+    color: #202020;
 }
-.member-img p {font-family: Garamond, serif;}
-.member-role {font-family: Garamond, serif; font-weight: bold; font-size: 14px; padding-left: 30px; position: relative; }
-.member-role:after {font-family: Garamond, serif; position: absolute; content: " "; height: 3px; width: 25px; position: absolute; left: 0; top: 12px; background: #000; }
-.member-img {    font-family: Garamond, serif; background-repeat: no-repeat; background-size: contain; height: 250px; background-position: center center; }
+.member-img p { color: #202020;font-family: Garamond, serif;}
+.member-role { color: #202020;font-family: Garamond, serif; font-weight: bold; font-size: 14px; padding-left: 30px; position: relative; }
+.member-role:after { color: #202020;font-family: Garamond, serif; position: absolute; content: " "; height: 3px; width: 25px; position: absolute; left: 0; top: 12px; background: #000; }
+.member-img {   color: #202020;  font-family: Garamond, serif; background-repeat: no-repeat; background-size: contain; height: 250px; background-position: center center; }
 #irem { background-image: url(../img/baroque/team/irem-baroque.jpg); }
 #ulzhan { background-image: url(../img/baroque/team/ulzhan-baroque.jpg); }
 #rana { background-image: url(../img/baroque/team/rana-baroque.jpg); }
