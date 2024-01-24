@@ -284,37 +284,37 @@
                 }
             };
 
-            var isFabButtonActive = localStorage.getItem('fabButtonActive');
-            var chosenStylesheet = localStorage.getItem('chosenStylesheet');
+            // var isFabButtonActive = localStorage.getItem('fabButtonActive');
+            // var chosenStylesheet = localStorage.getItem('chosenStylesheet');
 
-            if (isFabButtonActive === 'true' && chosenStylesheet) {
-                document.getElementById('container-floating').classList.add('active');
-                changeStyle(chosenStylesheet);
-            }
+            // if (isFabButtonActive === 'true' && chosenStylesheet) {
+            //     document.getElementById('container-floating').classList.add('active');
+            //     changeStyle(chosenStylesheet);
+            // }
 
-            initializeMap();
+            // initializeMap();
         });
 
-        function changeStyle(styleSheet) {
-            let getThemeLink = document.querySelector('link#theme');
-            getThemeLink.href = styleSheet;
+        // function changeStyle(styleSheet) {
+        //     let getThemeLink = document.querySelector('link#theme');
+        //     getThemeLink.href = styleSheet;
 
-            localStorage.setItem('chosenStylesheet', styleSheet);
-            localStorage.setItem('fabButtonActive', 'true');
-            document.getElementById('container-floating').classList.add('active');
-        }
+        //     localStorage.setItem('chosenStylesheet', styleSheet);
+        //     localStorage.setItem('fabButtonActive', 'true');
+        //     document.getElementById('container-floating').classList.add('active');
+        // }
 
-        function setDefaultStyle() {
-            let chosenStylesheet = localStorage.getItem('chosenStylesheet');
-            if (!chosenStylesheet) {
-                chosenStylesheet = '../css/minimalism.css';
-            }
+        // function setDefaultStyle() {
+        //     let chosenStylesheet = localStorage.getItem('chosenStylesheet');
+        //     if (!chosenStylesheet) {
+        //         chosenStylesheet = '../css/minimalism.css';
+        //     }
 
-            changeStyle(chosenStylesheet);
-        }
+        //     changeStyle(chosenStylesheet);
+        // }
     </script>
 
-    <!-- <script src="js/fab.js" defer></script> -->
+    <script src="js/fab.js" defer></script>
     <script src="js/map.js" defer></script>
 
 
