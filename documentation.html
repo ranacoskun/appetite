@@ -16,6 +16,8 @@
     <link rel="icon" href="img/icon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icon/favicon.png">
 
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/minimalism.css">
 
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/minimalism.css">
@@ -34,18 +36,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
-        .documentation-header {
-            margin: 5px;
-            padding: 15px;
+        .content {
             background-color: black;
-            border-radius: 20px;
+            border-radius: 15px;
+            color: white;
+            padding-top: 1px;
+            padding-bottom: 1px;
         }
 
-        .documentation-heading {
-            font-size: 50px;
+        .content a {
+            color: rgb(255, 255, 255);
+        }
+
+        .content a:hover {
+            color: rgb(105, 104, 104);
+        }
+
+        .content h4 {
             text-align: center;
-            color: white;
-            font-weight: 100;
+        }
+
+        .content2 {
+            background-color: rgb(0, 0, 0);
+            border-radius: 15px;
+            margin: 15px 15px;
+            border-style: solid;
+            border-color: white;
         }
     </style>
 </head>
@@ -118,15 +134,14 @@
                 </div>
             </nav>
         </header>
-            <!-- INTRO -->
-            <main>
+        <main>
             <div class="container position-relative">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row g-5 py-5">
-                            <div class="col-md-4">
-                                <div class="position-sticky" style="top: 10rem;">
-                                    <div class="p-4 mb-3 bg-body-tertiary rounded">
+                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                                <div class="position-sticky content" style="top: 10rem;">
+                                    <div class="content2 p-4">
                                         <h4>Table of Contents</h4>
                                         <ol class="list-unstyled mb-0">
                                             <li><a href="documentation.html#intro"
@@ -165,12 +180,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-8" style="text-align: justify;">
-                                <div class="documentation-header">
-                                    <h1 class="documentation-heading">
-                                        Documentation</h1>
-                                </div>
-                                <article class=" blog-post" id="intro">
+                            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12" style="text-align: justify;"
+                                id="article">
+                                <article class="blog-post scroll-target" id="intro">
                                     <h2 class="display-5 link-body-emphasis mb-1">Introduction</h2>
                                     <hr>
                                     <p> As three individuals with diverse tastes in food, we've established a magazine
@@ -195,8 +207,9 @@
                                         allowing enthusiasts to delve into the intricacies of the content.
                                     </p>
                                 </article>
-                                <article class="blog-post py-5" id="organization">
+                                <article class="blog-post py-5 scroll-target" id="organization">
                                     <h2 class="display-5 link-body-emphasis mb-1">Organization of the Website</h2>
+                                    <hr>
                                     <p>We have chosen 6 styles in total, from different periods of time. Here is the
                                         complete list of themes we have selected for each period:
                                     <table>
@@ -264,18 +277,8 @@
                                         unique
                                         dimension to the magazine, enhancing the overall reading experience.
                                     </p>
-                                    <hr>
-                                    <!-- <div>
-                                    <h2>Heading</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum animi
-                                        quam
-                                        sequi rem aspernatur, perferendis temporibus provident ad exercitationem
-                                        accusantium reprehenderit pariatur praesentium. Delectus dolorem aut
-                                        quos
-                                        commodi perspiciatis modi!</p> 
-                                </div>-->
                                 </article>
-                                <article id="mmmm">
+                                <article class="blog-post py-5 scroll-target" id="mmmm">
                                     <h2 class="display-5 link-body-emphasis mb-1">The MMMM Framework</h2>
                                     <hr>
                                     <p><b>M-Metadata:</b>Our Metadata Viewer is a tool designed to offer readers a
@@ -332,7 +335,7 @@
                                         narrative.<br>
                                     </p>
                                 </article>
-                                <article id="covers">
+                                <article class="blog-post py-5 scroll-target" id="covers">
                                     <h2 class="display-5 link-body-emphasis mb-1">Covers</h2>
                                     <hr>
                                     <p>Despite being an online magazine, we've retained the cherished tradition of
@@ -360,16 +363,11 @@
                                         of each thematic issue.
                                     </p>
                                 </article>
-                                <article id="styles">
+                                <article class="blog-post py-5 scroll-target" id="styles">
                                     <h2 class="display-5 link-body-emphasis mb-1">Styles in detail</h2>
                                     <hr>
-                                    <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro magni neque
-                                    quaerat ex dignissimos ab quasi cum, modi, necessitatibus, repellat
-                                    quisquam?
-                                    Exercitationem recusandae perferendis expedita perspiciatis inventore nam
-                                    nesciunt sint?</p> -->
-                                    <div id="baroque">
-                                        <h3>Baroque</h3>
+                                    <div class="py-5 mb-1" id="baroque">
+                                        <h3 style="text-decoration: underline;">Baroque</h3>
                                         <p>The Baroque period, which spanned the 17th to 18th centuries, originated in
                                             Italy
                                             as a reaction to the Mannerism that dominated the late Italian Renaissance.
@@ -543,15 +541,31 @@
                                             enhance legibility, ensuring a seamless and visually engaging browsing
                                             experience for our users.</p>
                                     </div>
-                                    <div></div>
-                                    <div id="constructivism">
-                                        <h3>Constructivism</h3>
-                                        <p>Constructivism was the most influential modern art movement in twentieth century Russia. With its aesthetic roots fixed firmly in the Suprematism movement, Constructivism came fully to the fore as the art of a young Soviet Union after the revolution of 1917. The movement was conceived of out of a need for a new aesthetic language; one benefitting of a progressive new era in Soviet socialist history. Constructivism also borrowed elements of other European avant-gardes, notably Cubism and Futurism, and at its heart was the idea that artmaking should be approached as a process of cerebral “construction”.
+                                    <div class="py-5 mb-1" id="constructivism">
+                                        <h3 style="text-decoration: underline;">Constructivism</h3>
+                                        <p>Constructivism was the most influential modern art movement in twentieth
+                                            century Russia. With its aesthetic roots fixed firmly in the Suprematism
+                                            movement, Constructivism came fully to the fore as the art of a young Soviet
+                                            Union after the revolution of 1917. The movement was conceived of out of a
+                                            need for a new aesthetic language; one benefitting of a progressive new era
+                                            in Soviet socialist history. Constructivism also borrowed elements of other
+                                            European avant-gardes, notably Cubism and Futurism, and at its heart was the
+                                            idea that artmaking should be approached as a process of cerebral
+                                            “construction”.
                                         </p>
                                         <tr>
                                             <td>
                                                 <p><b>IDEOLOGY</b></p>
-                                                <p>Constructivism became closely aligned with the idea of agitprop (agitational propaganda) which applied to an artwork that aimed to educate and indoctrinate its audience to the prevailing Bolshevik cause. By employing arrangements of basic industrial geometric forms and colors the new Soviet Union would be represented by the new languages of industry and modernity. However, most of the country were semi/illiterate land workers, and these remote communities were reached through Agit Trains. These featured (amongst other things) purpose-built cinemas which delivered the Bolshevik message through unambiguous propaganda films, known as agitki.
+                                                <p>Constructivism became closely aligned with the idea of agitprop
+                                                    (agitational propaganda) which applied to an artwork that aimed to
+                                                    educate and indoctrinate its audience to the prevailing Bolshevik
+                                                    cause. By employing arrangements of basic industrial geometric forms
+                                                    and colors the new Soviet Union would be represented by the new
+                                                    languages of industry and modernity. However, most of the country
+                                                    were semi/illiterate land workers, and these remote communities were
+                                                    reached through Agit Trains. These featured (amongst other things)
+                                                    purpose-built cinemas which delivered the Bolshevik message through
+                                                    unambiguous propaganda films, known as agitki.
                                                 </p>
                                             </td>
                                             <td><img src="img/constructivism/references/ideology.png" alt=""
@@ -561,15 +575,24 @@
                                         <tr>
                                             <td>
                                                 <p><b>Colors and layout</b></p>
-                                                <p>Pure geometric forms, linearity, symmetry, repetition, simple, sans-serif fonts, the dominance of red and black, photomontage.  Using these elements, Constructivists would create a graphic design style that rejected all artifice and that we still associate with post-revolution Russia today.  Its purposes included informing a population of mostly illiterate people about the politics of the new government.  That was the reason for one of the its main characteristics: font manipulation in order to give each part of the text the characteristics (e.g. a shape or colour) that reflected its importance within the message.
+                                                <p>Pure geometric forms, linearity, symmetry, repetition, simple,
+                                                    sans-serif fonts, the dominance of red and black, photomontage.
+                                                    Using these elements, Constructivists would create a graphic design
+                                                    style that rejected all artifice and that we still associate with
+                                                    post-revolution Russia today. Its purposes included informing a
+                                                    population of mostly illiterate people about the politics of the new
+                                                    government. That was the reason for one of the its main
+                                                    characteristics: font manipulation in order to give each part of the
+                                                    text the characteristics (e.g. a shape or colour) that reflected its
+                                                    importance within the message.
                                                 </p>
                                             </td>
                                             <td><img src="img/constructivism/references/colors.png" alt=""
                                                     width="400px"></td>
                                         </tr>
                                     </div>
-                                    <div id="artdeco">
-                                        <h3>First half of XX Century - Art Deco</h3>
+                                    <div class="py-5 mb-1" id="artdeco">
+                                        <h3 style="text-decoration: underline;">First half of XX Century - Art Deco</h3>
                                         <img src="" alt="" width="">
                                         <p>Art Deco is an era in art that took place in the years 1900 - 1945 and it is
                                             easily recognizable by its sense of glamour, elegance and optimism for the
@@ -800,8 +823,8 @@
                                         <img src="">
                                         <img src="">
                                     </div>
-                                    <div id="popart">
-                                        <h3>Pop Art</h3>
+                                    <div class="py-5 mb-1" id="popart">
+                                        <h3 style="text-decoration: underline;">Pop Art</h3>
                                         <p>Pop art emerged as an art movement during the 1950s in America and Britain,
                                             reaching its peak in the 1960s. It began as a revolt against the dominant
                                             approaches to art and culture, with young artists feeling that the art
@@ -892,16 +915,16 @@
                                             who share a similar style, like Tadanori Yokoo.
                                         </p>
                                     </div>
-                                    <div id="banksy">
-                                        <h3>Banksy</h3>
+                                    <div class="py-5 mb-1" id="banksy">
+                                        <h3 style="text-decoration: underline;">Banksy</h3>
                                         <p>Lorem ipsum dolor sit amet.</p>
                                     </div>
-                                    <div id="minimalism">
-                                        <h3>2030 - Minimalism</h3>
+                                    <div class="py-5 mb-1" id="minimalism">
+                                        <h3 style="text-decoration: underline;">2030 - Minimalism</h3>
                                         <p>Lorem ipsum dolor sit amet.</p>
                                     </div>
                                 </article>
-                                <article id="reference-list">
+                                <article class="scroll-target" id="reference-list">
                                     <h2 class="display-5 link-body-emphasis mb-1">Reference List</h2>
                                     <hr>
                                     <ol>
@@ -966,7 +989,6 @@
         </footer>
     </div>
 
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -975,68 +997,65 @@
         window.onscroll = function () {
             var header = document.querySelector(".page-header");
             var pageSub = document.getElementById("page-sub");
-            //var mainContent = document.querySelector("main");
-
+            var article = document.getElementById("article");
 
             if (window.pageYOffset > 0) {
                 if (pageSub) {
-                    pageSub.style.display = "none"; // Hide the page-sub element
+                    pageSub.style.display = "none";
                 }
                 header.classList.add("sticky");
-                // mainContent.style.paddingTop = header.clientHeight + "px"; // Add padding to main content
-
+                article.style.paddingTop = "100px";
+                console.log(article.style.paddingTop);
             } else {
                 if (pageSub) {
-                    pageSub.style.display = "block"; // Show the page-sub element
+                    pageSub.style.display = "block";
                 }
                 header.classList.remove("sticky");
-                // mainContent.style.paddingTop = "0"; // Reset padding
-
+                article.style.paddingTop = "0";
+                console.log(article.style.paddingTop);
             }
-            console.log("Header Height:", header.clientHeight);
-            //console.log("Main Content Padding Top:", mainContent.style.paddingTop)
         };
     </script>
 
-<script src="js/fab.js" defer></script>
+    <script src="js/fab.js" defer></script>
 
-<div class="fab-button">
-    <div id="container-outer">
-        <div id="container-floating">
-            <div class="nd4 nds" onclick="changeStyle('css/baroque2.css')">
-                <div class="text">Baroque</div>
-                <img class="reminder" src="components/fab button/icons/baroque-plate.jpg">
-            </div>
-            <div class="nd3 nds" onclick="changeStyle('css/constructivism.css')">
-                <div class="text">Constructivism</div>
-                <img class="reminder" src="components/fab button/icons/constructurism-plate.jpg" />
-            </div>
+    <div class="fab-button">
+        <div id="container-outer">
+            <div id="container-floating">
+                <div class="nd4 nds" onclick="changeStyle('css/baroque2.css')">
+                    <div class="text">Baroque</div>
+                    <img class="reminder" src="components/fab button/icons/baroque-plate.jpg">
+                </div>
+                <div class="nd3 nds" onclick="changeStyle('css/constructivism.css')">
+                    <div class="text">Constructivism</div>
+                    <img class="reminder" src="components/fab button/icons/constructurism-plate.jpg" />
+                </div>
 
-            <div class="nd1 nds" onclick="changeStyle('css/art-deco.css')">
-                <div class="text">Art Deco</div>
-                <img class="reminder" src="components/fab button/icons/art-deco-plate.jpg" />
-            </div>
-            <div class="nd-new nds" onclick="changeStyle('css/pop-art.css')">
-                <div class="text">Pop Art</div>
-                <img class="reminder" src="components/fab button/icons/pop-art-plate.jpg">
-            </div>
+                <div class="nd1 nds" onclick="changeStyle('css/art-deco.css')">
+                    <div class="text">Art Deco</div>
+                    <img class="reminder" src="components/fab button/icons/art-deco-plate.jpg" />
+                </div>
+                <div class="nd-new nds" onclick="changeStyle('css/pop-art.css')">
+                    <div class="text">Pop Art</div>
+                    <img class="reminder" src="components/fab button/icons/pop-art-plate.jpg">
+                </div>
 
-            <div class="nd-new2 nds" onclick="changeStyle('css/banksy.css')">
-                <div class="text">Banksy</div>
-                <img class="reminder" src="components/fab button/icons/banksy-plate.jpg">
-            </div>
+                <div class="nd-new2 nds" onclick="changeStyle('css/banksy.css')">
+                    <div class="text">Banksy</div>
+                    <img class="reminder" src="components/fab button/icons/banksy-plate.jpg">
+                </div>
 
-            <div class="nd-new3 nds" onclick="changeStyle('css/minimalism.css')">
-                <div class="text">Minimalism</div>
-                <img class="reminder" src="components/fab button/icons/minimalism-plate.jpg">
-            </div>
-            <div id="floating-button">
-                <p class="plus"><img src="components/fab button/icons/choosing-plate.png"></p>
-                <p class="edit"><img src="components/fab button/icons/x-plate.png"></p>
+                <div class="nd-new3 nds" onclick="changeStyle('css/minimalism.css')">
+                    <div class="text">Minimalism</div>
+                    <img class="reminder" src="components/fab button/icons/minimalism-plate.jpg">
+                </div>
+                <div id="floating-button">
+                    <p class="plus"><img src="components/fab button/icons/choosing-plate.png"></p>
+                    <p class="edit"><img src="components/fab button/icons/x-plate.png"></p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </body>
 
 </html>
