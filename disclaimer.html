@@ -214,7 +214,10 @@
             }
         };
     </script> -->
-    <!-- <script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             setDefaultStyle();
 
@@ -245,15 +248,21 @@
             getThemeLink.href = styleSheet;
 
             localStorage.setItem('chosenStylesheet', styleSheet);
+            localStorage.setItem('fabButtonActive', 'true'); // Store fab button state
             document.getElementById('container-floating').classList.add('active');
         }
 
         function setDefaultStyle() {
-            changeStyle('css/minimalism.css');
-        }
-    </script> -->
+            let chosenStylesheet = localStorage.getItem('chosenStylesheet');
+            if (!chosenStylesheet) {
+                chosenStylesheet = 'css/minimalism.css';
+            }
 
-    <script src="js/fab.js" defer></script>
+            changeStyle(chosenStylesheet);
+        }
+    </script>
+
+    <!-- <script src="js/fab.js" defer></script> -->
 
     <div class="fab-button">
         <div id="container-outer">
