@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'cityburn';
-    src: url('cityburn.woff2') format('woff2'),
-        url('cityburn.woff') format('woff');
+    src: url(../Fonts/cityburn/cityburn) format('woff2'),
+        url(../Fonts/cityburn/cityburn') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
