@@ -29,7 +29,8 @@ p { margin: 0 0 20px; line-height: 1.7; }
 p:last-child { margin: 0px; }
 a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
 a:focus, a:hover { text-decoration: none; color: #f85759; }
-
+#logo {color: #000;}
+#logo:hover {color: #000;}
 /* 
 .pop-art-left {
     background-image: url(../img/pop-art/elements/calling.png);
@@ -626,9 +627,11 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
     text-align: center;
     font-size: 25px;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 600;
     /* line-height: 161%;  */
-    padding: 2%;
+    padding-right: 3%;
+    padding-left: 3%;
+    padding-bottom: 6%;
 }
 
 .text-body p {
@@ -637,7 +640,9 @@ background-image: url(../img/pop-art/elements/egg.png); /* Set the path to your 
     font-size: 20px;
     font-style: normal;
     line-height:2-5vh;
-    padding: 3%;
+    padding-right: 3%;
+    padding-left: 3%;
+    padding-bottom: 2%;
     /* font-family: 'Blambot Casual Regular' !important; */
 }
 
