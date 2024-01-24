@@ -31,5 +31,5 @@ function changeStyle(styleSheet) {
 }
 
 function setDefaultStyle() {
-    changeStyle('../css/minimalism.css');
+    changeStyle('css/minimalism.css');
 }
