@@ -4,8 +4,6 @@
 * {
     box-sizing: border-box;
   }
-
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
    
 body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family:'Space Grotesk'; font-weight:regular; font-size: 17px;  line-height: 32px; background-color:#C40803; background-image: url(/img/constructivism/paper-bg.png); }
 h2 { font-size: 28px; line-height: 38px; }
@@ -13,7 +11,7 @@ h3 { font-size: 22px; line-height: 32px; }
 h4 { font-size: 20px; }
 h5 { font-size: 17px; }
 h6 { font-size: 12px; }
-p { margin: 0 0 20px; line-height: 1.7; }
+p { margin: 0 0 20px; line-height: 1.7; font-family: 'Staatliches';}
 p:last-child { margin: 0px; }
 /* a { text-decoration: none; color: #8d8f90; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
 a:focus, a:hover { text-decoration: none; color: #f85759; } */
@@ -46,20 +44,10 @@ a:focus, a:hover { text-decoration: none; color: #f85759; } */
     background: none;
     transition: padding 0.8s; /* Add a transition for smooth effect */
     /*background-image: url(../img/constructivism/star_with_hand.png); */
-    background-position: 25% 22%, top, left center;
     background-repeat: no-repeat;
-    background-size: 110px;
     padding-top: 2em;
 }
 
-.page-title { 
-    line-height: 1; 
-    color: #000000; 
-    text-align: center;  
-    font-family: 'Courier New';
-    font-weight: 400;
-    font-size: 100px; 
-}
 
 .page-sub {
     text-align: center; 
@@ -68,7 +56,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; } */
 }
 
 .page-caption {
-    padding-top: 20px; /* Reduce the top padding */
+    padding-top: 0px; /* Reduce the top padding */
     padding-bottom: 20px; /* Reduce the bottom padding */
     /*background-image: url(/img/constructivism/woman_scr.png); */
     background-repeat: no-repeat; 
@@ -82,13 +70,18 @@ a:focus, a:hover { text-decoration: none; color: #f85759; } */
 .page-title {
     color: white;
     font-family: 'Red October';
-    font-size: 100px; 
+    font-size: 7vw; 
     font-weight: 400;
-    line-height: 1;
+    /*line-height: 1;*/
     text-align: center;
     /*background-image: url(/img/constructivism/head-b.png); */
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 0 !important;
+    margin-top: 0;
+    padding-bottom: 0 !important;
+    width: fit-content;
+    height: fit-content;
 }
 
 .page-sub {
@@ -98,7 +91,7 @@ a:focus, a:hover { text-decoration: none; color: #f85759; } */
 
 /* Make the header sticky */
 .page-header.sticky {
-    background-color: white;
+    background-color:#C40803;
     position: fixed;
     top: 0;
     width: 100%;
@@ -347,10 +340,10 @@ li.nav-item.dropend {
     font-family: 'Red October';
 }
 .welcome-body{
-    font-family: 'Space Grotesk';
+    font-family: 'Staatliches';
     font-size: 20px;
     text-align: justify;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
@@ -367,12 +360,14 @@ li.nav-item.dropend {
 .team-title {    
     padding-top: 50px;
     text-align: center;
+    font-family: 'Red October';
 }
 .team-intro { text-align: center; margin: auto; width: 50%; }
 .team-item { padding: 20px; margin-top: 20px; background-color: antiquewhite;}
 .team-item h3{
     text-align: center;
     font-family: 'Staatliches';
+    color: #C40803;
 }
 
 .team-item p{
