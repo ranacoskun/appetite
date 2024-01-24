@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Exclude the "interest-cohort" feature from Permissions Policy -->
+<meta http-equiv="Permissions-Policy" content="interest-cohort=()"><!-- Exclude the "interest-cohort" feature from Permissions Policy -->
 
     <!-- meta tag specifying the document mode and compatibility settings for Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -227,8 +229,8 @@
                                 <div class="team-item">
                                     <div id="ulzhan" class="member-img"></div>
                                     <h3>Ulzhan Baizhankyzy</h3>
-                                    <p>After the Bachelor's Degree in Humanities at the University of Bologna
-                                        (2018-2021),
+                                    <p>After the Bachelor's Degree in Mathematical and Computer Modeling
+                                        (2017-2021),
                                         is
                                         now
                                         attending the Master's Dregree in DHDK.</p>
@@ -238,8 +240,8 @@
                                 <div class="team-item">
                                     <div id="rana" class="member-img"></div>
                                     <h3>Rana Coskun</h3>
-                                    <p>After the Bachelor's Degree at the Accademia di Belle Arti of Bologna
-                                        (2010-2014), is
+                                    <p>After the Bachelor's Degree in Electrical and Electronical Engineering
+                                        (2017-2021), is
                                         now
                                         attending the Master's Dregree in DHDK.</p>
                                 </div>
@@ -260,7 +262,7 @@
         </div>
     </footer>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             setDefaultStyle();
@@ -305,7 +307,7 @@
         function setDefaultStyle() {
             let chosenStylesheet = localStorage.getItem('chosenStylesheet');
             if (!chosenStylesheet) {
-                chosenStylesheet = 'css/minimalism.css';
+                chosenStylesheet = '../css/minimalism.css';
             }
 
             changeStyle(chosenStylesheet);
